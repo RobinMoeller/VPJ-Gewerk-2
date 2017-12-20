@@ -105,14 +105,19 @@ for nr = 1 : 1 : 2
     plotRobot( LadeX(nr)-OffsetAnfahr, LadeY(nr),farbeAnfahr);
 end
 %% FIFOs einzeichnen
-FIFOX=[1103 2308 3507 4694 6287];
-FIFOY=[250 250 250 250 250];
+FIFOX=[1103 2308 3507 4694];
+FIFOY=[250 250 250 250];
+ParkplatzX=6500;
+ParkplatzY=550;
 OffsetFIFO = 400;
 farbeFIFO= [0 0 1 0.4];
-for nr = 1 : 1 : 5
+for nr = 1 : 1 : 4
     plotRobot( FIFOX(nr), FIFOY(nr),farbeFIFO);
     plotRobot( FIFOX(nr)-OffsetFIFO, FIFOY(nr),farbeFIFO);
     plotRobot( FIFOX(nr)+OffsetFIFO, FIFOY(nr),farbeFIFO);
+end
+for nr = 1 : 1 : 4
+    plotRobot( ParkplatzX, ParkplatzY+(OffsetFIFO*(nr-1)),farbeFIFO);
 end
 
 
