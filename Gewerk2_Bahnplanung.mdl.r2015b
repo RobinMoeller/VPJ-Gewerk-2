@@ -1,6 +1,7 @@
 Model {
   Name			  "Gewerk2_Bahnplanung"
-  Version		  9.0
+  Version		  8.6
+  MdlSubVersion		  0
   SavedCharacterEncoding  "windows-1252"
   GraphicalInterface {
     NumRootInports	    0
@@ -10,125 +11,18 @@ Model {
       BusObject		      ""
       BusOutputAsStruct	      "off"
       SignalName	      "15 elements"
-      UnitExpr		      "inherit"
     }
     Outport {
       Name		      "UDP data"
       BusObject		      ""
       BusOutputAsStruct	      "off"
-      UnitExpr		      "inherit"
+      SignalName	      "56 elements"
     }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.815"
+    ComputedModelVersion    "1.814"
     NumModelReferences	    0
     NumTestPointedSignals   0
-    NumProvidedFunctions    0
-    NumRequiredFunctions    0
-    NumResetEvents	    0
-    HasInitializeEvent	    0
-    HasTerminateEvent	    0
-    IsExportFunctionModel   0
-    NumParameterArguments   0
-    NumExternalFileReferences 15
-    ExternalFileReference {
-      Reference		      "xpcutilitieslib/Byte Packing "
-      Path		      "Gewerk2_Bahnplanung/Communication Block/Pack"
-      SID		      "744"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "xpcrtudplib/Legacy UDP/Receive "
-      Path		      "Gewerk2_Bahnplanung/Communication Block/Robotino UDP transceiver/If Robotino 1/Receive from all"
-      SID		      "730"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "xpcrtudplib/Legacy UDP/Send "
-      Path		      "Gewerk2_Bahnplanung/Communication Block/Robotino UDP transceiver/If Robotino 1/Send to all"
-      SID		      "731"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "xpcrtudplib/Legacy UDP/Receive "
-      Path		      "Gewerk2_Bahnplanung/Communication Block/Robotino UDP transceiver/If Robotino 2/Receive from all"
-      SID		      "723"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "xpcrtudplib/Legacy UDP/Send "
-      Path		      "Gewerk2_Bahnplanung/Communication Block/Robotino UDP transceiver/If Robotino 2/Send to all"
-      SID		      "724"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "xpcrtudplib/Legacy UDP/Receive "
-      Path		      "Gewerk2_Bahnplanung/Communication Block/Robotino UDP transceiver/If Robotino 3/Receive from all"
-      SID		      "716"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "xpcrtudplib/Legacy UDP/Send "
-      Path		      "Gewerk2_Bahnplanung/Communication Block/Robotino UDP transceiver/If Robotino 3/Send to all"
-      SID		      "717"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "xpcrtudplib/Legacy UDP/Receive "
-      Path		      "Gewerk2_Bahnplanung/Communication Block/Robotino UDP transceiver/If Robotino 4/Receive from all"
-      SID		      "608"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "xpcrtudplib/Legacy UDP/Send "
-      Path		      "Gewerk2_Bahnplanung/Communication Block/Robotino UDP transceiver/If Robotino 4/Send to all"
-      SID		      "711"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "xpcutilitieslib/Byte Unpacking "
-      Path		      "Gewerk2_Bahnplanung/Communication Block/Unpack"
-      SID		      "536"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "xpcseriallib/Mainboard/Baseboard\nSerial"
-      Path		      "Gewerk2_Bahnplanung/Robotino interface/serial communication/Baseboard Serial"
-      SID		      "784"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "xpcrtudplib/Legacy UDP/Receive "
-      Path		      "Gewerk2_Bahnplanung/UDP interface/Receive"
-      SID		      "544"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "xpcobsoletelib/Utilities/Unpack "
-      Path		      "Gewerk2_Bahnplanung/UDP interface/Unpack"
-      SID		      "546"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "slrtlib/Target\nManagement/From File "
-      Path		      "Gewerk2_Bahnplanung/getRobotinoID/getIDfromFlash/From File"
-      SID		      "598"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "xpcobsoletelib/Utilities/Unpack "
-      Path		      "Gewerk2_Bahnplanung/getRobotinoID/getIDfromFlash/Unpack"
-      SID		      "599"
-      Type		      "LIBRARY_BLOCK"
-    }
-    OrderedModelArguments   1
   }
-  LogicAnalyzerGraphicalSettings ""
-  LogicAnalyzerPlugin	  "on"
-  LogicAnalyzerSignalOrdering ""
-  DiagnosticSuppressor	  "on"
-  SuppressorTable	  "22 serialization::archive 11 0 6 0 0 0 8 0"
-  CustomCodeFunctionData  ""
-  SLCCPlugin		  "on"
   ScopeRefreshTime	  0.035000
   OverrideScopeRefreshTime on
   DisableAllScopes	  off
@@ -139,7 +33,6 @@ Model {
   FPTRunName		  "Run 1"
   MaxMDLFileLineLength	  120
   CloseFcn		  "rtwprivate ssgencode ModelCloseRequest Robotino_Strecke_reall_2009"
-  LastSavedArchitecture	  "win64"
   Object {
     $PropName		    "BdWindowsInfo"
     $ObjectID		    1
@@ -149,7 +42,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-7.0, 0.0, 653.0, 687.0]
+      Location		      [1674.0, 189.0, 1696.0, 1066.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -171,58 +64,30 @@ Model {
 	$ObjectID		5
 	$ClassName		"Simulink.EditorInfo"
 	IsActive		[1]
-	ViewObjType		"StateflowChart"
-	LoadSaveID		"856"
-	Extents			[902.0, 782.0]
-	ZoomFactor		[0.6]
-	Offset			[53.002785520948294, -56.389922188719311]
+	ViewObjType		"SimulinkTopLevel"
+	LoadSaveID		"0"
+	Extents			[1646.0, 892.0]
+	ZoomFactor		[1.08]
+	Offset			[-75.115735332171084, 2.0370370370370665]
       }
-      Object {
-	$PropName		"DockComponentsInfo"
-	$ObjectID		6
-	$ClassName		"Simulink.DockComponentInfo"
-	Type			"GLUE2:PropertyInspector"
-	ID			"Property Inspector"
-	Visible			[0]
-	CreateCallback		""
-	UserData		""
-	Floating		[0]
-	DockPosition		"Right"
-	Width			[426]
-	Height			[320]
-      }
-      WindowState	      "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAAA/sAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
-      "AAAAAAA+wAAABYARABvAGMAawBXAGkAZABnAGUAdAA0AAAAAAD/////AAAAAAAAAAD7AAAAUgBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0Ac"
-      "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAACSAP///wAAAAEAAAAAAAAAAPwCA"
-      "AAAAfsAAABUAEcATABVAEUAMgA6AFAAcgBvAHAAZQByAHQAeQBJAG4AcwBwAGUAYwB0AG8AcgAvAFAAcgBvAHAAZQByAHQAeQAgAEkAbgBzAHAAZ"
-      "QBjAHQAbwByAAAAAAD/////AAAAPQD///8AAAO+AAADXAAAAAEAAAACAAAAAQAAAAL8AAAAAQAAAAIAAAAP/////wAAAAAA/////wAAAAAAAAAA/"
-      "////wEAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/"
-      "////wEAAACp/////wAAAAAAAAAA/////wEAAAEu/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAHX/////wAAAAAAAAAA/"
-      "////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA/////wEAAAM8/////wAAAAAAAAAA/"
-      "////wEAAAN9/////wAAAAAAAAAA/////wAAAAAA/////wAAAAAAAAAA"
     }
   }
-  HideAutomaticNames	  on
   Created		  "Tue Jan 12 08:18:07 2010"
   Creator		  "atlabor"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
-  LastModifiedBy	  "Jan"
+  LastModifiedBy	  "atlabor"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Feb 05 11:04:37 2018"
-  RTWModifiedTimeStamp	  439727743
-  ModelVersionFormat	  "1.%<AutoIncrement:815>"
+  LastModifiedDate	  "Thu Dec 07 13:13:25 2017"
+  RTWModifiedTimeStamp	  434546085
+  ModelVersionFormat	  "1.%<AutoIncrement:814>"
+  ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
   WideLines		  off
   ShowLineDimensions	  on
   ShowPortDataTypes	  off
-  PortDataTypeDisplayFormat "AliasTypeOnly"
-  ShowEditTimeErrors	  on
-  ShowEditTimeWarnings	  on
-  ShowEditTimeAdvisorChecks off
-  ShowPortUnits		  off
   ShowDesignRanges	  off
   ShowLoopsOnError	  on
   IgnoreBidirectionalLines off
@@ -231,7 +96,6 @@ Model {
   ShowSignalResolutionIcons on
   ShowViewerIcons	  on
   SortedOrder		  off
-  VariantCondition	  off
   ExecutionContextIcon	  off
   ShowLinearizationAnnotations on
   ShowVisualizeInsertedRTB on
@@ -239,14 +103,11 @@ Model {
   BlockNameDataTip	  off
   BlockParametersDataTip  off
   BlockDescriptionStringDataTip	off
-  BlockVariantConditionDataTip off
   ToolBar		  on
   StatusBar		  on
   BrowserShowLibraryLinks off
-  FunctionConnectors	  off
   BrowserLookUnderMasks	  off
   SimulationMode	  "external"
-  VisualizeLoggedSignalsWhenLoggingToFile off
   PauseTimes		  "5"
   NumberOfSteps		  1
   SnapshotBufferSize	  10
@@ -261,7 +122,7 @@ Model {
   TryForcingSFcnDF	  off
   Object {
     $PropName		    "DataLoggingOverride"
-    $ObjectID		    7
+    $ObjectID		    6
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
     model_		    "Gewerk2_Bahnplanung"
     Array {
@@ -300,28 +161,24 @@ Model {
   ExtModeAutoUpdateStatusClock on
   ShowModelReferenceBlockVersion off
   ShowModelReferenceBlockIO off
-  OrderedModelArguments	  on
   Array {
     Type		    "Handle"
     Dimension		    1
     Simulink.ConfigSet {
-      $ObjectID		      8
-      Version		      "1.17.1"
-      DisabledProps	      []
-      Description	      ""
+      $ObjectID		      7
+      Version		      "1.15.1"
       Array {
 	Type			"Handle"
 	Dimension		9
 	Simulink.SolverCC {
-	  $ObjectID		  9
-	  Version		  "1.17.1"
-	  DisabledProps		  []
-	  Description		  ""
+	  $ObjectID		  8
+	  Version		  "1.15.1"
 	  StartTime		  "0.0"
 	  StopTime		  "inf"
 	  AbsTol		  "auto"
 	  FixedStep		  "0.005"
 	  InitialStep		  "auto"
+	  MaxNumMinSteps	  "-1"
 	  MaxOrder		  5
 	  ZcThreshold		  "auto"
 	  ConsecutiveZCsStepRelTol "10*128*eps"
@@ -332,7 +189,8 @@ Model {
 	  MinStep		  "auto"
 	  MaxConsecutiveMinStep	  "1"
 	  RelTol		  "1e-3"
-	  EnableMultiTasking	  on
+	  SolverMode		  "Auto"
+	  EnableConcurrentExecution on
 	  ConcurrentTasks	  off
 	  Solver		  "ode3"
 	  SolverName		  "ode3"
@@ -348,14 +206,10 @@ Model {
 	  AutoInsertRateTranBlk	  off
 	  SampleTimeConstraint	  "Unconstrained"
 	  InsertRTBMode		  "Whenever possible"
-	  SampleTimeProperty	  []
-	  DecoupledContinuousIntegration off
 	}
 	Simulink.DataIOCC {
-	  $ObjectID		  10
-	  Version		  "1.17.1"
-	  DisabledProps		  []
-	  Description		  ""
+	  $ObjectID		  9
+	  Version		  "1.15.1"
 	  Decimation		  "1"
 	  ExternalInput		  "[t, u]"
 	  FinalStateName	  "xFinal"
@@ -387,14 +241,11 @@ Model {
 	  OutputTimes		  "[]"
 	  ReturnWorkspaceOutputsName "out"
 	  Refine		  "1"
-	  LoggingToFile		  off
-	  DatasetSignalFormat	  "timeseries"
-	  LoggingFileName	  "out.mat"
 	  LoggingIntervals	  "[-inf, inf]"
 	}
 	Simulink.OptimizationCC {
-	  $ObjectID		  11
-	  Version		  "1.17.1"
+	  $ObjectID		  10
+	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
 	    Dimension		    8
@@ -408,7 +259,6 @@ Model {
 	    Cell		    "UseSpecifiedMinMax"
 	    PropName		    "DisabledProps"
 	  }
-	  Description		  ""
 	  BlockReduction	  off
 	  BooleanDataType	  on
 	  ConditionallyExecuteInputs on
@@ -424,7 +274,6 @@ Model {
 	  CachingGlobalReferences off
 	  GlobalBufferReuse	  off
 	  StrengthReduction	  off
-	  AdvancedOptControl	  ""
 	  ExpressionFolding	  off
 	  BooleansAsBitfields	  off
 	  BitfieldContainerType	  "uint_T"
@@ -444,26 +293,16 @@ Model {
 	  NoFixptDivByZeroProtection off
 	  EfficientFloat2IntCast  off
 	  EfficientMapNaN2IntZero on
+	  OptimizeModelRefInitCode off
 	  LifeSpan		  "inf"
 	  MaxStackSize		  "Inherit from target"
 	  BufferReusableBoundary  on
 	  SimCompilerOptimization "off"
 	  AccelVerboseBuild	  off
-	  OptimizeBlockOrder	  "off"
-	  OptimizeDataStoreBuffers on
-	  BusAssignmentInplaceUpdate on
-	  DifferentSizesBufferReuse off
 	}
 	Simulink.DebuggingCC {
-	  $ObjectID		  12
-	  Version		  "1.17.1"
-	  Array {
-	    Type		    "Cell"
-	    Dimension		    1
-	    Cell		    "UseOnlyExistingSharedCode"
-	    PropName		    "DisabledProps"
-	  }
-	  Description		  ""
+	  $ObjectID		  11
+	  Version		  "1.15.1"
 	  RTPrefix		  "error"
 	  ConsistencyChecking	  "none"
 	  ArrayBoundsChecking	  "none"
@@ -495,7 +334,6 @@ Model {
 	  MultiTaskRateTransMsg	  "error"
 	  SingleTaskRateTransMsg  "none"
 	  TasksWithSamePriorityMsg "warning"
-	  ExportedTasksRateTransMsg "none"
 	  SigSpecEnsureSampleTimeMsg "warning"
 	  CheckMatrixSingularityMsg "none"
 	  IntegerOverflowMsg	  "warning"
@@ -512,12 +350,11 @@ Model {
 	  UnnecessaryDatatypeConvMsg "none"
 	  VectorMatrixConversionMsg "none"
 	  InvalidFcnCallConnMsg	  "error"
-	  FcnCallInpInsideContextMsg "warning"
+	  FcnCallInpInsideContextMsg "UseLocalSettings"
 	  SignalLabelMismatchMsg  "none"
 	  UnconnectedInputMsg	  "warning"
 	  UnconnectedOutputMsg	  "warning"
 	  UnconnectedLineMsg	  "warning"
-	  UseOnlyExistingSharedCode "error"
 	  SFcnCompatibilityMsg	  "none"
 	  FrameProcessingCompatibilityMsg "error"
 	  UniqueDataStoreMsg	  "none"
@@ -525,7 +362,6 @@ Model {
 	  RootOutportRequireBusObject "warning"
 	  AssertControl		  "UseLocalSettings"
 	  AllowSymbolicDim	  off
-	  RowMajorDimensionSupport off
 	  ModelReferenceIOMsg	  "none"
 	  ModelReferenceMultiInstanceNormalModeStructChecksumCheck "error"
 	  ModelReferenceVersionMismatchMessage "none"
@@ -537,49 +373,26 @@ Model {
 	  StateNameClashWarn	  "warning"
 	  SimStateInterfaceChecksumMismatchMsg "warning"
 	  SimStateOlderReleaseMsg "error"
-	  ChecksumConsistencyForSSReuse	"none"
 	  InitInArrayFormatMsg	  "warning"
 	  StrictBusMsg		  "Warning"
 	  BusNameAdapt		  "WarnAndRepair"
 	  NonBusSignalsTreatedAsBus "none"
 	  SymbolicDimMinMaxWarning "warning"
-	  LossOfSymbolicDimsSimulationWarning "warning"
-	  LossOfSymbolicDimsCodeGenerationWarning "error"
-	  SymbolicDimsDataTypeCodeGenerationDiagnostic "error"
 	  BlockIODiagnostic	  "none"
 	  SFUnusedDataAndEventsDiag "warning"
 	  SFUnexpectedBacktrackingDiag "warning"
 	  SFInvalidInputDataAccessInChartInitDiag "warning"
 	  SFNoUnconditionalDefaultTransitionDiag "warning"
 	  SFTransitionOutsideNaturalParentDiag "warning"
-	  SFUnreachableExecutionPathDiag "warning"
+	  SFUnconditionalTransitionShadowingDiag "warning"
 	  SFUndirectedBroadcastEventsDiag "warning"
 	  SFTransitionActionBeforeConditionDiag	"warning"
 	  SFOutputUsedAsStateInMooreChartDiag "error"
-	  SFTemporalDelaySmallerThanSampleTimeDiag "warning"
-	  SFSelfTransitionDiag	  "warning"
-	  SFExecutionAtInitializationDiag "none"
-	  SFMachineParentedDataDiag "warning"
 	  IntegerSaturationMsg	  "warning"
-	  AllowedUnitSystems	  "all"
-	  UnitsInconsistencyMsg	  "warning"
-	  AllowAutomaticUnitConversions	on
-	  RCSCRenamedMsg	  "warning"
-	  RCSCObservableMsg	  "warning"
-	  ForceCombineOutputUpdateInSim	off
-	  UnitDatabase		  ""
 	}
 	Simulink.HardwareCC {
-	  $ObjectID		  13
-	  Version		  "1.17.1"
-	  Array {
-	    Type		    "Cell"
-	    Dimension		    2
-	    Cell		    "ProdHWDeviceType"
-	    Cell		    "ProdLongLongMode"
-	    PropName		    "DisabledProps"
-	  }
-	  Description		  ""
+	  $ObjectID		  12
+	  Version		  "1.15.1"
 	  ProdBitPerChar	  8
 	  ProdBitPerShort	  16
 	  ProdBitPerInt		  32
@@ -588,8 +401,6 @@ Model {
 	  ProdBitPerFloat	  32
 	  ProdBitPerDouble	  64
 	  ProdBitPerPointer	  32
-	  ProdBitPerSizeT	  32
-	  ProdBitPerPtrDiffT	  32
 	  ProdLargestAtomicInteger "Char"
 	  ProdLargestAtomicFloat  "None"
 	  ProdIntDivRoundTo	  "Zero"
@@ -606,8 +417,6 @@ Model {
 	  TargetBitPerFloat	  32
 	  TargetBitPerDouble	  64
 	  TargetBitPerPointer	  32
-	  TargetBitPerSizeT	  32
-	  TargetBitPerPtrDiffT	  32
 	  TargetLargestAtomicInteger "Char"
 	  TargetLargestAtomicFloat "None"
 	  TargetShiftRightIntArith on
@@ -620,14 +429,10 @@ Model {
 	  TargetHWDeviceType	  "Specified"
 	  TargetUnknown		  off
 	  ProdEqTarget		  on
-	  UseEmbeddedCoderFeatures on
-	  UseSimulinkCoderFeatures on
 	}
 	Simulink.ModelReferenceCC {
-	  $ObjectID		  14
-	  Version		  "1.17.1"
-	  DisabledProps		  []
-	  Description		  ""
+	  $ObjectID		  13
+	  Version		  "1.15.1"
 	  UpdateModelReferenceTargets "IfOutOfDateOrStructuralChange"
 	  EnableRefExpFcnMdlSchedulingChecks on
 	  CheckModelReferenceTargetMessage "error"
@@ -636,28 +441,14 @@ Model {
 	  ParallelModelReferenceMATLABWorkerInit "None"
 	  ModelReferenceNumInstancesAllowed "Multi"
 	  PropagateVarSize	  "Infer from blocks in model"
-	  ModelDependencies	  ""
 	  ModelReferencePassRootInputsByReference on
 	  ModelReferenceMinAlgLoopOccurrences off
 	  PropagateSignalLabelsOutOfModel off
 	  SupportModelReferenceSimTargetCustomCode off
 	}
 	Simulink.SFSimCC {
-	  $ObjectID		  15
-	  Version		  "1.17.1"
-	  DisabledProps		  []
-	  Description		  ""
-	  SimCustomSourceCode	  ""
-	  SimCustomHeaderCode	  ""
-	  SimCustomInitializer	  ""
-	  SimCustomTerminator	  ""
-	  SimReservedNameArray	  []
-	  SimUserSources	  ""
-	  SimUserIncludeDirs	  ""
-	  SimUserLibraries	  ""
-	  SimUserDefines	  ""
-	  SimCustomCompilerFlags  ""
-	  SimCustomLinkerFlags	  ""
+	  $ObjectID		  14
+	  Version		  "1.15.1"
 	  SFSimEcho		  on
 	  SimCtrlC		  on
 	  SimIntegrity		  on
@@ -665,19 +456,14 @@ Model {
 	  SimParseCustomCode	  off
 	  SimBuildMode		  "sf_incremental_build"
 	  SimGenImportedTypeDefs  off
-	  ModelFunctionsGlobalVisibility "on"
-	  CompileTimeRecursionLimit 50
-	  EnableRuntimeRecursion  on
-	  MATLABDynamicMemAlloc	  on
-	  MATLABDynamicMemAllocThreshold 65536
 	}
 	Simulink.RTWCC {
 	  $BackupClass		  "Simulink.RTWCC"
-	  $ObjectID		  16
-	  Version		  "1.17.1"
+	  $ObjectID		  15
+	  Version		  "1.15.1"
 	  Array {
 	    Type		    "Cell"
-	    Dimension		    15
+	    Dimension		    13
 	    Cell		    "IncludeHyperlinkInReport"
 	    Cell		    "GenerateTraceInfo"
 	    Cell		    "GenerateTraceReport"
@@ -691,18 +477,14 @@ Model {
 	    Cell		    "GenerateErtSFunction"
 	    Cell		    "CreateSILPILBlock"
 	    Cell		    "GenerateMissedCodeReplacementReport"
-	    Cell		    "TargetLang"
-	    Cell		    "CodeExecutionProfiling"
 	    PropName		    "DisabledProps"
 	  }
 	  SystemTargetFile	  "slrt.tlc"
-	  HardwareBoard		  "None"
 	  TLCOptions		  ""
 	  GenCodeOnly		  off
 	  MakeCommand		  "make_rtw"
 	  GenerateMakefile	  on
 	  PackageGeneratedCodeAndArtifacts off
-	  PackageName		  ""
 	  TemplateMakefile	  "slrt_default_tmf"
 	  PostCodeGenCommand	  ""
 	  Description		  "Simulink Real-Time"
@@ -710,31 +492,19 @@ Model {
 	  SaveLog		  off
 	  RTWVerbose		  on
 	  RetainRTWFile		  off
-	  RTWBuildHooks		  []
 	  ProfileTLC		  off
 	  TLCDebug		  off
 	  TLCCoverage		  off
 	  TLCAssert		  off
 	  RTWUseLocalCustomCode	  off
 	  RTWUseSimCustomCode	  off
-	  CustomSourceCode	  ""
-	  CustomHeaderCode	  ""
-	  CustomInclude		  ""
-	  CustomSource		  ""
-	  CustomLibrary		  ""
-	  CustomDefine		  ""
-	  CustomLAPACKCallback	  ""
-	  CustomFFTCallback	  ""
-	  CustomInitializer	  ""
-	  CustomTerminator	  ""
 	  Toolchain		  "Automatically locate an installed toolchain"
 	  BuildConfiguration	  "Faster Builds"
-	  CustomToolchainOptions  []
 	  IncludeHyperlinkInReport off
 	  LaunchReport		  off
 	  PortableWordSizes	  off
 	  CreateSILPILBlock	  "None"
-	  CodeExecutionProfiling  on
+	  CodeExecutionProfiling  off
 	  CodeExecutionProfileVariable "executionProfile"
 	  CodeProfilingSaveOptions "SummaryOnly"
 	  CodeProfilingInstrumentation off
@@ -751,7 +521,6 @@ Model {
 	  GenerateCodeReplacementReport	off
 	  GenerateMissedCodeReplacementReport off
 	  RTWCompilerOptimization "on"
-	  ObjectivePriorities	  []
 	  RTWCustomCompilerOptimizations ""
 	  CheckMdlBeforeBuild	  "Off"
 	  SharedConstantsCachingThreshold 1024
@@ -759,11 +528,11 @@ Model {
 	    Type		    "Handle"
 	    Dimension		    2
 	    Simulink.CodeAppCC {
-	      $ObjectID		      17
-	      Version		      "1.17.1"
+	      $ObjectID		      16
+	      Version		      "1.15.1"
 	      Array {
 		Type			"Cell"
-		Dimension		28
+		Dimension		24
 		Cell			"IgnoreCustomStorageClasses"
 		Cell			"IgnoreTestpoints"
 		Cell			"InsertBlockDesc"
@@ -788,69 +557,54 @@ Model {
 		Cell			"CustomSymbolStrUtil"
 		Cell			"ReqsInCode"
 		Cell			"ParameterTuningSideEffectCode"
-		Cell			"CustomSymbolStrModelFcn"
-		Cell			"CustomSymbolStrEmxType"
-		Cell			"CustomSymbolStrEmxFcn"
-		Cell			"CustomUserTokenString"
 		PropName		"DisabledProps"
 	      }
-	      Description	      ""
-	      Comment		      ""
 	      ForceParamTrailComments off
 	      GenerateComments	      on
 	      CommentStyle	      "Auto"
 	      IgnoreCustomStorageClasses on
 	      IgnoreTestpoints	      off
+	      IncHierarchyInIds	      off
 	      MaxIdLength	      31
 	      PreserveName	      off
 	      PreserveNameWithParent  off
 	      ShowEliminatedStatement off
 	      OperatorAnnotations     off
+	      IncAutoGenComments      off
 	      SimulinkDataObjDesc     off
 	      SFDataObjDesc	      off
 	      MATLABFcnDesc	      off
+	      IncDataTypeInIds	      off
 	      MangleLength	      1
-	      SharedChecksumLength    8
 	      CustomSymbolStrGlobalVar "$R$N$M"
 	      CustomSymbolStrType     "$N$R$M_T"
 	      CustomSymbolStrField    "$N$M"
 	      CustomSymbolStrFcn      "$R$N$M$F"
-	      CustomSymbolStrModelFcn "$R$N"
 	      CustomSymbolStrFcnArg   "rt$I$N$M"
 	      CustomSymbolStrBlkIO    "rtb_$N$M"
 	      CustomSymbolStrTmpVar   "$N$M"
 	      CustomSymbolStrMacro    "$R$N$M"
 	      CustomSymbolStrUtil     "$N$C"
-	      CustomSymbolStrEmxType  "emxArray_$M$N"
-	      CustomSymbolStrEmxFcn   "emx$M$N"
-	      CustomUserTokenString   ""
-	      CustomCommentsFcn	      ""
 	      DefineNamingRule	      "None"
-	      DefineNamingFcn	      ""
 	      ParamNamingRule	      "None"
-	      ParamNamingFcn	      ""
 	      SignalNamingRule	      "None"
-	      SignalNamingFcn	      ""
 	      InsertBlockDesc	      off
 	      InsertPolySpaceComments off
 	      SimulinkBlockComments   on
-	      StateflowObjectComments on
 	      MATLABSourceComments    off
 	      EnableCustomComments    off
-	      InternalIdentifierFile  ""
 	      InternalIdentifier      "Shortened"
 	      InlinedPrmAccess	      "Literals"
 	      ReqsInCode	      off
 	      UseSimReservedNames     off
-	      ReservedNameArray	      []
 	    }
 	    SimulinkRealTime.SimulinkRealTimeCC {
 	      $BackupClass	      "Simulink.TargetCC"
-	      $ObjectID		      18
-	      Version		      "1.17.1"
+	      $ObjectID		      17
+	      Version		      "1.15.1"
 	      Array {
 		Type			"Cell"
-		Dimension		18
+		Dimension		13
 		Cell			"GeneratePreprocessorConditionals"
 		Cell			"IncludeMdlTerminateFcn"
 		Cell			"SupportNonInlinedSFcns"
@@ -864,14 +618,8 @@ Model {
 		Cell			"SupportComplex"
 		Cell			"SupportAbsoluteTime"
 		Cell			"SupportContinuousTime"
-		Cell			"RemoveResetFunc"
-		Cell			"ExistingSharedCode"
-		Cell			"RemoveDisableFunc"
-		Cell			"MatFileLogging"
-		Cell			"GRTInterface"
 		PropName		"DisabledProps"
 	      }
-	      Description	      ""
 	      TargetFcnLib	      "ansi_tfl_table_tmw.mat"
 	      TargetLibSuffix	      ""
 	      TargetPreCompLibLocation ""
@@ -879,11 +627,11 @@ Model {
 	      TargetLangStandard      "C89/C90 (ANSI)"
 	      CodeReplacementLibrary  "XPC_BLAS"
 	      UtilityFuncGeneration   "Auto"
-	      MultiwordTypeDef	      "System defined"
+	      ERTMultiwordTypeDef     "System defined"
+	      ERTMultiwordLength      256
 	      MultiwordLength	      2048
 	      GenerateFullHeader      on
 	      InferredTypesCompatibility off
-	      ExistingSharedCode      ""
 	      GenerateSampleERTMain   off
 	      GenerateTestInterfaces  off
 	      ModelReferenceCompliant on
@@ -895,6 +643,7 @@ Model {
 	      CombineOutputUpdateFcns off
 	      CombineSignalStateStructs	off
 	      SuppressErrorStatus     off
+	      ERTFirstTimeCompliant   off
 	      IncludeFileDelimiter    "Auto"
 	      ERTCustomFileBanners    off
 	      SupportAbsoluteTime     on
@@ -907,8 +656,6 @@ Model {
 	      PurelyIntegerCode	      off
 	      SupportContinuousTime   on
 	      SupportNonInlinedSFcns  on
-	      RemoveDisableFunc	      off
-	      RemoveResetFunc	      off
 	      SupportVariableSizeSignals off
 	      ParenthesesLevel	      "Nominal"
 	      CastingMode	      "Nominal"
@@ -916,23 +663,14 @@ Model {
 	      ModelStepFunctionPrototypeControlCompliant off
 	      CPPClassGenCompliant    off
 	      AutosarCompliant	      off
-	      MDXCompliant	      off
 	      GRTInterface	      on
 	      GenerateAllocFcn	      off
 	      UseToolchainInfoCompliant	off
 	      GenerateSharedConstants on
-	      CoderGroups	      []
-	      AccessMethods	      []
-	      LookupTableObjectStructAxisOrder "1,2,3,4,..."
-	      LUTObjectStructOrderExplicitValues "Size,Breakpoints,Table"
-	      LUTObjectStructOrderEvenSpacing "Size,Breakpoints,Table"
-	      ArrayLayout	      "Column-major"
-	      GenerateASAP2	      off
 	      RL32ModeModifier	      "Real-Time"
 	      ExtMode		      on
 	      ExtModeMexFile	      "ext_xpc"
 	      ExtModeIntrfLevel	      "Level2 - Open"
-	      ExtModeMexArgs	      ""
 	      ExtModeArmWhenConnect   off
 	      RL32LogTETModifier      on
 	      RL32LogBufSizeModifier  "100000"
@@ -951,34 +689,24 @@ Model {
 	      RL32ObjectName	      "tg"
 	      xPCisDownloadable	      on
 	      xPCisDefaultEnv	      on
-	      xPCTargetPCEnvName      ""
 	      xPCisModelTimeout	      on
 	      xPCModelTimeoutSecs     "5"
 	      xPCLoadParamSetFile     off
-	      xPCOnTgtParamSetFileName ""
 	      xPCConcurrentTasks      off
 	      xPCEnableSFAnimation    off
-	      UseERAMForLogging	      off
 	    }
 	    PropName		    "Components"
 	  }
 	}
 	SlCovCC.ConfigComp {
-	  $ObjectID		  19
-	  Version		  "1.17.1"
-	  DisabledProps		  []
+	  $ObjectID		  18
+	  Version		  "1.15.1"
 	  Description		  "Simulink Coverage Configuration Component"
 	  Name			  "Simulink Coverage"
-	  CovEnable		  off
-	  CovScope		  "EntireSystem"
-	  CovIncludeTopModel	  on
 	  RecordCoverage	  off
 	  CovPath		  "/"
 	  CovSaveName		  "covdata"
-	  CovCompData		  ""
 	  CovMetricSettings	  "dw"
-	  CovFilter		  ""
-	  CovHTMLOptions	  ""
 	  CovNameIncrementing	  off
 	  CovHtmlReporting	  on
 	  CovForceBlockReductionOff on
@@ -987,13 +715,8 @@ Model {
 	  CovSaveSingleToWorkspaceVar on
 	  CovCumulativeVarName	  "covCumulativeData"
 	  CovCumulativeReport	  off
-	  CovSaveOutputData	  on
-	  CovOutputDir		  "slcov_output/$ModelName$"
-	  CovDataFileName	  "$ModelName$_cvdata"
-	  CovShowResultsExplorer  on
 	  CovReportOnPause	  on
-	  CovModelRefEnable	  "off"
-	  CovModelRefExcluded	  ""
+	  CovModelRefEnable	  "Off"
 	  CovExternalEMLEnable	  off
 	  CovSFcnEnable		  off
 	  CovBoundaryAbsTol	  1e-05
@@ -1001,24 +724,23 @@ Model {
 	  CovUseTimeInterval	  off
 	  CovStartTime		  0
 	  CovStopTime		  0
-	  CovMcdcMode		  "Masking"
 	}
 	PropName		"Components"
       }
       Name		      "Configuration"
       ExtraOptions	      "-aGenerateTraceInfo=0 -aHostCAPINeeded=1 -aIgnoreTestpoints=0 "
       CurrentDlgPage	      "Solver"
-      ConfigPrmDlgPosition    [ 337, 158, 1336, 901 ]
+      ConfigPrmDlgPosition     [ 337, 158, 1336, 901 ] 
     }
     PropName		    "ConfigurationSets"
   }
   Simulink.ConfigSet {
     $PropName		    "ActiveConfigurationSet"
-    $ObjectID		    8
+    $ObjectID		    7
   }
   Object {
     $PropName		    "DataTransfer"
-    $ObjectID		    20
+    $ObjectID		    19
     $ClassName		    "Simulink.GlobalDataTransfer"
     DefaultTransitionBetweenSyncTasks "Ensure deterministic transfer (maximum delay)"
     DefaultTransitionBetweenAsyncTasks "Ensure data integrity only"
@@ -1037,7 +759,6 @@ Model {
     FontWeight		    "normal"
     FontAngle		    "normal"
     ShowName		    on
-    HideAutomaticName	    on
     BlockRotation	    0
     BlockMirror		    off
   }
@@ -1051,12 +772,7 @@ Model {
     FontSize		    10
     FontWeight		    "normal"
     FontAngle		    "normal"
-    MarkupType		    "model"
     UseDisplayTextAsClickCallback off
-    AnnotationType	    "note_annotation"
-    FixedHeight		    off
-    FixedWidth		    off
-    Interpreter		    "off"
   }
   LineDefaults {
     FontName		    "Helvetica"
@@ -1067,8 +783,8 @@ Model {
   MaskDefaults {
     SelfModifiable	    "off"
     IconFrame		    "on"
-    IconOpaque		    "opaque"
-    RunInitForIconRedraw    "analyze"
+    IconOpaque		    "on"
+    RunInitForIconRedraw    "off"
     IconRotate		    "none"
     PortRotate		    "default"
     IconUnits		    "autoscale"
@@ -1153,7 +869,6 @@ Model {
       OutDataTypeStr	      "Inherit: auto"
       LockScale		      off
       BusOutputAsStruct	      off
-      Unit		      "inherit"
       PortDimensions	      "-1"
       VarSizeSig	      "Inherit"
       SampleTime	      "-1"
@@ -1165,7 +880,7 @@ Model {
     }
     Block {
       BlockType		      Memory
-      InitialCondition	      "0"
+      X0		      "0"
       InheritSampleTime	      off
       LinearizeMemory	      off
       LinearizeAsDelay	      off
@@ -1206,26 +921,20 @@ Model {
       OutDataTypeStr	      "Inherit: auto"
       LockScale		      off
       BusOutputAsStruct	      off
-      Unit		      "inherit"
       PortDimensions	      "-1"
       VarSizeSig	      "Inherit"
       SampleTime	      "-1"
       SignalType	      "auto"
       SamplingMode	      "auto"
-      EnsureOutportIsVirtual  off
       SourceOfInitialOutputValue "Dialog"
       OutputWhenDisabled      "held"
       InitialOutput	      "[]"
-      MustResolveToSignalObject	off
-      OutputWhenUnConnected   off
-      OutputWhenUnconnectedValue "0"
-      VectorParamsAs1DForOutWhenUnconnected off
     }
     Block {
       BlockType		      RateTransition
       Integrity		      on
       Deterministic	      on
-      InitialCondition	      "0"
+      X0		      "0"
       OutPortSampleTimeOpt    "Specify"
       OutPortSampleTimeMultiple	"1"
       OutPortSampleTime	      "-1"
@@ -1253,6 +962,7 @@ Model {
       TreatAsAtomicUnit	      off
       MinAlgLoopOccurrences   off
       PropExecContextOutsideSubsystem off
+      CheckFcnCallInpInsideContextMsg off
       SystemSampleTime	      "-1"
       RTWSystemCode	      "Auto"
       RTWFcnNameOpts	      "Auto"
@@ -1272,12 +982,8 @@ Model {
       MaskHideContents	      off
       SFBlockType	      "NONE"
       GeneratePreprocessorConditionals off
-      AllowZeroVariantControls off
-      PropagateVariantConditions off
-      TreatAsGroupedWhenPropagatingVariantConditions on
       ContentPreviewEnabled   off
       IsWebBlock	      off
-      IsObserver	      off
     }
     Block {
       BlockType		      SwitchCase
@@ -1293,9 +999,6 @@ Model {
       BlockType		      TriggerPort
       TriggerType	      "rising"
       IsSimulinkFunction      off
-      FunctionVisibility      "global"
-      Variant		      off
-      GeneratePreprocessorConditionals off
       StatesWhenEnabling      "inherit"
       PropagateVarSize	      "During execution"
       ShowOutputPort	      off
@@ -1304,7 +1007,6 @@ Model {
       SampleTime	      "1"
       ZeroCross		      on
       DisallowConstTsAndPrmTs off
-      InitialTriggerSignalState	"compatibility (no trigger on first evaluation)"
       PortDimensions	      "-1"
       TriggerSignalSampleTime "-1"
       OutMin		      "[]"
@@ -1315,9 +1017,8 @@ Model {
   }
   System {
     Name		    "Gewerk2_Bahnplanung"
-    Location		    [-7, 0, 646, 687]
-    Open		    off
-    PortBlocksUseCompactNotation off
+    Location		    [1674, 189, 3370, 1255]
+    Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
     ScreenColor		    "white"
@@ -1330,7 +1031,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "108"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "856"
+    SIDHighWatermark	    "821"
     Block {
       BlockType		      Fcn
       Name		      "Abstandssensoren"
@@ -1356,7 +1057,6 @@ Model {
 	Name			"Begrenzung"
 	Location		[227, 345, 838, 789]
 	Open			off
-	PortBlocksUseCompactNotation off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -1368,7 +1068,7 @@ Model {
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"100"
-	SIDHighWatermark	"18"
+	SIDHighWatermark	"15"
 	SIDPrevWatermark	"9"
 	Block {
 	  BlockType		  Inport
@@ -1381,36 +1081,37 @@ Model {
 	Block {
 	  BlockType		  Demux
 	  Name			  " Demux "
-	  SID			  "478::17"
+	  SID			  "478::14"
 	  Ports			  [1, 1]
 	  Position		  [270, 230, 320, 270]
-	  ZOrder		  8
+	  ZOrder		  5
 	  Outputs		  "1"
 	}
 	Block {
 	  BlockType		  S-Function
 	  Name			  " SFunction "
-	  SID			  "478::16"
+	  SID			  "478::13"
 	  Tag			  "Stateflow S-Function Gewerk2_Bahnplanung 6"
 	  Ports			  [1, 2]
 	  Position		  [180, 100, 230, 160]
-	  ZOrder		  7
+	  ZOrder		  4
 	  FunctionName		  "sf_sfun"
 	  PortCounts		  "[1 2]"
 	  SFunctionDeploymentMode off
-	  EnableBusSupport	  off
-	  SFcnIsStateOwnerBlock	  off
+	  EnableBusSupport	  on
 	  Port {
 	    PortNumber		    2
 	    Name		    "wout"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
 	  }
 	}
 	Block {
 	  BlockType		  Terminator
 	  Name			  " Terminator "
-	  SID			  "478::18"
+	  SID			  "478::15"
 	  Position		  [460, 241, 480, 259]
-	  ZOrder		  9
+	  ZOrder		  6
 	}
 	Block {
 	  BlockType		  Outport
@@ -1421,7 +1122,7 @@ Model {
 	  IconDisplay		  "Port number"
 	}
 	Line {
-	  ZOrder		  13
+	  ZOrder		  9
 	  SrcBlock		  "win"
 	  SrcPort		  1
 	  DstBlock		  " SFunction "
@@ -1429,7 +1130,7 @@ Model {
 	}
 	Line {
 	  Name			  "wout"
-	  ZOrder		  14
+	  ZOrder		  10
 	  Labels		  [0, 0]
 	  SrcBlock		  " SFunction "
 	  SrcPort		  2
@@ -1437,14 +1138,14 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  15
+	  ZOrder		  11
 	  SrcBlock		  " Demux "
 	  SrcPort		  1
 	  DstBlock		  " Terminator "
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  16
+	  ZOrder		  12
 	  SrcBlock		  " SFunction "
 	  SrcPort		  1
 	  DstBlock		  " Demux "
@@ -1469,7 +1170,6 @@ Model {
 	Name			"Begrenzung1"
 	Location		[227, 345, 838, 789]
 	Open			off
-	PortBlocksUseCompactNotation off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -1481,7 +1181,7 @@ Model {
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"100"
-	SIDHighWatermark	"18"
+	SIDHighWatermark	"15"
 	SIDPrevWatermark	"9"
 	Block {
 	  BlockType		  Inport
@@ -1494,36 +1194,37 @@ Model {
 	Block {
 	  BlockType		  Demux
 	  Name			  " Demux "
-	  SID			  "479::17"
+	  SID			  "479::14"
 	  Ports			  [1, 1]
 	  Position		  [270, 230, 320, 270]
-	  ZOrder		  8
+	  ZOrder		  5
 	  Outputs		  "1"
 	}
 	Block {
 	  BlockType		  S-Function
 	  Name			  " SFunction "
-	  SID			  "479::16"
+	  SID			  "479::13"
 	  Tag			  "Stateflow S-Function Gewerk2_Bahnplanung 11"
 	  Ports			  [1, 2]
 	  Position		  [180, 100, 230, 160]
-	  ZOrder		  7
+	  ZOrder		  4
 	  FunctionName		  "sf_sfun"
 	  PortCounts		  "[1 2]"
 	  SFunctionDeploymentMode off
-	  EnableBusSupport	  off
-	  SFcnIsStateOwnerBlock	  off
+	  EnableBusSupport	  on
 	  Port {
 	    PortNumber		    2
 	    Name		    "wout"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
 	  }
 	}
 	Block {
 	  BlockType		  Terminator
 	  Name			  " Terminator "
-	  SID			  "479::18"
+	  SID			  "479::15"
 	  Position		  [460, 241, 480, 259]
-	  ZOrder		  9
+	  ZOrder		  6
 	}
 	Block {
 	  BlockType		  Outport
@@ -1534,7 +1235,7 @@ Model {
 	  IconDisplay		  "Port number"
 	}
 	Line {
-	  ZOrder		  13
+	  ZOrder		  9
 	  SrcBlock		  "win"
 	  SrcPort		  1
 	  DstBlock		  " SFunction "
@@ -1542,7 +1243,7 @@ Model {
 	}
 	Line {
 	  Name			  "wout"
-	  ZOrder		  14
+	  ZOrder		  10
 	  Labels		  [0, 0]
 	  SrcBlock		  " SFunction "
 	  SrcPort		  2
@@ -1550,14 +1251,14 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  15
+	  ZOrder		  11
 	  SrcBlock		  " Demux "
 	  SrcPort		  1
 	  DstBlock		  " Terminator "
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  16
+	  ZOrder		  12
 	  SrcBlock		  " SFunction "
 	  SrcPort		  1
 	  DstBlock		  " Demux "
@@ -1582,7 +1283,6 @@ Model {
 	Name			"Begrenzung2"
 	Location		[227, 345, 838, 789]
 	Open			off
-	PortBlocksUseCompactNotation off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -1594,7 +1294,7 @@ Model {
 	TiledPageScale		1
 	ShowPageBoundaries	off
 	ZoomFactor		"100"
-	SIDHighWatermark	"18"
+	SIDHighWatermark	"15"
 	SIDPrevWatermark	"9"
 	Block {
 	  BlockType		  Inport
@@ -1607,36 +1307,37 @@ Model {
 	Block {
 	  BlockType		  Demux
 	  Name			  " Demux "
-	  SID			  "564::17"
+	  SID			  "564::14"
 	  Ports			  [1, 1]
 	  Position		  [270, 230, 320, 270]
-	  ZOrder		  8
+	  ZOrder		  5
 	  Outputs		  "1"
 	}
 	Block {
 	  BlockType		  S-Function
 	  Name			  " SFunction "
-	  SID			  "564::16"
+	  SID			  "564::13"
 	  Tag			  "Stateflow S-Function Gewerk2_Bahnplanung 12"
 	  Ports			  [1, 2]
 	  Position		  [180, 100, 230, 160]
-	  ZOrder		  7
+	  ZOrder		  4
 	  FunctionName		  "sf_sfun"
 	  PortCounts		  "[1 2]"
 	  SFunctionDeploymentMode off
-	  EnableBusSupport	  off
-	  SFcnIsStateOwnerBlock	  off
+	  EnableBusSupport	  on
 	  Port {
 	    PortNumber		    2
 	    Name		    "wout"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
 	  }
 	}
 	Block {
 	  BlockType		  Terminator
 	  Name			  " Terminator "
-	  SID			  "564::18"
+	  SID			  "564::15"
 	  Position		  [460, 241, 480, 259]
-	  ZOrder		  9
+	  ZOrder		  6
 	}
 	Block {
 	  BlockType		  Outport
@@ -1647,7 +1348,7 @@ Model {
 	  IconDisplay		  "Port number"
 	}
 	Line {
-	  ZOrder		  13
+	  ZOrder		  9
 	  SrcBlock		  "win"
 	  SrcPort		  1
 	  DstBlock		  " SFunction "
@@ -1655,7 +1356,7 @@ Model {
 	}
 	Line {
 	  Name			  "wout"
-	  ZOrder		  14
+	  ZOrder		  10
 	  Labels		  [0, 0]
 	  SrcBlock		  " SFunction "
 	  SrcPort		  2
@@ -1663,14 +1364,14 @@ Model {
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  15
+	  ZOrder		  11
 	  SrcBlock		  " Demux "
 	  SrcPort		  1
 	  DstBlock		  " Terminator "
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  16
+	  ZOrder		  12
 	  SrcBlock		  " SFunction "
 	  SrcPort		  1
 	  DstBlock		  " Demux "
@@ -1692,9 +1393,8 @@ Model {
       Variant		      off
       System {
 	Name			"Communication Block"
-	Location		[-7, -7, 1288, 688]
+	Location		[1672, -8, 3368, 1058]
 	Open			off
-	PortBlocksUseCompactNotation off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -1705,7 +1405,7 @@ Model {
 	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"80"
+	ZoomFactor		"100"
 	Block {
 	  BlockType		  Inport
 	  Name			  "Robotino.ID"
@@ -1807,14 +1507,11 @@ Model {
 	  Ports			  [2, 1]
 	  Position		  [200, 132, 270, 228]
 	  ZOrder		  -11
-	  LibraryVersion	  "1.6"
-	  SourceBlock		  "xpcutilitieslib/Byte Packing "
-	  SourceType		  "xpcbytepacking"
-	  SourceProductName	  "Simulink Real-Time"
-	  SourceProductBaseCode	  "XP"
-	  MaskPackedDataType	  "uint8"
-	  MaskUnpackedDataTypes	  "{'int16','int16'}"
-	  MaskAlignment		  "1"
+	  LibraryVersion	  "1.199"
+	  SourceBlock		  "xpcobsoletelib/Utilities/Pack "
+	  SourceType		  "xpcany2byte"
+	  datatypes		  "{'int16','int16'}"
+	  byteAlign		  "1"
 	}
 	Block {
 	  BlockType		  SubSystem
@@ -1831,9 +1528,8 @@ Model {
 	  Variant		  off
 	  System {
 	    Name		    "Robotino UDP transceiver"
-	    Location		    [-7, -7, 1288, 688]
+	    Location		    [655, 75, 1614, 996]
 	    Open		    off
-	    PortBlocksUseCompactNotation off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -1877,7 +1573,6 @@ Model {
 		Name			"If Robotino 1"
 		Location		[796, 121, 1539, 777]
 		Open			off
-		PortBlocksUseCompactNotation off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -1915,8 +1610,6 @@ Model {
 		  LibraryVersion	  "1.71"
 		  SourceBlock		  "xpcrtudplib/Legacy UDP/Receive "
 		  SourceType		  "xpcudpbytereceive"
-		  SourceProductName	  "Simulink Real-Time"
-		  SourceProductBaseCode	  "XP"
 		  ipAddress		  "0.0.0.0"
 		  ipPort		  "25011"
 		  width			  "20"
@@ -1933,8 +1626,6 @@ Model {
 		  LibraryVersion	  "1.71"
 		  SourceBlock		  "xpcrtudplib/Legacy UDP/Send "
 		  SourceType		  "xpcudpbytesend"
-		  SourceProductName	  "Simulink Real-Time"
-		  SourceProductBaseCode	  "XP"
 		  ipAddress		  "255.255.255.255"
 		  ipPort		  "25010"
 		  localPort		  "-1"
@@ -1994,7 +1685,6 @@ Model {
 		Name			"If Robotino 2"
 		Location		[796, 121, 1539, 777]
 		Open			off
-		PortBlocksUseCompactNotation off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -2032,8 +1722,6 @@ Model {
 		  LibraryVersion	  "1.71"
 		  SourceBlock		  "xpcrtudplib/Legacy UDP/Receive "
 		  SourceType		  "xpcudpbytereceive"
-		  SourceProductName	  "Simulink Real-Time"
-		  SourceProductBaseCode	  "XP"
 		  ipAddress		  "0.0.0.0"
 		  ipPort		  "25012"
 		  width			  "20"
@@ -2050,8 +1738,6 @@ Model {
 		  LibraryVersion	  "1.71"
 		  SourceBlock		  "xpcrtudplib/Legacy UDP/Send "
 		  SourceType		  "xpcudpbytesend"
-		  SourceProductName	  "Simulink Real-Time"
-		  SourceProductBaseCode	  "XP"
 		  ipAddress		  "255.255.255.255"
 		  ipPort		  "25020"
 		  localPort		  "-1"
@@ -2111,7 +1797,6 @@ Model {
 		Name			"If Robotino 3"
 		Location		[796, 121, 1539, 777]
 		Open			off
-		PortBlocksUseCompactNotation off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -2149,8 +1834,6 @@ Model {
 		  LibraryVersion	  "1.71"
 		  SourceBlock		  "xpcrtudplib/Legacy UDP/Receive "
 		  SourceType		  "xpcudpbytereceive"
-		  SourceProductName	  "Simulink Real-Time"
-		  SourceProductBaseCode	  "XP"
 		  ipAddress		  "0.0.0.0"
 		  ipPort		  "25013"
 		  width			  "20"
@@ -2167,8 +1850,6 @@ Model {
 		  LibraryVersion	  "1.71"
 		  SourceBlock		  "xpcrtudplib/Legacy UDP/Send "
 		  SourceType		  "xpcudpbytesend"
-		  SourceProductName	  "Simulink Real-Time"
-		  SourceProductBaseCode	  "XP"
 		  ipAddress		  "255.255.255.255"
 		  ipPort		  "25030"
 		  localPort		  "-1"
@@ -2228,7 +1909,6 @@ Model {
 		Name			"If Robotino 4"
 		Location		[796, 121, 1539, 777]
 		Open			off
-		PortBlocksUseCompactNotation off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -2266,8 +1946,6 @@ Model {
 		  LibraryVersion	  "1.71"
 		  SourceBlock		  "xpcrtudplib/Legacy UDP/Receive "
 		  SourceType		  "xpcudpbytereceive"
-		  SourceProductName	  "Simulink Real-Time"
-		  SourceProductBaseCode	  "XP"
 		  ipAddress		  "0.0.0.0"
 		  ipPort		  "25014"
 		  width			  "20"
@@ -2284,8 +1962,6 @@ Model {
 		  LibraryVersion	  "1.71"
 		  SourceBlock		  "xpcrtudplib/Legacy UDP/Send "
 		  SourceType		  "xpcudpbytesend"
-		  SourceProductName	  "Simulink Real-Time"
-		  SourceProductBaseCode	  "XP"
 		  ipAddress		  "255.255.255.255"
 		  ipPort		  "25040"
 		  localPort		  "-1"
@@ -2529,14 +2205,12 @@ Model {
 	  Ports			  [1, 5]
 	  Position		  [440, 21, 525, 259]
 	  ZOrder		  -13
-	  LibraryVersion	  "1.6"
-	  SourceBlock		  "xpcutilitieslib/Byte Unpacking "
-	  SourceType		  "xpcbytepacking"
-	  SourceProductName	  "Simulink Real-Time"
-	  SourceProductBaseCode	  "XP"
-	  MaskUnpackedDataTypes	  "{'int32','int32','int32','int32','int32'}"
-	  MaskUnpackedDataSizes	  "{1, 1, 1, 1, 1}"
-	  MaskAlignment		  "1"
+	  LibraryVersion	  "1.199"
+	  SourceBlock		  "xpcobsoletelib/Utilities/Unpack "
+	  SourceType		  "xpcbyte2any"
+	  dimensions		  "{1, 1, 1, 1, 1}"
+	  datatypes		  "{'int32','int32','int32','int32','int32'}"
+	  byteAlign		  "1"
 	}
 	Block {
 	  BlockType		  Outport
@@ -2702,430 +2376,13 @@ Model {
 	  DstBlock		  "Unpack"
 	  DstPort		  1
 	}
-      }
-    }
-    Block {
-      BlockType		      SubSystem
-      Name		      "Gewerk2"
-      SID		      "829"
-      Ports		      [2, 1]
-      Position		      [875, 84, 1025, 271]
-      ZOrder		      19
-      RequestExecContextInheritance off
-      Variant		      off
-      System {
-	Name			"Gewerk2"
-	Location		[-7, 0, 646, 687]
-	Open			off
-	PortBlocksUseCompactNotation off
-	ModelBrowserVisibility	off
-	ModelBrowserWidth	200
-	ScreenColor		"white"
-	PaperOrientation	"landscape"
-	PaperPositionMode	"auto"
-	PaperType		"usletter"
-	PaperUnits		"inches"
-	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
-	TiledPageScale		1
-	ShowPageBoundaries	off
-	ZoomFactor		"60"
-	Block {
-	  BlockType		  Inport
-	  Name			  "56 elements"
-	  SID			  "830"
-	  Position		  [20, 43, 50, 57]
-	  ZOrder		  16
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Inport
-	  Name			  "Aufträge"
-	  SID			  "855"
-	  Position		  [15, 118, 55, 132]
-	  ZOrder		  37
-	  Port			  "2"
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  SubSystem
-	  Name			  "Chart"
-	  SID			  "856"
-	  Ports			  []
-	  Position		  [520, 29, 580, 81]
-	  ZOrder		  38
-	  ErrorFcn		  "Stateflow.Translate.translate"
-	  PermitHierarchicalResolution "ExplicitOnly"
-	  TreatAsAtomicUnit	  on
-	  RequestExecContextInheritance	off
-	  SFBlockType		  "Chart"
-	  Variant		  off
-	  System {
-	    Name		    "Chart"
-	    Location		    [-7, 0, 646, 687]
-	    Open		    on
-	    PortBlocksUseCompactNotation off
-	    ModelBrowserVisibility  off
-	    ModelBrowserWidth	    200
-	    ScreenColor		    "white"
-	    PaperOrientation	    "landscape"
-	    PaperPositionMode	    "auto"
-	    PaperType		    "usletter"
-	    PaperUnits		    "inches"
-	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
-	    TiledPageScale	    1
-	    ShowPageBoundaries	    off
-	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "84"
-	    Block {
-	      BlockType		      Demux
-	      Name		      " Demux "
-	      SID		      "856::82"
-	      Ports		      [1, 1]
-	      Position		      [270, 100, 320, 140]
-	      ZOrder		      62
-	      Outputs		      "1"
-	    }
-	    Block {
-	      BlockType		      Ground
-	      Name		      " Ground "
-	      SID		      "856::84"
-	      Position		      [20, 111, 40, 129]
-	      ZOrder		      64
-	    }
-	    Block {
-	      BlockType		      S-Function
-	      Name		      " SFunction "
-	      SID		      "856::81"
-	      Tag		      "Stateflow S-Function Gewerk2_Bahnplanung 13"
-	      Ports		      [1, 1]
-	      Position		      [180, 100, 230, 140]
-	      ZOrder		      61
-	      FunctionName	      "sf_sfun"
-	      PortCounts	      "[1 1]"
-	      SFunctionDeploymentMode off
-	      EnableBusSupport	      off
-	      SFcnIsStateOwnerBlock   off
-	    }
-	    Block {
-	      BlockType		      Terminator
-	      Name		      " Terminator "
-	      SID		      "856::83"
-	      Position		      [460, 111, 480, 129]
-	      ZOrder		      63
-	    }
-	    Line {
-	      ZOrder		      4
-	      SrcBlock		      " Ground "
-	      SrcPort		      1
-	      DstBlock		      " SFunction "
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      5
-	      SrcBlock		      " Demux "
-	      SrcPort		      1
-	      DstBlock		      " Terminator "
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      6
-	      SrcBlock		      " SFunction "
-	      SrcPort		      1
-	      DstBlock		      " Demux "
-	      DstPort		      1
-	    }
-	  }
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.XRobot1"
-	  SID			  "807"
-	  Position		  [340, 20, 400, 50]
-	  ZOrder		  2
-	  Expr			  "u(1)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.XRobot2"
-	  SID			  "836"
-	  Position		  [340, 230, 400, 260]
-	  ZOrder		  22
-	  Expr			  "u(4)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.XRobot3"
-	  SID			  "839"
-	  Position		  [340, 455, 400, 485]
-	  ZOrder		  25
-	  Expr			  "u(7)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.XRobot4"
-	  SID			  "842"
-	  Position		  [340, 660, 400, 690]
-	  ZOrder		  28
-	  Expr			  "u(10)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.YRobot1"
-	  SID			  "832"
-	  Position		  [340, 80, 400, 110]
-	  ZOrder		  18
-	  Expr			  "u(2)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.YRobot2"
-	  SID			  "837"
-	  Position		  [340, 305, 400, 335]
-	  ZOrder		  23
-	  Expr			  "u(5)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.YRobot3"
-	  SID			  "840"
-	  Position		  [340, 515, 400, 545]
-	  ZOrder		  26
-	  Expr			  "u(8)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.YRobot4"
-	  SID			  "843"
-	  Position		  [335, 725, 395, 755]
-	  ZOrder		  29
-	  Expr			  "u(11)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.°Robot1"
-	  SID			  "833"
-	  Position		  [340, 150, 400, 180]
-	  ZOrder		  19
-	  Expr			  "u(3)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.°Robot2"
-	  SID			  "838"
-	  Position		  [340, 375, 400, 405]
-	  ZOrder		  24
-	  Expr			  "u(6)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.°Robot3"
-	  SID			  "841"
-	  Position		  [340, 585, 400, 615]
-	  ZOrder		  27
-	  Expr			  "u(9)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.°Robot4"
-	  SID			  "844"
-	  Position		  [335, 790, 395, 820]
-	  ZOrder		  30
-	  Expr			  "u(12)"
-	}
-	Block {
-	  BlockType		  Terminator
-	  Name			  "Terminator10"
-	  SID			  "850"
-	  Position		  [460, 590, 480, 610]
-	  ZOrder		  36
-	}
-	Block {
-	  BlockType		  Terminator
-	  Name			  "Terminator4"
-	  SID			  "848"
-	  Position		  [460, 460, 480, 480]
-	  ZOrder		  34
-	}
-	Block {
-	  BlockType		  Terminator
-	  Name			  "Terminator9"
-	  SID			  "849"
-	  Position		  [460, 520, 480, 540]
-	  ZOrder		  35
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "UDP data"
-	  SID			  "831"
-	  Position		  [270, 48, 300, 62]
-	  ZOrder		  17
-	  IconDisplay		  "Port number"
-	}
-	Line {
-	  ZOrder		  64
-	  SrcBlock		  "Pos.XRobot1"
-	  SrcPort		  1
-	  Points		  [55, 0]
-	}
-	Line {
-	  ZOrder		  105
-	  SrcBlock		  "56 elements"
-	  SrcPort		  1
-	  Points		  [157, 0]
-	  Branch {
-	    ZOrder		    104
-	    Points		    [0, 5]
-	    Branch {
-	      ZOrder		      106
-	      DstBlock		      "UDP data"
-	      DstPort		      1
-	    }
-	    Branch {
-	      ZOrder		      58
-	      Points		      [0, 40]
-	      Branch {
-		ZOrder			114
-		DstBlock		"Pos.YRobot1"
-		DstPort			1
-	      }
-	      Branch {
-		ZOrder			113
-		Points			[0, 70]
-		Branch {
-		  ZOrder		  115
-		  Points		  [0, 80]
-		  Branch {
-		    ZOrder		    109
-		    DstBlock		    "Pos.XRobot2"
-		    DstPort		    1
-		  }
-		  Branch {
-		    ZOrder		    108
-		    Points		    [0, 75]
-		    Branch {
-		    ZOrder		    118
-		    Points		    [0, 70; 1, 0]
-		    Branch {
-		    ZOrder		    120
-		    Points		    [0, 80]
-		    Branch {
-		    ZOrder		    122
-		    Points		    [0, 60]
-		    Branch {
-		    ZOrder		    124
-		    Points		    [0, 70]
-		    Branch {
-		    ZOrder		    126
-		    Points		    [0, 75]
-		    Branch {
-		    ZOrder		    128
-		    Points		    [0, 65]
-		    Branch {
-		    ZOrder		    130
-		    Points		    [0, 65]
-		    DstBlock		    "Pos.°Robot4"
-		    DstPort		    1
-		    }
-		    Branch {
-		    ZOrder		    129
-		    DstBlock		    "Pos.YRobot4"
-		    DstPort		    1
-		    }
-		    }
-		    Branch {
-		    ZOrder		    127
-		    DstBlock		    "Pos.XRobot4"
-		    DstPort		    1
-		    }
-		    }
-		    Branch {
-		    ZOrder		    125
-		    DstBlock		    "Pos.°Robot3"
-		    DstPort		    1
-		    }
-		    }
-		    Branch {
-		    ZOrder		    123
-		    DstBlock		    "Pos.YRobot3"
-		    DstPort		    1
-		    }
-		    }
-		    Branch {
-		    ZOrder		    121
-		    DstBlock		    "Pos.XRobot3"
-		    DstPort		    1
-		    }
-		    }
-		    Branch {
-		    ZOrder		    119
-		    DstBlock		    "Pos.°Robot2"
-		    DstPort		    1
-		    }
-		    }
-		    Branch {
-		    ZOrder		    117
-		    DstBlock		    "Pos.YRobot2"
-		    DstPort		    1
-		    }
-		  }
-		}
-		Branch {
-		  ZOrder		  111
-		  DstBlock		  "Pos.°Robot1"
-		  DstPort		  1
-		}
-	      }
-	    }
-	  }
-	  Branch {
-	    ZOrder		    41
-	    Points		    [0, -15]
-	    DstBlock		    "Pos.XRobot1"
-	    DstPort		    1
-	  }
-	}
-	Line {
-	  ZOrder		  131
-	  SrcBlock		  "Pos.°Robot2"
-	  SrcPort		  1
-	  Points		  [55, 0]
-	}
-	Line {
-	  ZOrder		  132
-	  SrcBlock		  "Pos.YRobot2"
-	  SrcPort		  1
-	  Points		  [55, 0]
-	}
-	Line {
-	  ZOrder		  133
-	  SrcBlock		  "Pos.XRobot2"
-	  SrcPort		  1
-	  Points		  [55, 0]
-	}
-	Line {
-	  ZOrder		  137
-	  SrcBlock		  "Pos.XRobot3"
-	  SrcPort		  1
-	  DstBlock		  "Terminator4"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  138
-	  SrcBlock		  "Pos.YRobot3"
-	  SrcPort		  1
-	  DstBlock		  "Terminator9"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  139
-	  SrcBlock		  "Pos.°Robot3"
-	  SrcPort		  1
-	  DstBlock		  "Terminator10"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  141
-	  Points		  [27, 283; 41, 0; 0, -15]
+	Annotation {
+	  SID			  "754"
+	  Position		  [840, 359, 842, 374]
+	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  off
+	  FixedWidth		  off
+	  ZOrder		  -1
 	}
       }
     }
@@ -3136,6 +2393,38 @@ Model {
       Position		      [675, 355, 735, 385]
       ZOrder		      3
       Expr		      "u(1)"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "Pos.Robot1"
+      SID		      "807"
+      Position		      [775, 65, 835, 95]
+      ZOrder		      2
+      Expr		      "u(1)"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "Pos.Robot2"
+      SID		      "814"
+      Position		      [775, 120, 835, 150]
+      ZOrder		      9
+      Expr		      "u(6)"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "Pos.Robot3"
+      SID		      "815"
+      Position		      [775, 175, 835, 205]
+      ZOrder		      10
+      Expr		      "u(9)"
+    }
+    Block {
+      BlockType		      Fcn
+      Name		      "Pos.Robot4"
+      SID		      "816"
+      Position		      [775, 230, 835, 260]
+      ZOrder		      11
+      Expr		      "u(12)"
     }
     Block {
       BlockType		      SubSystem
@@ -3152,12 +2441,13 @@ Model {
       Port {
 	PortNumber		1
 	Name			"15 elements"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
       }
       System {
 	Name			"Robotino interface"
 	Location		[354, 160, 1321, 850]
 	Open			off
-	PortBlocksUseCompactNotation off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -3266,7 +2556,6 @@ Model {
 	    Name		    "assemble robotino response"
 	    Location		    [227, 345, 838, 789]
 	    Open		    off
-	    PortBlocksUseCompactNotation off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -3278,7 +2567,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "24"
+	    SIDHighWatermark	    "21"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "v_x_in"
@@ -3344,36 +2633,37 @@ Model {
 	    Block {
 	      BlockType		      Demux
 	      Name		      " Demux "
-	      SID		      "770::23"
+	      SID		      "770::20"
 	      Ports		      [1, 1]
 	      Position		      [270, 230, 320, 270]
-	      ZOrder		      8
+	      ZOrder		      5
 	      Outputs		      "1"
 	    }
 	    Block {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
-	      SID		      "770::22"
+	      SID		      "770::19"
 	      Tag		      "Stateflow S-Function Gewerk2_Bahnplanung 9"
 	      Ports		      [7, 2]
 	      Position		      [180, 100, 230, 260]
-	      ZOrder		      7
+	      ZOrder		      4
 	      FunctionName	      "sf_sfun"
 	      PortCounts	      "[7 2]"
 	      SFunctionDeploymentMode off
-	      EnableBusSupport	      off
-	      SFcnIsStateOwnerBlock   off
+	      EnableBusSupport	      on
 	      Port {
 		PortNumber		2
 		Name			"robotino_response"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
 	      }
 	    }
 	    Block {
 	      BlockType		      Terminator
 	      Name		      " Terminator "
-	      SID		      "770::24"
+	      SID		      "770::21"
 	      Position		      [460, 241, 480, 259]
-	      ZOrder		      9
+	      ZOrder		      6
 	    }
 	    Block {
 	      BlockType		      Outport
@@ -3384,49 +2674,49 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      21
+	      ZOrder		      11
 	      SrcBlock		      "v_x_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      22
+	      ZOrder		      12
 	      SrcBlock		      "v_y_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      23
+	      ZOrder		      13
 	      SrcBlock		      "v_theta_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      3
 	    }
 	    Line {
-	      ZOrder		      24
+	      ZOrder		      14
 	      SrcBlock		      "distance_measuring_sensors_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      4
 	    }
 	    Line {
-	      ZOrder		      25
+	      ZOrder		      15
 	      SrcBlock		      "bumper_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      5
 	    }
 	    Line {
-	      ZOrder		      26
+	      ZOrder		      16
 	      SrcBlock		      "light_barrier_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      6
 	    }
 	    Line {
-	      ZOrder		      27
+	      ZOrder		      17
 	      SrcBlock		      "slider_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
@@ -3434,7 +2724,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "robotino_response"
-	      ZOrder		      28
+	      ZOrder		      18
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      2
@@ -3442,14 +2732,14 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      29
+	      ZOrder		      19
 	      SrcBlock		      " Demux "
 	      SrcPort		      1
 	      DstBlock		      " Terminator "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      30
+	      ZOrder		      20
 	      SrcBlock		      " SFunction "
 	      SrcPort		      1
 	      DstBlock		      " Demux "
@@ -3475,7 +2765,6 @@ Model {
 	    Name		    "distance converter"
 	    Location		    [227, 345, 838, 789]
 	    Open		    off
-	    PortBlocksUseCompactNotation off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -3487,7 +2776,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "18"
+	    SIDHighWatermark	    "15"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "dms_in"
@@ -3499,36 +2788,37 @@ Model {
 	    Block {
 	      BlockType		      Demux
 	      Name		      " Demux "
-	      SID		      "771::17"
+	      SID		      "771::14"
 	      Ports		      [1, 1]
 	      Position		      [270, 230, 320, 270]
-	      ZOrder		      8
+	      ZOrder		      5
 	      Outputs		      "1"
 	    }
 	    Block {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
-	      SID		      "771::16"
+	      SID		      "771::13"
 	      Tag		      "Stateflow S-Function Gewerk2_Bahnplanung 8"
 	      Ports		      [1, 2]
 	      Position		      [180, 100, 230, 160]
-	      ZOrder		      7
+	      ZOrder		      4
 	      FunctionName	      "sf_sfun"
 	      PortCounts	      "[1 2]"
 	      SFunctionDeploymentMode off
-	      EnableBusSupport	      off
-	      SFcnIsStateOwnerBlock   off
+	      EnableBusSupport	      on
 	      Port {
 		PortNumber		2
 		Name			"dms_out"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
 	      }
 	    }
 	    Block {
 	      BlockType		      Terminator
 	      Name		      " Terminator "
-	      SID		      "771::18"
+	      SID		      "771::15"
 	      Position		      [460, 241, 480, 259]
-	      ZOrder		      9
+	      ZOrder		      6
 	    }
 	    Block {
 	      BlockType		      Outport
@@ -3539,7 +2829,7 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      9
+	      ZOrder		      5
 	      SrcBlock		      "dms_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
@@ -3547,7 +2837,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "dms_out"
-	      ZOrder		      10
+	      ZOrder		      6
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      2
@@ -3555,14 +2845,14 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      11
+	      ZOrder		      7
 	      SrcBlock		      " Demux "
 	      SrcPort		      1
 	      DstBlock		      " Terminator "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      12
+	      ZOrder		      8
 	      SrcBlock		      " SFunction "
 	      SrcPort		      1
 	      DstBlock		      " Demux "
@@ -3588,7 +2878,6 @@ Model {
 	    Name		    "light barrier & slider"
 	    Location		    [227, 345, 838, 789]
 	    Open		    off
-	    PortBlocksUseCompactNotation off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -3600,7 +2889,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "19"
+	    SIDHighWatermark	    "16"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "di03_bump_in"
@@ -3612,40 +2901,43 @@ Model {
 	    Block {
 	      BlockType		      Demux
 	      Name		      " Demux "
-	      SID		      "772::18"
+	      SID		      "772::15"
 	      Ports		      [1, 1]
 	      Position		      [270, 230, 320, 270]
-	      ZOrder		      8
+	      ZOrder		      5
 	      Outputs		      "1"
 	    }
 	    Block {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
-	      SID		      "772::17"
+	      SID		      "772::14"
 	      Tag		      "Stateflow S-Function Gewerk2_Bahnplanung 10"
 	      Ports		      [1, 3]
 	      Position		      [180, 100, 230, 180]
-	      ZOrder		      7
+	      ZOrder		      4
 	      FunctionName	      "sf_sfun"
 	      PortCounts	      "[1 3]"
 	      SFunctionDeploymentMode off
-	      EnableBusSupport	      off
-	      SFcnIsStateOwnerBlock   off
+	      EnableBusSupport	      on
 	      Port {
 		PortNumber		2
 		Name			"light_barrier"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		3
 		Name			"slider"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
 	      }
 	    }
 	    Block {
 	      BlockType		      Terminator
 	      Name		      " Terminator "
-	      SID		      "772::19"
+	      SID		      "772::16"
 	      Position		      [460, 241, 480, 259]
-	      ZOrder		      9
+	      ZOrder		      6
 	    }
 	    Block {
 	      BlockType		      Outport
@@ -3665,7 +2957,7 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      11
+	      ZOrder		      6
 	      SrcBlock		      "di03_bump_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
@@ -3673,7 +2965,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "light_barrier"
-	      ZOrder		      12
+	      ZOrder		      7
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      2
@@ -3682,7 +2974,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "slider"
-	      ZOrder		      13
+	      ZOrder		      8
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      3
@@ -3690,14 +2982,14 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      14
+	      ZOrder		      9
 	      SrcBlock		      " Demux "
 	      SrcPort		      1
 	      DstBlock		      " Terminator "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      15
+	      ZOrder		      10
 	      SrcBlock		      " SFunction "
 	      SrcPort		      1
 	      DstBlock		      " Demux "
@@ -3723,7 +3015,6 @@ Model {
 	    Name		    "receive\ndirection, unit & velocity converter"
 	    Location		    [227, 345, 838, 789]
 	    Open		    off
-	    PortBlocksUseCompactNotation off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -3735,7 +3026,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "26"
+	    SIDHighWatermark	    "23"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "number_of_robot"
@@ -3801,44 +3092,49 @@ Model {
 	    Block {
 	      BlockType		      Demux
 	      Name		      " Demux "
-	      SID		      "773::25"
+	      SID		      "773::22"
 	      Ports		      [1, 1]
 	      Position		      [270, 245, 320, 285]
-	      ZOrder		      9
+	      ZOrder		      6
 	      Outputs		      "1"
 	    }
 	    Block {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
-	      SID		      "773::24"
+	      SID		      "773::21"
 	      Tag		      "Stateflow S-Function Gewerk2_Bahnplanung 5"
 	      Ports		      [7, 4]
 	      Position		      [180, 100, 230, 260]
-	      ZOrder		      8
+	      ZOrder		      5
 	      FunctionName	      "sf_sfun"
 	      PortCounts	      "[7 4]"
 	      SFunctionDeploymentMode off
-	      EnableBusSupport	      off
-	      SFcnIsStateOwnerBlock   off
+	      EnableBusSupport	      on
 	      Port {
 		PortNumber		2
 		Name			"v_x_out"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		3
 		Name			"v_y_out"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		4
 		Name			"v_theta_out"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
 	      }
 	    }
 	    Block {
 	      BlockType		      Terminator
 	      Name		      " Terminator "
-	      SID		      "773::26"
+	      SID		      "773::23"
 	      Position		      [460, 256, 480, 274]
-	      ZOrder		      10
+	      ZOrder		      7
 	    }
 	    Block {
 	      BlockType		      Outport
@@ -3867,49 +3163,49 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      25
+	      ZOrder		      13
 	      SrcBlock		      "number_of_robot"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      26
+	      ZOrder		      14
 	      SrcBlock		      "direction_motor0_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      27
+	      ZOrder		      15
 	      SrcBlock		      "velocity_motor0_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      3
 	    }
 	    Line {
-	      ZOrder		      28
+	      ZOrder		      16
 	      SrcBlock		      "direction_motor1_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      4
 	    }
 	    Line {
-	      ZOrder		      29
+	      ZOrder		      17
 	      SrcBlock		      "velocity_motor1_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      5
 	    }
 	    Line {
-	      ZOrder		      30
+	      ZOrder		      18
 	      SrcBlock		      "direction_motor2_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      6
 	    }
 	    Line {
-	      ZOrder		      31
+	      ZOrder		      19
 	      SrcBlock		      "velocity_motor2_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
@@ -3917,7 +3213,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "v_x_out"
-	      ZOrder		      32
+	      ZOrder		      20
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      2
@@ -3926,7 +3222,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "v_y_out"
-	      ZOrder		      33
+	      ZOrder		      21
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      3
@@ -3935,7 +3231,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "v_theta_out"
-	      ZOrder		      34
+	      ZOrder		      22
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      4
@@ -3943,14 +3239,14 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      35
+	      ZOrder		      23
 	      SrcBlock		      " Demux "
 	      SrcPort		      1
 	      DstBlock		      " Terminator "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      36
+	      ZOrder		      24
 	      SrcBlock		      " SFunction "
 	      SrcPort		      1
 	      Points		      [20, 0]
@@ -3972,7 +3268,6 @@ Model {
 	    Name		    "serial communication"
 	    Location		    [1877, 123, 3209, 1211]
 	    Open		    off
-	    PortBlocksUseCompactNotation off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -4129,8 +3424,6 @@ Model {
 	      }
 	      SourceBlock	      "xpcseriallib/Mainboard/Baseboard\nSerial"
 	      SourceType	      "Baseboard RS232 Send Receive"
-	      SourceProductName	      "Simulink Real-Time"
-	      SourceProductBaseCode   "XP"
 	      ContentPreviewEnabled   off
 	      group		      "Transmit Setup"
 	      port		      "2"
@@ -4223,7 +3516,6 @@ Model {
 		Name			"error filter & protocol disassembler"
 		Location		[227, 345, 838, 789]
 		Open			off
-		PortBlocksUseCompactNotation off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -4235,7 +3527,7 @@ Model {
 		TiledPageScale		1
 		ShowPageBoundaries	off
 		ZoomFactor		"100"
-		SIDHighWatermark	"28"
+		SIDHighWatermark	"25"
 		Block {
 		  BlockType		  Inport
 		  Name			  "response"
@@ -4256,72 +3548,91 @@ Model {
 		Block {
 		  BlockType		  Demux
 		  Name			  " Demux "
-		  SID			  "789::27"
+		  SID			  "789::24"
 		  Ports			  [1, 1]
 		  Position		  [270, 495, 320, 535]
-		  ZOrder		  8
+		  ZOrder		  5
 		  Outputs		  "1"
 		}
 		Block {
 		  BlockType		  S-Function
 		  Name			  " SFunction "
-		  SID			  "789::26"
+		  SID			  "789::23"
 		  Tag			  "Stateflow S-Function Gewerk2_Bahnplanung 4"
 		  Ports			  [2, 11]
 		  Position		  [180, 95, 230, 335]
-		  ZOrder		  7
+		  ZOrder		  4
 		  FunctionName		  "sf_sfun"
 		  PortCounts		  "[2 11]"
 		  SFunctionDeploymentMode off
-		  EnableBusSupport	  off
-		  SFcnIsStateOwnerBlock	  off
+		  EnableBusSupport	  on
 		  Port {
 		    PortNumber		    2
 		    Name		    "direction_motor0_out"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
 		  }
 		  Port {
 		    PortNumber		    3
 		    Name		    "velocity_motor0_out"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
 		  }
 		  Port {
 		    PortNumber		    4
 		    Name		    "direction_motor1_out"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
 		  }
 		  Port {
 		    PortNumber		    5
 		    Name		    "velocity_motor1_out"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
 		  }
 		  Port {
 		    PortNumber		    6
 		    Name		    "direction_motor2_out"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
 		  }
 		  Port {
 		    PortNumber		    7
 		    Name		    "velocity_motor2_out"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
 		  }
 		  Port {
 		    PortNumber		    8
 		    Name		    "distance_measuring_sensors_out"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
 		  }
 		  Port {
 		    PortNumber		    9
 		    Name		    "di03_bump_out"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
 		  }
 		  Port {
 		    PortNumber		    10
 		    Name		    "bumper_out"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
 		  }
 		  Port {
 		    PortNumber		    11
 		    Name		    "error_free_resp_out"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
 		  }
 		}
 		Block {
 		  BlockType		  Terminator
 		  Name			  " Terminator "
-		  SID			  "789::28"
+		  SID			  "789::25"
 		  Position		  [460, 506, 480, 524]
-		  ZOrder		  9
+		  ZOrder		  6
 		}
 		Block {
 		  BlockType		  Outport
@@ -4413,7 +3724,7 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-		  ZOrder		  29
+		  ZOrder		  15
 		  SrcBlock		  "response"
 		  SrcPort		  1
 		  Points		  [120, 0]
@@ -4421,7 +3732,7 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  30
+		  ZOrder		  16
 		  SrcBlock		  "error_free_resp_in"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
@@ -4429,7 +3740,7 @@ Model {
 		}
 		Line {
 		  Name			  "direction_motor0_out"
-		  ZOrder		  31
+		  ZOrder		  17
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  2
@@ -4438,7 +3749,7 @@ Model {
 		}
 		Line {
 		  Name			  "velocity_motor0_out"
-		  ZOrder		  32
+		  ZOrder		  18
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  3
@@ -4447,7 +3758,7 @@ Model {
 		}
 		Line {
 		  Name			  "direction_motor1_out"
-		  ZOrder		  33
+		  ZOrder		  19
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  4
@@ -4456,7 +3767,7 @@ Model {
 		}
 		Line {
 		  Name			  "velocity_motor1_out"
-		  ZOrder		  34
+		  ZOrder		  20
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  5
@@ -4465,7 +3776,7 @@ Model {
 		}
 		Line {
 		  Name			  "direction_motor2_out"
-		  ZOrder		  35
+		  ZOrder		  21
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  6
@@ -4474,7 +3785,7 @@ Model {
 		}
 		Line {
 		  Name			  "velocity_motor2_out"
-		  ZOrder		  36
+		  ZOrder		  22
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  7
@@ -4483,7 +3794,7 @@ Model {
 		}
 		Line {
 		  Name			  "distance_measuring_sensors_out"
-		  ZOrder		  37
+		  ZOrder		  23
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  8
@@ -4492,7 +3803,7 @@ Model {
 		}
 		Line {
 		  Name			  "di03_bump_out"
-		  ZOrder		  38
+		  ZOrder		  24
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  9
@@ -4501,7 +3812,7 @@ Model {
 		}
 		Line {
 		  Name			  "bumper_out"
-		  ZOrder		  39
+		  ZOrder		  25
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  10
@@ -4510,7 +3821,7 @@ Model {
 		}
 		Line {
 		  Name			  "error_free_resp_out"
-		  ZOrder		  40
+		  ZOrder		  26
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  11
@@ -4518,14 +3829,14 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  41
+		  ZOrder		  27
 		  SrcBlock		  " Demux "
 		  SrcPort		  1
 		  DstBlock		  " Terminator "
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  42
+		  ZOrder		  28
 		  SrcBlock		  " SFunction "
 		  SrcPort		  1
 		  DstBlock		  " Demux "
@@ -4540,7 +3851,7 @@ Model {
 	      Position		      [780, 460, 810, 490]
 	      ZOrder		      -16
 	      BlockMirror	      on
-	      InitialCondition	      "[zeros(1,102)]"
+	      X0		      "[zeros(1,102)]"
 	    }
 	    Block {
 	      BlockType		      SubSystem
@@ -4559,7 +3870,6 @@ Model {
 		Name			"protocol adder & optional velocity adaption"
 		Location		[227, 345, 838, 789]
 		Open			off
-		PortBlocksUseCompactNotation off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -4571,7 +3881,7 @@ Model {
 		TiledPageScale		1
 		ShowPageBoundaries	off
 		ZoomFactor		"100"
-		SIDHighWatermark	"26"
+		SIDHighWatermark	"23"
 		Block {
 		  BlockType		  Inport
 		  Name			  "dir"
@@ -4655,36 +3965,37 @@ Model {
 		Block {
 		  BlockType		  Demux
 		  Name			  " Demux "
-		  SID			  "791::25"
+		  SID			  "791::22"
 		  Ports			  [1, 1]
 		  Position		  [270, 230, 320, 270]
-		  ZOrder		  8
+		  ZOrder		  5
 		  Outputs		  "1"
 		}
 		Block {
 		  BlockType		  S-Function
 		  Name			  " SFunction "
-		  SID			  "791::24"
+		  SID			  "791::21"
 		  Tag			  "Stateflow S-Function Gewerk2_Bahnplanung 2"
 		  Ports			  [9, 2]
 		  Position		  [180, 100, 230, 300]
-		  ZOrder		  7
+		  ZOrder		  4
 		  FunctionName		  "sf_sfun"
 		  PortCounts		  "[9 2]"
 		  SFunctionDeploymentMode off
-		  EnableBusSupport	  off
-		  SFcnIsStateOwnerBlock	  off
+		  EnableBusSupport	  on
 		  Port {
 		    PortNumber		    2
 		    Name		    "message"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
 		  }
 		}
 		Block {
 		  BlockType		  Terminator
 		  Name			  " Terminator "
-		  SID			  "791::26"
+		  SID			  "791::23"
 		  Position		  [460, 241, 480, 259]
-		  ZOrder		  9
+		  ZOrder		  6
 		}
 		Block {
 		  BlockType		  Outport
@@ -4695,63 +4006,63 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-		  ZOrder		  25
+		  ZOrder		  13
 		  SrcBlock		  "dir"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  26
+		  ZOrder		  14
 		  SrcBlock		  "vel"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  2
 		}
 		Line {
-		  ZOrder		  27
+		  ZOrder		  15
 		  SrcBlock		  "direction_motor0_in"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  3
 		}
 		Line {
-		  ZOrder		  28
+		  ZOrder		  16
 		  SrcBlock		  "velocity_motor0_in"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  4
 		}
 		Line {
-		  ZOrder		  29
+		  ZOrder		  17
 		  SrcBlock		  "direction_motor1_in"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  5
 		}
 		Line {
-		  ZOrder		  30
+		  ZOrder		  18
 		  SrcBlock		  "velocity_motor1_in"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  6
 		}
 		Line {
-		  ZOrder		  31
+		  ZOrder		  19
 		  SrcBlock		  "direction_motor2_in"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  7
 		}
 		Line {
-		  ZOrder		  32
+		  ZOrder		  20
 		  SrcBlock		  "velocity_motor2_in"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
 		  DstPort		  8
 		}
 		Line {
-		  ZOrder		  33
+		  ZOrder		  21
 		  SrcBlock		  "stop_in"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
@@ -4759,7 +4070,7 @@ Model {
 		}
 		Line {
 		  Name			  "message"
-		  ZOrder		  34
+		  ZOrder		  22
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  2
@@ -4767,14 +4078,14 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  35
+		  ZOrder		  23
 		  SrcBlock		  " Demux "
 		  SrcPort		  1
 		  DstBlock		  " Terminator "
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  36
+		  ZOrder		  24
 		  SrcBlock		  " SFunction "
 		  SrcPort		  1
 		  DstBlock		  " Demux "
@@ -4799,7 +4110,6 @@ Model {
 		Name			"stop by bumper"
 		Location		[227, 345, 838, 789]
 		Open			off
-		PortBlocksUseCompactNotation off
 		ModelBrowserVisibility	off
 		ModelBrowserWidth	200
 		ScreenColor		"white"
@@ -4811,7 +4121,7 @@ Model {
 		TiledPageScale		1
 		ShowPageBoundaries	off
 		ZoomFactor		"100"
-		SIDHighWatermark	"20"
+		SIDHighWatermark	"17"
 		Block {
 		  BlockType		  Inport
 		  Name			  "bumper"
@@ -4832,40 +4142,43 @@ Model {
 		Block {
 		  BlockType		  Demux
 		  Name			  " Demux "
-		  SID			  "792::19"
+		  SID			  "792::16"
 		  Ports			  [1, 1]
 		  Position		  [270, 230, 320, 270]
-		  ZOrder		  8
+		  ZOrder		  5
 		  Outputs		  "1"
 		}
 		Block {
 		  BlockType		  S-Function
 		  Name			  " SFunction "
-		  SID			  "792::18"
+		  SID			  "792::15"
 		  Tag			  "Stateflow S-Function Gewerk2_Bahnplanung 7"
 		  Ports			  [2, 3]
 		  Position		  [180, 100, 230, 180]
-		  ZOrder		  7
+		  ZOrder		  4
 		  FunctionName		  "sf_sfun"
 		  PortCounts		  "[2 3]"
 		  SFunctionDeploymentMode off
-		  EnableBusSupport	  off
-		  SFcnIsStateOwnerBlock	  off
+		  EnableBusSupport	  on
 		  Port {
 		    PortNumber		    2
 		    Name		    "stop_out"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
 		  }
 		  Port {
 		    PortNumber		    3
 		    Name		    "stop_flag_out"
+		    RTWStorageClass	    "Auto"
+		    DataLoggingNameMode	    "SignalName"
 		  }
 		}
 		Block {
 		  BlockType		  Terminator
 		  Name			  " Terminator "
-		  SID			  "792::20"
+		  SID			  "792::17"
 		  Position		  [460, 241, 480, 259]
-		  ZOrder		  9
+		  ZOrder		  6
 		}
 		Block {
 		  BlockType		  Outport
@@ -4885,7 +4198,7 @@ Model {
 		  IconDisplay		  "Port number"
 		}
 		Line {
-		  ZOrder		  13
+		  ZOrder		  7
 		  SrcBlock		  "bumper"
 		  SrcPort		  1
 		  Points		  [120, 0]
@@ -4893,7 +4206,7 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  14
+		  ZOrder		  8
 		  SrcBlock		  "stop_flag_in"
 		  SrcPort		  1
 		  DstBlock		  " SFunction "
@@ -4901,7 +4214,7 @@ Model {
 		}
 		Line {
 		  Name			  "stop_out"
-		  ZOrder		  15
+		  ZOrder		  9
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  2
@@ -4910,7 +4223,7 @@ Model {
 		}
 		Line {
 		  Name			  "stop_flag_out"
-		  ZOrder		  16
+		  ZOrder		  10
 		  Labels		  [0, 0]
 		  SrcBlock		  " SFunction "
 		  SrcPort		  3
@@ -4918,14 +4231,14 @@ Model {
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  17
+		  ZOrder		  11
 		  SrcBlock		  " Demux "
 		  SrcPort		  1
 		  DstBlock		  " Terminator "
 		  DstPort		  1
 		}
 		Line {
-		  ZOrder		  18
+		  ZOrder		  12
 		  SrcBlock		  " SFunction "
 		  SrcPort		  1
 		  DstBlock		  " Demux "
@@ -4940,7 +4253,7 @@ Model {
 	      Position		      [1005, 455, 1035, 485]
 	      ZOrder		      -19
 	      BlockMirror	      on
-	      InitialCondition	      "[zeros(1,3)]"
+	      X0		      "[zeros(1,3)]"
 	    }
 	    Block {
 	      BlockType		      DataTypeConversion
@@ -5296,7 +4609,6 @@ Model {
 	    Name		    "transmit\nvelocity, unit & direction converter"
 	    Location		    [227, 345, 838, 789]
 	    Open		    off
-	    PortBlocksUseCompactNotation off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -5308,7 +4620,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "25"
+	    SIDHighWatermark	    "22"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "v_x_in"
@@ -5338,56 +4650,67 @@ Model {
 	    Block {
 	      BlockType		      Demux
 	      Name		      " Demux "
-	      SID		      "805::24"
+	      SID		      "805::21"
 	      Ports		      [1, 1]
 	      Position		      [270, 350, 320, 390]
-	      ZOrder		      8
+	      ZOrder		      5
 	      Outputs		      "1"
 	    }
 	    Block {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
-	      SID		      "805::23"
+	      SID		      "805::20"
 	      Tag		      "Stateflow S-Function Gewerk2_Bahnplanung 1"
 	      Ports		      [3, 7]
 	      Position		      [180, 100, 230, 260]
-	      ZOrder		      7
+	      ZOrder		      4
 	      FunctionName	      "sf_sfun"
 	      PortCounts	      "[3 7]"
 	      SFunctionDeploymentMode off
-	      EnableBusSupport	      off
-	      SFcnIsStateOwnerBlock   off
+	      EnableBusSupport	      on
 	      Port {
 		PortNumber		2
 		Name			"direction_motor0_out"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		3
 		Name			"velocity_motor0_out"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		4
 		Name			"direction_motor1_out"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		5
 		Name			"velocity_motor1_out"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		6
 		Name			"direction_motor2_out"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
 	      }
 	      Port {
 		PortNumber		7
 		Name			"velocity_motor2_out"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
 	      }
 	    }
 	    Block {
 	      BlockType		      Terminator
 	      Name		      " Terminator "
-	      SID		      "805::25"
+	      SID		      "805::22"
 	      Position		      [460, 361, 480, 379]
-	      ZOrder		      9
+	      ZOrder		      6
 	    }
 	    Block {
 	      BlockType		      Outport
@@ -5443,21 +4766,21 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      23
+	      ZOrder		      12
 	      SrcBlock		      "v_x_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      24
+	      ZOrder		      13
 	      SrcBlock		      "v_y_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      25
+	      ZOrder		      14
 	      SrcBlock		      "v_theta_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
@@ -5465,7 +4788,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "direction_motor0_out"
-	      ZOrder		      26
+	      ZOrder		      15
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      2
@@ -5475,7 +4798,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "velocity_motor0_out"
-	      ZOrder		      27
+	      ZOrder		      16
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      3
@@ -5484,7 +4807,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "direction_motor1_out"
-	      ZOrder		      28
+	      ZOrder		      17
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      4
@@ -5493,7 +4816,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "velocity_motor1_out"
-	      ZOrder		      29
+	      ZOrder		      18
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      5
@@ -5502,7 +4825,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "direction_motor2_out"
-	      ZOrder		      30
+	      ZOrder		      19
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      6
@@ -5511,7 +4834,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "velocity_motor2_out"
-	      ZOrder		      31
+	      ZOrder		      20
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      7
@@ -5519,14 +4842,14 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      32
+	      ZOrder		      21
 	      SrcBlock		      " Demux "
 	      SrcPort		      1
 	      DstBlock		      " Terminator "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      33
+	      ZOrder		      22
 	      SrcBlock		      " SFunction "
 	      SrcPort		      1
 	      Points		      [20, 0]
@@ -5776,56 +5099,6 @@ Model {
       Expr		      "u(2)"
     }
     Block {
-      BlockType		      SubSystem
-      Name		      "Subsystem"
-      SID		      "851"
-      Ports		      [1, 1]
-      Position		      [725, -86, 825, -44]
-      ZOrder		      20
-      RequestExecContextInheritance off
-      Variant		      off
-      System {
-	Name			"Subsystem"
-	Location		[433, 403, 931, 703]
-	Open			off
-	PortBlocksUseCompactNotation off
-	ModelBrowserVisibility	off
-	ModelBrowserWidth	200
-	ScreenColor		"white"
-	PaperOrientation	"landscape"
-	PaperPositionMode	"auto"
-	PaperType		"usletter"
-	PaperUnits		"inches"
-	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
-	TiledPageScale		1
-	ShowPageBoundaries	off
-	ZoomFactor		"100"
-	Block {
-	  BlockType		  Inport
-	  Name			  "In1"
-	  SID			  "852"
-	  Position		  [110, 103, 140, 117]
-	  ZOrder		  -1
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Out1"
-	  SID			  "853"
-	  Position		  [360, 103, 390, 117]
-	  ZOrder		  -2
-	  IconDisplay		  "Port number"
-	}
-	Line {
-	  ZOrder		  1
-	  SrcBlock		  "In1"
-	  SrcPort		  1
-	  DstBlock		  "Out1"
-	  DstPort		  1
-	}
-      }
-    }
-    Block {
       BlockType		      Terminator
       Name		      "Terminator1"
       SID		      "811"
@@ -5854,6 +5127,34 @@ Model {
       ZOrder		      -6
     }
     Block {
+      BlockType		      Terminator
+      Name		      "Terminator5"
+      SID		      "817"
+      Position		      [895, 72, 915, 88]
+      ZOrder		      12
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator6"
+      SID		      "818"
+      Position		      [895, 125, 915, 145]
+      ZOrder		      13
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator7"
+      SID		      "819"
+      Position		      [895, 180, 915, 200]
+      ZOrder		      14
+    }
+    Block {
+      BlockType		      Terminator
+      Name		      "Terminator8"
+      SID		      "820"
+      Position		      [895, 235, 915, 255]
+      ZOrder		      15
+    }
+    Block {
       BlockType		      SubSystem
       Name		      "UDP interface"
       SID		      "542"
@@ -5869,16 +5170,19 @@ Model {
 	PortNumber		1
 	Name			"1 -> permission granted; \n      0 -> not granted"
 	PropagatedSignals	"enable_out"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
       }
       Port {
 	PortNumber		2
 	Name			"56 elements"
+	RTWStorageClass		"Auto"
+	DataLoggingNameMode	"SignalName"
       }
       System {
 	Name			"UDP interface"
 	Location		[400, 52, 1276, 1135]
 	Open			off
-	PortBlocksUseCompactNotation off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -5909,8 +5213,6 @@ Model {
 	  LibraryVersion	  "1.71"
 	  SourceBlock		  "xpcrtudplib/Legacy UDP/Receive "
 	  SourceType		  "xpcudpbytereceive"
-	  SourceProductName	  "Simulink Real-Time"
-	  SourceProductBaseCode	  "XP"
 	  ipAddress		  "0.0.0.0"
 	  ipPort		  "25000"
 	  width			  "448"
@@ -5934,8 +5236,6 @@ Model {
 	  LibraryVersion	  "1.199"
 	  SourceBlock		  "xpcobsoletelib/Utilities/Unpack "
 	  SourceType		  "xpcbyte2any"
-	  SourceProductName	  "Simulink Real-Time"
-	  SourceProductBaseCode	  "XP"
 	  dimensions		  "{[56]}"
 	  datatypes		  "{'double'}"
 	  byteAlign		  "1"
@@ -5957,7 +5257,6 @@ Model {
 	    Name		    "stop signals"
 	    Location		    [227, 345, 838, 789]
 	    Open		    off
-	    PortBlocksUseCompactNotation off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -5969,7 +5268,7 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "19"
+	    SIDHighWatermark	    "16"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "rob_number"
@@ -5990,36 +5289,37 @@ Model {
 	    Block {
 	      BlockType		      Demux
 	      Name		      " Demux "
-	      SID		      "547::18"
+	      SID		      "547::15"
 	      Ports		      [1, 1]
 	      Position		      [270, 230, 320, 270]
-	      ZOrder		      8
+	      ZOrder		      5
 	      Outputs		      "1"
 	    }
 	    Block {
 	      BlockType		      S-Function
 	      Name		      " SFunction "
-	      SID		      "547::17"
+	      SID		      "547::14"
 	      Tag		      "Stateflow S-Function Gewerk2_Bahnplanung 3"
 	      Ports		      [2, 2]
 	      Position		      [180, 100, 230, 160]
-	      ZOrder		      7
+	      ZOrder		      4
 	      FunctionName	      "sf_sfun"
 	      PortCounts	      "[2 2]"
 	      SFunctionDeploymentMode off
-	      EnableBusSupport	      off
-	      SFcnIsStateOwnerBlock   off
+	      EnableBusSupport	      on
 	      Port {
 		PortNumber		2
 		Name			"enable_out"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
 	      }
 	    }
 	    Block {
 	      BlockType		      Terminator
 	      Name		      " Terminator "
-	      SID		      "547::19"
+	      SID		      "547::16"
 	      Position		      [460, 241, 480, 259]
-	      ZOrder		      9
+	      ZOrder		      6
 	    }
 	    Block {
 	      BlockType		      Outport
@@ -6030,7 +5330,7 @@ Model {
 	      IconDisplay	      "Port number"
 	    }
 	    Line {
-	      ZOrder		      16
+	      ZOrder		      11
 	      SrcBlock		      "rob_number"
 	      SrcPort		      1
 	      Points		      [120, 0]
@@ -6038,7 +5338,7 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      17
+	      ZOrder		      12
 	      SrcBlock		      "udp_in"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
@@ -6046,7 +5346,7 @@ Model {
 	    }
 	    Line {
 	      Name		      "enable_out"
-	      ZOrder		      18
+	      ZOrder		      13
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      2
@@ -6054,14 +5354,14 @@ Model {
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      19
+	      ZOrder		      14
 	      SrcBlock		      " Demux "
 	      SrcPort		      1
 	      DstBlock		      " Terminator "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      20
+	      ZOrder		      15
 	      SrcBlock		      " SFunction "
 	      SrcPort		      1
 	      DstBlock		      " Demux "
@@ -6159,7 +5459,6 @@ Model {
 	Name			"getRobotinoID"
 	Location		[973, 266, 1460, 730]
 	Open			off
-	PortBlocksUseCompactNotation off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
 	ScreenColor		"white"
@@ -6193,7 +5492,6 @@ Model {
 	    Name		    "getIDfromFlash"
 	    Location		    [526, 219, 984, 735]
 	    Open		    off
-	    PortBlocksUseCompactNotation off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
 	    ScreenColor		    "white"
@@ -6212,7 +5510,6 @@ Model {
 	      Ports		      []
 	      Position		      [80, 80, 100, 100]
 	      ZOrder		      -1
-	      VariantControl	      "(inherit)"
 	      StatesWhenEnabling      "held"
 	    }
 	    Block {
@@ -6225,8 +5522,6 @@ Model {
 	      LibraryVersion	      "1.1843"
 	      SourceBlock	      "slrtlib/Target\nManagement/From File "
 	      SourceType	      "xpcfromfile"
-	      SourceProductName	      "Simulink Real-Time"
-	      SourceProductBaseCode   "XP"
 	      filename		      "'robotino.id'"
 	      dataSize		      "8"
 	      bufSize		      "2000"
@@ -6245,8 +5540,6 @@ Model {
 	      LibraryVersion	      "1.199"
 	      SourceBlock	      "xpcobsoletelib/Utilities/Unpack "
 	      SourceType	      "xpcbyte2any"
-	      SourceProductName	      "Simulink Real-Time"
-	      SourceProductBaseCode   "XP"
 	      dimensions	      "{[1]}"
 	      datatypes		      "{'double'}"
 	      byteAlign		      "1"
@@ -6301,8 +5594,10 @@ Model {
 	Annotation {
 	  SID			  "755"
 	  Name			  "Executing only once at start after 10ms"
-	  Position		  [52, 176, 277, 193]
+	  Position		  [164, 184, 389, 201]
 	  InternalMargins	  [0, 0, 0, 0]
+	  FixedHeight		  off
+	  FixedWidth		  off
 	  ForegroundColor	  "red"
 	  ZOrder		  -1
 	  FontName		  "Arial"
@@ -6324,7 +5619,7 @@ Model {
       BlockType		      Outport
       Name		      "UDP data"
       SID		      "553"
-      Position		      [1160, 168, 1190, 182]
+      Position		      [690, 93, 720, 107]
       ZOrder		      -12
       Port		      "2"
       IconDisplay	      "Port number"
@@ -6363,6 +5658,49 @@ Model {
       Branch {
 	ZOrder			42
 	DstBlock		"Robotino processed data"
+	DstPort			1
+      }
+    }
+    Line {
+      Name		      "56 elements"
+      ZOrder		      3
+      Labels		      [0, 0]
+      SrcBlock		      "UDP interface"
+      SrcPort		      2
+      Points		      [82, 0]
+      Branch {
+	ZOrder			41
+	Points			[0, -20]
+	DstBlock		"Pos.Robot1"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			58
+	Points			[0, 35]
+	Branch {
+	  ZOrder		  60
+	  Points		  [0, 55]
+	  Branch {
+	    ZOrder		    63
+	    Points		    [0, 55]
+	    DstBlock		    "Pos.Robot4"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    62
+	    DstBlock		    "Pos.Robot3"
+	    DstPort		    1
+	  }
+	}
+	Branch {
+	  ZOrder		  59
+	  DstBlock		  "Pos.Robot2"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	ZOrder			40
+	DstBlock		"UDP data"
 	DstPort			1
       }
     }
@@ -6488,72 +5826,74 @@ Model {
       DstPort		      1
     }
     Line {
-      Name		      "56 elements"
-      ZOrder		      120
-      Labels		      [0, 0]
-      SrcBlock		      "UDP interface"
-      SrcPort		      2
-      Points		      [68, 0; 0, 30]
-      DstBlock		      "Gewerk2"
+      ZOrder		      64
+      SrcBlock		      "Pos.Robot1"
+      SrcPort		      1
+      DstBlock		      "Terminator5"
       DstPort		      1
     }
     Line {
-      ZOrder		      121
-      SrcBlock		      "Gewerk2"
+      ZOrder		      65
+      SrcBlock		      "Pos.Robot2"
       SrcPort		      1
-      Points		      [0, -5]
-      DstBlock		      "UDP data"
+      DstBlock		      "Terminator6"
       DstPort		      1
     }
     Line {
-      ZOrder		      123
-      SrcBlock		      "Subsystem"
+      ZOrder		      66
+      SrcBlock		      "Pos.Robot3"
       SrcPort		      1
-      Points		      [20, 0; 0, 290]
-      DstBlock		      "Gewerk2"
-      DstPort		      2
+      DstBlock		      "Terminator7"
+      DstPort		      1
     }
-    Annotation {
-      SID		      "854"
-      Name		      "Schnittstelle Gewerk 1"
-      Position		      [724, -34, 825, -20]
-      InternalMargins	      [0, 0, 0, 0]
-      HorizontalAlignment     "left"
-      VerticalAlignment	      "top"
+    Line {
+      ZOrder		      67
+      SrcBlock		      "Pos.Robot4"
+      SrcPort		      1
+      DstBlock		      "Terminator8"
+      DstPort		      1
     }
     Annotation {
       SID		      "756"
       Name		      "0 -> open; 1 -> closed"
-      Position		      [295, 246, 394, 260]
+      Position		      [347, 253, 451, 268]
       InternalMargins	      [0, 0, 0, 0]
+      FixedHeight	      off
+      FixedWidth	      off
       ZOrder		      -1
     }
     Annotation {
       SID		      "757"
       Name		      "in rad/sec"
-      Position		      [342, 368, 387, 382]
+      Position		      [365, 375, 412, 390]
       InternalMargins	      [0, 0, 0, 0]
+      FixedHeight	      off
+      FixedWidth	      off
       ZOrder		      -2
     }
     Annotation {
       SID		      "758"
       Name		      "in mm/sec"
-      Position		      [339, 286, 386, 300]
+      Position		      [364, 293, 414, 308]
       InternalMargins	      [0, 0, 0, 0]
+      FixedHeight	      off
+      FixedWidth	      off
       ZOrder		      -3
     }
     Annotation {
       SID		      "759"
       Name		      "in mm/sec"
-      Position		      [339, 326, 386, 340]
+      Position		      [364, 333, 414, 348]
       InternalMargins	      [0, 0, 0, 0]
+      FixedHeight	      off
+      FixedWidth	      off
       ZOrder		      -4
     }
   }
 }
 #Finite State Machines
 #
-#   Stateflow 80000012
+#   Stateflow 80000006
 #
 #
 Stateflow {
@@ -6562,21 +5902,24 @@ Stateflow {
     name		    "Gewerk2_Bahnplanung"
     created		    "12-Jan-2010 08:27:24"
     isLibrary		    0
-    sfVersion		    80000012
-    firstTarget		    139
+    firstTarget		    129
+    sfVersion		    80000006
   }
   chart {
     id			    2
-    machine		    1
     name		    "Robotino interface/transmit\nvelocity, unit & direction converter"
     windowPosition	    [576 346.25 213 385]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1680 1050 1.333333333333333]
     treeNode		    [0 3 0 0]
+    firstTransition	    14
+    firstJunction	    13
     viewObj		    2
+    machine		    1
     ssIdHighWaterMark	    13
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
+    firstData		    4
     sampleTime		    "2*dtpc"
     chartFileNumber	    1
     disableImplicitCasting  1
@@ -6584,9 +5927,6 @@ Stateflow {
       name		      "fcn"
     }
     supportVariableSizing   0
-    firstData		    4
-    firstTransition	    14
-    firstJunction	    13
   }
   state {
     id			    3
@@ -6643,6 +5983,7 @@ Stateflow {
     id			    4
     ssIdNumber		    8
     name		    "direction_motor0_out"
+    linkNode		    [2 0 5]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -6657,17 +5998,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [2 0 5]
   }
   data {
     id			    5
     ssIdNumber		    4
     name		    "velocity_motor0_out"
+    linkNode		    [2 4 6]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -6680,17 +6018,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [2 4 6]
   }
   data {
     id			    6
     ssIdNumber		    9
     name		    "direction_motor1_out"
+    linkNode		    [2 5 7]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -6705,17 +6040,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [2 5 7]
   }
   data {
     id			    7
     ssIdNumber		    6
     name		    "velocity_motor1_out"
+    linkNode		    [2 6 8]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -6730,17 +6062,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [2 6 8]
   }
   data {
     id			    8
     ssIdNumber		    10
     name		    "direction_motor2_out"
+    linkNode		    [2 7 9]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -6755,17 +6084,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [2 7 9]
   }
   data {
     id			    9
     ssIdNumber		    7
     name		    "velocity_motor2_out"
+    linkNode		    [2 8 10]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -6780,17 +6106,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [2 8 10]
   }
   data {
     id			    10
     ssIdNumber		    11
     name		    "v_x_in"
+    linkNode		    [2 9 11]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -6805,17 +6128,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [2 9 11]
   }
   data {
     id			    11
     ssIdNumber		    12
     name		    "v_y_in"
+    linkNode		    [2 10 12]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -6830,17 +6150,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [2 10 12]
   }
   data {
     id			    12
     ssIdNumber		    13
     name		    "v_theta_in"
+    linkNode		    [2 11 0]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -6855,21 +6172,17 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [2 11 0]
   }
   junction {
     id			    13
     position		    [23.5747 49.5747 7]
     chart		    2
+    linkNode		    [2 0 0]
     subviewer		    2
     ssIdNumber		    3
     type		    CONNECTIVE_JUNCTION
-    linkNode		    [2 0 0]
   }
   transition {
     id			    14
@@ -6885,6 +6198,7 @@ Stateflow {
     }
     midPoint		    [23.5747 24.9468]
     chart		    2
+    linkNode		    [2 0 0]
     dataLimits		    [21.175 25.975 14.625 42.575]
     subviewer		    2
     drawStyle		    SMART
@@ -6893,26 +6207,28 @@ Stateflow {
     }
     executionOrder	    1
     ssIdNumber		    2
-    linkNode		    [2 0 0]
   }
   instance {
     id			    15
-    machine		    1
     name		    "Robotino interface/transmit\nvelocity, unit & direction converter"
+    machine		    1
     chart		    2
   }
   chart {
     id			    16
-    machine		    1
     name		    "Robotino interface/serial communication/protocol adder & optional velocity adaption"
     windowPosition	    [556 346.25 213 385]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1680 1050 1.333333333333333]
     treeNode		    [0 17 0 0]
+    firstTransition	    29
+    firstJunction	    28
     viewObj		    16
+    machine		    1
     ssIdHighWaterMark	    13
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
+    firstData		    18
     sampleTime		    "2*dtpc"
     chartFileNumber	    2
     disableImplicitCasting  1
@@ -6920,9 +6236,6 @@ Stateflow {
       name		      "fcn"
     }
     supportVariableSizing   0
-    firstData		    18
-    firstTransition	    29
-    firstJunction	    28
   }
   state {
     id			    17
@@ -6974,6 +6287,7 @@ Stateflow {
     id			    18
     ssIdNumber		    12
     name		    "dir"
+    linkNode		    [16 0 19]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -6988,17 +6302,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [16 0 19]
   }
   data {
     id			    19
     ssIdNumber		    13
     name		    "vel"
+    linkNode		    [16 18 20]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -7013,17 +6324,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [16 18 20]
   }
   data {
     id			    20
     ssIdNumber		    8
     name		    "direction_motor0_in"
+    linkNode		    [16 19 21]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -7038,17 +6346,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [16 19 21]
   }
   data {
     id			    21
     ssIdNumber		    4
     name		    "velocity_motor0_in"
+    linkNode		    [16 20 22]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -7060,17 +6365,14 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [16 20 22]
   }
   data {
     id			    22
     ssIdNumber		    9
     name		    "direction_motor1_in"
+    linkNode		    [16 21 23]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -7085,17 +6387,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [16 21 23]
   }
   data {
     id			    23
     ssIdNumber		    6
     name		    "velocity_motor1_in"
+    linkNode		    [16 22 24]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -7110,17 +6409,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [16 22 24]
   }
   data {
     id			    24
     ssIdNumber		    10
     name		    "direction_motor2_in"
+    linkNode		    [16 23 25]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -7135,17 +6431,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [16 23 25]
   }
   data {
     id			    25
     ssIdNumber		    7
     name		    "velocity_motor2_in"
+    linkNode		    [16 24 26]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -7160,17 +6453,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [16 24 26]
   }
   data {
     id			    26
     ssIdNumber		    11
     name		    "stop_in"
+    linkNode		    [16 25 27]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -7185,17 +6475,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [16 25 27]
   }
   data {
     id			    27
     ssIdNumber		    5
     name		    "message"
+    linkNode		    [16 26 0]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -7208,21 +6495,17 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [16 26 0]
   }
   junction {
     id			    28
     position		    [23.5747 49.5747 7]
     chart		    16
+    linkNode		    [16 0 0]
     subviewer		    16
     ssIdNumber		    3
     type		    CONNECTIVE_JUNCTION
-    linkNode		    [16 0 0]
   }
   transition {
     id			    29
@@ -7238,6 +6521,7 @@ Stateflow {
     }
     midPoint		    [23.5747 24.9468]
     chart		    16
+    linkNode		    [16 0 0]
     dataLimits		    [21.175 25.975 14.625 42.575]
     subviewer		    16
     drawStyle		    SMART
@@ -7246,35 +6530,34 @@ Stateflow {
     }
     executionOrder	    1
     ssIdNumber		    2
-    linkNode		    [16 0 0]
   }
   instance {
     id			    30
-    machine		    1
     name		    "Robotino interface/serial communication/protocol adder & optional velocity adaption"
+    machine		    1
     chart		    16
   }
   chart {
     id			    31
-    machine		    1
     name		    "UDP interface/stop signals"
     windowPosition	    [456 343 213 385]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1680 1050 1.333333333333333]
     treeNode		    [0 32 0 0]
+    firstTransition	    37
+    firstJunction	    36
     viewObj		    31
+    machine		    1
     ssIdHighWaterMark	    7
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
+    firstData		    33
     chartFileNumber	    3
     disableImplicitCasting  1
     eml {
       name		      "fcn"
     }
     supportVariableSizing   0
-    firstData		    33
-    firstTransition	    37
-    firstJunction	    36
   }
   state {
     id			    32
@@ -7311,6 +6594,7 @@ Stateflow {
     id			    33
     ssIdNumber		    7
     name		    "rob_number"
+    linkNode		    [31 0 34]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -7325,17 +6609,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [31 0 34]
   }
   data {
     id			    34
     ssIdNumber		    4
     name		    "udp_in"
+    linkNode		    [31 33 35]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -7347,17 +6628,14 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [31 33 35]
   }
   data {
     id			    35
     ssIdNumber		    5
     name		    "enable_out"
+    linkNode		    [31 34 0]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -7370,21 +6648,17 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [31 34 0]
   }
   junction {
     id			    36
     position		    [23.5747 49.5747 7]
     chart		    31
+    linkNode		    [31 0 0]
     subviewer		    31
     ssIdNumber		    3
     type		    CONNECTIVE_JUNCTION
-    linkNode		    [31 0 0]
   }
   transition {
     id			    37
@@ -7400,6 +6674,7 @@ Stateflow {
     }
     midPoint		    [23.5747 24.9468]
     chart		    31
+    linkNode		    [31 0 0]
     dataLimits		    [23.575 23.575 14.625 34.575]
     subviewer		    31
     drawStyle		    SMART
@@ -7408,26 +6683,28 @@ Stateflow {
     }
     executionOrder	    1
     ssIdNumber		    2
-    linkNode		    [31 0 0]
   }
   instance {
     id			    38
-    machine		    1
     name		    "UDP interface/stop signals"
+    machine		    1
     chart		    31
   }
   chart {
     id			    39
-    machine		    1
     name		    "Robotino interface/serial communication/error filter & protocol disassembler"
     windowPosition	    [556 346.25 213 385]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1680 1050 1.333333333333333]
     treeNode		    [0 40 0 0]
+    firstTransition	    54
+    firstJunction	    53
     viewObj		    39
+    machine		    1
     ssIdHighWaterMark	    63
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
+    firstData		    41
     sampleTime		    "dtpc/2"
     chartFileNumber	    4
     disableImplicitCasting  1
@@ -7435,9 +6712,6 @@ Stateflow {
       name		      "fcn"
     }
     supportVariableSizing   0
-    firstData		    41
-    firstTransition	    54
-    firstJunction	    53
   }
   state {
     id			    40
@@ -7531,6 +6805,7 @@ Stateflow {
     id			    41
     ssIdNumber		    55
     name		    "response"
+    linkNode		    [39 0 42]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -7545,17 +6820,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [39 0 42]
   }
   data {
     id			    42
     ssIdNumber		    56
     name		    "error_free_resp_in"
+    linkNode		    [39 41 43]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -7570,17 +6842,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [39 41 43]
   }
   data {
     id			    43
     ssIdNumber		    57
     name		    "direction_motor0_out"
+    linkNode		    [39 42 44]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -7595,17 +6864,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [39 42 44]
   }
   data {
     id			    44
     ssIdNumber		    6
     name		    "velocity_motor0_out"
+    linkNode		    [39 43 45]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -7620,17 +6886,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [39 43 45]
   }
   data {
     id			    45
     ssIdNumber		    16
     name		    "direction_motor1_out"
+    linkNode		    [39 44 46]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -7645,17 +6908,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [39 44 46]
   }
   data {
     id			    46
     ssIdNumber		    17
     name		    "velocity_motor1_out"
+    linkNode		    [39 45 47]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -7670,17 +6930,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [39 45 47]
   }
   data {
     id			    47
     ssIdNumber		    26
     name		    "direction_motor2_out"
+    linkNode		    [39 46 48]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -7695,17 +6952,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [39 46 48]
   }
   data {
     id			    48
     ssIdNumber		    27
     name		    "velocity_motor2_out"
+    linkNode		    [39 47 49]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -7720,17 +6974,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [39 47 49]
   }
   data {
     id			    49
     ssIdNumber		    9
     name		    "distance_measuring_sensors_out"
+    linkNode		    [39 48 50]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -7745,17 +6996,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [39 48 50]
   }
   data {
     id			    50
     ssIdNumber		    63
     name		    "di03_bump_out"
+    linkNode		    [39 49 51]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -7770,17 +7018,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [39 49 51]
   }
   data {
     id			    51
     ssIdNumber		    10
     name		    "bumper_out"
+    linkNode		    [39 50 52]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -7795,17 +7040,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [39 50 52]
   }
   data {
     id			    52
     ssIdNumber		    61
     name		    "error_free_resp_out"
+    linkNode		    [39 51 0]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -7820,21 +7062,17 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [39 51 0]
   }
   junction {
     id			    53
     position		    [23.5747 49.5747 7]
     chart		    39
+    linkNode		    [39 0 0]
     subviewer		    39
     ssIdNumber		    3
     type		    CONNECTIVE_JUNCTION
-    linkNode		    [39 0 0]
   }
   transition {
     id			    54
@@ -7850,6 +7088,7 @@ Stateflow {
     }
     midPoint		    [23.5747 24.9468]
     chart		    39
+    linkNode		    [39 0 0]
     dataLimits		    [21.175 25.975 14.625 42.575]
     subviewer		    39
     drawStyle		    SMART
@@ -7858,26 +7097,28 @@ Stateflow {
     }
     executionOrder	    1
     ssIdNumber		    2
-    linkNode		    [39 0 0]
   }
   instance {
     id			    55
-    machine		    1
     name		    "Robotino interface/serial communication/error filter & protocol disassembler"
+    machine		    1
     chart		    39
   }
   chart {
     id			    56
-    machine		    1
     name		    "Robotino interface/receive\ndirection, unit & velocity converter"
     windowPosition	    [556 346.25 213 385]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1680 1050 1.333333333333333]
     treeNode		    [0 57 0 0]
+    firstTransition	    69
+    firstJunction	    68
     viewObj		    56
+    machine		    1
     ssIdHighWaterMark	    13
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
+    firstData		    58
     sampleTime		    "dtpc/2"
     chartFileNumber	    5
     disableImplicitCasting  1
@@ -7885,9 +7126,6 @@ Stateflow {
       name		      "fcn"
     }
     supportVariableSizing   0
-    firstData		    58
-    firstTransition	    69
-    firstJunction	    68
   }
   state {
     id			    57
@@ -7943,6 +7181,7 @@ Stateflow {
     id			    58
     ssIdNumber		    13
     name		    "number_of_robot"
+    linkNode		    [56 0 59]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -7957,17 +7196,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [56 0 59]
   }
   data {
     id			    59
     ssIdNumber		    4
     name		    "direction_motor0_in"
+    linkNode		    [56 58 60]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -7979,17 +7215,14 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [56 58 60]
   }
   data {
     id			    60
     ssIdNumber		    5
     name		    "v_x_out"
+    linkNode		    [56 59 61]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -8002,17 +7235,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [56 59 61]
   }
   data {
     id			    61
     ssIdNumber		    6
     name		    "velocity_motor0_in"
+    linkNode		    [56 60 62]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -8027,17 +7257,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [56 60 62]
   }
   data {
     id			    62
     ssIdNumber		    7
     name		    "direction_motor1_in"
+    linkNode		    [56 61 63]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -8052,17 +7279,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [56 61 63]
   }
   data {
     id			    63
     ssIdNumber		    8
     name		    "velocity_motor1_in"
+    linkNode		    [56 62 64]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -8077,17 +7301,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [56 62 64]
   }
   data {
     id			    64
     ssIdNumber		    9
     name		    "direction_motor2_in"
+    linkNode		    [56 63 65]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -8102,17 +7323,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [56 63 65]
   }
   data {
     id			    65
     ssIdNumber		    10
     name		    "velocity_motor2_in"
+    linkNode		    [56 64 66]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -8127,17 +7345,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [56 64 66]
   }
   data {
     id			    66
     ssIdNumber		    11
     name		    "v_y_out"
+    linkNode		    [56 65 67]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -8152,17 +7367,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [56 65 67]
   }
   data {
     id			    67
     ssIdNumber		    12
     name		    "v_theta_out"
+    linkNode		    [56 66 0]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -8177,21 +7389,17 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [56 66 0]
   }
   junction {
     id			    68
     position		    [23.5747 49.5747 7]
     chart		    56
+    linkNode		    [56 0 0]
     subviewer		    56
     ssIdNumber		    3
     type		    CONNECTIVE_JUNCTION
-    linkNode		    [56 0 0]
   }
   transition {
     id			    69
@@ -8207,6 +7415,7 @@ Stateflow {
     }
     midPoint		    [23.5747 24.9468]
     chart		    56
+    linkNode		    [56 0 0]
     dataLimits		    [21.175 25.975 14.625 42.575]
     subviewer		    56
     drawStyle		    SMART
@@ -8215,35 +7424,34 @@ Stateflow {
     }
     executionOrder	    1
     ssIdNumber		    2
-    linkNode		    [56 0 0]
   }
   instance {
     id			    70
-    machine		    1
     name		    "Robotino interface/receive\ndirection, unit & velocity converter"
+    machine		    1
     chart		    56
   }
   chart {
     id			    71
-    machine		    1
     name		    "Begrenzung"
     windowPosition	    [647 346.25 213 385]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1680 1050 1.333333333333333]
     treeNode		    [0 72 0 0]
+    firstTransition	    76
+    firstJunction	    75
     viewObj		    71
+    machine		    1
     ssIdHighWaterMark	    14
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
+    firstData		    73
     chartFileNumber	    6
     disableImplicitCasting  1
     eml {
       name		      "fnc"
     }
     supportVariableSizing   0
-    firstData		    73
-    firstTransition	    76
-    firstJunction	    75
   }
   state {
     id			    72
@@ -8271,6 +7479,7 @@ Stateflow {
     id			    73
     ssIdNumber		    12
     name		    "win"
+    linkNode		    [71 0 74]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -8285,17 +7494,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [71 0 74]
   }
   data {
     id			    74
     ssIdNumber		    14
     name		    "wout"
+    linkNode		    [71 73 0]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -8310,21 +7516,17 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [71 73 0]
   }
   junction {
     id			    75
     position		    [23.5747 49.5747 7]
     chart		    71
+    linkNode		    [71 0 0]
     subviewer		    71
     ssIdNumber		    3
     type		    CONNECTIVE_JUNCTION
-    linkNode		    [71 0 0]
   }
   transition {
     id			    76
@@ -8340,6 +7542,7 @@ Stateflow {
     }
     midPoint		    [23.5747 24.9468]
     chart		    71
+    linkNode		    [71 0 0]
     dataLimits		    [23.575 23.575 14.625 34.575]
     subviewer		    71
     drawStyle		    SMART
@@ -8348,26 +7551,28 @@ Stateflow {
     }
     executionOrder	    1
     ssIdNumber		    2
-    linkNode		    [71 0 0]
   }
   instance {
     id			    77
-    machine		    1
     name		    "Begrenzung"
+    machine		    1
     chart		    71
   }
   chart {
     id			    78
-    machine		    1
     name		    "Robotino interface/serial communication/stop by bumper"
     windowPosition	    [556 346.25 213 385]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1680 1050 1.333333333333333]
     treeNode		    [0 79 0 0]
+    firstTransition	    85
+    firstJunction	    84
     viewObj		    78
+    machine		    1
     ssIdHighWaterMark	    12
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
+    firstData		    80
     sampleTime		    "2*dtpc"
     chartFileNumber	    7
     disableImplicitCasting  1
@@ -8375,9 +7580,6 @@ Stateflow {
       name		      "fcn"
     }
     supportVariableSizing   0
-    firstData		    80
-    firstTransition	    85
-    firstJunction	    84
   }
   state {
     id			    79
@@ -8424,6 +7626,7 @@ Stateflow {
     id			    80
     ssIdNumber		    9
     name		    "stop_out"
+    linkNode		    [78 0 81]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -8438,17 +7641,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [78 0 81]
   }
   data {
     id			    81
     ssIdNumber		    8
     name		    "bumper"
+    linkNode		    [78 80 82]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -8463,17 +7663,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [78 80 82]
   }
   data {
     id			    82
     ssIdNumber		    12
     name		    "stop_flag_in"
+    linkNode		    [78 81 83]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -8488,17 +7685,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [78 81 83]
   }
   data {
     id			    83
     ssIdNumber		    5
     name		    "stop_flag_out"
+    linkNode		    [78 82 0]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -8511,21 +7705,17 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [78 82 0]
   }
   junction {
     id			    84
     position		    [23.5747 49.5747 7]
     chart		    78
+    linkNode		    [78 0 0]
     subviewer		    78
     ssIdNumber		    3
     type		    CONNECTIVE_JUNCTION
-    linkNode		    [78 0 0]
   }
   transition {
     id			    85
@@ -8541,6 +7731,7 @@ Stateflow {
     }
     midPoint		    [23.5747 24.9468]
     chart		    78
+    linkNode		    [78 0 0]
     dataLimits		    [21.175 25.975 14.625 42.575]
     subviewer		    78
     drawStyle		    SMART
@@ -8549,26 +7740,28 @@ Stateflow {
     }
     executionOrder	    1
     ssIdNumber		    2
-    linkNode		    [78 0 0]
   }
   instance {
     id			    86
-    machine		    1
     name		    "Robotino interface/serial communication/stop by bumper"
+    machine		    1
     chart		    78
   }
   chart {
     id			    87
-    machine		    1
     name		    "Robotino interface/distance converter"
     windowPosition	    [556 346.25 213 385]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1680 1050 1.333333333333333]
     treeNode		    [0 88 0 0]
+    firstTransition	    92
+    firstJunction	    91
     viewObj		    87
+    machine		    1
     ssIdHighWaterMark	    6
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
+    firstData		    89
     sampleTime		    "dtpc/2"
     chartFileNumber	    8
     disableImplicitCasting  1
@@ -8576,9 +7769,6 @@ Stateflow {
       name		      "fcn"
     }
     supportVariableSizing   0
-    firstData		    89
-    firstTransition	    92
-    firstJunction	    91
   }
   state {
     id			    88
@@ -8617,6 +7807,7 @@ Stateflow {
     id			    89
     ssIdNumber		    4
     name		    "dms_in"
+    linkNode		    [87 0 90]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -8628,17 +7819,14 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [87 0 90]
   }
   data {
     id			    90
     ssIdNumber		    5
     name		    "dms_out"
+    linkNode		    [87 89 0]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -8651,21 +7839,17 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [87 89 0]
   }
   junction {
     id			    91
     position		    [23.5747 49.5747 7]
     chart		    87
+    linkNode		    [87 0 0]
     subviewer		    87
     ssIdNumber		    3
     type		    CONNECTIVE_JUNCTION
-    linkNode		    [87 0 0]
   }
   transition {
     id			    92
@@ -8681,6 +7865,7 @@ Stateflow {
     }
     midPoint		    [23.5747 24.9468]
     chart		    87
+    linkNode		    [87 0 0]
     dataLimits		    [21.175 25.975 14.625 42.575]
     subviewer		    87
     drawStyle		    SMART
@@ -8689,35 +7874,34 @@ Stateflow {
     }
     executionOrder	    1
     ssIdNumber		    2
-    linkNode		    [87 0 0]
   }
   instance {
     id			    93
-    machine		    1
     name		    "Robotino interface/distance converter"
+    machine		    1
     chart		    87
   }
   chart {
     id			    94
-    machine		    1
     name		    "Robotino interface/assemble robotino response"
     windowPosition	    [476 346.25 213 385]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1680 1050 1.333333333333333]
     treeNode		    [0 95 0 0]
+    firstTransition	    105
+    firstJunction	    104
     viewObj		    94
+    machine		    1
     ssIdHighWaterMark	    17
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
+    firstData		    96
     chartFileNumber	    9
     disableImplicitCasting  1
     eml {
       name		      "fcn"
     }
     supportVariableSizing   0
-    firstData		    96
-    firstTransition	    105
-    firstJunction	    104
   }
   state {
     id			    95
@@ -8756,6 +7940,7 @@ Stateflow {
     id			    96
     ssIdNumber		    4
     name		    "v_x_in"
+    linkNode		    [94 0 97]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -8767,17 +7952,14 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [94 0 97]
   }
   data {
     id			    97
     ssIdNumber		    5
     name		    "robotino_response"
+    linkNode		    [94 96 98]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -8790,17 +7972,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [94 96 98]
   }
   data {
     id			    98
     ssIdNumber		    6
     name		    "v_y_in"
+    linkNode		    [94 97 99]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -8815,17 +7994,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [94 97 99]
   }
   data {
     id			    99
     ssIdNumber		    7
     name		    "v_theta_in"
+    linkNode		    [94 98 100]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -8840,17 +8016,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [94 98 100]
   }
   data {
     id			    100
     ssIdNumber		    14
     name		    "distance_measuring_sensors_in"
+    linkNode		    [94 99 101]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -8865,17 +8038,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [94 99 101]
   }
   data {
     id			    101
     ssIdNumber		    15
     name		    "bumper_in"
+    linkNode		    [94 100 102]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -8890,17 +8060,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [94 100 102]
   }
   data {
     id			    102
     ssIdNumber		    16
     name		    "light_barrier_in"
+    linkNode		    [94 101 103]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -8915,17 +8082,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [94 101 103]
   }
   data {
     id			    103
     ssIdNumber		    17
     name		    "slider_in"
+    linkNode		    [94 102 0]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -8940,21 +8104,17 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [94 102 0]
   }
   junction {
     id			    104
     position		    [23.5747 49.5747 7]
     chart		    94
+    linkNode		    [94 0 0]
     subviewer		    94
     ssIdNumber		    3
     type		    CONNECTIVE_JUNCTION
-    linkNode		    [94 0 0]
   }
   transition {
     id			    105
@@ -8970,6 +8130,7 @@ Stateflow {
     }
     midPoint		    [23.5747 24.9468]
     chart		    94
+    linkNode		    [94 0 0]
     dataLimits		    [21.175 25.975 14.625 42.575]
     subviewer		    94
     drawStyle		    SMART
@@ -8978,35 +8139,34 @@ Stateflow {
     }
     executionOrder	    1
     ssIdNumber		    2
-    linkNode		    [94 0 0]
   }
   instance {
     id			    106
-    machine		    1
     name		    "Robotino interface/assemble robotino response"
+    machine		    1
     chart		    94
   }
   chart {
     id			    107
-    machine		    1
     name		    "Robotino interface/light barrier & slider"
     windowPosition	    [416 303 213 385]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1680 1050 1.333333333333333]
     treeNode		    [0 108 0 0]
+    firstTransition	    113
+    firstJunction	    112
     viewObj		    107
+    machine		    1
     ssIdHighWaterMark	    6
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
+    firstData		    109
     chartFileNumber	    10
     disableImplicitCasting  1
     eml {
       name		      "fcn"
     }
     supportVariableSizing   0
-    firstData		    109
-    firstTransition	    113
-    firstJunction	    112
   }
   state {
     id			    108
@@ -9043,6 +8203,7 @@ Stateflow {
     id			    109
     ssIdNumber		    4
     name		    "di03_bump_in"
+    linkNode		    [107 0 110]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -9054,17 +8215,14 @@ Stateflow {
 	primitive		SF_DOUBLE_TYPE
       }
       complexity	      SF_COMPLEX_INHERITED
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [107 0 110]
   }
   data {
     id			    110
     ssIdNumber		    5
     name		    "light_barrier"
+    linkNode		    [107 109 111]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -9077,17 +8235,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [107 109 111]
   }
   data {
     id			    111
     ssIdNumber		    6
     name		    "slider"
+    linkNode		    [107 110 0]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -9102,21 +8257,17 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [107 110 0]
   }
   junction {
     id			    112
     position		    [23.5747 49.5747 7]
     chart		    107
+    linkNode		    [107 0 0]
     subviewer		    107
     ssIdNumber		    3
     type		    CONNECTIVE_JUNCTION
-    linkNode		    [107 0 0]
   }
   transition {
     id			    113
@@ -9132,6 +8283,7 @@ Stateflow {
     }
     midPoint		    [23.5747 24.9468]
     chart		    107
+    linkNode		    [107 0 0]
     dataLimits		    [21.175 25.975 14.625 42.575]
     subviewer		    107
     drawStyle		    SMART
@@ -9140,35 +8292,34 @@ Stateflow {
     }
     executionOrder	    1
     ssIdNumber		    2
-    linkNode		    [107 0 0]
   }
   instance {
     id			    114
-    machine		    1
     name		    "Robotino interface/light barrier & slider"
+    machine		    1
     chart		    107
   }
   chart {
     id			    115
-    machine		    1
     name		    "Begrenzung1"
     windowPosition	    [667 346.25 213 385]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1680 1050 1.333333333333333]
     treeNode		    [0 116 0 0]
+    firstTransition	    120
+    firstJunction	    119
     viewObj		    115
+    machine		    1
     ssIdHighWaterMark	    14
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
+    firstData		    117
     chartFileNumber	    11
     disableImplicitCasting  1
     eml {
       name		      "fnc"
     }
     supportVariableSizing   0
-    firstData		    117
-    firstTransition	    120
-    firstJunction	    119
   }
   state {
     id			    116
@@ -9196,6 +8347,7 @@ Stateflow {
     id			    117
     ssIdNumber		    12
     name		    "win"
+    linkNode		    [115 0 118]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -9210,17 +8362,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [115 0 118]
   }
   data {
     id			    118
     ssIdNumber		    14
     name		    "wout"
+    linkNode		    [115 117 0]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -9235,21 +8384,17 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [115 117 0]
   }
   junction {
     id			    119
     position		    [23.5747 49.5747 7]
     chart		    115
+    linkNode		    [115 0 0]
     subviewer		    115
     ssIdNumber		    3
     type		    CONNECTIVE_JUNCTION
-    linkNode		    [115 0 0]
   }
   transition {
     id			    120
@@ -9265,6 +8410,7 @@ Stateflow {
     }
     midPoint		    [23.5747 24.9468]
     chart		    115
+    linkNode		    [115 0 0]
     dataLimits		    [23.575 23.575 14.625 34.575]
     subviewer		    115
     drawStyle		    SMART
@@ -9273,35 +8419,34 @@ Stateflow {
     }
     executionOrder	    1
     ssIdNumber		    2
-    linkNode		    [115 0 0]
   }
   instance {
     id			    121
-    machine		    1
     name		    "Begrenzung1"
+    machine		    1
     chart		    115
   }
   chart {
     id			    122
-    machine		    1
     name		    "Begrenzung2"
     windowPosition	    [687 346.25 213 385]
     viewLimits		    [0 156.75 0 153.75]
     screen		    [1 1 1680 1050 1.333333333333333]
     treeNode		    [0 123 0 0]
+    firstTransition	    127
+    firstJunction	    126
     viewObj		    122
+    machine		    1
     ssIdHighWaterMark	    14
     decomposition	    CLUSTER_CHART
     type		    EML_CHART
+    firstData		    124
     chartFileNumber	    12
     disableImplicitCasting  1
     eml {
       name		      "fnc"
     }
     supportVariableSizing   0
-    firstData		    124
-    firstTransition	    127
-    firstJunction	    126
   }
   state {
     id			    123
@@ -9329,6 +8474,7 @@ Stateflow {
     id			    124
     ssIdNumber		    12
     name		    "win"
+    linkNode		    [122 0 125]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -9343,17 +8489,14 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [122 0 125]
   }
   data {
     id			    125
     ssIdNumber		    14
     name		    "wout"
+    linkNode		    [122 124 0]
     scope		    OUTPUT_DATA
     machine		    1
     props {
@@ -9368,21 +8511,17 @@ Stateflow {
       }
       complexity	      SF_COMPLEX_INHERITED
       frame		      SF_FRAME_NO
-      unit {
-	name			"inherit"
-      }
     }
     dataType		    "Inherit: Same as Simulink"
-    linkNode		    [122 124 0]
   }
   junction {
     id			    126
     position		    [23.5747 49.5747 7]
     chart		    122
+    linkNode		    [122 0 0]
     subviewer		    122
     ssIdNumber		    3
     type		    CONNECTIVE_JUNCTION
-    linkNode		    [122 0 0]
   }
   transition {
     id			    127
@@ -9398,6 +8537,7 @@ Stateflow {
     }
     midPoint		    [23.5747 24.9468]
     chart		    122
+    linkNode		    [122 0 0]
     dataLimits		    [23.575 23.575 14.625 34.575]
     subviewer		    122
     drawStyle		    SMART
@@ -9406,191 +8546,24 @@ Stateflow {
     }
     executionOrder	    1
     ssIdNumber		    2
-    linkNode		    [122 0 0]
   }
   instance {
     id			    128
-    machine		    1
     name		    "Begrenzung2"
+    machine		    1
     chart		    122
   }
-  chart {
-    id			    129
-    machine		    1
-    name		    "Gewerk2/Chart"
-    windowPosition	    [199.5 216.75 417 348.75]
-    viewLimits		    [53.003 1055.225 -56.39 812.499]
-    zoomFactor		    2.222
-    screen		    [1 1 3200 1200 1.25]
-    treeNode		    [0 133 0 0]
-    viewObj		    129
-    visible		    1
-    subviewS {
-    }
-    ssIdHighWaterMark	    8
-    decomposition	    CLUSTER_CHART
-    chartFileNumber	    13
-    allowGlobalAccessToExportedFunctions 0
-    saturateOnIntegerOverflow 1
-    userSpecifiedStateTransitionExecutionOrder 1
-    disableImplicitCasting  1
-    actionLanguage	    2
-  }
-  state {
-    id			    130
-    labelString		    "Auftrag_Roboter_1"
-    position		    [159.6667 151.3333 167.3333 31.3333]
-    fontSize		    12
-    chart		    129
-    treeNode		    [133 0 131 132]
-    subviewer		    129
-    ssIdNumber		    1
-    type		    AND_STATE
-    decomposition	    CLUSTER_STATE
-    executionOrder	    2
-  }
-  state {
-    id			    131
-    labelString		    "Zielbereich_untersuchen\nentry:\n"
-    position		    [509.6667 137 149.5521 103.3333]
-    fontSize		    12
-    chart		    129
-    treeNode		    [133 0 0 130]
-    subviewer		    129
-    ssIdNumber		    3
-    type		    AND_STATE
-    decomposition	    CLUSTER_STATE
-    executionOrder	    1
-  }
-  state {
-    id			    132
-    labelString		    "Uebergabepunkt_Zielpunkt\nentry:\nZielx.x=Auftrag1.x;\nZielx.y=Auftrag1.y;\nZielx.°=Auftrag1.°;"
-    position		    [517.776 339.1667 159.1667 76.6667]
-    fontSize		    12
-    chart		    129
-    treeNode		    [133 0 130 0]
-    subviewer		    129
-    ssIdNumber		    5
-    type		    AND_STATE
-    decomposition	    CLUSTER_STATE
-    executionOrder	    3
-  }
-  state {
-    id			    133
-    labelString		    "?"
-    position		    [106.3361 54.7212 722.2222 456.6667]
-    fontSize		    12
-    chart		    129
-    treeNode		    [129 131 0 134]
-    subviewer		    129
-    ssIdNumber		    7
-    type		    OR_STATE
-    decomposition	    SET_STATE
-    firstTransition	    135
-  }
-  state {
-    id			    134
-    labelString		    "?"
-    position		    [908.0028 128.6667 90 60]
-    fontSize		    12
-    chart		    129
-    treeNode		    [129 0 133 0]
-    subviewer		    129
-    ssIdNumber		    8
-    type		    OR_STATE
-    decomposition	    SET_STATE
-  }
-  transition {
-    id			    135
-    labelString		    ""
-    labelPosition	    [197.874 136.333 0 0]
-    fontSize		    12
-    src {
-      intersection	      [0 0 1 0 197.8744 121.3333 0 0]
-    }
-    dst {
-      id		      130
-      intersection	      [1 0 -1 0.2283 197.8744 151.3333 0 0]
-    }
-    midPoint		    [197.8744 136.3333]
-    chart		    129
-    dataLimits		    [195.474 200.274 121.333 151.333]
-    subviewer		    129
-    drawStyle		    SMART
-    slide {
-      sticky		      BOTH_STICK
-    }
-    executionOrder	    1
-    ssIdNumber		    2
-    linkNode		    [133 0 136]
-  }
-  transition {
-    id			    136
-    labelString		    "[Auftrag1> 0]"
-    labelPosition	    [365.914 148.364 70.984 16]
-    fontSize		    12
-    src {
-      id		      130
-      intersection	      [2 1 0 0.5 327 167 0 0]
-    }
-    dst {
-      id		      131
-      intersection	      [4 -1 -0 0.7097 509.6667 167 0 0]
-    }
-    midPoint		    [414.3333 167]
-    chart		    129
-    dataLimits		    [327 509.667 164.6 169.4]
-    subviewer		    129
-    drawStyle		    SMART
-    slide {
-      sticky		      BOTH_STICK
-    }
-    executionOrder	    1
-    ssIdNumber		    4
-    linkNode		    [133 135 137]
-  }
-  transition {
-    id			    137
-    labelString		    "[PositionRobbi2~=Auftrag1 OR PositionRobbi3 ]"
-    labelPosition	    [557.038 276.196 257.266 16]
-    fontSize		    12
-    src {
-      id		      131
-      intersection	      [3 0 1 0.7021 554.2187 240.3333 0 0]
-    }
-    dst {
-      id		      132
-      intersection	      [1 -0 -1 0.229 554.2187 339.1667 0 0]
-    }
-    midPoint		    [554.2187 285.75]
-    chart		    129
-    dataLimits		    [551.819 556.619 240.333 339.167]
-    subviewer		    129
-    drawStyle		    SMART
-    slide {
-      sticky		      BOTH_STICK
-    }
-    executionOrder	    1
-    ssIdNumber		    6
-    linkNode		    [133 136 0]
-  }
-  instance {
-    id			    138
-    machine		    1
-    name		    "Gewerk2/Chart"
-    chart		    129
-  }
   target {
-    id			    139
-    machine		    1
+    id			    129
     name		    "sfun"
     description		    "Default Simulink S-Function Target."
-    linkNode		    [1 0 140]
+    machine		    1
+    linkNode		    [1 0 130]
   }
   target {
-    id			    140
-    machine		    1
+    id			    130
     name		    "rtw"
-    linkNode		    [1 139 0]
+    machine		    1
+    linkNode		    [1 129 0]
   }
 }
