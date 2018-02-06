@@ -18,7 +18,7 @@ Model {
       BusOutputAsStruct	      "off"
     }
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.820"
+    ComputedModelVersion    "1.828"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -66,8 +66,8 @@ Model {
 	ViewObjType		"SimulinkSubsys"
 	LoadSaveID		"829"
 	Extents			[1868.0, 796.0]
-	ZoomFactor		[1.0]
-	Offset			[-408.96578092139612, 10.950155155447728]
+	ZoomFactor		[0.8]
+	Offset			[299.22234395750388, -307.33396007275348]
       }
     }
   }
@@ -77,9 +77,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Jan"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Feb 05 14:52:53 2018"
-  RTWModifiedTimeStamp	  439743168
-  ModelVersionFormat	  "1.%<AutoIncrement:820>"
+  LastModifiedDate	  "Tue Feb 06 14:18:10 2018"
+  RTWModifiedTimeStamp	  439827368
+  ModelVersionFormat	  "1.%<AutoIncrement:828>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -849,6 +849,24 @@ Model {
       SampleTime	      "-1"
     }
     Block {
+      BlockType		      Delay
+      DelayLengthSource	      "Dialog"
+      DelayLength	      "2"
+      DelayLengthUpperLimit   "100"
+      InitialConditionSource  "Dialog"
+      InitialCondition	      "0.0"
+      ExternalReset	      "None"
+      ShowEnablePort	      off
+      PreventDirectFeedthrough off
+      DiagnosticForOutOfRangeDelayLength "None"
+      RemoveProtectionDelayLength off
+      InputProcessing	      "Elements as channels (sample based)"
+      UseCircularBuffer	      off
+      SampleTime	      "-1"
+      StateMustResolveToSignalObject off
+      CodeGenStateStorageClass "Auto"
+    }
+    Block {
       BlockType		      Demux
       Outputs		      "4"
       DisplayOption	      "none"
@@ -1064,7 +1082,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "60"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "869"
+    SIDHighWatermark	    "883"
     Block {
       BlockType		      Fcn
       Name		      "Abstandssensoren"
@@ -2439,7 +2457,7 @@ Model {
 	TiledPaperMargins	[0.500000, 0.500000, 0.500000, 0.500000]
 	TiledPageScale		1
 	ShowPageBoundaries	off
-	ZoomFactor		"100"
+	ZoomFactor		"80"
 	Block {
 	  BlockType		  Inport
 	  Name			  "56 elements"
@@ -2458,11 +2476,35 @@ Model {
 	  IconDisplay		  "Port number"
 	}
 	Block {
+	  BlockType		  Delay
+	  Name			  "Delay"
+	  SID			  "882"
+	  Ports			  [1, 1]
+	  Position		  [895, 283, 930, 317]
+	  ZOrder		  59
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  InputPortMap		  "u0"
+	  DelayLength		  "1"
+	}
+	Block {
+	  BlockType		  Delay
+	  Name			  "Delay1"
+	  SID			  "883"
+	  Ports			  [1, 1]
+	  Position		  [935, 295, 980, 345]
+	  ZOrder		  60
+	  BlockMirror		  on
+	  NamePlacement		  "alternate"
+	  InputPortMap		  "u0"
+	  DelayLength		  "1"
+	}
+	Block {
 	  BlockType		  SubSystem
-	  Name			  "Chart"
+	  Name			  "Fifo"
 	  SID			  "856"
-	  Ports			  [8, 2]
-	  Position		  [1120, 159, 1325, 581]
+	  Ports			  [4, 1]
+	  Position		  [1510, -70, 1715, 355]
 	  ZOrder		  38
 	  ErrorFcn		  "Stateflow.Translate.translate"
 	  PermitHierarchicalResolution "ExplicitOnly"
@@ -2471,7 +2513,7 @@ Model {
 	  SFBlockType		  "Chart"
 	  Variant		  off
 	  System {
-	    Name		    "Chart"
+	    Name		    "Fifo"
 	    Location		    [-7, -7, 1287, 687]
 	    Open		    off
 	    ModelBrowserVisibility  off
@@ -2485,10 +2527,10 @@ Model {
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
 	    ZoomFactor		    "100"
-	    SIDHighWatermark	    "94"
+	    SIDHighWatermark	    "95"
 	    Block {
 	      BlockType		      Inport
-	      Name		      "Robbi2_x"
+	      Name		      "FifoArray"
 	      SID		      "856::85"
 	      Position		      [20, 101, 40, 119]
 	      ZOrder		      65
@@ -2496,65 +2538,29 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Inport
-	      Name		      "Robbi3_x"
-	      SID		      "856::86"
-	      Position		      [20, 136, 40, 154]
-	      ZOrder		      66
-	      Port		      "2"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "Robbi4_x"
-	      SID		      "856::87"
-	      Position		      [20, 171, 40, 189]
-	      ZOrder		      67
-	      Port		      "3"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "Robbi2_y"
-	      SID		      "856::88"
-	      Position		      [20, 206, 40, 224]
-	      ZOrder		      68
-	      Port		      "4"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "Robbi3_y"
-	      SID		      "856::89"
-	      Position		      [20, 246, 40, 264]
-	      ZOrder		      69
-	      Port		      "5"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
-	      Name		      "Robbi4_y"
-	      SID		      "856::90"
-	      Position		      [20, 281, 40, 299]
-	      ZOrder		      70
-	      Port		      "6"
-	      IconDisplay	      "Port number"
-	    }
-	    Block {
-	      BlockType		      Inport
 	      Name		      "Zielposition"
 	      SID		      "856::91"
-	      Position		      [20, 316, 40, 334]
+	      Position		      [20, 136, 40, 154]
 	      ZOrder		      71
-	      Port		      "7"
+	      Port		      "2"
 	      IconDisplay	      "Port number"
 	    }
 	    Block {
 	      BlockType		      Inport
 	      Name		      "Zielstation"
 	      SID		      "856::92"
-	      Position		      [20, 351, 40, 369]
+	      Position		      [20, 171, 40, 189]
 	      ZOrder		      72
-	      Port		      "8"
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "StationArray"
+	      SID		      "856::95"
+	      Position		      [20, 206, 40, 224]
+	      ZOrder		      75
+	      Port		      "4"
 	      IconDisplay	      "Port number"
 	    }
 	    Block {
@@ -2571,22 +2577,16 @@ Model {
 	      Name		      " SFunction "
 	      SID		      "856::81"
 	      Tag		      "Stateflow S-Function Gewerk2_Bahnplanung2015 13"
-	      Ports		      [8, 3]
-	      Position		      [180, 110, 230, 290]
+	      Ports		      [4, 2]
+	      Position		      [180, 122, 230, 223]
 	      ZOrder		      61
 	      FunctionName	      "sf_sfun"
-	      PortCounts	      "[8 3]"
+	      PortCounts	      "[4 2]"
 	      SFunctionDeploymentMode off
 	      EnableBusSupport	      off
 	      Port {
 		PortNumber		2
-		Name			"Vektorberechnung"
-		RTWStorageClass		"Auto"
-		DataLoggingNameMode	"SignalName"
-	      }
-	      Port {
-		PortNumber		3
-		Name			"Auftragskoordinaten"
+		Name			"Fifo"
 		RTWStorageClass		"Auto"
 		DataLoggingNameMode	"SignalName"
 	      }
@@ -2600,104 +2600,58 @@ Model {
 	    }
 	    Block {
 	      BlockType		      Outport
-	      Name		      "Vektorberechnung"
+	      Name		      "Fifo"
 	      SID		      "856::93"
 	      Position		      [460, 101, 480, 119]
 	      ZOrder		      73
 	      IconDisplay	      "Port number"
 	    }
-	    Block {
-	      BlockType		      Outport
-	      Name		      "Auftragskoordinaten"
-	      SID		      "856::94"
-	      Position		      [460, 136, 480, 154]
-	      ZOrder		      74
-	      Port		      "2"
-	      IconDisplay	      "Port number"
-	    }
 	    Line {
-	      ZOrder		      70
-	      SrcBlock		      "Robbi2_x"
+	      ZOrder		      135
+	      SrcBlock		      "FifoArray"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      71
-	      SrcBlock		      "Robbi3_x"
+	      ZOrder		      136
+	      SrcBlock		      "Zielposition"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      2
 	    }
 	    Line {
-	      ZOrder		      72
-	      SrcBlock		      "Robbi4_x"
+	      ZOrder		      137
+	      SrcBlock		      "Zielstation"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      3
 	    }
 	    Line {
-	      ZOrder		      73
-	      SrcBlock		      "Robbi2_y"
+	      ZOrder		      138
+	      SrcBlock		      "StationArray"
 	      SrcPort		      1
 	      DstBlock		      " SFunction "
 	      DstPort		      4
 	    }
 	    Line {
-	      ZOrder		      74
-	      SrcBlock		      "Robbi3_y"
-	      SrcPort		      1
-	      DstBlock		      " SFunction "
-	      DstPort		      5
-	    }
-	    Line {
-	      ZOrder		      75
-	      SrcBlock		      "Robbi4_y"
-	      SrcPort		      1
-	      DstBlock		      " SFunction "
-	      DstPort		      6
-	    }
-	    Line {
-	      ZOrder		      76
-	      SrcBlock		      "Zielposition"
-	      SrcPort		      1
-	      DstBlock		      " SFunction "
-	      DstPort		      7
-	    }
-	    Line {
-	      ZOrder		      77
-	      SrcBlock		      "Zielstation"
-	      SrcPort		      1
-	      DstBlock		      " SFunction "
-	      DstPort		      8
-	    }
-	    Line {
-	      Name		      "Vektorberechnung"
-	      ZOrder		      78
+	      Name		      "Fifo"
+	      ZOrder		      139
 	      Labels		      [0, 0]
 	      SrcBlock		      " SFunction "
 	      SrcPort		      2
-	      DstBlock		      "Vektorberechnung"
+	      DstBlock		      "Fifo"
 	      DstPort		      1
 	    }
 	    Line {
-	      Name		      "Auftragskoordinaten"
-	      ZOrder		      79
-	      Labels		      [0, 0]
-	      SrcBlock		      " SFunction "
-	      SrcPort		      3
-	      DstBlock		      "Auftragskoordinaten"
-	      DstPort		      1
-	    }
-	    Line {
-	      ZOrder		      80
+	      ZOrder		      140
 	      SrcBlock		      " Demux "
 	      SrcPort		      1
 	      DstBlock		      " Terminator "
 	      DstPort		      1
 	    }
 	    Line {
-	      ZOrder		      81
+	      ZOrder		      141
 	      SrcBlock		      " SFunction "
 	      SrcPort		      1
 	      DstBlock		      " Demux "
@@ -2717,6 +2671,175 @@ Model {
 	  SaturateOnIntegerOverflow off
 	}
 	Block {
+	  BlockType		  SubSystem
+	  Name			  "Globale Markierung"
+	  SID			  "875"
+	  Ports			  [3, 2]
+	  Position		  [800, -54, 1005, 224]
+	  ZOrder		  57
+	  LibraryVersion	  "1.32"
+	  ErrorFcn		  "Stateflow.Translate.translate"
+	  PermitHierarchicalResolution "ExplicitOnly"
+	  TreatAsAtomicUnit	  on
+	  RequestExecContextInheritance	off
+	  SFBlockType		  "MATLAB Function"
+	  Variant		  off
+	  System {
+	    Name		    "Globale Markierung"
+	    Location		    [223, 338, 826, 833]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "100"
+	    SIDHighWatermark	    "23"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "Robbi"
+	      SID		      "875::1"
+	      Position		      [20, 101, 40, 119]
+	      ZOrder		      -1
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "StationArray"
+	      SID		      "875::20"
+	      Position		      [20, 136, 40, 154]
+	      ZOrder		      11
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Inport
+	      Name		      "FifoArray"
+	      SID		      "875::21"
+	      Position		      [20, 171, 40, 189]
+	      ZOrder		      12
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Demux
+	      Name		      " Demux "
+	      SID		      "875::17"
+	      Ports		      [1, 1]
+	      Position		      [270, 230, 320, 270]
+	      ZOrder		      8
+	      Outputs		      "1"
+	    }
+	    Block {
+	      BlockType		      S-Function
+	      Name		      " SFunction "
+	      SID		      "875::16"
+	      Tag		      "Stateflow S-Function Gewerk2_Bahnplanung2015 15"
+	      Ports		      [3, 3]
+	      Position		      [180, 100, 230, 180]
+	      ZOrder		      7
+	      FunctionName	      "sf_sfun"
+	      PortCounts	      "[3 3]"
+	      SFunctionDeploymentMode off
+	      EnableBusSupport	      off
+	      Port {
+		PortNumber		2
+		Name			"FifoArray1"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	      Port {
+		PortNumber		3
+		Name			"StationArray1"
+		RTWStorageClass		"Auto"
+		DataLoggingNameMode	"SignalName"
+	      }
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      " Terminator "
+	      SID		      "875::18"
+	      Position		      [460, 241, 480, 259]
+	      ZOrder		      9
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "FifoArray1"
+	      SID		      "875::22"
+	      Position		      [460, 101, 480, 119]
+	      ZOrder		      13
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "StationArray1"
+	      SID		      "875::23"
+	      Position		      [460, 136, 480, 154]
+	      ZOrder		      14
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      ZOrder		      42
+	      SrcBlock		      "Robbi"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      43
+	      SrcBlock		      "StationArray"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      44
+	      SrcBlock		      "FifoArray"
+	      SrcPort		      1
+	      DstBlock		      " SFunction "
+	      DstPort		      3
+	    }
+	    Line {
+	      Name		      "FifoArray1"
+	      ZOrder		      45
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      2
+	      DstBlock		      "FifoArray1"
+	      DstPort		      1
+	    }
+	    Line {
+	      Name		      "StationArray1"
+	      ZOrder		      46
+	      Labels		      [0, 0]
+	      SrcBlock		      " SFunction "
+	      SrcPort		      3
+	      DstBlock		      "StationArray1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      47
+	      SrcBlock		      " Demux "
+	      SrcPort		      1
+	      DstBlock		      " Terminator "
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      48
+	      SrcBlock		      " SFunction "
+	      SrcPort		      1
+	      DstBlock		      " Demux "
+	      DstPort		      1
+	    }
+	  }
+	}
+	Block {
 	  BlockType		  Fcn
 	  Name			  "Identrobot"
 	  SID			  "860"
@@ -2725,241 +2848,290 @@ Model {
 	  Expr			  "u(2)"
 	}
 	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.XRobot1"
-	  SID			  "807"
-	  Position		  [620, 20, 680, 50]
-	  ZOrder		  2
-	  Expr			  "u(1)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.XRobot2"
-	  SID			  "836"
-	  Position		  [620, 230, 680, 260]
-	  ZOrder		  22
-	  Expr			  "u(4)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.XRobot3"
-	  SID			  "839"
-	  Position		  [620, 455, 680, 485]
-	  ZOrder		  25
-	  Expr			  "u(7)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.XRobot4"
-	  SID			  "842"
-	  Position		  [620, 660, 680, 690]
-	  ZOrder		  28
-	  Expr			  "u(10)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.YRobot1"
-	  SID			  "832"
-	  Position		  [620, 80, 680, 110]
-	  ZOrder		  18
-	  Expr			  "u(2)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.YRobot2"
-	  SID			  "837"
-	  Position		  [620, 305, 680, 335]
-	  ZOrder		  23
-	  Expr			  "u(5)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.YRobot3"
-	  SID			  "840"
-	  Position		  [620, 515, 680, 545]
-	  ZOrder		  26
-	  Expr			  "u(8)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.YRobot4"
-	  SID			  "843"
-	  Position		  [615, 725, 675, 755]
-	  ZOrder		  29
-	  Expr			  "u(11)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.°Robot1"
-	  SID			  "833"
-	  Position		  [620, 150, 680, 180]
-	  ZOrder		  19
-	  Expr			  "u(3)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.°Robot2"
-	  SID			  "838"
-	  Position		  [620, 375, 680, 405]
-	  ZOrder		  24
-	  Expr			  "u(6)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.°Robot3"
-	  SID			  "841"
-	  Position		  [620, 585, 680, 615]
-	  ZOrder		  27
-	  Expr			  "u(9)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Pos.°Robot4"
-	  SID			  "844"
-	  Position		  [615, 790, 675, 820]
-	  ZOrder		  30
-	  Expr			  "u(12)"
-	}
-	Block {
-	  BlockType		  Sum
-	  Name			  "Sum"
-	  SID			  "864"
-	  Ports			  [2, 1]
-	  Position		  [435, 235, 455, 255]
-	  ZOrder		  46
-	  ShowName		  off
-	  IconShape		  "round"
-	  Inputs		  "++|"
-	  InputSameDT		  off
-	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
-	  SaturateOnIntegerOverflow off
-	  Port {
-	    PortNumber		    1
-	    Name		    "Zielpunkt"
-	    RTWStorageClass	    "Auto"
-	    DataLoggingNameMode	    "SignalName"
-	  }
-	}
-	Block {
-	  BlockType		  Terminator
-	  Name			  "Terminator1"
-	  SID			  "865"
-	  Position		  [735, 85, 755, 105]
-	  ZOrder		  48
-	}
-	Block {
-	  BlockType		  Terminator
-	  Name			  "Terminator10"
-	  SID			  "850"
-	  Position		  [735, 590, 755, 610]
-	  ZOrder		  36
-	}
-	Block {
-	  BlockType		  Terminator
-	  Name			  "Terminator2"
-	  SID			  "866"
-	  Position		  [735, 25, 755, 45]
-	  ZOrder		  47
-	}
-	Block {
-	  BlockType		  Terminator
-	  Name			  "Terminator3"
-	  SID			  "867"
-	  Position		  [735, 155, 755, 175]
-	  ZOrder		  49
-	}
-	Block {
-	  BlockType		  Terminator
-	  Name			  "Terminator4"
-	  SID			  "868"
-	  Position		  [720, 380, 740, 400]
-	  ZOrder		  50
-	}
-	Block {
-	  BlockType		  Terminator
-	  Name			  "Terminator5"
-	  SID			  "869"
-	  Position		  [710, 795, 730, 815]
-	  ZOrder		  51
-	}
-	Block {
-	  BlockType		  Reference
-	  Name			  "Unpack"
-	  SID			  "858"
-	  Ports			  [1, 1]
-	  Position		  [135, 100, 215, 150]
-	  ZOrder		  40
-	  LibraryVersion	  "1.5"
-	  SourceBlock		  "xpcutilitieslib/Byte Unpacking "
-	  SourceType		  "xpcbytepacking"
-	  MaskUnpackedDataTypes	  "{'uint8'}"
-	  MaskUnpackedDataSizes	  "{[8]}"
-	  MaskAlignment		  "1"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Zielfach"
-	  SID			  "863"
-	  Position		  [270, 230, 330, 260]
-	  ZOrder		  45
-	  Expr			  "u(6)"
-	}
-	Block {
-	  BlockType		  Fcn
-	  Name			  "Zielstation"
-	  SID			  "861"
-	  Position		  [270, 170, 330, 200]
-	  ZOrder		  43
-	  Expr			  "u(5)"
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "UDP data"
-	  SID			  "831"
-	  Position		  [550, 48, 580, 62]
-	  ZOrder		  17
-	  IconDisplay		  "Port number"
-	}
-	Line {
-	  ZOrder		  171
-	  SrcBlock		  "Pos.XRobot1"
-	  SrcPort		  1
-	  DstBlock		  "Terminator2"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  105
-	  SrcBlock		  "56 elements"
-	  SrcPort		  1
-	  Points		  [437, 0]
-	  Branch {
-	    ZOrder		    104
-	    Points		    [0, 5]
-	    Branch {
-	      ZOrder		      106
-	      DstBlock		      "UDP data"
+	  BlockType		  SubSystem
+	  Name			  "Subsystem"
+	  SID			  "876"
+	  Ports			  [1, 4]
+	  Position		  [470, -18, 510, 43]
+	  ZOrder		  -30
+	  RequestExecContextInheritance	off
+	  Variant		  off
+	  System {
+	    Name		    "Subsystem"
+	    Location		    [100, 100, 600, 900]
+	    Open		    off
+	    ModelBrowserVisibility  off
+	    ModelBrowserWidth	    200
+	    ScreenColor		    "white"
+	    PaperOrientation	    "landscape"
+	    PaperPositionMode	    "auto"
+	    PaperType		    "A4"
+	    PaperUnits		    "centimeters"
+	    TiledPaperMargins	    [1.270000, 1.270000, 1.270000, 1.270000]
+	    TiledPageScale	    1
+	    ShowPageBoundaries	    off
+	    ZoomFactor		    "61"
+	    Block {
+	      BlockType		      Inport
+	      Name		      "In1"
+	      SID		      "877"
+	      Position		      [20, 43, 50, 57]
+	      ZOrder		      55
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux"
+	      SID		      "870"
+	      Ports		      [2, 1]
+	      Position		      [800, 256, 805, 294]
+	      ZOrder		      52
+	      ShowName		      off
+	      Inputs		      "2"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux1"
+	      SID		      "871"
+	      Ports		      [2, 1]
+	      Position		      [820, 476, 825, 514]
+	      ZOrder		      53
+	      ShowName		      off
+	      Inputs		      "2"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Mux
+	      Name		      "Mux2"
+	      SID		      "872"
+	      Ports		      [2, 1]
+	      Position		      [820, 701, 825, 739]
+	      ZOrder		      54
+	      ShowName		      off
+	      Inputs		      "2"
+	      DisplayOption	      "bar"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Pos.XRobot1"
+	      SID		      "807"
+	      Position		      [625, 20, 685, 50]
+	      ZOrder		      2
+	      Expr		      "u(1)"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Pos.XRobot2"
+	      SID		      "836"
+	      Position		      [625, 230, 685, 260]
+	      ZOrder		      22
+	      Expr		      "u(4)"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Pos.XRobot3"
+	      SID		      "839"
+	      Position		      [625, 455, 685, 485]
+	      ZOrder		      25
+	      Expr		      "u(7)"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Pos.XRobot4"
+	      SID		      "842"
+	      Position		      [625, 660, 685, 690]
+	      ZOrder		      28
+	      Expr		      "u(10)"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Pos.YRobot1"
+	      SID		      "832"
+	      Position		      [625, 80, 685, 110]
+	      ZOrder		      18
+	      Expr		      "u(2)"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Pos.YRobot2"
+	      SID		      "837"
+	      Position		      [625, 305, 685, 335]
+	      ZOrder		      23
+	      Expr		      "u(5)"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Pos.YRobot3"
+	      SID		      "840"
+	      Position		      [625, 515, 685, 545]
+	      ZOrder		      26
+	      Expr		      "u(8)"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Pos.YRobot4"
+	      SID		      "843"
+	      Position		      [620, 725, 680, 755]
+	      ZOrder		      29
+	      Expr		      "u(11)"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Pos.°Robot1"
+	      SID		      "833"
+	      Position		      [625, 150, 685, 180]
+	      ZOrder		      19
+	      Expr		      "u(3)"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Pos.°Robot2"
+	      SID		      "838"
+	      Position		      [625, 375, 685, 405]
+	      ZOrder		      24
+	      Expr		      "u(6)"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Pos.°Robot3"
+	      SID		      "841"
+	      Position		      [625, 585, 685, 615]
+	      ZOrder		      27
+	      Expr		      "u(9)"
+	    }
+	    Block {
+	      BlockType		      Fcn
+	      Name		      "Pos.°Robot4"
+	      SID		      "844"
+	      Position		      [620, 790, 680, 820]
+	      ZOrder		      30
+	      Expr		      "u(12)"
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator1"
+	      SID		      "865"
+	      Position		      [740, 85, 760, 105]
+	      ZOrder		      48
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator10"
+	      SID		      "850"
+	      Position		      [740, 590, 760, 610]
+	      ZOrder		      36
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator2"
+	      SID		      "866"
+	      Position		      [740, 25, 760, 45]
+	      ZOrder		      47
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator3"
+	      SID		      "867"
+	      Position		      [740, 155, 760, 175]
+	      ZOrder		      49
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator4"
+	      SID		      "868"
+	      Position		      [725, 380, 745, 400]
+	      ZOrder		      50
+	    }
+	    Block {
+	      BlockType		      Terminator
+	      Name		      "Terminator5"
+	      SID		      "869"
+	      Position		      [715, 795, 735, 815]
+	      ZOrder		      51
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "UDP data"
+	      SID		      "878"
+	      Position		      [570, 48, 600, 62]
+	      ZOrder		      56
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out2"
+	      SID		      "879"
+	      Position		      [825, 268, 855, 282]
+	      ZOrder		      57
+	      Port		      "2"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out3"
+	      SID		      "880"
+	      Position		      [845, 488, 875, 502]
+	      ZOrder		      58
+	      Port		      "3"
+	      IconDisplay	      "Port number"
+	    }
+	    Block {
+	      BlockType		      Outport
+	      Name		      "Out4"
+	      SID		      "881"
+	      Position		      [845, 713, 875, 727]
+	      ZOrder		      59
+	      Port		      "4"
+	      IconDisplay	      "Port number"
+	    }
+	    Line {
+	      ZOrder		      171
+	      SrcBlock		      "Pos.XRobot1"
+	      SrcPort		      1
+	      DstBlock		      "Terminator2"
 	      DstPort		      1
 	    }
-	    Branch {
-	      ZOrder		      58
-	      Points		      [0, 40]
+	    Line {
+	      ZOrder		      176
+	      SrcBlock		      "Pos.°Robot2"
+	      SrcPort		      1
+	      DstBlock		      "Terminator4"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      243
+	      SrcBlock		      "In1"
+	      SrcPort		      1
+	      Points		      [442, 0]
 	      Branch {
-		ZOrder			114
-		DstBlock		"Pos.YRobot1"
-		DstPort			1
-	      }
-	      Branch {
-		ZOrder			113
-		Points			[0, 70]
+		ZOrder			104
+		Points			[0, 5]
 		Branch {
-		  ZOrder		  115
-		  Points		  [0, 80]
+		  ZOrder		  244
+		  DstBlock		  "UDP data"
+		  DstPort		  1
+		}
+		Branch {
+		  ZOrder		  58
+		  Points		  [0, 40]
 		  Branch {
-		    ZOrder		    109
-		    DstBlock		    "Pos.XRobot2"
+		    ZOrder		    114
+		    DstBlock		    "Pos.YRobot1"
 		    DstPort		    1
 		  }
 		  Branch {
+		    ZOrder		    113
+		    Points		    [0, 70]
+		    Branch {
+		    ZOrder		    115
+		    Points		    [0, 80]
+		    Branch {
+		    ZOrder		    109
+		    DstBlock		    "Pos.XRobot2"
+		    DstPort		    1
+		    }
+		    Branch {
 		    ZOrder		    108
 		    Points		    [0, 75]
 		    Branch {
@@ -3027,68 +3199,179 @@ Model {
 		    DstBlock		    "Pos.YRobot2"
 		    DstPort		    1
 		    }
+		    }
+		    }
+		    Branch {
+		    ZOrder		    111
+		    DstBlock		    "Pos.°Robot1"
+		    DstPort		    1
+		    }
 		  }
 		}
-		Branch {
-		  ZOrder		  111
-		  DstBlock		  "Pos.°Robot1"
-		  DstPort		  1
-		}
+	      }
+	      Branch {
+		ZOrder			41
+		Points			[0, -15]
+		DstBlock		"Pos.XRobot1"
+		DstPort			1
 	      }
 	    }
+	    Line {
+	      ZOrder		      227
+	      SrcBlock		      "Pos.YRobot2"
+	      SrcPort		      1
+	      Points		      [53, 0; 0, -35]
+	      DstBlock		      "Mux"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      139
+	      SrcBlock		      "Pos.°Robot3"
+	      SrcPort		      1
+	      DstBlock		      "Terminator10"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      233
+	      SrcBlock		      "Pos.YRobot3"
+	      SrcPort		      1
+	      Points		      [63, 0; 0, -25]
+	      DstBlock		      "Mux1"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      226
+	      SrcBlock		      "Pos.XRobot2"
+	      SrcPort		      1
+	      Points		      [53, 0; 0, 20]
+	      DstBlock		      "Mux"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      232
+	      SrcBlock		      "Pos.XRobot3"
+	      SrcPort		      1
+	      Points		      [63, 0; 0, 15]
+	      DstBlock		      "Mux1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      169
+	      SrcBlock		      "Pos.°Robot1"
+	      SrcPort		      1
+	      DstBlock		      "Terminator3"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      237
+	      SrcBlock		      "Pos.YRobot4"
+	      SrcPort		      1
+	      Points		      [65, 0; 0, -10]
+	      DstBlock		      "Mux2"
+	      DstPort		      2
+	    }
+	    Line {
+	      ZOrder		      170
+	      SrcBlock		      "Pos.YRobot1"
+	      SrcPort		      1
+	      DstBlock		      "Terminator1"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      177
+	      SrcBlock		      "Pos.°Robot4"
+	      SrcPort		      1
+	      DstBlock		      "Terminator5"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      236
+	      SrcBlock		      "Pos.XRobot4"
+	      SrcPort		      1
+	      Points		      [63, 0; 0, 35]
+	      DstBlock		      "Mux2"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      245
+	      SrcBlock		      "Mux"
+	      SrcPort		      1
+	      DstBlock		      "Out2"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      246
+	      SrcBlock		      "Mux1"
+	      SrcPort		      1
+	      DstBlock		      "Out3"
+	      DstPort		      1
+	    }
+	    Line {
+	      ZOrder		      247
+	      SrcBlock		      "Mux2"
+	      SrcPort		      1
+	      DstBlock		      "Out4"
+	      DstPort		      1
+	    }
 	  }
-	  Branch {
-	    ZOrder		    41
-	    Points		    [0, -15]
-	    DstBlock		    "Pos.XRobot1"
-	    DstPort		    1
+	}
+	Block {
+	  BlockType		  Sum
+	  Name			  "Sum"
+	  SID			  "864"
+	  Ports			  [2, 1]
+	  Position		  [435, 235, 455, 255]
+	  ZOrder		  46
+	  ShowName		  off
+	  IconShape		  "round"
+	  Inputs		  "++|"
+	  InputSameDT		  off
+	  OutDataTypeStr	  "Inherit: Inherit via internal rule"
+	  SaturateOnIntegerOverflow off
+	  Port {
+	    PortNumber		    1
+	    Name		    "Zielpunkt"
+	    RTWStorageClass	    "Auto"
+	    DataLoggingNameMode	    "SignalName"
 	  }
 	}
-	Line {
-	  ZOrder		  176
-	  SrcBlock		  "Pos.°Robot2"
-	  SrcPort		  1
-	  DstBlock		  "Terminator4"
-	  DstPort		  1
+	Block {
+	  BlockType		  Reference
+	  Name			  "Unpack"
+	  SID			  "858"
+	  Ports			  [1, 1]
+	  Position		  [135, 100, 215, 150]
+	  ZOrder		  40
+	  LibraryVersion	  "1.5"
+	  SourceBlock		  "xpcutilitieslib/Byte Unpacking "
+	  SourceType		  "xpcbytepacking"
+	  MaskUnpackedDataTypes	  "{'uint8'}"
+	  MaskUnpackedDataSizes	  "{[8]}"
+	  MaskAlignment		  "1"
 	}
-	Line {
-	  ZOrder		  168
-	  SrcBlock		  "Pos.YRobot2"
-	  SrcPort		  1
-	  Points		  [103, 0; 0, 25]
-	  DstBlock		  "Chart"
-	  DstPort		  4
+	Block {
+	  BlockType		  Fcn
+	  Name			  "Zielfach"
+	  SID			  "863"
+	  Position		  [270, 230, 330, 260]
+	  ZOrder		  45
+	  Expr			  "u(6)"
 	}
-	Line {
-	  ZOrder		  167
-	  SrcBlock		  "Pos.XRobot2"
-	  SrcPort		  1
-	  Points		  [215, 0; 0, -50]
-	  DstBlock		  "Chart"
-	  DstPort		  1
+	Block {
+	  BlockType		  Fcn
+	  Name			  "Zielstation"
+	  SID			  "861"
+	  Position		  [270, 170, 330, 200]
+	  ZOrder		  43
+	  Expr			  "u(5)"
 	}
-	Line {
-	  ZOrder		  172
-	  SrcBlock		  "Pos.XRobot3"
-	  SrcPort		  1
-	  Points		  [135, 0; 0, -225]
-	  DstBlock		  "Chart"
-	  DstPort		  2
-	}
-	Line {
-	  ZOrder		  174
-	  SrcBlock		  "Pos.YRobot3"
-	  SrcPort		  1
-	  Points		  [75, 0; 0, -135]
-	  DstBlock		  "Chart"
-	  DstPort		  5
-	}
-	Line {
-	  ZOrder		  139
-	  SrcBlock		  "Pos.°Robot3"
-	  SrcPort		  1
-	  DstBlock		  "Terminator10"
-	  DstPort		  1
+	Block {
+	  BlockType		  Outport
+	  Name			  "UDP data"
+	  SID			  "831"
+	  Position		  [550, -27, 580, -13]
+	  ZOrder		  17
+	  IconDisplay		  "Port number"
 	}
 	Line {
 	  ZOrder		  150
@@ -3127,15 +3410,15 @@ Model {
 	  ZOrder		  157
 	  SrcBlock		  "Zielstation"
 	  SrcPort		  1
-	  Points		  [20, 0]
+	  Points		  [23, 0]
 	  Branch {
-	    ZOrder		    180
-	    Points		    [0, -48; 720, 0; 0, 408]
-	    DstBlock		    "Chart"
-	    DstPort		    8
+	    ZOrder		    247
+	    Points		    [0, -51; 1092, 0; 0, 61]
+	    DstBlock		    "Fifo"
+	    DstPort		    3
 	  }
 	  Branch {
-	    ZOrder		    179
+	    ZOrder		    246
 	    DstBlock		    "Gain"
 	    DstPort		    1
 	  }
@@ -3156,51 +3439,82 @@ Model {
 	  DstPort		  2
 	}
 	Line {
-	  ZOrder		  169
-	  SrcBlock		  "Pos.°Robot1"
+	  ZOrder		  243
+	  SrcBlock		  "56 elements"
 	  SrcPort		  1
-	  DstBlock		  "Terminator3"
+	  Points		  [204, 0; 0, -35]
+	  DstBlock		  "Subsystem"
 	  DstPort		  1
 	}
 	Line {
-	  ZOrder		  170
-	  SrcBlock		  "Pos.YRobot1"
+	  ZOrder		  244
+	  SrcBlock		  "Subsystem"
 	  SrcPort		  1
-	  DstBlock		  "Terminator1"
-	  DstPort		  1
-	}
-	Line {
-	  ZOrder		  173
-	  SrcBlock		  "Pos.XRobot4"
-	  SrcPort		  1
-	  Points		  [153, 0; 0, -380]
-	  DstBlock		  "Chart"
-	  DstPort		  3
-	}
-	Line {
-	  ZOrder		  175
-	  SrcBlock		  "Pos.YRobot4"
-	  SrcPort		  1
-	  Points		  [257, 0; 0, -295]
-	  DstBlock		  "Chart"
-	  DstPort		  6
-	}
-	Line {
-	  ZOrder		  177
-	  SrcBlock		  "Pos.°Robot4"
-	  SrcPort		  1
-	  DstBlock		  "Terminator5"
+	  Points		  [10, 0; 0, -10]
+	  DstBlock		  "UDP data"
 	  DstPort		  1
 	}
 	Line {
 	  Name			  "Zielpunkt"
-	  ZOrder		  178
+	  ZOrder		  245
 	  Labels		  [0, 0]
 	  SrcBlock		  "Sum"
 	  SrcPort		  1
-	  Points		  [14, 0; 0, 261; 555, 0; 0, -11]
-	  DstBlock		  "Chart"
-	  DstPort		  7
+	  Points		  [373, 0; 0, -100; 558, 0; 0, -55]
+	  DstBlock		  "Fifo"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  251
+	  SrcBlock		  "Globale Markierung"
+	  SrcPort		  2
+	  Points		  [64, 0; 0, 66; -17, 0]
+	  Branch {
+	    ZOrder		    264
+	    Points		    [-48, 0; 0, 79]
+	    DstBlock		    "Fifo"
+	    DstPort		    4
+	  }
+	  Branch {
+	    ZOrder		    260
+	    Points		    [0, 79]
+	    DstBlock		    "Delay"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  255
+	  SrcBlock		  "Globale Markierung"
+	  SrcPort		  1
+	  Points		  [64, 0; 0, -15]
+	  Branch {
+	    ZOrder		    265
+	    Points		    [-72, 0; 0, -15]
+	    DstBlock		    "Fifo"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    259
+	    Points		    [29, 0; 0, 320]
+	    DstBlock		    "Delay1"
+	    DstPort		    1
+	  }
+	}
+	Line {
+	  ZOrder		  254
+	  SrcBlock		  "Delay"
+	  SrcPort		  1
+	  Points		  [-143, 0; 0, -215]
+	  DstBlock		  "Globale Markierung"
+	  DstPort		  2
+	}
+	Line {
+	  ZOrder		  256
+	  SrcBlock		  "Delay1"
+	  SrcPort		  1
+	  Points		  [-252, 0; 0, -145]
+	  DstBlock		  "Globale Markierung"
+	  DstPort		  3
 	}
       }
     }
@@ -6675,7 +6989,7 @@ Stateflow {
     name		    "Gewerk2_Bahnplanung2015"
     created		    "12-Jan-2010 08:27:24"
     isLibrary		    0
-    firstTarget		    166
+    firstTarget		    163
     sfVersion		    80000006
   }
   chart {
@@ -9328,20 +9642,21 @@ Stateflow {
   }
   chart {
     id			    129
-    name		    "Gewerk2/Chart"
+    name		    "Gewerk2/Fifo"
     windowPosition	    [199.5 216.75 417 348.75]
-    viewLimits		    [-987.358 1506.118 -300.19 762.34]
-    zoomFactor		    2.67
+    viewLimits		    [48.995 1294.328 418.024 948.691]
+    zoomFactor		    1.333
     screen		    [1 1 3200 1200 1.25]
-    treeNode		    [0 140 0 0]
+    treeNode		    [0 131 0 0]
+    firstTransition	    142
     viewObj		    129
     visible		    1
     machine		    1
     subviewS {
     }
-    ssIdHighWaterMark	    63
+    ssIdHighWaterMark	    75
     decomposition	    CLUSTER_CHART
-    firstData		    155
+    firstData		    137
     chartFileNumber	    13
     saturateOnIntegerOverflow 1
     userSpecifiedStateTransitionExecutionOrder 1
@@ -9351,10 +9666,10 @@ Stateflow {
   state {
     id			    130
     labelString		    "Auftrag_Roboter_1"
-    position		    [984.3009 450.9675 167.3333 31.3333]
+    position		    [1219.3009 450.9675 167.3333 31.3333]
     fontSize		    12
     chart		    129
-    treeNode		    [138 0 131 133]
+    treeNode		    [129 0 131 133]
     subviewer		    129
     ssIdNumber		    1
     type		    OR_STATE
@@ -9362,13 +9677,11 @@ Stateflow {
   }
   state {
     id			    131
-    labelString		    "Zielbereich_untersuchen\nentry:\nn4=round((Robbi4_x-528)/400);\nn2=round((Robbi2_x-528)/400);\nn"
-    "3=round((Robbi3_x-528)/400);\ny2=Robbi2_y;\ny3=Robbi3_y;\ny4=Robbi4_y;\nersterFifo=floor(Zielstationstation/2)*3+2"
-    "*mod(Zielstation,2);"
-    position		    [1456.7009 436.0524 335.326 152.4605]
+    labelString		    "Zielbereich_untersuchen\nentry:\nersterFifo=floor(Zielstationstation/2)*3+2*mod(Zielstation,2);"
+    position		    [1685.0342 439.7857 335.326 152.4605]
     fontSize		    12
     chart		    129
-    treeNode		    [138 0 0 130]
+    treeNode		    [129 0 0 130]
     subviewer		    129
     ssIdNumber		    3
     type		    OR_STATE
@@ -9376,12 +9689,11 @@ Stateflow {
   }
   state {
     id			    132
-    labelString		    "Uebergabepunkt_gleich_Zielpunkt\nentry:\nfor i=1:1:8\n    Fifo(i)=0;\nend\nVektorberechnung=1;\n"
-    "Auftragskoordinaten=Zielpostion;"
-    position		    [1606.7045 805.4291 209.1667 133.3334]
+    labelString		    "Uebergabepunkt_gleich_Zielpunkt\nentry:\nFifo=0;\n"
+    position		    [1811.1935 783.7624 209.1667 133.3334]
     fontSize		    12
     chart		    129
-    treeNode		    [138 0 141 135]
+    treeNode		    [129 0 136 0]
     subviewer		    129
     ssIdNumber		    5
     type		    OR_STATE
@@ -9389,11 +9701,11 @@ Stateflow {
   }
   state {
     id			    133
-    labelString		    "Fifo_besetzt\nentry:\nFifobelegt=1;\nzweiterFifo=floor(Zielstation/2)*3+1;"
-    position		    [1122.0813 587.9091 209.2275 65.4342]
+    labelString		    "Fifo_einfachbesetzt1\nentry:\nzweiterFifo=floor(Zielstation/2)*3+1;\nFifo=2;"
+    position		    [959.5813 674.5758 209.2275 65.4342]
     fontSize		    12
     chart		    129
-    treeNode		    [138 0 130 134]
+    treeNode		    [129 0 130 135]
     visible		    0
     subviewer		    129
     ssIdNumber		    44
@@ -9402,11 +9714,11 @@ Stateflow {
   }
   state {
     id			    134
-    labelString		    "Fifo_doppelt_besetzt\nentry:\ndritterFifo=floor(Zielstation/2)*3+2-2*mod(Zielstation,2);"
-    position		    [495.8123 609.4317 304.1382 96.0182]
+    labelString		    "Fifo_doppelt_besetzt\nentry:\ndritterFifo=floor(Zielstation/2)*3+2-2*mod(Zielstation,2);\nFifo=3;"
+    position		    [333.3123 696.0984 304.1382 96.0182]
     fontSize		    12
     chart		    129
-    treeNode		    [138 0 133 136]
+    treeNode		    [129 0 135 136]
     visible		    0
     subviewer		    129
     ssIdNumber		    47
@@ -9415,118 +9727,156 @@ Stateflow {
   }
   state {
     id			    135
-    labelString		    "Fifo_einfachbesetzt\nentry:\nVektorberechung=1;\nAuftragskoordinaten=Position(zweiterFifo);"
-    position		    [1191.7048 809.4291 252.6667 125.3333]
+    labelString		    "Fifo_frei\nentry:\nFifo=1;"
+    position		    [1413.991 675.9595 112.9333 62.6667]
     fontSize		    12
     chart		    129
-    treeNode		    [138 0 132 137]
+    treeNode		    [129 0 133 134]
     visible		    0
     subviewer		    129
-    ssIdNumber		    49
+    ssIdNumber		    69
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
   state {
     id			    136
-    labelString		    "Fifo_voll\nentry:\nVektorberechung=1;\nAuftragskoordinaten=Warteposition;"
-    position		    [183.4199 618.2741 209.3333 104.6667]
+    labelString		    "Fifo_voll\nentry:\nFifo=4;"
+    position		    [20.9199 704.9408 209.3333 104.6667]
     fontSize		    12
     chart		    129
-    treeNode		    [138 0 134 141]
+    treeNode		    [129 0 134 132]
     visible		    0
     subviewer		    129
     ssIdNumber		    51
     type		    OR_STATE
     decomposition	    CLUSTER_STATE
   }
-  state {
+  data {
     id			    137
-    labelString		    "Fifo_doppeltbesetzt\nentry:\nVektorberechung=1;\nAuftragskoordinaten=Position(driterFifo);"
-    position		    [574.2048 819.4291 252.6667 125.3333]
-    fontSize		    12
-    chart		    129
-    treeNode		    [138 0 135 0]
-    visible		    0
-    subviewer		    129
-    ssIdNumber		    54
-    type		    OR_STATE
-    decomposition	    CLUSTER_STATE
+    ssIdNumber		    34
+    name		    "FifoArray"
+    linkNode		    [129 0 138]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
   }
-  state {
+  data {
     id			    138
-    labelString		    "Hauptprogramm"
-    position		    [40.2562 320.6392 1832.7778 687.7778]
-    fontSize		    12
-    chart		    129
-    treeNode		    [140 131 0 139]
-    firstTransition	    142
-    visible		    0
-    subviewer		    129
-    ssIdNumber		    57
-    type		    AND_STATE
-    decomposition	    CLUSTER_STATE
-    executionOrder	    1
+    ssIdNumber		    40
+    name		    "Zielposition"
+    linkNode		    [129 137 139]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
   }
-  state {
+  data {
     id			    139
-    labelString		    "Rechnung\nduring:\nn4=round((Robbi4_x-528)/400);\nn2=round((Robbi2_x-528)/400);\nn3=round((Robbi"
-    "3_x-528)/400);\ny2=Robbi2_y;\ny3=Robbi3_y;\ny4=Robbi4_y;\nPositionRobbi2=[Robbi2_x Robbi2_y];\nPositionRobbi3=[Rob"
-    "bi2_x Robbi2_y];\nPositionRobbi4=[Robbi2_x Robbi2_y];"
-    position		    [1902.5737 371.9026 231.8667 175.9619]
-    fontSize		    12
-    chart		    129
-    treeNode		    [140 0 138 0]
-    visible		    0
-    subviewer		    129
-    ssIdNumber		    58
-    type		    AND_STATE
-    decomposition	    CLUSTER_STATE
-    executionOrder	    2
+    ssIdNumber		    41
+    name		    "Zielstation"
+    linkNode		    [129 138 140]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
   }
-  state {
+  data {
     id			    140
-    labelString		    "?"
-    position		    [20.2562 20.8367 2122.2475 1014.4761]
-    fontSize		    12
-    chart		    129
-    treeNode		    [129 138 0 0]
-    firstTransition	    153
-    visible		    0
-    subviewer		    129
-    ssIdNumber		    59
-    type		    OR_STATE
-    decomposition	    SET_STATE
+    ssIdNumber		    42
+    name		    "Fifo"
+    linkNode		    [129 139 141]
+    scope		    OUTPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_NO
+    }
+    dataType		    "Inherit: Same as Simulink"
   }
-  state {
+  data {
     id			    141
-    labelString		    "AbstandRoboterzumZiel\nentry:\nAbstand=sqrt((Position(Zielstation)(1)-x_ziel1)^2+(y_robotino1-y_"
-    "ziel1)^2)/100\nABstände der Roboter zur Zeilstation vergleichen\nanschließend Merker des Fifos zurücksetzten;"
-    position		    [1431.6342 670.4505 250.8194 95.6097]
-    fontSize		    12
-    chart		    129
-    treeNode		    [138 0 136 132]
-    visible		    0
-    subviewer		    129
-    ssIdNumber		    62
-    type		    OR_STATE
-    decomposition	    CLUSTER_STATE
+    ssIdNumber		    66
+    name		    "StationArray"
+    linkNode		    [129 140 0]
+    scope		    INPUT_DATA
+    machine		    1
+    props {
+      array {
+	size			"-1"
+      }
+      type {
+	method			SF_INHERITED_TYPE
+	primitive		SF_DOUBLE_TYPE
+	isSigned		1
+	wordLength		"16"
+      }
+      complexity	      SF_COMPLEX_INHERITED
+      frame		      SF_FRAME_INHERITED
+    }
+    dataType		    "Inherit: Same as Simulink"
   }
   transition {
     id			    142
     labelString		    ""
-    labelPosition	    [1022.509 417.967 0 0]
+    labelPosition	    [1257.509 417.967 0 0]
     fontSize		    12
     src {
-      intersection	      [0 0 1 0 1022.5086 420.9675 0 0]
+      intersection	      [0 0 1 0 1257.5086 420.9675 0 0]
     }
     dst {
       id		      130
-      intersection	      [1 0 -1 0.2283 1022.5086 450.9675 0 0]
+      intersection	      [1 0 -1 0.2283 1257.5086 450.9675 0 0]
     }
-    midPoint		    [1022.5086 435.9675]
+    midPoint		    [1257.5086 435.9675]
     chart		    129
-    linkNode		    [138 0 143]
-    dataLimits		    [1020.109 1024.909 420.967 450.967]
+    linkNode		    [129 0 143]
+    dataLimits		    [1255.109 1259.909 420.967 450.967]
     subviewer		    129
     drawStyle		    SMART
     slide {
@@ -9537,21 +9887,21 @@ Stateflow {
   }
   transition {
     id			    143
-    labelString		    "[Zielposition>0]"
-    labelPosition	    [1262.397 451.876 83 17]
+    labelString		    "[Zielposition>-1]"
+    labelPosition	    [1490.812 451.876 87 17]
     fontSize		    12
     src {
       id		      130
-      intersection	      [2 1 0 0.5 1151.6342 466.6342 0 0]
+      intersection	      [2 1 0 0.5 1386.6342 466.6342 0 0]
     }
     dst {
       id		      131
-      intersection	      [4 -1 -0 0.7994 1456.7009 466.6342 0 0]
+      intersection	      [4 -1 -0 0.8239 1685.0342 466.6342 0 0]
     }
-    midPoint		    [1300.1675 466.6342]
+    midPoint		    [1531.8342 466.6342]
     chart		    129
-    linkNode		    [138 142 144]
-    dataLimits		    [1151.634 1456.701 464.234 469.034]
+    linkNode		    [129 142 144]
+    dataLimits		    [1386.634 1685.034 464.234 469.034]
     subviewer		    129
     drawStyle		    SMART
     slide {
@@ -9562,21 +9912,21 @@ Stateflow {
   }
   transition {
     id			    144
-    labelString		    "[(ersterFifo==n2| ersterFifo==n3 | ersterFifo==n4)&(y2<=500 | y2<=500 | y2<=500)]"
-    labelPosition	    [920.519 505.123 443 17]
+    labelString		    "[(FifoArray(ersterFifo)~=0)| (FifoArray(ersterFifo)=0 & StationArray(Zielstation)~=0) ]"
+    labelPosition	    [1197.662 558.77 449.75 17]
     fontSize		    12
     src {
       id		      131
-      intersection	      [4 -1 0 0.4445 1456.7009 520.7484 0 0]
+      intersection	      [4 -1 0 0.4445 1685.0342 524.4817 0 0]
     }
     dst {
       id		      133
-      intersection	      [1 0 -1 0.86 1302.022 587.9091 0 0]
+      intersection	      [1 0 -1 0.7495 1116.391 674.5758 0 0]
     }
-    midPoint		    [1358.6606 529.6279]
+    midPoint		    [1327.4466 522.2628]
     chart		    129
-    linkNode		    [138 143 145]
-    dataLimits		    [1299.622 1456.701 520.748 587.909]
+    linkNode		    [129 143 145]
+    dataLimits		    [1113.991 1685.034 517.849 674.576]
     subviewer		    129
     drawStyle		    SMART
     slide {
@@ -9587,46 +9937,71 @@ Stateflow {
   }
   transition {
     id			    145
-    labelString		    "[y2>500 & y3>500 & y4>500]"
-    labelPosition	    [1698.154 766.656 156.75 17]
+    labelString		    ""
+    labelPosition	    [2019.659 635.565 0 0]
     fontSize		    12
     src {
       id		      131
-      intersection	      [3 0 1 0.1227 1750.8806 588.5129 0 0]
+      intersection	      [3 0 1 0.1836 1958.7937 592.2462 0 0]
     }
     dst {
       id		      132
-      intersection	      [1 -0 -1 0.6893 1750.8806 805.4291 0 0]
+      intersection	      [2 1 0 0.4817 2020.3602 847.9828 0 0]
     }
-    midPoint		    [1750.8806 692.971]
+    midPoint		    [2019.659 653.5655]
     chart		    129
-    linkNode		    [138 144 146]
-    dataLimits		    [1748.481 1753.281 588.513 805.429]
+    linkNode		    [129 144 146]
+    dataLimits		    [1958.794 2070.248 592.246 850.383]
     subviewer		    129
     drawStyle		    SMART
     slide {
       sticky		      BOTH_STICK
     }
     executionOrder	    1
-    ssIdNumber		    6
+    ssIdNumber		    65
   }
   transition {
     id			    146
-    labelString		    "[(zweiterFifo==n2| zweiterFifo==n3 | zweiterFifo==n4)&(y2<=500 | y2<=500 | y2<=500)]"
-    labelPosition	    [755.167 560.298 463.25 17]
+    labelString		    "[FifoArray(ersterFifo)=0]"
+    labelPosition	    [1242.646 764.183 130.5 17]
     fontSize		    12
     src {
       id		      133
-      intersection	      [4 -1 0 0.5449 1122.0813 617.6876 0 0]
+      intersection	      [2 1 0 0.4474 1168.8088 703.8478 0 0]
+    }
+    dst {
+      id		      135
+      intersection	      [3 0 1 0.8385 1432.2243 738.6262 0 0]
+    }
+    midPoint		    [1236.3777 780.3633]
+    chart		    129
+    linkNode		    [129 145 147]
+    dataLimits		    [1168.809 1434.624 703.848 812.803]
+    subviewer		    129
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
+    }
+    executionOrder	    2
+    ssIdNumber		    74
+  }
+  transition {
+    id			    147
+    labelString		    "[(FifoArray(zweiterFifo)~=0)]"
+    labelPosition	    [715.334 648.031 152.25 17]
+    fontSize		    12
+    src {
+      id		      133
+      intersection	      [4 -1 0 0.5449 959.5813 704.3543 0 0]
     }
     dst {
       id		      134
-      intersection	      [2 1 -0 0.133 799.9504 622.2021 0 0]
+      intersection	      [2 1 -0 0.133 637.4504 708.8688 0 0]
     }
-    midPoint		    [965.0159 619.9448]
+    midPoint		    [802.5159 706.6115]
     chart		    129
-    linkNode		    [138 145 147]
-    dataLimits		    [799.95 1122.081 617.688 624.602]
+    linkNode		    [129 146 148]
+    dataLimits		    [637.45 959.581 704.354 711.269]
     subviewer		    129
     drawStyle		    SMART
     slide {
@@ -9636,208 +10011,168 @@ Stateflow {
     ssIdNumber		    48
   }
   transition {
-    id			    147
-    labelString		    "[(ersterFifo~=n2 & ersterFifo~=n3 & ersterFifo~=n4)]"
-    labelPosition	    [1410.851 624.484 281 17]
-    fontSize		    12
-    src {
-      id		      133
-      intersection	      [2 1 0 0.6306 1331.3088 629.1704 0 0]
-    }
-    dst {
-      id		      141
-      intersection	      [4 -1 -0 0.8284 1431.6342 686.8538 0 0]
-    }
-    midPoint		    [1377.4715 658.0121]
-    chart		    129
-    linkNode		    [138 146 148]
-    dataLimits		    [1331.309 1431.634 629.17 689.254]
-    subviewer		    129
-    drawStyle		    SMART
-    slide {
-      sticky		      BOTH_STICK
-    }
-    executionOrder	    3
-    ssIdNumber		    63
-  }
-  transition {
     id			    148
-    labelString		    "[(dritterFifo==n2| dritterFifo==n3 | dritterFifo==n4)&(y2<=500 | y2<=500 | y2<=500)]"
-    labelPosition	    [290.808 583.68 442.25 17]
+    labelString		    "[(FifoArray(dritterFifo)~=0)]"
+    labelPosition	    [128.308 670.347 145.25 17]
     fontSize		    12
     src {
       id		      134
-      intersection	      [4 -1 0 0.586 495.8123 649.1799 0 0]
+      intersection	      [4 -1 0 0.586 333.3123 735.8466 0 0]
     }
     dst {
       id		      136
-      intersection	      [2 1 -0 0.2953 392.7532 649.1799 0 0]
+      intersection	      [2 1 -0 0.2953 230.2532 735.8466 0 0]
     }
-    midPoint		    [448.2827 649.1799]
+    midPoint		    [285.7827 735.8466]
     chart		    129
-    linkNode		    [138 147 149]
-    dataLimits		    [392.753 495.812 646.78 651.58]
+    linkNode		    [129 147 149]
+    dataLimits		    [230.253 333.312 733.447 738.247]
     subviewer		    129
     drawStyle		    SMART
     slide {
       sticky		      BOTH_STICK
     }
-    executionOrder	    1
+    executionOrder	    2
     ssIdNumber		    52
   }
   transition {
     id			    149
-    labelString		    "[(zweiterFifo~=n2 & zweiterFifo~=n3 & zweiterFifo~=n4)]"
-    labelPosition	    [817.453 748.525 301.25 17]
+    labelString		    "[ StationArray(Zielstation)=0]"
+    labelPosition	    [1553.33 712.229 155 17]
     fontSize		    12
     src {
-      id		      134
-      intersection	      [2 1 0 0.867 799.9504 692.6795 0 0]
+      id		      135
+      intersection	      [3 0 1 0.5738 1462.123 738.6262 0 0]
     }
     dst {
-      id		      133
-      intersection	      [3 0 1 0.7734 1169.4819 653.3433 0 0]
+      id		      132
+      intersection	      [4 -1 0 0.8261 1811.1935 806.9495 0 0]
     }
-    midPoint		    [1031.0734 723.3686]
+    midPoint		    [1589.1774 816.2687]
     chart		    129
-    linkNode		    [138 148 150]
-    dataLimits		    [799.95 1171.882 653.343 725.751]
+    linkNode		    [129 148 150]
+    dataLimits		    [1462.123 1811.194 738.626 816.6]
     subviewer		    129
     drawStyle		    SMART
     slide {
       sticky		      BOTH_STICK
     }
-    executionOrder	    3
-    ssIdNumber		    56
+    executionOrder	    1
+    ssIdNumber		    63
   }
   transition {
     id			    150
-    labelString		    ""
-    labelPosition	    [1222.577 709.386 0 0]
+    labelString		    "[FifoArray(zweiterFifo)=0]"
+    labelPosition	    [724.4 818.201 137.25 17]
     fontSize		    12
     src {
-      id		      133
-      intersection	      [3 0 1 0.5197 1222.5774 653.3433 0 0]
+      id		      134
+      intersection	      [3 0 1 0.073 615.2474 792.1166 0 0]
     }
     dst {
-      id		      135
-      intersection	      [1 -0 -1 0.1222 1222.5774 809.4291 0 0]
+      id		      133
+      intersection	      [3 0 1 0.6448 1033.891 740.01 0 0]
     }
-    midPoint		    [1222.5774 727.3862]
+    midPoint		    [824.5692 875.3034]
     chart		    129
-    linkNode		    [138 149 151]
-    dataLimits		    [1220.177 1224.977 653.343 809.429]
+    linkNode		    [129 149 151]
+    dataLimits		    [615.247 1036.291 740.01 877.803]
     subviewer		    129
     drawStyle		    SMART
     slide {
       sticky		      BOTH_STICK
     }
-    executionOrder	    2
-    ssIdNumber		    50
+    executionOrder	    1
+    ssIdNumber		    64
   }
   transition {
     id			    151
-    labelString		    "[(dritterFifo~=n2 & dritterFifo~=n3 & dritterFifo~=n4)]"
-    labelPosition	    [318.862 753.468 280.25 17]
+    labelString		    "[FifoArray(dritterFifo)=0]"
+    labelPosition	    [218.995 858.357 130.25 17]
     fontSize		    12
     src {
       id		      136
-      intersection	      [3 0 1 0.6826 249.871 722.9408 0 0]
+      intersection	      [3 0 1 0.5563 113.801 809.6075 0 0]
     }
     dst {
       id		      134
-      intersection	      [3 0 1 0.4727 656.1854 705.4499 0 0]
+      intersection	      [3 0 1 0.5596 467.2554 792.1166 0 0]
     }
-    midPoint		    [453.0282 819.8017]
+    midPoint		    [290.5282 893.2575]
     chart		    129
-    linkNode		    [138 150 152]
-    dataLimits		    [249.871 658.585 705.45 819.919]
+    linkNode		    [129 150 0]
+    dataLimits		    [113.801 469.655 792.117 893.4]
     subviewer		    129
     drawStyle		    SMART
     slide {
       sticky		      BOTH_STICK
     }
     executionOrder	    1
-    ssIdNumber		    53
+    ssIdNumber		    75
   }
-  transition {
+  instance {
     id			    152
-    labelString		    " "
-    labelPosition	    [715.769 740.44 5.25 17]
-    fontSize		    12
-    src {
-      id		      134
-      intersection	      [3 0 1 0.2809 714.5187 705.4499 0 0]
-    }
-    dst {
-      id		      137
-      intersection	      [1 -0 -1 0.5652 717.0187 819.4291 0 0]
-    }
-    midPoint		    [715.7687 758.4395]
+    name		    "Gewerk2/Fifo"
+    machine		    1
     chart		    129
-    linkNode		    [138 151 0]
-    dataLimits		    [714.519 719.419 705.45 819.429]
-    subviewer		    129
-    drawStyle		    SMART
-    slide {
-      sticky		      BOTH_STICK
-    }
-    executionOrder	    2
-    ssIdNumber		    55
   }
-  transition {
+  chart {
     id			    153
-    labelString		    ""
-    labelPosition	    [276.218 289.421 0 0]
-    fontSize		    12
-    src {
-      intersection	      [0 0 0 0 274.0233 275.5413 0 0]
+    name		    "Gewerk2/Globale Markierung"
+    windowPosition	    [422 539.941 189 413]
+    viewLimits		    [0 156.75 0 153.75]
+    screen		    [1 1 3600 1200 1.180555555555556]
+    treeNode		    [0 154 0 0]
+    firstTransition	    161
+    firstJunction	    160
+    viewObj		    153
+    visible		    1
+    machine		    1
+    subviewS {
     }
-    dst {
-      id		      138
-      intersection	      [1 0 -1 0.1299 278.4136 320.6392 0 0]
+    ssIdHighWaterMark	    8
+    decomposition	    CLUSTER_CHART
+    type		    EML_CHART
+    firstData		    155
+    chartFileNumber	    15
+    disableImplicitCasting  1
+    eml {
+      name		      "fcn"
     }
-    midPoint		    [276.2185 289.4206]
-    chart		    129
-    linkNode		    [140 0 154]
-    dataLimits		    [274.023 280.814 275.541 320.639]
-    subviewer		    129
-    drawStyle		    SMART
-    slide {
-      sticky		      BOTH_STICK
-    }
-    executionOrder	    2
-    ssIdNumber		    61
   }
-  transition {
+  state {
     id			    154
-    labelString		    ""
-    labelPosition	    [1997.267 322.573 0 0]
+    labelString		    "eML_blk_kernel()"
+    position		    [18 64.5 118 66]
     fontSize		    12
-    src {
-      intersection	      [0 0 0 0 1987.1694 327.6236 0 0]
+    chart		    153
+    treeNode		    [153 0 0 0]
+    superState		    SUBCHART
+    subviewer		    153
+    ssIdNumber		    1
+    type		    FUNC_STATE
+    decomposition	    CLUSTER_STATE
+    eml {
+      isEML		      1
+      script		      "function [FifoArray1,StationArray1]= fcn(Robbi,StationArray,FifoArray)\n%#codegen\nX=[Robbi(1) Ro"
+      "bbi(4) Robbi(7) Robbi(10)];\nY=[Robbi(2) Robbi(5) Robbi(8) Robbi(11)];\nFifoArray1=zeroes([1 12]);\nFifoArray1=F"
+      "ifoArray;\nStationArray1=zeroes([1 8]);\nStationArray1=StationArray;\nN=zeroes([1 12]);\nS=Zeroes([1 8]);\nfor n"
+      "= 1 : 1 : 4\n    N(n)=round((X(n)-528)/400);   % Berechnung in welchem Fifo der Roboter sich befindet\n    S(n)="
+      "round((X(n)-725)/560);   %Berechnung in welcher Station der Roboter sich befindet\n    if (Y(n)<=2100 || Y(n)>34"
+      "00)\n        for i=1:8\n            if StationArray1(i)==n\n                StationArray(i)=0;\n            end\n"
+      "        end\n    end\n    if (Y(n)>2100 && X(n)<5100) \n         for i=1:12\n            if FifoArray1(i)==n\n  "
+      "              FifoArray1(i)=0;\n            end\n        end\n        StationArray1(S(n))=n;\n        \n    else"
+      " if (Y(n)<450 && (X(n)>100 && X(n)<5250))\n        for i=1:12\n            if FifoArray1(i)==n\n                "
+      "FifoArray1(i)=0;\n            end\n        end\n            FifoArray1(N(n))=n;\n        end\n    end\nend\n\n  "
+      "  \n  "
+      editorLayout	      "100 M4x1[10 5 700 500]"
     }
-    dst {
-      id		      139
-      intersection	      [1 0 -1 0.4519 2007.3648 371.9026 0 0]
-    }
-    midPoint		    [1997.2671 340.5729]
-    chart		    129
-    linkNode		    [140 153 0]
-    dataLimits		    [1987.169 2009.765 327.624 371.903]
-    subviewer		    129
-    drawStyle		    SMART
-    slide {
-      sticky		      BOTH_STICK
-    }
-    executionOrder	    1
-    ssIdNumber		    60
   }
   data {
     id			    155
-    ssIdNumber		    34
-    name		    "Robbi2_x"
-    linkNode		    [129 0 156]
+    ssIdNumber		    4
+    name		    "Robbi"
+    linkNode		    [153 0 156]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -9847,19 +10182,16 @@ Stateflow {
       type {
 	method			SF_INHERITED_TYPE
 	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
       }
       complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
     }
     dataType		    "Inherit: Same as Simulink"
   }
   data {
     id			    156
-    ssIdNumber		    35
-    name		    "Robbi3_x"
-    linkNode		    [129 155 157]
+    ssIdNumber		    6
+    name		    "StationArray"
+    linkNode		    [153 155 157]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -9873,15 +10205,15 @@ Stateflow {
 	wordLength		"16"
       }
       complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
+      frame		      SF_FRAME_NO
     }
     dataType		    "Inherit: Same as Simulink"
   }
   data {
     id			    157
-    ssIdNumber		    36
-    name		    "Robbi4_x"
-    linkNode		    [129 156 158]
+    ssIdNumber		    5
+    name		    "FifoArray"
+    linkNode		    [153 156 158]
     scope		    INPUT_DATA
     machine		    1
     props {
@@ -9891,20 +10223,18 @@ Stateflow {
       type {
 	method			SF_INHERITED_TYPE
 	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
       }
       complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
+      frame		      SF_FRAME_NO
     }
     dataType		    "Inherit: Same as Simulink"
   }
   data {
     id			    158
-    ssIdNumber		    37
-    name		    "Robbi2_y"
-    linkNode		    [129 157 159]
-    scope		    INPUT_DATA
+    ssIdNumber		    7
+    name		    "FifoArray1"
+    linkNode		    [153 157 159]
+    scope		    OUTPUT_DATA
     machine		    1
     props {
       array {
@@ -9917,16 +10247,16 @@ Stateflow {
 	wordLength		"16"
       }
       complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
+      frame		      SF_FRAME_NO
     }
     dataType		    "Inherit: Same as Simulink"
   }
   data {
     id			    159
-    ssIdNumber		    38
-    name		    "Robbi3_y"
-    linkNode		    [129 158 160]
-    scope		    INPUT_DATA
+    ssIdNumber		    8
+    name		    "StationArray1"
+    linkNode		    [153 158 0]
+    scope		    OUTPUT_DATA
     machine		    1
     props {
       array {
@@ -9939,137 +10269,60 @@ Stateflow {
 	wordLength		"16"
       }
       complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
+      frame		      SF_FRAME_NO
     }
     dataType		    "Inherit: Same as Simulink"
   }
-  data {
+  junction {
     id			    160
-    ssIdNumber		    39
-    name		    "Robbi4_y"
-    linkNode		    [129 159 161]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
-    }
-    dataType		    "Inherit: Same as Simulink"
+    position		    [23.5747 49.5747 7]
+    chart		    153
+    linkNode		    [153 0 0]
+    subviewer		    153
+    ssIdNumber		    3
+    type		    CONNECTIVE_JUNCTION
   }
-  data {
+  transition {
     id			    161
-    ssIdNumber		    40
-    name		    "Zielposition"
-    linkNode		    [129 160 162]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
+    labelString		    "{eML_blk_kernel();}"
+    labelPosition	    [28.125 13.875 102.544 14.964]
+    fontSize		    12
+    src {
+      intersection	      [0 0 1 0 23.5747 14.625 0 0]
     }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    162
-    ssIdNumber		    41
-    name		    "Zielstation"
-    linkNode		    [129 161 163]
-    scope		    INPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_INHERITED
+    dst {
+      id		      160
+      intersection	      [1 0 -1 0 23.5747 42.5747 0 0]
     }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    163
-    ssIdNumber		    42
-    name		    "Vektorberechnung"
-    linkNode		    [129 162 164]
-    scope		    OUTPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_NO
+    midPoint		    [23.5747 24.9468]
+    chart		    153
+    linkNode		    [153 0 0]
+    dataLimits		    [21.175 25.975 14.625 42.575]
+    subviewer		    153
+    drawStyle		    SMART
+    slide {
+      sticky		      BOTH_STICK
     }
-    dataType		    "Inherit: Same as Simulink"
-  }
-  data {
-    id			    164
-    ssIdNumber		    43
-    name		    "Auftragskoordinaten"
-    linkNode		    [129 163 0]
-    scope		    OUTPUT_DATA
-    machine		    1
-    props {
-      array {
-	size			"-1"
-      }
-      type {
-	method			SF_INHERITED_TYPE
-	primitive		SF_DOUBLE_TYPE
-	isSigned		1
-	wordLength		"16"
-      }
-      complexity	      SF_COMPLEX_INHERITED
-      frame		      SF_FRAME_NO
-    }
-    dataType		    "Inherit: Same as Simulink"
+    executionOrder	    1
+    ssIdNumber		    2
   }
   instance {
-    id			    165
-    name		    "Gewerk2/Chart"
+    id			    162
+    name		    "Gewerk2/Globale Markierung"
     machine		    1
-    chart		    129
+    chart		    153
   }
   target {
-    id			    166
+    id			    163
     name		    "sfun"
     description		    "Default Simulink S-Function Target."
     machine		    1
-    linkNode		    [1 0 167]
+    linkNode		    [1 0 164]
   }
   target {
-    id			    167
+    id			    164
     name		    "rtw"
     machine		    1
-    linkNode		    [1 166 0]
+    linkNode		    [1 163 0]
   }
 }
