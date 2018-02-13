@@ -184,10 +184,6 @@ else
     x_robotino3=x_robotino3+Abstand3*0.2;
     y_robotino3=y_robotino3+Abstand3*0.2;
 end
-    
-    
-   
-    
 
 end
 %%
@@ -212,3 +208,41 @@ plot( FX2,FY2)
 hold on 
 plot(FX3,FY3)
 hold off
+%%
+x=600:50:5100;
+y=0:50:2500;
+[X1,Y1]=meshgrid(x,y);  
+    h1= 1000*exp((Y1-2500)/50)+0*X1;
+x=0:50:600;
+y=0:50:2000;
+[X4,Y4]=meshgrid(x,y);  
+    h4= 1000*exp((Y4-2500)/50)+0*X4;
+x=0:50:600;
+y=2000:50:4000;
+[X2,Y2]=meshgrid(x,y);
+    h2=((X2-300)/10).^2+ 1*Y2-2000;
+x=0:50:5100;
+y=3250:50:4000;
+[X3,Y3]=meshgrid(x,y);
+    h3=((Y3-3500)/10).^2+ 1*X3;
+x=5100:50:7000;
+y=2500:50:4000;
+[X5,Y5]=meshgrid(x,y);
+    h5=1000*exp(-(X5-5100)/50)+Y5*0;
+x=5100:50:7000;
+y=0:50:2500;
+[X6,Y6]=meshgrid(x,y);
+    h6=1000*exp(-((X6-5100)-(Y6-2500))/50);
+surf(X1,Y1,h1)
+hold on
+surf(X2,Y2,h2)
+surf(X3,Y3,h3)
+surf(X4,Y4,h4)
+surf(X5,Y5,h5)
+surf(X6,Y6,h6)
+hold off
+
+
+
+
+
