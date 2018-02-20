@@ -1,11 +1,10 @@
 %%
-x=0:5:700;
-y=0:5:400;
-[X,Y]=meshgrid(x,y);
-
+X=Vektor(2,:);
+Y=Vektor(3,:);
+for t=1:10006
 k_stationen = 400; % zum einstellen der "Höhe" gößer
-temp = 900;        % zum einstellen vom "Radius" gößer => Radius wir erhöht
-h_stationen = k_stationen *(exp(-((X-110.3).^2+(Y-283.2).^2)/temp)+exp(-((X-230.8).^2+(Y-283.2).^2)/temp)+exp(-((X-350.7).^2+(Y-283.2).^2)/temp)+exp(-((X-469.4).^2+(Y-283.2).^2)/temp)+exp(-((X-628.7).^2+(Y-260.8).^2)/temp)+exp(-((X-630).^2+(Y-308.5).^2)/temp));
+temp = 70000;        % zum einstellen vom "Radius" gößer => Radius wir erhöht
+h_stationen = k_stationen *(exp(-((X(t)-1103).^2+(Y(t)-2832).^2)/temp)+exp(-((X(t)-2308).^2+(Y(t)-2832).^2)/temp)+exp(-((X(t)-3507).^2+(Y(t)-2832).^2)/temp)+exp(-((X(t)-4694).^2+(Y(t)-2832).^2)/temp)+exp(-((X(t)-6287).^2+(Y(t)-2608).^2)/temp)+exp(-((X(t)-6300).^2+(Y(t)-3085).^2)/temp));
 
 k_fahrspur = -100; % zum einstellen der "Höhe"
 temp = 20000;      % zum einstellen vom "Radius" gößer => Radius wir erhöht
@@ -16,19 +15,21 @@ k_ziel=-200; % zum einstellen der "Höhe"
 temp = 1000; % zum einstellen vom "Radius" gößer => Radius wir erhöht
 x_ziel=100;
 y_ziel=100;
-h_ziel = 1*sqrt((X-x_ziel).^2+(Y-y_ziel).^2)+k_ziel * exp(-((X-x_ziel).^2+(Y-y_ziel).^2)/temp);
+h_ziel = 0.3*sqrt((X(t)-2200).^2+(Y(t)-250).^2);
 
-h=h_fahrspur+h_stationen+h_ziel; %Summe aller Potentiale
+h=h_stationen+h_ziel; %Summe aller Potentiale
+
 for i=1:1
-x_robotino=500+i;
-y_robotino=100;
-k_robotino=400;
-temp=1000;
-h_Robotino=k_robotino * exp(-((X-x_robotino).^2+(Y-y_robotino).^2)/temp);
-
-h_2=h+h_Robotino;
-surf(X,Y,h_2);
+k_robotino=100;
+temp=100000;
+h_Robotino1=k_robotino * exp(-((X(t)-2600).^2+(Y(t)-2500).^2)/temp);
+h_Robotino2=k_robotino * exp(-((X(t)-2700).^2+(Y(t)-250).^2)/temp);
+h_Robotino3=k_robotino * exp(-((X(t)-2400).^2+(Y(t)-250).^2)/temp);
+h_Robotino4=k_robotino * exp(-((X(t)-1100).^2+(Y(t)-800).^2)/temp);
+h_2(t)=h+h_Robotino1+h_Robotino2+h_Robotino3+h_Robotino4;
+surf(X(t),Y(t),h_2(t));
 pause(0.1);
+end
 end
 %%
 [Fx,Fy]=gradient(h_2,.2,.2);
@@ -211,26 +212,33 @@ hold off
 %%
 x=600:50:5100;
 y=0:50:2500;
+%Grenze bei y= nach unten 2500
 [X1,Y1]=meshgrid(x,y);  
     h1= 1000*exp((Y1-2500)/50)+0*X1;
 x=0:50:600;
 y=0:50:2000;
+%Grenze bei
 [X4,Y4]=meshgrid(x,y);  
     h4= 1000*exp((Y4-2500)/50)+0*X4;
 x=0:50:600;
 y=2000:50:4000;
+%Fahrrinne in y rivhtung
 [X2,Y2]=meshgrid(x,y);
     h2=((X2-300)/10).^2+ 1*Y2-2000;
 x=0:50:5100;
 y=3250:50:4000;
+%Fahrrinne in X richtung
 [X3,Y3]=meshgrid(x,y);
     h3=((Y3-3500)/10).^2+ 1*X3;
 x=5100:50:7000;
 y=2500:50:4000;
+%Grenze bei  X = 5100 nach rechts
 [X5,Y5]=meshgrid(x,y);
     h5=1000*exp(-(X5-5100)/50)+Y5*0;
+     h5=1000*exp((X5-7000)/50)+Y5*0;
 x=5100:50:7000;
 y=0:50:2500;
+%Übergang der 2 Grenzen
 [X6,Y6]=meshgrid(x,y);
     h6=1000*exp(-((X6-5100)-(Y6-2500))/50);
 surf(X1,Y1,h1)
@@ -242,7 +250,55 @@ surf(X5,Y5,h5)
 surf(X6,Y6,h6)
 hold off
 
+%% 
+[X,Y]=meshgrid(1:7000,1:3600);
+x_g=zeros([3600 7000]);
+y_g=zeros([3600 7000]);
+Zone =0;
+for x= 1:7001
+    for y=1:3601
+ if (x >601) && (x<=5501) && (y>2501) && (y<=3201)
+    Zone=4;
+elseif (x >2751) && (x<=5501) && (y>3201)
+    Zone=1;
+elseif (x > 601) && (x<=2751) && (y>3201)
+    Zone=2;
+ elseif (x<=601) && (y>2501)
+     Zone=3;
+ else
+     Zone=0;
+ end
 
-
-
-
+ if Zone == 0 % Fahrbereich
+%      x_g=(1/50)*1000*exp(-(X)/50)-(1/50)*1000*exp((X-7000)/50);
+%      y_g=(1/50)*1000*exp(-(Y)/50)-(1/50)*1000*exp((Y-3600)/50);
+     if (x <= 5500) && (y <= 2500)
+         x_test=(1/50)*1000*exp(-(x-1)/50);
+         y_test=(-1/50)*1000*exp((y-1-2500)/50);
+     elseif (x > 5500) && (y <= 2500)
+         x_test=(1/50)*1000*exp((-(x-1-5500)+(y-1-2500))/50);
+         y_test=(-1/50)*1000*exp((-(x-1-5500)+(y-1-2500))/50);
+     elseif (x > 5500) && (y > 2500)
+         x_test=(1/50)*1000*exp(-(x-1-5500)/50);
+         y_test=(-1/50)*1000*exp((y-1-3600)/50);
+      end
+ x_g(y,x)=x_test+(-1/50)*1000*exp((x-1-7000)/50);
+ y_g(y,x)=y_test+(1/50)*1000*exp(-(y-1)/50);
+ elseif Zone == 1 %Rinne nach rechts weg
+     x_g(y,x)=10; %Konstante Steigung
+     y_g(y,x)=-2*(y-1-3500)/10; % Parabel abgeleitet
+ elseif Zone == 2 %Rinne nach links weg
+     x_g(y,x)=-10; %Konstante Steigung
+     y_g(y,x)=-2*(y-1-3500)/10; % Parabel abgeleitet
+ elseif Zone == 3 %Rinne nach unten weg
+     x_g(y,x)=-2*(x-1-300)/10; %Konstante Steigung
+     y_g(y,x)=-10; % Parabel abgeleitet
+ else 
+     x_g(y,x)=0;
+     y_g(y,x)=10;
+ end
+     end   
+ end
+%
+quiver(X(1:10:3600,1:10:7000),Y(1:10:3600,1:10:7000),x_g(1:10:3600,1:10:7000),y_g(1:10:3600,1:10:7000))
+%%
