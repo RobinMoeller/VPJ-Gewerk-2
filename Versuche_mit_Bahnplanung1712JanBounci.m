@@ -301,4 +301,80 @@ elseif (x > 601) && (x<=2751) && (y>3201)
  end
 %
 quiver(X(1:10:3600,1:10:7000),Y(1:10:3600,1:10:7000),x_g(1:10:3600,1:10:7000),y_g(1:10:3600,1:10:7000))
+%% Plot für Präsi
+[X,Y]=meshgrid(1:7000,1:3600);
+
+
+Zone =0;
+
+%  if (x >601) && (x<=5501) && (y>2501) && (y<=3201)
+%     Zone=4;
+% elseif (x >2751) && (x<=5501) && (y>3201)
+%     Zone=1;
+% elseif (x > 601) && (x<=2751) && (y>3201)
+%     Zone=2;
+%  elseif (x<=601) && (y>2501)
+%      Zone=3;
+%  else
+%      Zone=0;
+%  end 
+%401 701
+H_zeros=zeros([73 141]);
+          [x,y]=meshgrid(0:50:5500,0:50:2500); 
+         H_011=1000*exp(-(x)/50)+1000*exp((y-2500)/50);
+         H_01=H_zeros;
+         H_01(1:51,1:111)=H_011;
+         
+         [x,y]=meshgrid(5550:50:7000,0:50:2500); 
+         H_021=1000*exp((-(x-5500)+(y-2500))/50)+1000*exp((-(x-5500)+(y-2500))/50);
+         H_02=H_zeros;
+         H_02(1:51,112:141)=H_021;
+         
+         [x,y]=meshgrid(5500:50:7000,2500:50:3600); 
+         H_031=1000*exp(-(x-5500)/50)+1000*exp((y-3600)/50);
+          H_03=H_zeros;
+         H_03(51:73,111:141)=H_031;
+       
+ [x,y]=meshgrid(0:50:7000,0:50:3600);       
+ 
+ 
+ H0=H_01+H_02+H_03+1000*exp((x-7000)/50)+1000*exp(-(y)/50);
+ 
+
+ [x,y]=meshgrid(2750:50:5450,3200:50:3600);  
+ H_1=-0.5*x+((y-3400).^2)/100+3000;
+ H1=H_zeros; 
+ H1(65:73,56:110)=H_1;
+ 
+  [x,y]=meshgrid(600:50:2700,3200:50:3600);  
+ H_2=+0.5*x+((y-3400).^2)/100+250;
+ H2=H_zeros; 
+ H2(65:73,13:55)=H_2;
+ 
+ [x,y]=meshgrid(0:50:550,2550:50:3600);  
+ H_3=((x-250).^2)/100+0.5*y-1300;
+ H3=H_zeros; 
+ H3(52:73,1:12)=H_3;
+ 
+ [x,y]=meshgrid(0:50:7000,0:50:3600); 
+ surf(x,y,H1+H0+H2+H3)
+ 
 %%
+if 2
+ elseif Zone == 1 %Rinne nach rechts weg
+     x_g(y,x)=-10*x((y-1-3500)^2)/10; %Konstante Steigung
+    
+ elseif Zone == 2 %Rinne nach links weg
+     x_g(y,x)=10*x; %Konstante Steigung
+     y_g(y,x)=((y-1-3500)^2)/10; % Parabel abgeleitet
+ elseif Zone == 3 %Rinne nach unten weg
+     x_g(y,x)=((x-1-300)^2)/10; %Konstante Steigung
+     y_g(y,x)=10*y; % Parabel abgeleitet
+ else 
+     x_g(y,x)=0;
+     y_g(y,x)=10*y;
+ end
+     end   
+ end
+%
+
