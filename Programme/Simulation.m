@@ -1,6 +1,4 @@
-%% Detailansicht Fertigungsbereich
 %%INIT
-clear all;
 d=350; %[mm]
 r=d/2;
 Sicherheit= 50; %[mm]
@@ -61,9 +59,11 @@ LadeY = [2593 2593 3080 3081 2593];
 
 %% Karte erstellen
 %close all;[
-figure();
+figure(1);
+for t=1:20:4000
 axis equal
 xlim([0 7500]),ylim([0 3650]);
+plot(0,0);
 title(''),xlabel('Globale x-Koordinate in mm'),ylabel('Globale y-Koordinate in mm');
 grid on;
 hold on;
@@ -95,41 +95,14 @@ for n=1:1:3
     plotRobot( ParkX(n), ParkY(n), farbeWarte );
     
 end
-%% Ladestationen einzeichnen
-nr = 1;
-plotRobot( LadeX(nr), LadeY(nr),farbeAnfahr);
-nr = 2;
-plotRobot( LadeX(nr), LadeY(nr),farbeLadestation);
-nr = 3;
-plotRobot( LadeX(nr), LadeY(nr),farbeAnfahr);
-nr = 4;
-plotRobot( LadeX(nr), LadeY(nr),farbeAnfahr);
-nr = 5;
-plotRobot( LadeX(nr), LadeY(nr),farbeLadestation);
 
-%% FIFOs einzeichnen
-FIFOX=[1103 2308 3507 4694];
-FIFOY=[250 250 250 250];
-ParkplatzX=[6200 6800 7200 7200 7200];
-ParkplatzY=[250 250 550 1150 1750];
-OffsetFIFO = 400;
-farbeFIFO= [0 0 1 0.4];
-for nr = 1 : 1 : 4
-    plotRobot( FIFOX(nr), FIFOY(nr),farbeFIFO);
-    plotRobot( FIFOX(nr)-OffsetFIFO, FIFOY(nr),farbeFIFO);
-    plotRobot( FIFOX(nr)+OffsetFIFO, FIFOY(nr),farbeFIFO);
+
+
+for x=1:5
+plotRobot(Positionen.Data(t,(x-1)*3+1),Positionen.Data(t,(x-1)*3+2),farbeAnfahr);
 end
-for nr = 1 : 1 : 5
-    plotRobot( ParkplatzX(nr), ParkplatzY(nr),farbeFIFO);
+pause(0.001);
+hold off
 end
-
-
-
-
-
-
-
-
-
 
 
