@@ -1,2 +1,6 @@
 
 Transportbereich.asv
+*.mat
+*.l
+Bilder/Thumbs.db
+*.original
