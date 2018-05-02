@@ -56,8 +56,8 @@ for n=1:1:4
 end
 
 % Ladestationen
-LadeX = [5965 6182 5965 6194 5965];
-LadeY = [2593 2593 3080 3081 2593];
+LadeX = [5965 6182 6950 6813 6665];
+LadeY = [2593 2593 2168 3112 3110];
 
 %% Karte erstellen
 %close all;[
