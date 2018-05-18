@@ -166,7 +166,7 @@ H_zeros=zeros([73 151]);
  
  
   xlim([0 8000]),ylim([0 4000]),zlim([-250 3000]);
- for t=1:10:4000 
+ for t=1:5:4000 
          [x,y]=meshgrid(0:50:7500,0:50:3600);
          k_robotino=1500;
          temp=10000;
