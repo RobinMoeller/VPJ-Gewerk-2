@@ -10,22 +10,27 @@
 \contentsline {section}{\numberline {3.1}Verschiedene Theorien}{11}{section.3.1}
 \contentsline {section}{\numberline {3.2}Ausgew\"ahltes Konzept}{11}{section.3.2}
 \contentsline {chapter}{\numberline {4}Konzept}{12}{chapter.4}
-\contentsline {section}{\numberline {4.1}Potentialfeld zur Bahngenerierung und Kollisionsvermeidung}{13}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Roboter Umwelt}{13}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Robotino}{13}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Ziel}{13}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Kollisionsvermeidung durch *ich kann nicht lesen was davor steht* Bereiche}{13}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Selbstorganisation durch Wartebereiche}{13}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Bekannte Hindernisse}{13}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Unbekannte Hindernisse}{13}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Schnittstellen}{13}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Bahnregelung}{13}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Fertigungsplanung}{13}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Positionsdaten}{13}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}Gesamtprogrammablauf}{13}{section.4.4}
-\contentsline {chapter}{\numberline {5}Simulation und Testplanung}{14}{chapter.5}
-\contentsline {chapter}{\numberline {6}Implementierung und Zielsysteme}{15}{chapter.6}
-\contentsline {chapter}{\numberline {7}Robotino 2.0}{16}{chapter.7}
-\contentsline {chapter}{\numberline {8}Validierung}{17}{chapter.8}
-\contentsline {chapter}{\numberline {9}Ausblick}{18}{chapter.9}
-\contentsline {chapter}{\numberline {10}Fazit}{19}{chapter.10}
+\contentsline {section}{\numberline {4.1}Potentialfeld zur Bahngenerierung und Kollisionsvermeidung}{12}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Roboter Umwelt}{12}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Robotino}{12}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Ziel}{12}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Kollisionsvermeidung durch kritische Bereiche}{12}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Selbstorganisation durch Wartebereiche}{12}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Bekannte Hindernisse}{12}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Unbekannte Hindernisse}{12}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Schnittstellen}{12}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Bahnregelung}{12}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Fertigungsplanung}{12}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Positionsdaten}{12}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}Gesamtprogrammablauf}{12}{section.4.4}
+\contentsline {chapter}{\numberline {5}Simulation und Testplanung}{13}{chapter.5}
+\contentsline {chapter}{\numberline {6}Implementierung und Zielsysteme}{14}{chapter.6}
+\contentsline {chapter}{\numberline {7}Robotino 2.0}{15}{chapter.7}
+\contentsline {chapter}{\numberline {8}Validierung}{16}{chapter.8}
+\contentsline {chapter}{\numberline {9}Ausblick}{17}{chapter.9}
+\contentsline {chapter}{\numberline {10}Fazit}{18}{chapter.10}
+\contentsline {chapter}{\numberline {11}Konzept}{19}{chapter.11}
+\contentsline {section}{\numberline {11.1}Kollisionsvermeidung durch kritische Bereiche}{19}{section.11.1}
+\contentsline {subsection}{\numberline {11.1.1}Selbstorganisation durch Wartebereiche}{19}{subsection.11.1.1}
+\contentsline {subsection}{\numberline {11.1.2}Bekannte Hindernisse}{19}{subsection.11.1.2}
+\contentsline {subsection}{\numberline {11.1.3}Unbekannte Hindernisse}{19}{subsection.11.1.3}
