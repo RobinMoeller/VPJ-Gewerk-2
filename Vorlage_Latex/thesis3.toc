@@ -2,53 +2,63 @@
 \select@language {ngerman}
 \select@language {english}
 \select@language {ngerman}
-\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{6}{chapter*.5}
-\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{7}{chapter*.6}
-\contentsline {chapter}{\numberline {1}Einf\"uhrung}{8}{chapter.1}
-\contentsline {chapter}{\numberline {2}Aufgabenstellung}{9}{chapter.2}
-\contentsline {chapter}{\numberline {3}Bahnplanung}{10}{chapter.3}
-\contentsline {section}{\numberline {3.1}Lokalisierung}{10}{section.3.1}
-\contentsline {section}{\numberline {3.2}Kartenerstellung}{11}{section.3.2}
-\contentsline {section}{\numberline {3.3}Trajektoriengenergierung}{11}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}Globale Bahnplanung}{12}{subsection.3.3.1}
-\contentsline {subsubsection}{\nonumberline Sichtbarbeitsgraph Methode mit A*}{12}{section*.7}
-\contentsline {subsubsection}{\nonumberline Occupancy Grid mit D*-Algorithmus}{13}{section*.8}
-\contentsline {subsection}{\numberline {3.3.2}Lokale Bahnplanung}{15}{subsection.3.3.2}
-\contentsline {subsubsection}{\nonumberline Bug-Algorithmus}{15}{section*.9}
-\contentsline {subsubsection}{\nonumberline Potentialfeld-Methode}{16}{section*.10}
-\contentsline {section}{\numberline {3.4}Ausgew\"ahltes Konzept}{18}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Gesamtkonzept}{18}{subsection.3.4.1}
-\contentsline {subsubsection}{\nonumberline Warteporitionen}{19}{section*.11}
-\contentsline {subsubsection}{\nonumberline Stationen und \"Ubergabepunkte}{19}{section*.12}
-\contentsline {subsubsection}{\nonumberline Warteschlange \glqq Fifo\grqq }{20}{section*.13}
-\contentsline {subsubsection}{\nonumberline Ladestation}{20}{section*.14}
-\contentsline {subsubsection}{\nonumberline Potentialfeld}{20}{section*.15}
-\contentsline {chapter}{\numberline {4}Konzept}{22}{chapter.4}
-\contentsline {section}{\numberline {4.1}Potentialfeld zur Bahngenerierung und Kollisionsvermeidung}{23}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Roboter Umwelt}{23}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Robotino,Sationen und IR-Hindernisse}{25}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Ziel}{26}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Kollisionsvermeidung durch kritische Bereiche}{27}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Selbstorganisation durch Wartebereiche}{28}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Bekannte Hindernisse}{29}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}Unbekannte Hindernisse}{30}{subsection.4.2.3}
-\contentsline {section}{\numberline {4.3}Schnittstellen}{31}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Bahnregelung}{31}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Fertigungsplanung}{32}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}Fehlererkennung}{33}{subsection.4.3.3}
-\contentsline {chapter}{\numberline {5}Simulation und Testplanung}{34}{chapter.5}
-\contentsline {section}{\numberline {5.1}Simulation des Ausweichman\"overs}{34}{section.5.1}
-\contentsline {section}{\numberline {5.2}Simulation Wartebereiche}{35}{section.5.2}
-\contentsline {chapter}{\numberline {6}Implementierung und Zielsysteme}{37}{chapter.6}
-\contentsline {section}{\numberline {6.1}Potentialfeld}{37}{section.6.1}
-\contentsline {section}{\numberline {6.2}Selbstorganisation durch Wartebereiche}{37}{section.6.2}
-\contentsline {section}{\numberline {6.3}Bekannte Hindernisse}{41}{section.6.3}
-\contentsline {section}{\numberline {6.4}Unbekannte Hindernisse}{41}{section.6.4}
-\contentsline {section}{\numberline {6.5}Geschwindigkeit bestimmen}{42}{section.6.5}
-\contentsline {subsection}{\numberline {6.5.1}IR Daten erfassen}{42}{subsection.6.5.1}
-\contentsline {subsection}{\numberline {6.5.2}Fahrende Robotinos erkennen}{42}{subsection.6.5.2}
-\contentsline {subsection}{\numberline {6.5.3}Geschwindigkeitsvektor bestimmen}{44}{subsection.6.5.3}
-\contentsline {subsection}{\numberline {6.5.4}Ausweichrichtung bestimmen}{44}{subsection.6.5.4}
-\contentsline {subsection}{\numberline {6.5.5}Ausweichman\"over addieren}{44}{subsection.6.5.5}
-\contentsline {chapter}{\numberline {7}Robotino 2.0}{45}{chapter.7}
-\contentsline {chapter}{\numberline {8}Validierung}{46}{chapter.8}
+\contentsline {chapter}{\nonumberline Tabellenverzeichnis}{7}{chapter*.5}
+\contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{8}{chapter*.6}
+\contentsline {chapter}{\numberline {1}Einf\"uhrung}{10}{chapter.1}
+\contentsline {chapter}{\numberline {2}Aufgabenstellung}{11}{chapter.2}
+\contentsline {chapter}{\numberline {3}Bahnplanung}{12}{chapter.3}
+\contentsline {section}{\numberline {3.1}Lokalisierung}{12}{section.3.1}
+\contentsline {section}{\numberline {3.2}Kartenerstellung}{13}{section.3.2}
+\contentsline {section}{\numberline {3.3}Trajektoriengenergierung}{13}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Globale Bahnplanung}{14}{subsection.3.3.1}
+\contentsline {subsubsection}{\nonumberline Sichtbarbeitsgraph Methode mit A*}{14}{section*.7}
+\contentsline {subsubsection}{\nonumberline Occupancy Grid mit D*-Algorithmus}{15}{section*.8}
+\contentsline {subsection}{\numberline {3.3.2}Lokale Bahnplanung}{17}{subsection.3.3.2}
+\contentsline {subsubsection}{\nonumberline Bug-Algorithmus}{17}{section*.9}
+\contentsline {subsubsection}{\nonumberline Potentialfeld-Methode}{18}{section*.10}
+\contentsline {section}{\numberline {3.4}Ausgew\"ahltes Konzept}{20}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Gesamtkonzept}{20}{subsection.3.4.1}
+\contentsline {subsubsection}{\nonumberline Warteporitionen}{21}{section*.11}
+\contentsline {subsubsection}{\nonumberline Stationen und \"Ubergabepunkte}{21}{section*.12}
+\contentsline {subsubsection}{\nonumberline Warteschlange \glqq Fifo\grqq }{22}{section*.13}
+\contentsline {subsubsection}{\nonumberline Ladestation}{22}{section*.14}
+\contentsline {subsubsection}{\nonumberline Potentialfeld}{22}{section*.15}
+\contentsline {chapter}{\numberline {4}Konzept}{24}{chapter.4}
+\contentsline {section}{\numberline {4.1}Potentialfeld zur Bahngenerierung und Kollisionsvermeidung}{25}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Roboter Umwelt}{25}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Robotino,Sationen und IR-Hindernisse}{27}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Ziel}{28}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Kollisionsvermeidung durch kritische Bereiche}{29}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Selbstorganisation durch Wartebereiche}{30}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Bekannte Hindernisse}{31}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Unbekannte Hindernisse}{32}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Schnittstellen}{33}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Bahnregelung}{33}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Fertigungsplanung}{34}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Fehlererkennung}{35}{subsection.4.3.3}
+\contentsline {chapter}{\numberline {5}Simulation und Testplanung}{36}{chapter.5}
+\contentsline {section}{\numberline {5.1}Simulation des Ausweichman\"overs}{36}{section.5.1}
+\contentsline {section}{\numberline {5.2}Simulation Wartebereiche}{37}{section.5.2}
+\contentsline {chapter}{\numberline {6}Implementierung und Zielsysteme}{39}{chapter.6}
+\contentsline {section}{\numberline {6.1}Potentialfeld}{39}{section.6.1}
+\contentsline {section}{\numberline {6.2}Selbstorganisation durch Wartebereiche}{39}{section.6.2}
+\contentsline {section}{\numberline {6.3}Bekannte Hindernisse}{43}{section.6.3}
+\contentsline {section}{\numberline {6.4}Unbekannte Hindernisse}{43}{section.6.4}
+\contentsline {section}{\numberline {6.5}UDP Gewerk1 einlesen}{44}{section.6.5}
+\contentsline {section}{\numberline {6.6}UDP Daten formatieren}{44}{section.6.6}
+\contentsline {section}{\numberline {6.7}Fehler erkennen}{45}{section.6.7}
+\contentsline {section}{\numberline {6.8}Auftrag steuern}{45}{section.6.8}
+\contentsline {section}{\numberline {6.9}Position der Robotinos bestimmen}{46}{section.6.9}
+\contentsline {section}{\numberline {6.10}Geschwindigkeit bestimmen}{46}{section.6.10}
+\contentsline {subsection}{\numberline {6.10.1}IR Daten erfassen}{47}{subsection.6.10.1}
+\contentsline {subsection}{\numberline {6.10.2}Fahrende Robotinos erkennen}{48}{subsection.6.10.2}
+\contentsline {subsection}{\numberline {6.10.3}Geschwindigkeitsvektor bestimmen}{48}{subsection.6.10.3}
+\contentsline {subsection}{\numberline {6.10.4}Ausweichrichtung bestimmen}{51}{subsection.6.10.4}
+\contentsline {subsection}{\numberline {6.10.5}Ausweichman\"over addieren}{51}{subsection.6.10.5}
+\contentsline {section}{\numberline {6.11}Fahrmodus steuern}{51}{section.6.11}
+\contentsline {section}{\numberline {6.12}Geschwindigkeit begrenzen}{52}{section.6.12}
+\contentsline {section}{\numberline {6.13}Geschwindigkeit transformieren}{53}{section.6.13}
+\contentsline {section}{\numberline {6.14}Status bestimmen}{53}{section.6.14}
+\contentsline {section}{\numberline {6.15}UDP Gewerk1 schreiben}{53}{section.6.15}
+\contentsline {chapter}{\numberline {7}Robotino 2.0}{54}{chapter.7}
+\contentsline {chapter}{\numberline {8}Validierung}{55}{chapter.8}
