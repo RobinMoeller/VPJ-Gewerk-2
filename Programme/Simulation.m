@@ -1,5 +1,5 @@
 %%INIT
-load('Route_Simulation.mat');
+%load('Route_Simulation.mat');
 d=350; %[mm]
 r=d/2;
 Sicherheit= 50; %[mm]
@@ -61,7 +61,7 @@ LadeY = [2593 2593 3080 3081 2593];
 % Karte erstellen
 %close all;[
 figure(1);
-for t=1:20:4000
+
 axis equal
 xlim([0 7500]),ylim([0 3650]);
 plot(0,0);
@@ -98,13 +98,14 @@ for n=1:1:3
 end
 
 
-
-for x=1:5
-plotRobot(Positionen.Data(t,(x-1)*3+1),Positionen.Data(t,(x-1)*3+2),farbeAnfahr);
-end
+plot(Positionen.Data(:,1),Positionen.Data(:,2),'b');
+plot(Positionen.Data(:,4),Positionen.Data(:,5),'r');
+plot(Positionen.Data(:,7),Positionen.Data(:,8),'g');
+plot(Positionen.Data(:,10),Positionen.Data(:,11),'c');
+%plot(Positionen.Data(:,13),Positionen.Data(:,14),'y');
 pause(0.001);
 hold off
-end
+
 
 %% 3D Simulation
 %% Plot für Präsi

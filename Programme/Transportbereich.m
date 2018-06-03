@@ -69,7 +69,7 @@ grid on;
 hold on;
 
 
-rectangle('Position',[FertigungsbP1X FertigungsbP1Y FertigungsbP2X FertigungsbP2Y], 'FaceColor', [0.1 0.1 0.5 0.2])
+% rectangle('Position',[FertigungsbP1X FertigungsbP1Y FertigungsbP2X FertigungsbP2Y], 'FaceColor', [0.1 0.1 0.5 0.2])
 for n = 1 : 1 : 4
     rectangle('Position',[StationX(n) StationY(n) StationXdim StationYdim])
     %Plotte Warteposen vor und hinter Stationen
@@ -122,6 +122,16 @@ end
 for nr = 1 : 1 : 5
     plotRobot( ParkplatzX(nr), ParkplatzY(nr),farbeFIFO);
 end
+%Zone4
+rectangle('Position',[600 2500 5300-600 3200-2500], 'FaceColor', [1 0 0 0.5])
+%Zone1
+rectangle('Position',[2750 3200 5500-2750 3600-3200], 'FaceColor', [0 1 0 0.5])
+%Zone2
+rectangle('Position',[600 3200 2750-600 3600-3200], 'FaceColor', [0 0 1 0.5])
+%Zone3
+rectangle('Position',[0 2000 600 3600-2000], 'FaceColor', [1 0 1 0.5])
+%Zone5
+rectangle('Position',[5000 2500 7400-5000 3600-2500], 'FaceColor', [0 1 1 0.5])
 
 
 
