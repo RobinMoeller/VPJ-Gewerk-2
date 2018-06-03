@@ -1,7 +1,7 @@
 \chapter{Implementierung und Zielsysteme}
 \label{cha:Implementierung}
-In diesem Kapitel wird die Umsetzung der einzelnen Algorithmen des in Kapitel \ref{cha:konzept} erlÃ¤uterten Konzepts mit Hilfe der Software Matlab/Simulink erklÃ¤rt.
-FÃ¼r einen besseren Ãœberblick zum dem Konzept zeigt die Abbildung \ref{Ablaufdiagramm} ein Ablaufdiagramm des Programms der Bahnplanung.\\
+In diesem Kapitel wird die Umsetzung der einzelnen Algorithmen des in Kapitel \ref{cha:konzept} erläuterten Konzepts mit Hilfe der Software Matlab/Simulink erklärt.
+Für einen besseren Überblick zum dem Konzept zeigt die Abbildung \ref{Ablaufdiagramm} ein Ablaufdiagramm des Programms der Bahnplanung.\\
 
 \begin{figure}[H]
 	\centering
@@ -10,16 +10,16 @@ FÃ¼r einen besseren Ãœberblick zum dem Konzept zeigt die Abbildung \ref{Ablaufdi
 	\label{Ablaufdiagramm}
 \end{figure}
 \noindent
-ZunÃ¤chst wird der Auftrag der Fertigungsplanung verarbeitet und parallel dazu wir die eigene Position des Robotinos sowie auch die Positionsdaten der anderen Robotinos bezogen. Nachdem die Selbstorganisation durch Wartebereiche abgearbeitet wurde wird das erhaltene Ziel weitergeleitet. Mit dem bekannten Ziel wird der Zielvektor bestimmt. Die Hinderniserkennung lÃ¤uft nun gleichzeitig.
+Zunächst wird der Auftrag der Fertigungsplanung verarbeitet und parallel dazu wir die eigene Position des Robotinos sowie auch die Positionsdaten der anderen Robotinos bezogen. Nachdem die Selbstorganisation durch Wartebereiche abgearbeitet wurde wird das erhaltene Ziel weitergeleitet. Mit dem bekannten Ziel wird der Zielvektor bestimmt. Die Hinderniserkennung läuft nun gleichzeitig.
 Hat der Robotino sein Endziel erreicht kann ein neuer Auftrag abgearbeitet werden.\\
-\\Hat ein Robotino zur Zeit keinen Auftrag wird als Ziel die Standby-Position einprogrammiert. ZunÃ¤chst wird der Grundalgorithmus zur Zielgebung erlÃ¤utert und anschlieÃŸend um die einzelenen Unterpunkte des Konzeptes erweitert.\\
+\\Hat ein Robotino zur Zeit keinen Auftrag wird als Ziel die Standby-Position einprogrammiert. Zunächst wird der Grundalgorithmus zur Zielgebung erläutert und anschließend um die einzelenen Unterpunkte des Konzeptes erweitert.\\
 
 \section{Potentialfeld}
 \label{sec:potentialfeld}
 
 \section{Selbstorganisation durch Wartebereiche}
 \label{sec:Impl:Selbstorga}
-Die in dem Unterkapitel \ref{subsec:Selbstorga} erklÃ¤rte intelligente Selstorganisation wird im folgenden erklÃ¤rt und es wird gezeigt wie der Algorithmus in der Software Simulink umgesetzt wird. \\
+Die in dem Unterkapitel \ref{subsec:Selbstorga} erklärte intelligente Selstorganisation wird im folgenden erklärt und es wird gezeigt wie der Algorithmus in der Software Simulink umgesetzt wird. \\
 \\
 Das Ablaufdiagramm in Abbildung \ref{AblaufdiagrammFIFO} stellt den Ablauf des  Algorithmus dar.\\
 
@@ -31,8 +31,8 @@ Das Ablaufdiagramm in Abbildung \ref{AblaufdiagrammFIFO} stellt den Ablauf des  
 \end{figure}
 \noindent
 \\
-Die Positionen der anderen Robotinos werden Ã¼ber den 'FIFO Merker' geprÃ¼ft und es wird geschaut ob die anderen Roboter Positionen einnehmen die ein zugehÃ¶riger Warteplatz fÃ¼r die Zielstation darstellen.\\
-Die Roboterpositionen werden in einem Array der X- Positionen und einem der Y-Postionen gespeichert. Die 12 bestehenden in gleichmÃ¤ÃŸigen Abstand aufgeteilten Wartebereiche kÃ¶nnen mit der Formel \ref{equ:wartebereiche} in Zeile 8 des Matlabcodes \ref{Fifomerker} in X-Richtung berechnet werden.\\
+Die Positionen der anderen Robotinos werden über den 'FIFO Merker' geprüft und es wird geschaut ob die anderen Roboter Positionen einnehmen die ein zugehöriger Warteplatz für die Zielstation darstellen.\\
+Die Roboterpositionen werden in einem Array der X- Positionen und einem der Y-Postionen gespeichert. Die 12 bestehenden in gleichmäßigen Abstand aufgeteilten Wartebereiche können mit der Formel \ref{equ:wartebereiche} in Zeile 8 des Matlabcodes \ref{Fifomerker} in X-Richtung berechnet werden.\\
 \begin{align}
 \label{equ:wartebereiche}
   N(n)=round((X(n)-703)/400)+1;
@@ -61,37 +61,37 @@ elseif (Y(n)<450 && (X(n)>100 && X(n)<5250)&& N(n)<=12 && N(n)>0)
           ...
 end
 \end{lstlisting}
-Auch die Belegung der Stationen wird mit dem selben Algorithmus berechnet. Einzig die Bereichsabfrage Ã¤ndert sich und die Formel \ref{equ:wartebereiche} fÃ¼r die Berechnung der Belegung. Hierbei Ã¤ndert sich allerdings nur die Unterteilung und der Offset der Formel.\\
+Auch die Belegung der Stationen wird mit dem selben Algorithmus berechnet. Einzig die Bereichsabfrage ändert sich und die Formel \ref{equ:wartebereiche} für die Berechnung der Belegung. Hierbei ändert sich allerdings nur die Unterteilung und der Offset der Formel.\\
 Die Merkerwerte werden in einem Stateflowdiagramm weiterverarbeitet. Die EingÃ¤nge des Stateflowdiagramms sind die Auftragsdaten, die Merkerdaten, und die genauen Positionsdaten des Robotinos aus Beobachter und Kamerawerten.
-Damit das System die Wartepositionen der zugehÃ¶rigen Zielstationen fÃ¼r die Zuweisung verwendet wird die Formel \ref{equ:ersterfifo} verwendet. Die 12 Wartebereiche kÃ¶nnen so explizit den 8 Stationen zugeordnet werden. Zwei Stationen teilen sich jeweils drei Wartebereiche.
+Damit das System die Wartepositionen der zugehörigen Zielstationen für die Zuweisung verwendet wird die Formel \ref{equ:ersterfifo} verwendet. Die 12 Wartebereiche können so explizit den 8 Stationen zugeordnet werden. Zwei Stationen teilen sich jeweils drei Wartebereiche.
 \begin{align}
 \label{equ:ersterfifo}
  &ersterFifo=floor(Zielstation/2)\cdot3+2 \cdot mod(Zielstation,2)+1\\
  &zweiterFifo=floor(Zielstation/2)\cdot 3+1+1\\
  &dritterFifo=floor(Zielstation/2)\cdot 3+2-2\cdot mod(Zielstation,2)+1
   \end{align} 
-Ist der erste Bereich belegt wird der zweite Bereich abgefragt ist dieser belegt wird der Dritte abgefragt. Sind alles drei Bereich belegt gibt das Stateflow diagramm den hÃ¶chsten Wert aus. Beim hÃ¶chsten Wert wird die Standbyposition als Ziel einprogrammiert.\\
+Ist der erste Bereich belegt wird der zweite Bereich abgefragt ist dieser belegt wird der Dritte abgefragt. Sind alles drei Bereich belegt gibt das Stateflow diagramm den höchsten Wert aus. Beim höchsten Wert wird die Standbyposition als Ziel einprogrammiert.\\
 \\
 
-Wird im nÃ¤chsten Zyklus der nÃ¤chst kleinere Wartebereich frei so wird dieses als Ziel angefahren. 
-In dem Fall wenn ein anderer Robotino den ersten Wartebereich verlÃ¤sst und zur Zielstation fÃ¤hrt besteht ein Sonderfall. Da die Strecke zwischen den beiden Punkten ca. zwei Meter betrÃ¤gt dauert diese Fahrt mehrere Zyklen. Damit ein dahinter stehender Robotino in dem Moment nicht auch direkt die Station anfÃ¤hrt, weil alle anderen Bereiche frei sind, wird eine weitere Position abgefragt. Die Stationsbelegung wird abgefragt. 
+Wird im nächsten Zyklus der nächst kleinere Wartebereich frei so wird dieses als Ziel angefahren. 
+In dem Fall wenn ein anderer Robotino den ersten Wartebereich verlässt und zur Zielstation fährt besteht ein Sonderfall. Da die Strecke zwischen den beiden Punkten ca. zwei Meter beträgt dauert diese Fahrt mehrere Zyklen. Damit ein dahinter stehender Robotino in dem Moment nicht auch direkt die Station anfährt, weil alle anderen Bereiche frei sind, wird eine weitere Position abgefragt. Die Stationsbelegung wird abgefragt. 
 Die Station wird erst wieder freigegeben wenn sie im Stationsmerker nicht mehr belegt ist.\\
 
 \section{Bekannte Hindernisse}
 
-FÃ¼r eine verbesserte Kollisionsvermeidung wurde das AusweichmanÃ¶ver, wie in Unterkapitel \ref{subsec:bekannt} bereits erklÃ¤rt, verwendet. Die Aufgabe des ManÃ¶vers ist es den Zielvektor des Robotinos so zu verÃ¤ndern, dass er einem sich im Weg befindenden Robotino mit einem grÃ¶ÃŸeren Abstand ausweicht.
-Es werden die Position des Robotinos benÃ¶tigt sowie auch die Positionen der anderen Robotinos, die StÃ¶rpositionen. DarÃ¼ber hinaus benÃ¶tigt das ManÃ¶ver den Zielvektor.\\
-ZunÃ¤chst wird analysiert in welchem Winkel die StÃ¶rpositionen sich zum Zielvektor befinden. Liegt ein anderer Robotino innerhalb von \ang{30} zum Zeilvektor wird ein Ausweichwinkel berechnet. 
+Für eine verbesserte Kollisionsvermeidung wurde das Ausweichmanöver, wie in Unterkapitel \ref{subsec:bekannt} bereits erklärt, verwendet. Die Aufgabe des Manövers ist es den Zielvektor des Robotinos so zu verÃ¤ndern, dass er einem sich im Weg befindenden Robotino mit einem größeren Abstand ausweicht.
+Es werden die Position des Robotinos benötigt sowie auch die Positionen der anderen Robotinos, die Störpositionen. Darüber hinaus benötigt das Manöver den Zielvektor.\\
+Zunächst wird analysiert in welchem Winkel die Störpositionen sich zum Zielvektor befinden. Liegt ein anderer Robotino innerhalb von \ang{30} zum Zeilvektor wird ein Ausweichwinkel berechnet. 
 \begin{align}
 \label{Ausweichwinkel}
 Ausweich(1,i)=+asin(Abstand(2,i)/Hyp)-pi/2
 \end{align}
-Der erste Wert des Ausweichs-Array aus Formel \ref{Ausweichwinkel} ist der Ausweichwinkel. Ãœber eine Trigonometrische Funktion wird der genaue Winkel des Zielvektors zum Ziel ausgerechnet und \ang{90} addiert.
-Solange eine StÃ¶rposition innerhalb der \ang{30} liegen bleibt der Ausweichwinkel erhalten. Ist der im Weg liegende Roboter weitgenug umfahren wird der originale Zielvektor einprogrammiert.
+Der erste Wert des Ausweichs-Array aus Formel \ref{Ausweichwinkel} ist der Ausweichwinkel. über eine Trigonometrische Funktion wird der genaue Winkel des Zielvektors zum Ziel ausgerechnet und \ang{90} addiert.
+Solange eine Störposition innerhalb der \ang{30} liegen bleibt der Ausweichwinkel erhalten. Ist der im Weg liegende Roboter weitgenug umfahren wird der originale Zielvektor einprogrammiert.
 
 \section{Unbekannte Hindernisse}
  
-Unbekannte Hindernisse werden nur mit Hilfe der 9 verbauten Infrarotsensoren erkannt. Zyklisch werden diese Sensoren abgefragt. Detektiert einer der Sensoren ein Hindernis wird zunÃ¤chst Ã¼berprÃ¼ft an welcher Position relativ zur Roboterausrichtung sich das Hindernis befindet. Der Ablauf wird im Code \ref{infra} dargestellt:\\
+Unbekannte Hindernisse werden nur mit Hilfe der 9 verbauten Infrarotsensoren erkannt. Zyklisch werden diese Sensoren abgefragt. Detektiert einer der Sensoren ein Hindernis wird zunächst überprüft an welcher Position relativ zur Roboterausrichtung sich das Hindernis befindet. Der Ablauf wird im Code \ref{infra} dargestellt:\\
 \begin{lstlisting}[caption=Infraroterkennung,label=infra,basicstyle=\small]
 for x=1:9
  if  (isnan(IRDaten(x))==0) && (IRDaten(x) <= 150)

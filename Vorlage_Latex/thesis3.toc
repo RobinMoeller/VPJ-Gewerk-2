@@ -1,7 +1,7 @@
-\babel@toc {ngerman}{}
-\babel@toc {ngerman}{}
-\babel@toc {english}{}
-\babel@toc {ngerman}{}
+\select@language {ngerman}
+\select@language {ngerman}
+\select@language {english}
+\select@language {ngerman}
 \contentsline {chapter}{\nonumberline Tabellenverzeichnis}{7}{chapter*.5}
 \contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{8}{chapter*.6}
 \contentsline {chapter}{\numberline {1}Einf\"uhrung}{9}{chapter.1}
@@ -26,16 +26,29 @@
 \contentsline {chapter}{\numberline {4}Konzept}{23}{chapter.4}
 \contentsline {section}{\numberline {4.1}Potentialfeld zur Bahngenerierung und Kollisionsvermeidung}{24}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Roboter Umwelt}{24}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Robotino,Sationen und IR-Hindernisse}{27}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.2}Robotino,Sationen und IR-Hindernisse}{26}{subsection.4.1.2}
 \contentsline {subsection}{\numberline {4.1.3}Ziel}{27}{subsection.4.1.3}
-\contentsline {chapter}{\numberline {5}Simulation und Testplanung}{29}{chapter.5}
-\contentsline {section}{\numberline {5.1}Simulation des Ausweichman\~A\IeC {\P }vers}{29}{section.5.1}
-\contentsline {section}{\numberline {5.2}Simulation Wartebereiche}{30}{section.5.2}
-\contentsline {section}{\numberline {5.3}Geschwindigkeit bestimmen}{30}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}IR Daten erfassen}{31}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Fahrende Robotinos erkennen}{31}{subsection.5.3.2}
-\contentsline {subsection}{\numberline {5.3.3}Geschwindigkeitsvektor bestimmen}{33}{subsection.5.3.3}
-\contentsline {subsection}{\numberline {5.3.4}Ausweichrichtung bestimmen}{33}{subsection.5.3.4}
-\contentsline {subsection}{\numberline {5.3.5}Ausweichman\~A\IeC {\P }ver addieren}{33}{subsection.5.3.5}
-\contentsline {chapter}{\numberline {6}Robotino 2.0}{34}{chapter.6}
-\contentsline {chapter}{\numberline {7}Validierung}{35}{chapter.7}
+\contentsline {section}{\numberline {4.2}Kollisionsvermeidung durch kritische Bereiche}{28}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}Selbstorganisation durch Wartebereiche}{29}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Bekannte Hindernisse}{30}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}Unbekannte Hindernisse}{31}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Schnittstellen}{32}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Bahnregelung}{32}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Fertigungsplanung}{33}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}Fehlererkennung}{35}{subsection.4.3.3}
+\contentsline {chapter}{\numberline {5}Simulation und Testplanung}{36}{chapter.5}
+\contentsline {section}{\numberline {5.1}Simulation des Ausweichman\"overs}{36}{section.5.1}
+\contentsline {section}{\numberline {5.2}Simulation Wartebereiche}{37}{section.5.2}
+\contentsline {chapter}{\numberline {6}Implementierung und Zielsysteme}{39}{chapter.6}
+\contentsline {section}{\numberline {6.1}Potentialfeld}{39}{section.6.1}
+\contentsline {section}{\numberline {6.2}Selbstorganisation durch Wartebereiche}{39}{section.6.2}
+\contentsline {section}{\numberline {6.3}Bekannte Hindernisse}{42}{section.6.3}
+\contentsline {section}{\numberline {6.4}Unbekannte Hindernisse}{43}{section.6.4}
+\contentsline {section}{\numberline {6.5}Geschwindigkeit bestimmen}{43}{section.6.5}
+\contentsline {subsection}{\numberline {6.5.1}IR Daten erfassen}{44}{subsection.6.5.1}
+\contentsline {subsection}{\numberline {6.5.2}Fahrende Robotinos erkennen}{44}{subsection.6.5.2}
+\contentsline {subsection}{\numberline {6.5.3}Geschwindigkeitsvektor bestimmen}{44}{subsection.6.5.3}
+\contentsline {subsection}{\numberline {6.5.4}Ausweichrichtung bestimmen}{44}{subsection.6.5.4}
+\contentsline {subsection}{\numberline {6.5.5}Ausweichman\"over addieren}{44}{subsection.6.5.5}
+\contentsline {chapter}{\numberline {7}Robotino 2.0}{47}{chapter.7}
+\contentsline {chapter}{\numberline {8}Validierung}{48}{chapter.8}
