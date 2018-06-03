@@ -1,5 +1,5 @@
 \section{Geschwindigkeit bestimmen}
-Um die Sollgeschwindigkeit des Robotinos zu bestimmen, wird das Subsystem Vektorberechnung genutzt. Dieses Subsystem ist wie in Abbildung \ref{fig:Vektorberechnung} dargestellt, aufgebaut. Das Subsystem hat dabei den in Abbildung \ref{fig:AblVektor} gezeigten Ablauf. Dabei ist zu erkennen, dass zuerst die IR Daten erfasst werden und die fahrenden Robotinos erkannt werden. Die IR Datenerfassung wird unter Kapitel \ref{} nÃ¤her erlÃ¤utert. Wie die fahrenden Robotinos erkannt werden, wird in Kapitel \ref{} beschrieben. Anhand der IR Daten und der Informationen Ã¼ber die fahrenden Robotinos wird dann der Geschwindigkeitsvektor bestimmt. Die dabei genutzte Funktion wird unter Kapitel \ref{} beschrieben. Anhand des bestimmten Geschwindigkeitsvektors wird dann eine Ausweichrichtung bestimmt, wenn ein anderer Robotino die Route kreuzt. die dazu genutzte Funktion ist in Kapitel \ref{} nÃ¤her beschrieben. Im nÃ¤chsten Schritt wird dann das AusweichmanÃ¶ver ausgefÃ¼hrt. Die Implementierung des AusweichmanÃ¶vers wird in Kapiitel \ref{} beschrieben.
+Um die Sollgeschwindigkeit des Robotinos zu bestimmen, wird das Subsystem Vektorberechnung genutzt. Dieses Subsystem ist wie in Abbildung \ref{fig:Vektorberechnung} dargestellt, aufgebaut. Das Subsystem hat dabei den in Abbildung \ref{fig:AblVektor} gezeigten Ablauf. Dabei ist zu erkennen, dass zuerst die IR Daten erfasst werden und die fahrenden Robotinos erkannt werden. Die IR Datenerfassung wird unter Kapitel \ref{} näher erläutert. Wie die fahrenden Robotinos erkannt werden, wird in Kapitel \ref{} beschrieben. Anhand der IR Daten und der Informationen über die fahrenden Robotinos wird dann der Geschwindigkeitsvektor bestimmt. Die dabei genutzte Funktion wird unter Kapitel \ref{} beschrieben. Anhand des bestimmten Geschwindigkeitsvektors wird dann eine Ausweichrichtung bestimmt, wenn ein anderer Robotino die Route kreuzt. die dazu genutzte Funktion ist in Kapitel \ref{} näher beschrieben. Im nächsten Schritt wird dann das Ausweichmanöver ausgeführt. Die Implementierung des Ausweichmanövers wird in Kapiitel \ref{} beschrieben.
 
 \begin{figure}
 	\centering	\includegraphics[width=0.5\textwidth]{grafiken/Geschwindigkeit_bestimmen.png}
@@ -14,7 +14,7 @@ Um die Sollgeschwindigkeit des Robotinos zu bestimmen, wird das Subsystem Vektor
 \end{figure}
 
 \subsection{IR Daten erfassen}
-In der IR Daten erfassen Funktion werden zuerst die IR Daten aus den RobotinoDaten gefiltert und auf NaN gesetzt, wenn der gemessene Abstand grÃ¶ÃŸer als 150 mm ist. Bei einem Abstand kleiner gleich 150 mm wird die Position der Hindernisse in globalen Koordinaten bestimmt und ausgegeben.
+In der IR Daten erfassen Funktion werden zuerst die IR Daten aus den RobotinoDaten gefiltert und auf NaN gesetzt, wenn der gemessene Abstand größer als 150 mm ist. Bei einem Abstand kleiner gleich 150 mm wird die Position der Hindernisse in globalen Koordinaten bestimmt und ausgegeben.
 
 \subsection{Fahrende Robotinos erkennen}
 Um zu erkennen ob die anderen Robotinos fahren, werden die Postionen der Robotinos mit den Postionen vor einer Sekunde verglichen. Wenn die Robotinos mehr als 10 mm in der Sekunde zurÃ¼ckgelegt haben, wird der Robotino als fahrend gesetzt.
@@ -24,4 +24,4 @@ Um zu erkennen ob die anderen Robotinos fahren, werden die Postionen der Robotin
 \subsection{Ausweichrichtung bestimmen}
 
 
-\subsection{AusweichmanÃ¶ver addieren}
+\subsection{Ausweichmanöver addieren}
