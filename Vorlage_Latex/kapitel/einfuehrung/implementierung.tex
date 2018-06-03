@@ -37,8 +37,8 @@ Die Roboterpositionen werden in einem Array der X- Positionen und einem der Y-Po
 \label{equ:wartebereiche}
   N(n)=round((X(n)-703)/400)+1;
   \end{align}  
-Stimmen die X-Positionen der Robotinos mit den Bereichen Ã¼berein und sind die Y-Positionen am linken Rand des gesamten 'Fabrik' Bereiches, wird der Wartebereich an dem ein Robotino mit einer jedem Robotino spezifischen Nummer belegt.
-Damit die Wartebereiche auch in jedem Zyklus wieder neu berechnet werden wird der Merker zunÃ¤chst auf 0 gesetzt und in jedem Zyklus mit neuen Werten beschrieben.\\
+Stimmen die X-Positionen der Robotinos mit den Bereichen überein und sind die Y-Positionen am linken Rand des gesamten 'Fabrik' Bereiches, wird der Wartebereich an dem ein Robotino mit einer jedem Robotino spezifischen Nummer belegt.
+Damit die Wartebereiche auch in jedem Zyklus wieder neu berechnet werden wird der Merker zunächst auf 0 gesetzt und in jedem Zyklus mit neuen Werten beschrieben.\\
 
 \newpage
 \begin{lstlisting}[caption={FIFO Merker},label=Fifomerker,basicstyle=\small]
@@ -62,7 +62,7 @@ elseif (Y(n)<450 && (X(n)>100 && X(n)<5250)&& N(n)<=12 && N(n)>0)
 end
 \end{lstlisting}
 Auch die Belegung der Stationen wird mit dem selben Algorithmus berechnet. Einzig die Bereichsabfrage ändert sich und die Formel \ref{equ:wartebereiche} für die Berechnung der Belegung. Hierbei ändert sich allerdings nur die Unterteilung und der Offset der Formel.\\
-Die Merkerwerte werden in einem Stateflowdiagramm weiterverarbeitet. Die EingÃ¤nge des Stateflowdiagramms sind die Auftragsdaten, die Merkerdaten, und die genauen Positionsdaten des Robotinos aus Beobachter und Kamerawerten.
+Die Merkerwerte werden in einem Stateflowdiagramm weiterverarbeitet. Die Eingänge des Stateflowdiagramms sind die Auftragsdaten, die Merkerdaten, und die genauen Positionsdaten des Robotinos aus Beobachter und Kamerawerten.
 Damit das System die Wartepositionen der zugehörigen Zielstationen für die Zuweisung verwendet wird die Formel \ref{equ:ersterfifo} verwendet. Die 12 Wartebereiche können so explizit den 8 Stationen zugeordnet werden. Zwei Stationen teilen sich jeweils drei Wartebereiche.
 \begin{align}
 \label{equ:ersterfifo}
@@ -79,7 +79,7 @@ Die Station wird erst wieder freigegeben wenn sie im Stationsmerker nicht mehr b
 
 \section{Bekannte Hindernisse}
 
-Für eine verbesserte Kollisionsvermeidung wurde das Ausweichmanöver, wie in Unterkapitel \ref{subsec:bekannt} bereits erklärt, verwendet. Die Aufgabe des Manövers ist es den Zielvektor des Robotinos so zu verÃ¤ndern, dass er einem sich im Weg befindenden Robotino mit einem größeren Abstand ausweicht.
+Für eine verbesserte Kollisionsvermeidung wurde das Ausweichmanöver, wie in Unterkapitel \ref{subsec:bekannt} bereits erklärt, verwendet. Die Aufgabe des Manövers ist es den Zielvektor des Robotinos so zu verändern, dass er einem sich im Weg befindenden Robotino mit einem größeren Abstand ausweicht.
 Es werden die Position des Robotinos benötigt sowie auch die Positionen der anderen Robotinos, die Störpositionen. Darüber hinaus benötigt das Manöver den Zielvektor.\\
 Zunächst wird analysiert in welchem Winkel die Störpositionen sich zum Zielvektor befinden. Liegt ein anderer Robotino innerhalb von \ang{30} zum Zeilvektor wird ein Ausweichwinkel berechnet. 
 \begin{align}
