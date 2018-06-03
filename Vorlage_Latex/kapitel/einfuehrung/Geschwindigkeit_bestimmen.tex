@@ -79,7 +79,7 @@ Vy_{Umwelt}(Zone=5)=-K_{gerade}
  \end{align}
 
 \subsection{Ausweichrichtung bestimmen}
-Um eine Ausweichrichtung zu bestimmen, wird zuerst der Abstand zu den anderen Robotinos anhand derer Positionen bestimmt. Wenn der Abstand geringer als ein Meter ist, wird der globale Winkel zum Robotino bestimmt und um \(90^°\) erhöht. Zusätzlich wird im nächsten Schritt der Fahrwinkel anhand des Geschwindigkeitsvektors in globalen Koordinaten bestimmt. Anhand des Fahrwinkels und der Robotinowinkel wird dann ein Enable-Bit gesetzt wenn sich der Robotino in einem Toleranzbereich um den Fahrwinkel befindet. Wenn dieses Enable-Bit nicht gesetzt ist, wird kein Ausweichmanöver ausgeführt.
+Um eine Ausweichrichtung zu bestimmen, wird zuerst der Abstand zu den anderen Robotinos anhand derer Positionen bestimmt. Wenn der Abstand geringer als ein Meter ist, wird der globale Winkel zum Robotino bestimmt und um \ang{90} erhöht. Zusätzlich wird im nächsten Schritt der Fahrwinkel anhand des Geschwindigkeitsvektors in globalen Koordinaten bestimmt. Anhand des Fahrwinkels und der Robotinowinkel wird dann ein Enable-Bit gesetzt wenn sich der Robotino in einem Toleranzbereich um den Fahrwinkel befindet. Wenn dieses Enable-Bit nicht gesetzt ist, wird kein Ausweichmanöver ausgeführt.
 
 \subsection{Ausweichmanöver addieren}
 In dieserFunktion wird nun auf das Ausweichmanöver auf den Geschwindigkeitsvektor addiert wenn das Enable-Bit aus der Ausweichrichtungsbestimmung gesetzt ist. Desweiteren wird das Ausweichmanöver nicht ausgeführt wenn sich der Robotino nicht in der Hauptfahrzone (Zone=0) befindet oder sich der Robotino nicht im FIFO-Bereich oder nahe am Ziel (Distanz >300mm) befindet.

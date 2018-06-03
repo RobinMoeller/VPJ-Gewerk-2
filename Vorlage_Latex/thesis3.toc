@@ -1,7 +1,7 @@
-\select@language {ngerman}
-\select@language {ngerman}
-\select@language {english}
-\select@language {ngerman}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
+\babel@toc {english}{}
+\babel@toc {ngerman}{}
 \contentsline {chapter}{\nonumberline Tabellenverzeichnis}{7}{chapter*.5}
 \contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{8}{chapter*.6}
 \contentsline {chapter}{\numberline {1}Einf\"uhrung}{10}{chapter.1}
@@ -40,8 +40,8 @@
 \contentsline {section}{\numberline {5.1}Simulation des Ausweichman\"overs}{36}{section.5.1}
 \contentsline {section}{\numberline {5.2}Simulation Wartebereiche}{37}{section.5.2}
 \contentsline {chapter}{\numberline {6}Implementierung und Zielsysteme}{39}{chapter.6}
-\contentsline {section}{\numberline {6.1}Potentialfeld}{39}{section.6.1}
-\contentsline {section}{\numberline {6.2}Selbstorganisation durch Wartebereiche}{39}{section.6.2}
+\contentsline {section}{\numberline {6.1}Potentialfeld}{40}{section.6.1}
+\contentsline {section}{\numberline {6.2}Selbstorganisation durch Wartebereiche}{40}{section.6.2}
 \contentsline {section}{\numberline {6.3}Bekannte Hindernisse}{43}{section.6.3}
 \contentsline {section}{\numberline {6.4}Unbekannte Hindernisse}{43}{section.6.4}
 \contentsline {section}{\numberline {6.5}UDP Gewerk1 einlesen}{44}{section.6.5}
@@ -62,3 +62,4 @@
 \contentsline {section}{\numberline {6.15}UDP Gewerk1 schreiben}{53}{section.6.15}
 \contentsline {chapter}{\numberline {7}Robotino 2.0}{54}{chapter.7}
 \contentsline {chapter}{\numberline {8}Validierung}{55}{chapter.8}
+\contentsline {chapter}{\numberline {9}Ausblick}{57}{chapter.9}
