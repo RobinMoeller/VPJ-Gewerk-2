@@ -1,37 +1,44 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6630 64-bit) (preloaded format=pdflatex 2018.4.16)  28 MAY 2018 17:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2016.3.13)  3 JUN 2018 09:30
 entering extended mode
-**./thesis3.tex
-(thesis3.tex
-LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 75 language(s) loaded.
+**C:/Users/Robin/Documents/GitHub/VPJ-Gewerk-2/Vorlage_Latex/thesis3.tex
+(C:/Users/Robin/Documents/GitHub/VPJ-Gewerk-2/Vorlage_Latex/thesis3.tex
+LaTeX2e <2015/10/01> patch level 2
+Babel <3.9n> and hyphenation patterns for 69 languages loaded.
 (einstellungen/grundeinstellungen.tex
-(E:\Latex\tex\latex\koma-script\scrreprt.cls
-Document Class: scrreprt 2018/03/30 v3.25 KOMA-Script document class (report)
-(E:\Latex\tex\latex\koma-script\scrkbase.sty
-Package: scrkbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-dependent b
-asics and keyval usage)
-
-(E:\Latex\tex\latex\koma-script\scrbase.sty
-Package: scrbase 2018/03/30 v3.25 KOMA-Script package (KOMA-Script-independent 
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrreprt.cls"
+Document Class: scrreprt 2015/10/03 v3.19a KOMA-Script document class (report)
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrkbase.sty"
+Package: scrkbase 2015/10/03 v3.19a KOMA-Script package (KOMA-Script-dependent 
 basics and keyval usage)
 
-(E:\Latex\tex\latex\graphics\keyval.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrbase.sty"
+Package: scrbase 2015/10/03 v3.19a KOMA-Script package (KOMA-Script-independent
+ basics and keyval usage)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(E:\Latex\tex\latex\koma-script\scrlfile.sty
-Package: scrlfile 2018/03/30 v3.25 KOMA-Script package (loading files)
-)))
-(E:\Latex\tex\latex\koma-script\tocbasic.sty
-Package: tocbasic 2018/03/30 v3.25 KOMA-Script package (handling toc-files)
-\scr@dte@tocline@numberwidth=\skip41
-\scr@dte@tocline@numbox=\box26
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrlfile.sty"
+Package: scrlfile 2015/10/03 v3.19a KOMA-Script package (loading files)
+
+Package scrlfile, 2015/10/03 v3.19a KOMA-Script package (loading files)
+                  Copyright (C) Markus Kohm
+
+))) ("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\tocbasic.sty"
+Package: tocbasic 2015/10/03 v3.19a KOMA-Script package (handling toc-files)
 )
 Package tocbasic Info: omitting babel extension for `toc'
 (tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `toc' on input line 136.
-Package tocbasic Info: defining new hook before heading of `' on input line 166
-7.
+(tocbasic)             for `toc' on input line 125.
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 126.
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 127.
+Package tocbasic Info: defining new hook before heading of `' on input line 158
+8.
 Class scrreprt Info: You've used standard option `oneside'.
 (scrreprt)           This is correct!
 (scrreprt)           Internally I'm using `twoside=false'.
@@ -49,22 +56,11 @@ Package scrreprt Info: You've used standard option `12pt'.
 Class scrreprt Warning: You've used obsolete option `halfparskip'.
 (scrreprt)              Usage of this option indicates an old document
 (scrreprt)              and changes compatibility level using
-(scrreprt)              `parskip=half,version=first,
-(scrreprt)              enabledeprecatedfontcommands' that may result
-(scrreprt)              in further warnings.
+(scrreprt)              `parskip=half,version=first'.
 (scrreprt)              If you don't want this, you should simply
 (scrreprt)              replace option `halfparskip' by `parskip=half'.
 
 Class scrreprt Info: Switching compatibility level to `first'.
-
-Class scrreprt Warning: deprecated option `enabledeprecatedfontcommands'.
-(scrreprt)              Note, that this option was already depreacted when
-(scrreprt)              it has been defined. Support for old font commands
-(scrreprt)              has been removed from KOMA-Script more than one
-(scrreprt)              decade ago. It is not recommended to use them any
-(scrreprt)              longer. Therefore usage of this class option also
-(scrreprt)              is not recommended.
-
 Class scrreprt Info: You've used standard option `abstracton'.
 (scrreprt)           This is correct!
 (scrreprt)           Internally I'm using `abstract=true'.
@@ -81,71 +77,43 @@ Class scrreprt Info: You've used standard option `final'.
 Class scrreprt Warning: You've used obsolete option `liststotoc'.
 (scrreprt)              Usage of this option indicates an old document
 (scrreprt)              and changes compatibility level using
-(scrreprt)              `listof=totoc,version=first,
-(scrreprt)              enabledeprecatedfontcommands' that may result
-(scrreprt)              in further warnings.
+(scrreprt)              `listof=totoc,version=first'.
 (scrreprt)              If you don't want this, you should simply
 (scrreprt)              replace option `liststotoc' by `listof=totoc'.
 
 Class scrreprt Info: Switching compatibility level to `first'.
 
-Class scrreprt Warning: deprecated option `enabledeprecatedfontcommands'.
-(scrreprt)              Note, that this option was already depreacted when
-(scrreprt)              it has been defined. Support for old font commands
-(scrreprt)              has been removed from KOMA-Script more than one
-(scrreprt)              decade ago. It is not recommended to use them any
-(scrreprt)              longer. Therefore usage of this class option also
-(scrreprt)              is not recommended.
-
-
 Class scrreprt Warning: You've used obsolete option `idxtotoc'.
 (scrreprt)              Usage of this option indicates an old document
 (scrreprt)              and changes compatibility level using
-(scrreprt)              `index=totoc,version=first,
-(scrreprt)              enabledeprecatedfontcommands' that may result
-(scrreprt)              in further warnings.
+(scrreprt)              `index=totoc,version=first'.
 (scrreprt)              If you don't want this, you should simply
 (scrreprt)              replace option `idxtotoc' by `index=totoc'.
 
 Class scrreprt Info: Switching compatibility level to `first'.
 
-Class scrreprt Warning: deprecated option `enabledeprecatedfontcommands'.
-(scrreprt)              Note, that this option was already depreacted when
-(scrreprt)              it has been defined. Support for old font commands
-(scrreprt)              has been removed from KOMA-Script more than one
-(scrreprt)              decade ago. It is not recommended to use them any
-(scrreprt)              longer. Therefore usage of this class option also
-(scrreprt)              is not recommended.
-
-
 Class scrreprt Warning: You've used obsolete option `bibtotoc'.
 (scrreprt)              Usage of this option indicates an old document
 (scrreprt)              and changes compatibility level using
-(scrreprt)              `bibliography=totoc,version=first,
-(scrreprt)              enabledeprecatedfontcommands' that may result
-(scrreprt)              in further warnings.
+(scrreprt)              `bibliography=totoc,version=first'.
 (scrreprt)              If you don't want this, you should simply
 (scrreprt)              replace option `bibtotoc' by `bibliography=totoc'.
 
 Class scrreprt Info: Switching compatibility level to `first'.
-
-Class scrreprt Warning: deprecated option `enabledeprecatedfontcommands'.
-(scrreprt)              Note, that this option was already depreacted when
-(scrreprt)              it has been defined. Support for old font commands
-(scrreprt)              has been removed from KOMA-Script more than one
-(scrreprt)              decade ago. It is not recommended to use them any
-(scrreprt)              longer. Therefore usage of this class option also
-(scrreprt)              is not recommended.
-
 Class scrreprt Info: File `scrsize12pt.clo' used to setup font sizes on input l
-ine 2328.
-(E:\Latex\tex\latex\koma-script\scrsize12pt.clo
-File: scrsize12pt.clo 2018/03/30 v3.25 KOMA-Script font size class option (12pt
+ine 2248.
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrsize12pt.clo"
+File: scrsize12pt.clo 2015/10/03 v3.19a KOMA-Script font size class option (12p
+t)
 )
-)
-(E:\Latex\tex\latex\koma-script\typearea.sty
-Package: typearea 2018/03/30 v3.25 KOMA-Script package (type area)
-\ta@bcor=\skip42
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\typearea.sty"
+Package: typearea 2015/10/03 v3.19a KOMA-Script package (type area)
+
+Package typearea, 2015/10/03 v3.19a KOMA-Script package (type area)
+                  Copyright (C) Frank Neukam, 1992-1994
+                  Copyright (C) Markus Kohm, 1994-
+
+\ta@bcor=\skip41
 \ta@div=\count79
 Package typearea Info: You've used standard option `a4paper'.
 (typearea)             This is correct!
@@ -159,22 +127,10 @@ Package typearea Info: You've used standard option `oneside'.
 (typearea)             If you'd like to set the option with \KOMAoptions,
 (typearea)             you'd have to use `twoside=false' there
 (typearea)             instead of `oneside', too.
-
-
-Package typearea Warning: You've used obsolete option `BCOR5mm'.
-(typearea)                Usage of this option indicates an old document
-(typearea)                and changes compatibility level using
-(typearea)                `BCOR=5mm,version=first,
-(typearea)                enabledeprecatedfontcommands' that may result
-(typearea)                in further warnings.
-(typearea)                If you don't want this, you should simply
-(typearea)                replace option `BCOR5mm' by `BCOR=5mm'.
-
-Package typearea Info: Switching compatibility level to `first'.
-\ta@hblk=\skip43
-\ta@vblk=\skip44
-\ta@temp=\skip45
-\footheight=\skip46
+\ta@hblk=\skip42
+\ta@vblk=\skip43
+\ta@temp=\skip44
+\footheight=\skip45
 Package typearea Info: These are the values describing the layout:
 (typearea)             DIV  = 12
 (typearea)             BCOR = 14.22636pt
@@ -191,7 +147,7 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 12.0pt
 (typearea)              \footskip       = 50.75pt
 (typearea)              \baselineskip   = 14.5pt
-(typearea)              on input line 1706.
+(typearea)              on input line 1509.
 )
 \c@part=\count80
 \c@chapter=\count81
@@ -200,106 +156,91 @@ Package typearea Info: These are the values describing the layout:
 \c@subsubsection=\count84
 \c@paragraph=\count85
 \c@subparagraph=\count86
-\scr@dte@part@maxnumwidth=\skip47
-\scr@dte@chapter@maxnumwidth=\skip48
-\scr@dte@section@maxnumwidth=\skip49
-\scr@dte@subsection@maxnumwidth=\skip50
-\scr@dte@subsubsection@maxnumwidth=\skip51
-\scr@dte@paragraph@maxnumwidth=\skip52
-\scr@dte@subparagraph@maxnumwidth=\skip53
-\abovecaptionskip=\skip54
-\belowcaptionskip=\skip55
-\c@pti@nb@sid@b@x=\box27
-\scr@dte@figure@maxnumwidth=\skip56
-Package tocbasic Info: omitting babel extension for `lof'
-(tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lof' on input line 6247.
+LaTeX Info: Redefining \textsubscript on input line 4652.
+\abovecaptionskip=\skip46
+\belowcaptionskip=\skip47
+\c@pti@nb@sid@b@x=\box26
 \c@figure=\count87
-\scr@dte@table@maxnumwidth=\skip57
-Package tocbasic Info: omitting babel extension for `lot'
-(tocbasic)             because of feature `nobabel' available
-(tocbasic)             for `lot' on input line 6264.
 \c@table=\count88
-Class scrreprt Info: Using old \@makefntext due to compatibility level
-(scrreprt)           less than 3.22 on input line 6420.
-Class scrreprt Info: Redefining `\numberline' on input line 6433.
 \bibindent=\dimen102
-) (E:\Latex\tex\generic\babel\babel.sty
-Package: babel 2018/02/14 3.18 The Babel package
- (E:\Latex\tex\generic\babel\switch.def
-File: switch.def 2018/02/14 3.18 Babel switching mechanism
-)
+) ("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2016/01/08 3.9n The Babel package
+
 *************************************
 * Local config file bblopts.cfg used
 *
-(E:\Latex\tex\latex\arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\bblopts.cfg"
+File: bblopts.cfg 2006/07/31 v1.0 MiKTeX 'babel' configuration
 )
-(E:\Latex\tex\latex\babel-english\english.ldf
-Language: english 2017/06/06 v3.3r English support from the babel system
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
+Language: english 2012/08/20 v3.3p English support from the babel system
 
-(E:\Latex\tex\generic\babel\babel.def
-File: babel.def 2018/02/14 3.18 Babel common definitions
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2016/01/08 3.9n Babel common definitions
 \babel@savecnt=\count89
 \U@D=\dimen103
- (E:\Latex\tex\generic\babel\txtbabel.def)
-\bbl@dirlevel=\count90
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
-) (E:\Latex\tex\latex\babel-german\ngerman.ldf
-Language: ngerman 2016/11/02 v2.9 German support for babel (new orthography)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\ngerman.ldf"
+Language: ngerman 2013/12/13 v2.7 German support for babel (new orthography)
 
-(E:\Latex\tex\latex\babel-german\ngermanb.ldf
-Language: ngermanb 2016/11/02 v2.9 German support for babel (new orthography)
-Package babel Info: Making " an active character on input line 125.
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-german\ngermanb.ldf"
+Language: ngermanb 2013/12/13 v2.7 German support for babel (new orthography)
+\l@naustrian = a dialect from \language\l@ngerman 
+\l@nswissgerman = a dialect from \language\l@ngerman 
+Package babel Info: Making " an active character on input line 88.
 )))
-(E:\Latex\tex\latex\base\fontenc.sty
-Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
- (E:\Latex\tex\latex\base\t1enc.def
-File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
+File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
 LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
-(E:\Latex\tex\latex\base\inputenc.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks15
 \inpenc@posthook=\toks16
- (E:\Latex\tex\latex\base\latin1.def
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
 File: latin1.def 2015/03/17 v1.2c Input encoding file
 ))
-(E:\Latex\tex\latex\psnfss\times.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
-) (E:\Latex\tex\latex\tools\array.sty
-Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\array.sty"
+Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen104
 \extrarowheight=\dimen105
 \NC@list=\toks17
-\extratabsurround=\skip58
-\backup@length=\skip59
+\extratabsurround=\skip48
+\backup@length=\skip49
 )
-(E:\Latex\tex\latex\ms\ragged2e.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\ms\ragged2e.sty"
 Package: ragged2e 2009/05/21 v2.1 ragged2e Package (MS)
- (E:\Latex\tex\latex\ms\everysel.sty
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everysel.sty"
 Package: everysel 2011/10/28 v1.2 EverySelectfont Package (MS)
 )
-\CenteringLeftskip=\skip60
-\RaggedLeftLeftskip=\skip61
-\RaggedRightLeftskip=\skip62
-\CenteringRightskip=\skip63
-\RaggedLeftRightskip=\skip64
-\RaggedRightRightskip=\skip65
-\CenteringParfillskip=\skip66
-\RaggedLeftParfillskip=\skip67
-\RaggedRightParfillskip=\skip68
-\JustifyingParfillskip=\skip69
-\CenteringParindent=\skip70
-\RaggedLeftParindent=\skip71
-\RaggedRightParindent=\skip72
-\JustifyingParindent=\skip73
+\CenteringLeftskip=\skip50
+\RaggedLeftLeftskip=\skip51
+\RaggedRightLeftskip=\skip52
+\CenteringRightskip=\skip53
+\RaggedLeftRightskip=\skip54
+\RaggedRightRightskip=\skip55
+\CenteringParfillskip=\skip56
+\RaggedLeftParfillskip=\skip57
+\RaggedRightParfillskip=\skip58
+\JustifyingParfillskip=\skip59
+\CenteringParindent=\skip60
+\RaggedLeftParindent=\skip61
+\RaggedRightParindent=\skip62
+\JustifyingParindent=\skip63
 )
-(E:\Latex\tex\latex\cmbright\cmbright.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\cmbright\cmbright.sty"
 Package: cmbright 2005/04/13 v8.1 (WaS)
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 29.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
@@ -367,57 +308,62 @@ LaTeX Info: Redefining \LaTeXe on input line 139.
 LaTeX Font Info:    Try loading font information for T1+cmbr on input line 144.
 
 
-(E:\Latex\tex\latex\cmbright\t1cmbr.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\cmbright\t1cmbr.fd"
 File: t1cmbr.fd 2005/04/13 v8.1 (WaS)
-)) (E:\Latex\tex\latex\psnfss\helvet.sty
+))
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\helvet.sty"
 Package: helvet 2005/04/12 PSNFSS-v9.2a (WaS) 
-) (E:\Latex\tex\latex\psnfss\courier.sty
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\courier.sty"
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
 )
-(E:\Latex\tex\latex\koma-script\scrpage2.sty
-Package: scrpage2 2018/03/30 v3.25 KOMA-Script package (page head and foot)
-
-
-Package scrpage2 Warning: usage of obsolete package!
-(scrpage2)                Package `scrpage2' is obsolete.
-(scrpage2)                You should not longer use package `scrpage2'.
-(scrpage2)                You should replace usage of package `scrpage2'
-(scrpage2)                by `scrlayer-scrpage' on input line 52.
-
-LaTeX Info: Redefining \pagemark on input line 180.
-) (E:\Latex\tex\latex\tools\xspace.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\koma-script\scrpage2.sty"
+Package: scrpage2 2015/10/03 v3.19a KOMA-Script package (page head and foot)
+LaTeX Info: Redefining \pagemark on input line 174.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\xspace.sty"
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-(E:\Latex\tex\latex\setspace\setspace.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
-(E:\Latex\tex\latex\graphics\graphicx.sty
-Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
 
-(E:\Latex\tex\latex\graphics\graphics.sty
-Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
- (E:\Latex\tex\latex\graphics\trig.sty
-Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
-) (E:\Latex\tex\latex\graphics-cfg\graphics.cfg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-Package graphics Info: Driver file: pdftex.def on input line 99.
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
 
-(E:\Latex\tex\latex\graphics-def\pdftex.def
-File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count90
 ))
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
 )
-(E:\Latex\tex\latex\textpos\textpos.sty
-Package: textpos 2016/06/07 v1.8
+("C:\Program Files\MiKTeX 2.9\tex\latex\textpos\textpos.sty"
+Package: textpos 2014/01/03 v1.7j
 
-Package: textpos 2016/06/07 1.8, absolute positioning of text on the page
-(E:\Latex\tex\latex\ms\everyshi.sty
+Package: textpos 2014/01/03 1.7j, absolute positioning of text on the page
+("C:\Program Files\MiKTeX 2.9\tex\latex\ms\everyshi.sty"
 Package: everyshi 2001/05/15 v3.00 EveryShipout Package (MS)
 )
-\TP@textbox=\box28
-\TP@holdbox=\box29
+\TP@textbox=\box27
+\TP@holdbox=\box28
 \TPHorizModule=\dimen108
 \TPVertModule=\dimen109
 \TP@margin=\dimen110
@@ -430,81 +376,80 @@ Grid set 16 x 16 = 37.34424pt x 52.81543pt
 \TP@tbargs=\toks18
 \TP@prevdepth=\dimen115
 TextBlockOrigin set to 0pt x 0pt
-) (E:\Latex\tex\latex\pdfpages\pdfpages.sty
-Package: pdfpages 2017/10/31 v0.5l Insert pages of external PDF documents (AM)
- (E:\Latex\tex\latex\base\ifthen.sty
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pdfpages.sty"
+Package: pdfpages 2016/04/19 v0.5f Insert pages of external PDF documents (AM)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
 Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-) (E:\Latex\tex\latex\tools\calc.sty
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\calc.sty"
 Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count91
 \calc@Bcount=\count92
 \calc@Adimen=\dimen116
 \calc@Bdimen=\dimen117
-\calc@Askip=\skip74
-\calc@Bskip=\skip75
+\calc@Askip=\skip64
+\calc@Bskip=\skip65
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
 \calc@Ccount=\count93
-\calc@Cskip=\skip76
-) (E:\Latex\tex\latex\eso-pic\eso-pic.sty
+\calc@Cskip=\skip66
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\eso-pic\eso-pic.sty"
 Package: eso-pic 2015/07/21 v2.0g eso-pic (RN)
 
-(E:\Latex\tex\generic\oberdiek\atbegshi.sty
-Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\atbegshi.sty"
+Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 
-(E:\Latex\tex\generic\oberdiek\infwarerr.sty
-Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
-)
-(E:\Latex\tex\generic\oberdiek\ltxcmds.sty
-Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
-)
-(E:\Latex\tex\generic\oberdiek\ifpdf.sty
-Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
 ))
-(E:\Latex\tex\latex\xcolor\xcolor.sty
-Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
-(E:\Latex\tex\latex\graphics-cfg\color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
-Package xcolor Info: Model `RGB' extended on input line 1364.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
 ))
 \AM@pagewidth=\dimen118
 \AM@pageheight=\dimen119
 
-(E:\Latex\tex\latex\pdfpages\pppdftex.def
-File: pppdftex.def 2017/10/31 v0.5l Pdfpages driver for pdfTeX (AM)
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdfpages\pppdftex.def"
+File: pppdftex.def 2016/04/19 v0.5f Pdfpages driver for pdfTeX (AM)
 )
-\AM@pagebox=\box30
+\AM@pagebox=\box29
 \AM@global@opts=\toks19
 \AM@toc@title=\toks20
 \c@AM@survey=\count94
-\AM@templatesizebox=\box31
+\AM@templatesizebox=\box30
 )
-(E:\Latex\tex\latex\natbib\natbib.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\natbib\natbib.sty"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip77
-\bibsep=\skip78
+\bibhang=\skip67
+\bibsep=\skip68
 LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count95
-) (E:\Latex\tex\latex\germbib\bibgerm.sty
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\germbib\bibgerm.sty"
 Package: bibgerm 2000/08/18 v0.1 Support for mixed language bibliographies
 
 ** Macros for german `BibTeX'ing added to Style Option `german' 20 Apr 1993 **
 ** idea and languages `german' and `USenglish' implemented by M. Wallmeier **
 ** Modified for LaTeX 2e and german.sty 2.5b by A. Scherer 1 Nov 1995 **
 ** Modified for ngerman.sty and babel.sty by H. Harders 21 August 2000 **)
-(E:\Latex\tex\latex\tools\tabularx.sty
-Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\tabularx.sty"
+Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
 \TX@col@width=\dimen120
 \TX@old@table=\dimen121
 \TX@old@col=\dimen122
@@ -512,7 +457,8 @@ Package: tabularx 2016/02/03 v2.11 `tabularx' package (DPC)
 \TX@delta=\dimen124
 \TX@cols=\count96
 \TX@ftn=\toks21
-) (E:\Latex\tex\latex\base\makeidx.sty
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\makeidx.sty"
 Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 )
 \@indexfile=\write3
@@ -520,135 +466,137 @@ Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 
 
 Writing index file thesis3.idx
-(E:\Latex\tex\latex\nomencl\nomencl.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\nomencl\nomencl.sty"
 Package: nomencl 2005/09/22 v4.2 Nomenclature package (LN)
 \nomlabelwidth=\dimen125
 \nom@tempdim=\dimen126
-\nomitemsep=\skip79
+\nomitemsep=\skip69
 )
 \@nomenclaturefile=\write4
 \openout4 = `thesis3.nlo'.
 
 
 Writing nomenclature file thesis3.nlo
-(E:\Latex\tex\latex\hyperref\hyperref.sty
-Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(E:\Latex\tex\generic\oberdiek\hobsub-hyperref.sty
-Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
 
 
-(E:\Latex\tex\generic\oberdiek\hobsub-generic.sty
-Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
-Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
 Package hobsub Info: Skipping package `ltxcmds' (already loaded).
-Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
-Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package: intcalc 2007/09/27 v1.1 Expandable calculations with integers (HO)
 Package hobsub Info: Skipping package `ifpdf' (already loaded).
-Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
-Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
-Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
-Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+Package: pdfescape 2011/11/25 v1.13 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2012/04/08 v1.3 Expandable calculations on big integers (HO
 )
-Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
-Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+Package: bitset 2011/01/30 v1.1 Handle bit-vector datatype (HO)
+Package: uniquecounter 2011/01/30 v1.2 Provide unlimited unique counter (HO)
 )
 Package hobsub Info: Skipping package `hobsub' (already loaded).
-Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
-Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
-Package: xcolor-patch 2016/05/16 xcolor patch
-Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
+Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
+Package: xcolor-patch 2011/01/30 xcolor patch
+Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
 Package atveryend Info: \enddocument detected (standard20110627).
 Package hobsub Info: Skipping package `atbegshi' (already loaded).
-Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
-Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
+Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-(E:\Latex\tex\generic\ifxetex\ifxetex.sty
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(E:\Latex\tex\latex\oberdiek\auxhook.sty
-Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-(E:\Latex\tex\latex\oberdiek\kvoptions.sty
-Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen127
 \Hy@linkcounter=\count97
 \Hy@pagecounter=\count98
 
-(E:\Latex\tex\latex\hyperref\pd1enc.def
-File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count99
 
-(E:\Latex\tex\latex\00miktex\hyperref.cfg
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Option `final' set `true' on input line 4383.
-Package hyperref Info: Option `colorlinks' set `true' on input line 4383.
-Package hyperref Info: Option `bookmarks' set `true' on input line 4383.
-Package hyperref Info: Option `bookmarksopen' set `false' on input line 4383.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4383
+Package hyperref Info: Option `final' set `true' on input line 4319.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4319.
+Package hyperref Info: Option `bookmarks' set `true' on input line 4319.
+Package hyperref Info: Option `bookmarksopen' set `false' on input line 4319.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 4319
 .
-Package hyperref Info: Option `linktocpage' set `true' on input line 4383.
-Package hyperref Info: Hyper figures OFF on input line 4509.
-Package hyperref Info: Link nesting OFF on input line 4514.
-Package hyperref Info: Hyper index ON on input line 4517.
-Package hyperref Info: Plain pages OFF on input line 4524.
-Package hyperref Info: Backreferencing OFF on input line 4529.
+Package hyperref Info: Option `linktocpage' set `true' on input line 4319.
+Package hyperref Info: Hyper figures OFF on input line 4443.
+Package hyperref Info: Link nesting OFF on input line 4448.
+Package hyperref Info: Hyper index ON on input line 4451.
+Package hyperref Info: Plain pages OFF on input line 4458.
+Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4762.
+Package hyperref Info: Bookmarks ON on input line 4688.
 \c@Hy@tempcnt=\count100
- (E:\Latex\tex\latex\url\url.sty
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5115.
+LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen128
 \Fld@menulength=\count101
 \Field@Width=\dimen129
 \Fld@charsize=\dimen130
-Package hyperref Info: Hyper figures OFF on input line 6369.
-Package hyperref Info: Link nesting OFF on input line 6374.
-Package hyperref Info: Hyper index ON on input line 6377.
-Package hyperref Info: backreferencing OFF on input line 6384.
-Package hyperref Info: Link coloring ON on input line 6387.
-Package hyperref Info: Link coloring with OCG OFF on input line 6394.
-Package hyperref Info: PDF/A mode OFF on input line 6399.
-LaTeX Info: Redefining \ref on input line 6439.
-LaTeX Info: Redefining \pageref on input line 6443.
+Package hyperref Info: Hyper figures OFF on input line 6295.
+Package hyperref Info: Link nesting OFF on input line 6300.
+Package hyperref Info: Hyper index ON on input line 6303.
+Package hyperref Info: backreferencing OFF on input line 6310.
+Package hyperref Info: Link coloring ON on input line 6313.
+Package hyperref Info: Link coloring with OCG OFF on input line 6320.
+Package hyperref Info: PDF/A mode OFF on input line 6325.
+LaTeX Info: Redefining \ref on input line 6365.
+LaTeX Info: Redefining \pageref on input line 6369.
 \Hy@abspage=\count102
 \c@Item=\count103
 \c@Hfootnote=\count104
 )
-Package hyperref Info: Driver: hpdftex.
 
-(E:\Latex\tex\latex\hyperref\hpdftex.def
-File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
+Package hyperref Message: Driver: hpdftex.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count105
 \c@bookmark@seq@number=\count106
 
-(E:\Latex\tex\latex\oberdiek\rerunfilecheck.sty
-Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip80
+\Hy@SectionHShift=\skip70
 )
 (einstellungen/neuebefehle.sty) (einstellungen/trennungen.sty)) (thesis3.aux)
 \openout1 = `thesis3.aux'.
@@ -669,19 +617,20 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 12.
 LaTeX Font Info:    ... okay on input line 12.
 LaTeX Font Info:    Try loading font information for T1+phv on input line 12.
 
-(E:\Latex\tex\latex\psnfss\t1phv.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 10.79993pt on input line 12.
- ABD: EverySelectfont initializing macros
+
+ABD: EverySelectfont initializing macros
 LaTeX Info: Redefining \selectfont on input line 12.
 
-(E:\Latex\tex\context\base\supp-pdf.mkii
+("C:\Program Files\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count107
 \scratchdimen=\dimen131
-\scratchbox=\box32
+\scratchbox=\box31
 \nofMPsegments=\count108
 \nofMParguments=\count109
 \everyMPshowfont=\toks22
@@ -690,67 +639,56 @@ LaTeX Info: Redefining \selectfont on input line 12.
 \MPnumerator=\count111
 \makeMPintoPDFobject=\count112
 \everyMPtoPDFconversion=\toks23
-) (E:\Latex\tex\latex\oberdiek\epstopdf-base.sty
-Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+) ABD: EveryShipout initializing macros
+\AtBeginShipoutBox=\box32
 
-(E:\Latex\tex\latex\oberdiek\grfext.sty
-Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
-)
-Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
-38.
-Package grfext Info: Graphics extension search list:
-(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 456.
-)
-ABD: EveryShipout initializing macros
-\AtBeginShipoutBox=\box33
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\pdflscape.sty"
+Package: pdflscape 2008/08/11 v0.10 Display of landscape pages in PDF (HO)
 
-(E:\Latex\tex\latex\oberdiek\pdflscape.sty
-Package: pdflscape 2016/05/14 v0.11 Display of landscape pages in PDF (HO)
-
-(E:\Latex\tex\latex\graphics\lscape.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
-Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+Package pdflscape Info: Auto-detected driver: pdftex on input line 80.
 )
 
 bibgerm.sty: babel.sty detected
 
 Package hyperref Info: Link coloring ON on input line 12.
-(E:\Latex\tex\latex\hyperref\nameref.sty
-Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-(E:\Latex\tex\generic\oberdiek\gettitlestring.sty
-Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count113
 )
 LaTeX Info: Redefining \ref on input line 12.
 LaTeX Info: Redefining \pageref on input line 12.
 LaTeX Info: Redefining \nameref on input line 12.
- (thesis3.out) (thesis3.out)
+
+(thesis3.out) (thesis3.out)
 \@outlinefile=\write5
 \openout5 = `thesis3.out'.
+
 
 TextBlockOrigin set to 0mm x 0mm
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 19.79987pt on input line 25.
 LaTeX Font Info:    Try loading font information for OT1+cmbr on input line 25.
 
-(E:\Latex\tex\latex\cmbright\ot1cmbr.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\cmbright\ot1cmbr.fd"
 File: ot1cmbr.fd 2005/04/13 v8.1 (WaS)
 )
 LaTeX Font Info:    Try loading font information for OML+cmbrm on input line 25
 .
 
-(E:\Latex\tex\latex\cmbright\omlcmbrm.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\cmbright\omlcmbrm.fd"
 File: omlcmbrm.fd 2005/04/13 v8.1 (WaS)
 )
 LaTeX Font Info:    Try loading font information for OMS+cmbrs on input line 25
 .
 
-(E:\Latex\tex\latex\cmbright\omscmbrs.fd
+("C:\Program Files\MiKTeX 2.9\tex\latex\cmbright\omscmbrs.fd"
 File: omscmbrs.fd 2005/04/13 v8.1 (WaS)
 )
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -777,35 +715,40 @@ LaTeX Font Info:    Font shape `T1/phv/m/it' in size <10> not available
 (Font)              Font shape `T1/phv/m/sl' tried instead on input line 25.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 8.99994pt on input line 25.
-<pdf/DeckblattFarbe.pdf, id=55, 597.55246pt x 845.19763pt>
+<pdf/DeckblattFarbe.pdf, id=119, 597.55246pt x 845.19763pt>
 File: pdf/DeckblattFarbe.pdf Graphic file (type pdf)
+
 <use pdf/DeckblattFarbe.pdf>
-Package pdftex.def Info: pdf/DeckblattFarbe.pdf  used on input line 25.
+Package pdftex.def Info: pdf/DeckblattFarbe.pdf used on input line 25.
 (pdftex.def)             Requested size: 597.551pt x 845.19557pt.
 File: pdf/DeckblattFarbe.pdf Graphic file (type pdf)
-<use pdf/DeckblattFarbe.pdf>
-Package pdftex.def Info: pdf/DeckblattFarbe.pdf  used on input line 25.
+ <use pdf/DeckblattFarbe.pdf>
+Package pdftex.def Info: pdf/DeckblattFarbe.pdf used on input line 25.
 (pdftex.def)             Requested size: 597.551pt x 845.19557pt.
-<pdf/DeckblattFarbe.pdf, id=58, page=1, 597.55246pt x 845.19763pt>
+
+<pdf/DeckblattFarbe.pdf, id=122, page=1, 597.55246pt x 845.19763pt>
 File: pdf/DeckblattFarbe.pdf Graphic file (type pdf)
+
 <use pdf/DeckblattFarbe.pdf, page 1>
-Package pdftex.def Info: pdf/DeckblattFarbe.pdf , page1 used on input line 25.
+Package pdftex.def Info: pdf/DeckblattFarbe.pdf, page1 used on input line 25.
 (pdftex.def)             Requested size: 597.551pt x 845.19557pt.
 File: pdf/DeckblattFarbe.pdf Graphic file (type pdf)
-<use pdf/DeckblattFarbe.pdf, page 1>
-Package pdftex.def Info: pdf/DeckblattFarbe.pdf , page1 used on input line 25.
+ <use pdf/DeckblattFarbe.pdf, page 1>
+Package pdftex.def Info: pdf/DeckblattFarbe.pdf, page1 used on input line 25.
 (pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
 File: pdf/DeckblattFarbe.pdf Graphic file (type pdf)
+
 <use pdf/DeckblattFarbe.pdf, page 1>
-Package pdftex.def Info: pdf/DeckblattFarbe.pdf , page1 used on input line 25.
+Package pdftex.def Info: pdf/DeckblattFarbe.pdf, page1 used on input line 25.
 (pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
 File: pdf/DeckblattFarbe.pdf Graphic file (type pdf)
-<use pdf/DeckblattFarbe.pdf, page 1>
-Package pdftex.def Info: pdf/DeckblattFarbe.pdf , page1 used on input line 25.
+ <use pdf/DeckblattFarbe.pdf, page 1>
+Package pdftex.def Info: pdf/DeckblattFarbe.pdf, page1 used on input line 25.
 (pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
 File: pdf/DeckblattFarbe.pdf Graphic file (type pdf)
+
 <use pdf/DeckblattFarbe.pdf, page 1>
-Package pdftex.def Info: pdf/DeckblattFarbe.pdf , page1 used on input line 25.
+Package pdftex.def Info: pdf/DeckblattFarbe.pdf, page1 used on input line 25.
 (pdftex.def)             Requested size: 597.57834pt x 845.23425pt.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 25.
@@ -815,10 +758,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 25.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 25.
-[1
+ [1
 
 
-{C:/Users/inkeh/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./pdf/Deckb
+
+{C:/Users/Robin/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./pdf/Deckb
 lattFarbe.pdf>]
 TextBlockOrigin set to 0mm x 0mm
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
@@ -918,12 +862,30 @@ LaTeX Font Info:    Font shape `T1/phv/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/phv/b/n' tried instead on input line 64.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 22.39185pt on input line 64.
- (thesis3.toc)
+ (thesis3.toc
+LaTeX Font Info:    Try loading font information for OMS+phv on input line 32.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsphv.fd"
+File: omsphv.fd 
+)
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 32.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 10.79993pt on input line 41.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 41.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 41.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 41.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 41.
+ [5
+
+])
 \tf@toc=\write6
 \openout6 = `thesis3.toc'.
 
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 10.79993pt on input line 65.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 65.
 Package babel Info: Redefining ngerman shorthand "~
@@ -932,14 +894,13 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 65.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 65.
- [5
+ [6]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 65.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 65.
 
-]
-Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 65.
-Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 65.
- (thesis3.lot)
+(thesis3.lot)
 \tf@lot=\write7
 \openout7 = `thesis3.lot'.
 
@@ -951,19 +912,30 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 66.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 66.
- [6
+ [7
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 66.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 66.
- (thesis3.lof)
+ (thesis3.lof
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.23 ...n radialen Basisfunktion}}{27}{figure.4.6}
+                                                  
+? 
+)
 \tf@lof=\write8
 \openout8 = `thesis3.lof'.
 
-
-(kapitel/einfuehrung/einfuehrung.tex
+ (kapitel/einfuehrung/einfuehrung.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining ngerman shorthand "~
@@ -972,7 +944,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 4.
- [7
+ [8
 
 ] (kapitel/einfuehrung/Einleitung.tex
 chapter 1.
@@ -989,7 +961,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
- [8
+ [9
 
 ]
 chapter 2.
@@ -1006,7 +978,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 1.
- [9
+ [10
 
 ]
 chapter 3.
@@ -1014,12 +986,6 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 3.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 3.
-LaTeX Font Info:    Try loading font information for OMS+phv on input line 9.
-(E:\Latex\tex\latex\psnfss\omsphv.fd
-File: omsphv.fd 
-)
-LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 9.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 13.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1036,7 +1002,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 18.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 18.
- [10
+[11
 
 ]
 Package babel Info: Redefining ngerman shorthand "|
@@ -1055,11 +1021,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 29.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 29.
- [11]
-<Sichtbarkeitsgraph.png, id=162, 541.27219pt x 254.45062pt>
+ [12] <Sichtbarkeitsgraph.png, id=269, 541.27219pt x 254.45062pt>
 File: Sichtbarkeitsgraph.png Graphic file (type png)
+
 <use Sichtbarkeitsgraph.png>
-Package pdftex.def Info: Sichtbarkeitsgraph.png  used on input line 41.
+Package pdftex.def Info: Sichtbarkeitsgraph.png used on input line 41.
 (pdftex.def)             Requested size: 341.43306pt x 160.51051pt.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 49.
@@ -1069,16 +1035,17 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 49.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 49.
- [12 <./Sichtbarkeitsgraph.png>]
-<OccupancyGrid.png, id=171, 460.72125pt x 355.3275pt>
+ [13 <./Sichtbarkeitsgraph.png>]
+<OccupancyGrid.png, id=279, 460.72125pt x 355.3275pt>
 File: OccupancyGrid.png Graphic file (type png)
-<use OccupancyGrid.png>
-Package pdftex.def Info: OccupancyGrid.png  used on input line 56.
+ <use OccupancyGrid.png>
+Package pdftex.def Info: OccupancyGrid.png used on input line 56.
 (pdftex.def)             Requested size: 284.52756pt x 219.43869pt.
-<DStern.png, id=173, 502.87875pt x 392.96812pt>
+
+<DStern.png, id=281, 502.87875pt x 392.96812pt>
 File: DStern.png Graphic file (type png)
-<use DStern.png>
-Package pdftex.def Info: DStern.png  used on input line 65.
+ <use DStern.png>
+Package pdftex.def Info: DStern.png used on input line 65.
 (pdftex.def)             Requested size: 284.52756pt x 222.33919pt.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
@@ -1088,7 +1055,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 69.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 69.
-[13 <./OccupancyGrid.png>]
+ [14 <./OccupancyGrid.png>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 72.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1101,11 +1068,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 75.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 75.
- [14 <./DStern.png>]
-<Bug2_m-Linie.png, id=188, 270.25969pt x 289.83281pt>
+ [15 <./DStern.png>]
+<Bug2_m-Linie.png, id=295, 270.25969pt x 289.83281pt>
 File: Bug2_m-Linie.png Graphic file (type png)
-<use Bug2_m-Linie.png>
-Package pdftex.def Info: Bug2_m-Linie.png  used on input line 87.
+ <use Bug2_m-Linie.png>
+Package pdftex.def Info: Bug2_m-Linie.png used on input line 87.
 (pdftex.def)             Requested size: 142.26378pt x 152.57137pt.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 95.
@@ -1115,16 +1082,18 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 95.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 95.
- [15 <./Bug2_m-Linie.png>]
-<Bug2.png, id=196, 199.49532pt x 271.0125pt>
+
+[16 <./Bug2_m-Linie.png>] <Bug2.png, id=303, 199.49532pt x 271.0125pt>
 File: Bug2.png Graphic file (type png)
+
 <use Bug2.png>
-Package pdftex.def Info: Bug2.png  used on input line 104.
+Package pdftex.def Info: Bug2.png used on input line 104.
 (pdftex.def)             Requested size: 142.26378pt x 193.27208pt.
-<Bug2_Problem.png, id=198, 198.7425pt x 237.88875pt>
+ <Bug2_Problem.png, id=305, 198.7425pt x 237.88875pt>
 File: Bug2_Problem.png Graphic file (type png)
+
 <use Bug2_Problem.png>
-Package pdftex.def Info: Bug2_Problem.png  used on input line 113.
+Package pdftex.def Info: Bug2_Problem.png used on input line 113.
 (pdftex.def)             Requested size: 142.26378pt x 170.28879pt.
 
 
@@ -1138,11 +1107,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 120.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 120.
-[16 <./Bug2.png>]
-<Potentialfeld.png, id=206, 613.54219pt x 400.49625pt>
+[17 <./Bug2.png>] <Potentialfeld.png, id=313, 613.54219pt x 400.49625pt>
 File: Potentialfeld.png Graphic file (type png)
+
 <use Potentialfeld.png>
-Package pdftex.def Info: Potentialfeld.png  used on input line 123.
+Package pdftex.def Info: Potentialfeld.png used on input line 123.
 (pdftex.def)             Requested size: 256.0748pt x 167.15617pt.
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 130.
@@ -1152,7 +1121,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 130.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 130.
- [17 <./Bug2_Problem.png> <./Potentialfeld.png>]
+ [18 <./Bug2_Problem.png> <./Potentialfeld.png>]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 130.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1161,10 +1130,11 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 151.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 151.
-<KonfigRaum.png, id=214, 738.67548pt x 381.12915pt>
+
+<KonfigRaum.png, id=321, 738.67548pt x 381.12915pt>
 File: KonfigRaum.png Graphic file (type png)
-<use KonfigRaum.png>
-Package pdftex.def Info: KonfigRaum.png  used on input line 156.
+ <use KonfigRaum.png>
+Package pdftex.def Info: KonfigRaum.png used on input line 156.
 (pdftex.def)             Requested size: 312.9803pt x 161.48633pt.
 
 
@@ -1178,7 +1148,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 164.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 164.
-[18]
+[19]
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 171.
 Package babel Info: Redefining ngerman shorthand "~
@@ -1187,11 +1157,12 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 171.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 171.
- [19 <./KonfigRaum.png>]
-<Potentialfeld_Fertig.png, id=230, 738.67548pt x 366.67516pt>
+ [20 <./KonfigRaum.png>]
+<Potentialfeld_Fertig.png, id=337, 738.67548pt x 366.67516pt>
 File: Potentialfeld_Fertig.png Graphic file (type png)
+
 <use Potentialfeld_Fertig.png>
-Package pdftex.def Info: Potentialfeld_Fertig.png  used on input line 179.
+Package pdftex.def Info: Potentialfeld_Fertig.png used on input line 179.
 (pdftex.def)             Requested size: 312.9803pt x 155.36209pt.
 )
 Package babel Info: Redefining ngerman shorthand "|
@@ -1202,21 +1173,977 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 9.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 9.
- [20 <./Potentialfeld_Fertig.png>]
+ [21 <./Potentialfeld_Fertig.png>]
+(kapitel/einfuehrung/Konzept_Kapitelbeschreibung.tex
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "|
-(babel)             in language  on input line 27.
+(babel)             in language  on input line 1.
 Package babel Info: Redefining ngerman shorthand "~
-(babel)             in language  on input line 27.
- [21]
+(babel)             in language  on input line 1.
+ [22]
 chapter 4.
 Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+
+LaTeX Warning: Reference `fig:Bereich' on page 23 undefined on input line 2.
+
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ... Abbildung \ref{fig:Bereich} nicht eingefä
+                                                  rbt, wird die Regelung des...
+
+? 
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ... wird unter Kapitel \ref{sec:Potential} nä
+                                                  her erläutert. Im Fertigu...
+
+? 
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...er Kapitel \ref{sec:Potential} näher erlä
+                                                  utert. Im Fertigungsbereic...
+
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...ischen den Bereichen zu wechseln, werden Ü
+                                                  bergabepunkte definiert, a...
+
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...el sicher ausgeführt werden kann. Diese Ü
+                                                  bergabepunkte sind in der ...
+
+? 
+
+LaTeX Warning: Reference `' on page 23 undefined on input line 2.
+
+
+LaTeX Warning: Reference `' on page 23 undefined on input line 2.
+
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...eiden von Kollisionen in Kapitel \ref{} nä
+                                                  her beschrieben. Dabei wir...
+
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...en eingegangen. Um das Konzept abzuschließ
+                                                  en wird in Kapitel \ref{} ...
+
+? 
+
+LaTeX Warning: Reference `' on page 23 undefined on input line 2.
+
+<grafiken/TransportbereichKarte.png, id=352, 856.70062pt x 442.65375pt>
+File: grafiken/TransportbereichKarte.png Graphic file (type png)
+
+<use grafiken/TransportbereichKarte.png>
+Package pdftex.def Info: grafiken/TransportbereichKarte.png used on input line 
+5.
+(pdftex.def)             Requested size: 349.97028pt x 180.82727pt.
+)
+(kapitel/einfuehrung/Potentialfeld_Konzept.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 4.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 4.
+ [23
+
+ <./grafiken/TransportbereichKarte.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 4.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 4.
+
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ...ende Bereich in Zonen unterteilt. Die gewä
+                                                  hlten Zonen sind in Abbild...
+
+? 
+
+LaTeX Warning: Reference `' on page 24 undefined on input line 5.
+
+
+LaTeX Warning: Reference `' on page 24 undefined on input line 5.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ...s Verlassen der Zone 0 erfolgt durch die Ü
+                                                  bergabe an den Fertigungsb...
+
+? 
+
+LaTeX Warning: Reference `' on page 24 undefined on input line 5.
+
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ...gungsbereich, welches in Kapitel \ref{} nä
+                                                  her erläutert wird. \\
+? 
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.5 ...ich, welches in Kapitel \ref{} näher erlä
+                                                  utert wird. \\
+? 
+
+LaTeX Warning: Reference `' on page 24 undefined on input line 6.
+
+
+LaTeX Warning: Reference `' on page 24 undefined on input line 6.
+
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...ichung ist als \ref{} gekennzeichnet. Zusä
+                                                  tzlich wird in Zone 4 für...
+
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...wird in Zone 4 für jede Station eine gauß
+                                                  sche radiale Basisfunktion...
+
+? 
+
+LaTeX Warning: Reference `' on page 24 undefined on input line 6.
+
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...isfunktion, welche unter Kapitel \ref{} nä
+                                                  her erläutert, genutzt, d...
+
+? 
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...n, welche unter Kapitel \ref{} näher erlä
+                                                  utert, genutzt, damit kein...
+
+? 
+
+LaTeX Warning: Reference `' on page 24 undefined on input line 6.
+
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.6 ...chkeit aus der Zone 0 zur Ladestation gewä
+                                                  hrleistet. \\
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 ...ig:PotUmweltohne} dargestellt, wobei zur Ü
+                                                  bersichtlichkeit die Stati...
+
+? 
+<grafiken/Zonen_eingezeichnet.pdf, id=365, 597.23125pt x 845.1575pt>
+File: grafiken/Zonen_eingezeichnet.pdf Graphic file (type pdf)
+
+<use grafiken/Zonen_eingezeichnet.pdf>
+Package pdftex.def Info: grafiken/Zonen_eingezeichnet.pdf used on input line 24
+.
+(pdftex.def)             Requested size: 349.97028pt x 495.25984pt.
+
+Overfull \hbox (57.79866pt too wide) in paragraph at lines 24--25
+ [][] 
+ []
+
+
+! LaTeX Error: Environment align undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.29 \begin{align}
+                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.30 H_
+       {0(x=0..5500,y=0..2500)} = K_{exp}\cdot(e^{(-\frac{x}{\sigma})}+e^{(\...
+
+? 
+
+! LaTeX Error: \begin{document} ended by \end{align}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.38  \end{align}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.38  \end{align}
+                 
+? 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 39.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 39.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 39.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 39.
+[24]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 39.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 39.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 39.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 39.
+ [25 <./grafiken/Zonen_eingezeichnet.pdf>]
+<grafiken/EinzelZonen.pdf, id=381, 597.23125pt x 845.1575pt>
+File: grafiken/EinzelZonen.pdf Graphic file (type pdf)
+
+<use grafiken/EinzelZonen.pdf>
+Package pdftex.def Info: grafiken/EinzelZonen.pdf used on input line 41.
+(pdftex.def)             Requested size: 218.73059pt x 309.53094pt.
+
+<grafiken/Potentialfeld_ohne_2schraege.png, id=382, 889.07156pt x 444.15938pt>
+File: grafiken/Potentialfeld_ohne_2schraege.png Graphic file (type png)
+
+<use grafiken/Potentialfeld_ohne_2schraege.png>
+Package pdftex.def Info: grafiken/Potentialfeld_ohne_2schraege.png used on inpu
+t line 47.
+(pdftex.def)             Requested size: 218.73059pt x 109.27068pt.
+
+<grafiken/Potentialfeld_mit_2schraegen.png, id=383, 888.31876pt x 441.90094pt>
+File: grafiken/Potentialfeld_mit_2schraegen.png Graphic file (type png)
+
+<use grafiken/Potentialfeld_mit_2schraegen.png>
+Package pdftex.def Info: grafiken/Potentialfeld_mit_2schraegen.png used on inpu
+t line 53.
+(pdftex.def)             Requested size: 218.73059pt x 108.80946pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 58.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 58.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...dernisse werden im Potentialfeld als gauß
+                                                  sche radiale Basisfunktion...
+
+? 
+
+LaTeX Warning: Reference `' on page 26 undefined on input line 59.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ... unter \ref{} definiert. Da sich die gauß
+                                                  sche radiale Basisfunktion...
+
+? 
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ... der genutzten e-Funktion gut ableiten lä
+                                                  sst, wird diese Funktion g...
+
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...ird diese Funktion genutzt, um ein abstoß
+                                                  endes Potential zu generie...
+
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...zu generieren. Das Potentialfeld der gauß
+                                                  schen radialen Basisfunkti...
+
+? 
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.59 ...werden als flexibel betrachtet, da sie wä
+                                                  hrend der laufzeit bestimm...
+
+? 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 60.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 60.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 60.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 60.
+[26 <./grafiken/EinzelZonen.pdf> <./grafiken/Potentialfeld_ohne_2schraege.png>]
+
+! LaTeX Error: Environment align undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.61 \begin{align}
+                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.62 H_
+       {Gauß}=K\cdot e^{-\frac{(x-x_{pos})^2+(y-y_{pos})^2}{2\cdot \sigma^2}}
+? 
+
+LaTeX Warning: Command \~ invalid in math mode on input line 62.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 H_{Gauß
+             }=K\cdot e^{-\frac{(x-x_{pos})^2+(y-y_{pos})^2}{2\cdot \sigma^2}}
+? 
+
+! LaTeX Error: \begin{document} ended by \end{align}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63  \end{align}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.63  \end{align}
+                 
+? 
+Missing character: There is no � in font cmbr8!
+<grafiken/listen-tiny.jpg, id=403, 213.79875pt x 130.4875pt>
+File: grafiken/listen-tiny.jpg Graphic file (type jpg)
+
+<use grafiken/listen-tiny.jpg>
+Package pdftex.def Info: grafiken/listen-tiny.jpg used on input line 66.
+(pdftex.def)             Requested size: 218.73059pt x 133.49767pt.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 ...eld der gaußschen radialen Basisfunktion}
+                                                  
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.67 ...eld der gaußschen radialen Basisfunktion}
+                                                  
+? 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 71.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 71.
+
+LaTeX Warning: Reference `' on page 27 undefined on input line 72.
+
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.72 ...rgestellte Funktion genutzt. Um durch Trä
+                                                  gheit verursachte Schwingu...
+
+? 
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.72 ...unkt zu vermeiden, wird eine Abstandsabhä
+                                                  ngiger Faktor als Filterun...
+
+? 
+
+LaTeX Warning: Reference `' on page 27 undefined on input line 72.
+
+
+LaTeX Warning: Reference `' on page 27 undefined on input line 72.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 73.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 73.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 73.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 73.
+[27 <./grafiken/Potentialfeld_mit_2schraegen.png> <./grafiken/listen-tiny.jpg>]
+
+! LaTeX Error: Environment align undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.74 \begin{align}
+                  
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.75 H_
+       {Ziel}= K \cdot \sqrt{(x-x_{Ziel})^2+(y-y_{Ziel})^2} \\
+? 
+
+! LaTeX Error: \begin{document} ended by \end{align}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.78  \end{align}
+                 
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.78  \end{align}
+                 
+? 
+File: grafiken/listen-tiny.jpg Graphic file (type jpg)
+<use grafiken/listen-tiny.jpg>
+Package pdftex.def Info: grafiken/listen-tiny.jpg used on input line 81.
+(pdftex.def)             Requested size: 218.73059pt x 133.49767pt.
+) (kapitel/einfuehrung/Simulation.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+ [28]
+chapter 5.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...ion das Potentialfeld auf Ihre Funktionsfä
+                                                  higkeit geprüft. Bei dies...
+
+? 
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...-Dummy in Simulink erstellt mit dem Aufträ
+                                                  ge an den Robotino per UDP...
+
+? 
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...le hintereinander Angefahren werden. Im nä
+                                                  chsten Schritt wird die Sc...
+
+? 
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...gehend erweitert, zufallsgenerierte Aufträ
+                                                  ge zu senden. Im letzten S...
+
+? 
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...rkt wird und die zufallsgenerierten Aufträ
+                                                  ge auf ausführbare Auftr�...
+
+? 
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...erierten Aufträge auf ausführbare Aufträ
+                                                  ge gefiltert wird. Zum End...
+
+? 
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...ert wird. Zum Ende des Projektes wird zusä
+                                                  tzlich eine Simulation, wi...
+
+? 
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...g auf 5 Robotinos ausgeführt um geringe Ä
+                                                  nderungen im Programm aufz...
+
+? 
+
+LaTeX Warning: Reference `' on page 29 undefined on input line 2.
+
+
+LaTeX Font Warning: Font shape `OMS/phv/bx/n' undefined
+(Font)              using `OMS/phv/m/n' instead
+(Font)              for symbol `textparagraph' on input line 3.
+
+LaTeX Font Info:    Font shape `OMS/phv/m/n' in size <17.28> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 3.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3.
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 ...trachtet. Robotino 1 in Rot dargestellt fä
+                                                  hrt von der Position [500 ...
+
+? 
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.4 ...efindet. Robotino 2 in blau dargestellt fä
+                                                  hrt von der Position [4500...
+
+? 
+<grafiken/SimulationAusweich.pdf, id=416, 597.23125pt x 845.1575pt>
+File: grafiken/SimulationAusweich.pdf Graphic file (type pdf)
+
+<use grafiken/SimulationAusweich.pdf>
+Package pdftex.def Info: grafiken/SimulationAusweich.pdf used on input line 7.
+(pdftex.def)             Requested size: 218.73059pt x 309.53094pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 10.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 10.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 10.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 10.
+ [29
+
+]
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.12 ...zu erkennen ist, kommt es zu einem Abstoß
+                                                  verhalten, wodurch die Rob...
+
+? 
+<grafiken/Simulation_ohne_Ausweich.pdf, id=422, 597.23125pt x 845.1575pt>
+File: grafiken/Simulation_ohne_Ausweich.pdf Graphic file (type pdf)
+
+<use grafiken/Simulation_ohne_Ausweich.pdf>
+Package pdftex.def Info: grafiken/Simulation_ohne_Ausweich.pdf used on input li
+ne 15.
+(pdftex.def)             Requested size: 218.73059pt x 309.53094pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 19.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 19.
+)
+(kapitel/einfuehrung/Geschwindigkeit_bestimmen.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+
+
+LaTeX Warning: Reference `' on page 30 undefined on input line 2.
+
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...atenerfassung wird unter Kapitel \ref{} nä
+                                                  her erläutert. Wie die fa...
+
+? 
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...sung wird unter Kapitel \ref{} näher erlä
+                                                  utert. Wie die fahrenden R...
+
+? 
+
+LaTeX Warning: Reference `' on page 30 undefined on input line 2.
+
+
+LaTeX Warning: Reference `' on page 30 undefined on input line 2.
+
+
+LaTeX Warning: Reference `' on page 30 undefined on input line 2.
+
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...genutzte Funktion ist in Kapitel \ref{} nä
+                                                  her beschrieben. Im nächs...
+
+? 
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...n Kapitel \ref{} näher beschrieben. Im nä
+                                                  chsten Schritt wird dann d...
+
+? 
+
+LaTeX Warning: Reference `' on page 30 undefined on input line 2.
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 3.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 3.
+[30 <./grafiken/SimulationAusweich.pdf>]
+<grafiken/Geschwindigkeit_bestimmen.png, id=435, 533.995pt x 588.1975pt>
+File: grafiken/Geschwindigkeit_bestimmen.png Graphic file (type png)
+
+<use grafiken/Geschwindigkeit_bestimmen.png>
+Package pdftex.def Info: grafiken/Geschwindigkeit_bestimmen.png used on input l
+ine 5.
+(pdftex.def)             Requested size: 218.73059pt x 240.92918pt.
+File: grafiken/Geschwindigkeit_bestimmen.png Graphic file (type png)
+
+<use grafiken/Geschwindigkeit_bestimmen.png>
+Package pdftex.def Info: grafiken/Geschwindigkeit_bestimmen.png used on input l
+ine 11.
+(pdftex.def)             Requested size: 218.73059pt x 240.92918pt.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 16.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 16.
+
+
+! Package inputenc Error: Keyboard character used is undefined
+(inputenc)                in inputencoding `latin1'.
+
+See the inputenc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.17 ...gesetzt, wenn der gemessene Abstand größ
+                                                  er als 150 mm ist. Bei ein...
+
+? 
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 19.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 19.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 22.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 22.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 24.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 24.
+LaTeX Font Info:    Font shape `OMS/phv/bx/n' in size <14.4> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
+Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 27.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 27.
+) (kapitel/einfuehrung/Robotino2.tex
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+ [31 <./grafiken/Simulation_ohne_Ausweich.pdf>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+ [32 <./grafiken/Geschwindigkeit_bestimmen.png>]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+ [33]
+chapter 6.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...ten Robotinosauf dem neuen Robotino lauffä
+                                                  hig zu bekommen. Um das Pr...
+
+? 
+
+! LaTeX Error: Command \textcurrency unavailable in encoding T1.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2 ...und Gewerk4 zusammengearbeitet. Die hauptä
+                                                  nderung des Programmes bes...
+
+? 
+)
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 32.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 32.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 32.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 32.
+ [34
+
+]
+chapter 7.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 32.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 32.
 ) (kapitel/hauptteil/hauptteil.tex
 Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 4.
@@ -1226,118 +2153,73 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 4.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 4.
- [22
-
-])
-No file thesis3.bbl.
-(literatur/literatur.tex
-
-Package natbib Warning: Citation `Guenther:2002' undefined on input line 3.
-
-
-Package natbib Warning: Citation `Lamport:1995' undefined on input line 4.
-
-
-Package natbib Warning: Citation `Goossens:2000' undefined on input line 5.
-
-
-Package natbib Warning: Citation `Kohm:2003' undefined on input line 6.
-
-
-Package natbib Warning: Citation `Hunt:2003' undefined on input line 7.
-
-
-Package natbib Warning: Citation `Boehm:2002' undefined on input line 8.
-
-
-Package natbib Warning: Citation `Schmatz:2004' undefined on input line 9.
-
-
-Package natbib Warning: Citation `Streitz:2005' undefined on input line 10.
-
-
-Package natbib Warning: Citation `HP:2004' undefined on input line 11.
-
-
-Package natbib Warning: Citation `Luede:2004' undefined on input line 12.
-
-
-Package natbib Warning: Citation `Demarco:1999' undefined on input line 13.
-
-
-Package natbib Warning: Citation `Kollakowski:2004' undefined on input line 14.
-
-
-
-Package natbib Warning: Citation `Dawson:2003' undefined on input line 15.
-
-
-Package natbib Warning: Citation `Poenicke:1988' undefined on input line 16.
-
-
-Package natbib Warning: Citation `Kruse:2000' undefined on input line 17.
-
-
-Package natbib Warning: Citation `Nilsson:1998' undefined on input line 18.
-
-
-Package natbib Warning: Citation `Heinsohn:1999' undefined on input line 19.
-
-
-Package natbib Warning: Citation `Luger:2001' undefined on input line 20.
-
-
-Package natbib Warning: Citation `Kuehnel:2001' undefined on input line 21.
-
-
-Package natbib Warning: Citation `Bigus:2001' undefined on input line 22.
-
-
-Package natbib Warning: Citation `Ferber:2001' undefined on input line 23.
-
-
-Package natbib Warning: Citation `Wooldridge:2002' undefined on input line 24.
-
-
-Package natbib Warning: Citation `KuroseRoss:2002' undefined on input line 25.
-
-
-Package natbib Warning: Citation `Vogt:2001' undefined on input line 26.
-
-
-Package natbib Warning: Citation `Roetzer:1999' undefined on input line 27.
-
-
-Package natbib Warning: Citation `P3P:2004' undefined on input line 28.
-
-
-Package natbib Warning: Citation `CPEX:2004' undefined on input line 29.
-
-
-Package natbib Warning: Citation `Duden:1997' undefined on input line 30.
-
-
-Package natbib Warning: Citation `Hoerauf:2001' undefined on input line 31.
-
-
-Package natbib Warning: Citation `Schirru:2004' undefined on input line 32.
-
-
-Package natbib Warning: Citation `Babic:2003' undefined on input line 33.
-
-
-Package natbib Warning: Citation `Luepke:2004' undefined on input line 34.
-
+ [35
+
+]) (thesis3.bbl
+chapter without number
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 1.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 1.
+LaTeX Font Info:    Font shape `T1/phv/m/sc' will be
+(Font)              scaled to size 10.79993pt on input line 11.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <12> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 12.
+LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
+(Font)              scaled to size 10.79993pt on input line 12.
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 15.
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 )
+Underfull \hbox (badness 1565) in paragraph at lines 11--16
+[]\T1/phv/m/n/12 [Babic 2003]  \T1/phv/m/sc/12 Ba-bic\T1/phv/m/n/12 , Alex-an-d
+er:  \T1/phv/m/sl/12 Ent-wick-lung ei-ner pro-fil-ver-ar-bei-ten-den ubi-qui-t�
+r-
+ []
+
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 61.
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
+File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
+)
+Underfull \hbox (badness 3058) in paragraph at lines 85--92
+\T1/phv/m/n/12 --  URL [][]$\T1/pcr/m/n/12 http : / / www . informatik . uni-[]
+mannheim . de / pi4 / lectures /$
+ []
+
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 92.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 92.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 92.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 92.
+[36
+
+]
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 182.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 182.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 182.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 182.
+ [37]) (literatur/literatur.tex)
 No file thesis3.nls.
 No file thesis3.ind.
-
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 113.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 113.
+Package babel Info: Redefining ngerman shorthand "|
+(babel)             in language  on input line 113.
+Package babel Info: Redefining ngerman shorthand "~
+(babel)             in language  on input line 113.
+[38]
 Overfull \hbox (10.79993pt too wide) in paragraph at lines 113--113
 [][] 
  []
-
-
-Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 118.
 Package babel Info: Redefining ngerman shorthand "|
@@ -1348,7 +2230,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 118.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 118.
-[23
+[39
 
 ]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 118.
@@ -1356,25 +2238,48 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 118.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 118.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 118.
 Package rerunfilecheck Info: File `thesis3.out' has not changed.
-(rerunfilecheck)             Checksum: EC1248085567A41C261CD312AF5AF939;831.
+(rerunfilecheck)             Checksum: D9D4ABB679BCFC3D5A36676536B53BEB;2080.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 118.
  ) 
 Here is how much of TeX's memory you used:
- 11022 strings out of 493305
- 173783 string characters out of 3147110
- 374257 words of memory out of 3000000
- 14238 multiletter control sequences out of 15000+200000
- 38716 words of font info for 48 fonts, out of 3000000 for 9000
- 1147 hyphenation exceptions out of 8191
- 45i,18n,66p,9173b,493s stack positions out of 5000i,500n,10000p,200000b,50000s
- <C:\Users\inkeh\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi
-720\cmbrsy10.pk>{E:/Latex/fonts/enc/dvips/base/8r.enc}<E:/Latex/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb><E:/Latex/fonts/type1/urw/helvetic/uhvb8a.pfb><E:/La
-tex/fonts/type1/urw/helvetic/uhvr8a.pfb><E:/Latex/fonts/type1/urw/helvetic/uhvr
-o8a.pfb>
-Output written on thesis3.pdf (23 pages, 1700367 bytes).
+ 10575 strings out of 493634
+ 163505 string characters out of 3143744
+ 328854 words of memory out of 3000000
+ 13530 multiletter control sequences out of 15000+200000
+ 50715 words of font info for 58 fonts, out of 3000000 for 9000
+ 1031 hyphenation exceptions out of 8191
+ 45i,18n,66p,2276b,705s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc} <C:\Users\Robin
+\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi450\cmbr8.pk> <C:\
+Users\Robin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi450\cmb
+rsy8.pk> <C:\Users\Robin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbrig
+ht\dpi450\cmbrmi8.pk> <C:\Users\Robin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\
+public\cmbright\dpi600\cmbrsy8.pk> <C:\Users\Robin\AppData\Local\MiKTeX\2.9\fon
+ts\pk\ljfour\public\cmbright\dpi720\cmbrmi10.pk> <C:\Users\Robin\AppData\Local\
+MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi720\cmbr10.pk> <C:\Users\Robin\Ap
+pData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi600\cmbrmi8.pk> <C:\U
+sers\Robin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbright\dpi720\cmbr
+sy10.pk> <C:\Users\Robin\AppData\Local\MiKTeX\2.9\fonts\pk\ljfour\public\cmbrig
+ht\dpi600\cmbr8.pk><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.p
+fb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program 
+Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvb8a.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
+/urw/helvetic/uhvro8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/ut
+mri8a.pfb>
+Output written on thesis3.pdf (39 pages, 3173356 bytes).
 PDF statistics:
- 287 PDF objects out of 1000 (max. 8388607)
- 61 named destinations out of 1000 (max. 500000)
- 170 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 684 PDF objects out of 1000 (max. 8388607)
+ 136 named destinations out of 1000 (max. 500000)
+ 343 words of extra memory for PDF output out of 10000 (max. 10000000)
 
