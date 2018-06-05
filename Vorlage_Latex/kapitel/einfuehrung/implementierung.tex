@@ -40,7 +40,6 @@ Die Roboterpositionen werden in einem Array der X- Positionen und einem der Y-Po
 Stimmen die X-Positionen der Robotinos mit den Bereichen überein und sind die Y-Positionen am linken Rand des gesamten 'Fabrik' Bereiches, wird der Wartebereich an dem ein Robotino mit einer jedem Robotino spezifischen Nummer belegt.
 Damit die Wartebereiche auch in jedem Zyklus wieder neu berechnet werden wird der Merker zunächst auf 0 gesetzt und in jedem Zyklus mit neuen Werten beschrieben.\\
 
-\newpage
 \begin{lstlisting}[caption={FIFO Merker},label=Fifomerker,basicstyle=\small]
 function [FifoArray1,StationArray1,LadeArray1]= fcn(Robbi,FifoArray,LadeArray)
 X=[Robbi(1) Robbi(4) Robbi(7) Robbi(10)];
@@ -87,7 +86,7 @@ Zunächst wird analysiert in welchem Winkel die Störpositionen sich zum Zielvekto
 Ausweich(1,i)=+asin(Abstand(2,i)/Hyp)-pi/2
 \end{align}
 Der erste Wert des Ausweichs-Array aus Formel \ref{Ausweichwinkel} ist der Ausweichwinkel. über eine Trigonometrische Funktion wird der genaue Winkel des Zielvektors zum Ziel ausgerechnet und \ang{90} addiert.
-Solange eine Störposition innerhalb der \ang{30} liegen bleibt der Ausweichwinkel erhalten. Ist der im Weg liegende Roboter weitgenug umfahren wird der originale Zielvektor einprogrammiert.
+Solange eine Störposition innerhalb der \ang{30} liegen bleibt der Ausweichwinkel erhalten. Ist der im Weg liegende Roboter weit genug umfahren wird der originale Zielvektor einprogrammiert.
 
 \section{Unbekannte Hindernisse}
  
@@ -103,3 +102,5 @@ for x=1:9
  end
 end
 \end{lstlisting}
+\noindent 
+Wurde ein Hindernis detektiert wird ein Ausweichvektor in \ang{180} zum Hindernis in X-Richtung und einer in Y-Richtung berechnet. Diese berechneten 'IRWerte' werden anschließend in der Zielvektorberechnung einbezogen.
