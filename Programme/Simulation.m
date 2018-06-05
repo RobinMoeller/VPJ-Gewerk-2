@@ -96,7 +96,17 @@ for n=1:1:3
     plotRobot( ParkX(n), ParkY(n), farbeWarte );
     
 end
-
+FIFOX=[1103 2308 3507 4694];
+FIFOY=[250 250 250 250];
+ParkplatzX=[6200 6800 7200 7200 7200];
+ParkplatzY=[250 250 550 1150 1750];
+OffsetFIFO = 400;
+farbeFIFO= [0 0 1 0.4];
+for nr = 1 : 1 : 4
+    plotRobot( FIFOX(nr), FIFOY(nr),farbeFIFO);
+    plotRobot( FIFOX(nr)-OffsetFIFO, FIFOY(nr),farbeFIFO);
+    plotRobot( FIFOX(nr)+OffsetFIFO, FIFOY(nr),farbeFIFO);
+end
 
 plot(Positionen.Data(:,1),Positionen.Data(:,2),'b');
 plot(Positionen.Data(:,4),Positionen.Data(:,5),'r');
