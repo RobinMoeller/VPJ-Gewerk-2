@@ -6,12 +6,12 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {3.1}{\ignorespaces Beispiel Sichtbarkeitsgraph, Graue Felder sind Hindernisse, blaue Linie ist optimaler Pfad}}{14}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Beispiel Occupancy Grid, Rot-Hindernisse, Wei\IeC {\ss }-befahrbarer Raum}}{15}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Beispiel Occupancy Grid mit D*, Rot-Hindernisse, Intensit\"at des Graus im Hintergrunds repr\"asentiert die Entfernung zum Ziel; blauer Punkt entspricht Ziel}}{16}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Bu2-Algorithmus, Grauen Fl\"achen: Hindernisse, Roter Punkt: Startpunkt, Gr\"uner Punkt: Ziel, Verbindungslinie: m-Linie}}{17}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Bu2-Algorithmus, Fahrweg des Roboters ist in orange dargestellt}}{18}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Bu2-Algorithmus, m\"oglicher Deadlock, Fahrweg des Roboters ist in orange dargestellt}}{19}{figure.3.6}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Beispiel Potentialfeld}}{19}{figure.3.7}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Beispiel Occupancy Grid, Rot-Hindernisse, Wei\IeC {\ss }-befahrbarer Raum}}{16}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Beispiel Occupancy Grid mit D*, Rot-Hindernisse, Intensit\"at des Graus im Hintergrunds repr\"asentiert die Entfernung zum Ziel; blauer Punkt entspricht Ziel}}{17}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Bu2-Algorithmus, Grauen Fl\"achen: Hindernisse, Roter Punkt: Startpunkt, Gr\"uner Punkt: Ziel, Verbindungslinie: m-Linie}}{18}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Bu2-Algorithmus, Fahrweg des Roboters ist in orange dargestellt}}{19}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Bu2-Algorithmus, m\"oglicher Deadlock, Fahrweg des Roboters ist in orange dargestellt}}{20}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Beispiel Potentialfeld}}{21}{figure.3.7}
 \contentsline {figure}{\numberline {3.8}{\ignorespaces Konfigurationsraum}}{21}{figure.3.8}
 \contentsline {figure}{\numberline {3.9}{\ignorespaces Potentialfeld des Konfigurationsraumes eingez\"aunt in hohe Potentiale zur eindeutigen Begrenzung des Raumes, Stationen als ein hohes Potential dargestellt, Rampen und Fahrrinnen zum leiten der Robotinos, }}{22}{figure.3.9}
 \addvspace {10\p@ }
@@ -36,6 +36,7 @@
 \contentsline {figure}{\numberline {6.6}{\ignorespaces Subsystem Vektorberechnung}}{47}{figure.6.6}
 \contentsline {figure}{\numberline {6.7}{\ignorespaces Ablaufplan des Subsystems Vektorberechnung}}{48}{figure.6.7}
 \contentsline {figure}{\numberline {6.8}{\ignorespaces Fahrmodus steuern}}{52}{figure.6.8}
+\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

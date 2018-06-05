@@ -2,7 +2,7 @@
 
 \chapter{Bahnplanung}
 
-Die Navigation, also das effiziente und kollisionsfreie Bewegen im Raum, gehört zu den Hauptaufgaben von autonomen mobilen Robotern. Um, zum Beispiel Produktionsstraßen zukunftsfähig und effizienter zu gestalten, müssen die Robotinos konkreten Aufgaben wie \glqq Fahre zum Zielpunkt XY und nehme das Werkstück auf\grqq{} übernehmen und abarbeiten können. Dazu muss der Robotino zu jeder Zeit folgende Fragen beantworten können: \glqq Wo befinde ich mich? Wo muss ich hin? Wie gelange ich dort hin?\grqq (Mohamed Oubbati Einführung in die Robotik)
+Die Navigation, also das effiziente und kollisionsfreie Bewegen im Raum, gehört zu den Hauptaufgaben von autonomen mobilen Robotern. Um, zum Beispiel Produktionsstraßen zukunftsfähig und effizienter zu gestalten, müssen die Robotinos konkreten Aufgaben wie \glqq Fahre zum Zielpunkt XY und nehme das Werkstück auf\grqq{} übernehmen und abarbeiten können. Dazu muss der Robotino zu jeder Zeit folgende Fragen beantworten können: \glqq Wo befinde ich mich? Wo muss ich hin? Wie gelange ich dort hin?\grqq \cite{WegPlanung}
 
 Anhand dieser Fragen lässt sich die Bahnplanung in drei Bereiche unterteilen:
 \begin{itemize}
@@ -12,9 +12,9 @@ Anhand dieser Fragen lässt sich die Bahnplanung in drei Bereiche unterteilen:
 \end{itemize}
 \section{Lokalisierung}
 Eine Bahnplanung kann nur dann erfolgen, wenn der Roboter seine eigene Position zu jeder Zeit lokalisieren kann. 
-In dem Fall des hier ausgearbeiteten Projektes erfolgt die Lokalisierung über Deckenkameras, die mittels UDP-Kommunikation den Robotinos ihre eigene Position, aber auch die der anderen Robotinos im bekannten Raum senden. Intern wurde über den Raum ein Koordinatensystem gelegt,so dass die genaue Position der Roboter in x- und y-Richtung ausgegeben werden kann. Zu diesem Zweck sind die Robotinos mit ArUco-Markern ausgestattet. Um ein zuverlässiges Gesamtsystem zu erschaffen und die Ausfallwahrscheinlichkeit zu minimieren, erfolgt die Lokalisierung zusätzlich über Positionsdaten des Gewerks 3 \glqq Regelung\grqq. Somit wird sichergestellt, dass bei ungenauen und nicht vorhandenen Kameradaten die Robotinoposition zu jeder Zeit bekannt ist und ein unterbrechungsfreier Ablauf des Prozesses gegeben ist. 
+In dem Fall des hier ausgearbeiteten Projektes erfolgt die Lokalisierung über Deckenkameras, die mittels UDP-Kommunikation den Robotinos ihre eigene Position, aber auch die der anderen Robotinos im bekannten Raum senden. Intern wurde über den Raum ein Koordinatensystem gelegt,so dass die genaue Position der Roboter in x- und y-Richtung ausgegeben werden kann. Zu diesem Zweck sind die Robotinos mit ArUco-Markern ausgestattet. Um ein zuverlässiges Gesamtsystem zu erschaffen und die Ausfallwahrscheinlichkeit zu minimieren, erfolgt die Lokalisierung zusätzlich über Positionsdaten des Gewerks 3 \glqq Regelung\grqq. Somit wird sichergestellt, dass bei ungenauen und nicht vorhandenen Kameradaten die Robotinoposition zu jeder Zeit bekannt ist und ein unterbrechungsfreier Ablauf des Prozesses gegeben ist. \cite{WegPlanung}
 \section{Kartenerstellung}
-Mit bekannten Karten und vom Roboter durch die Sensorik erstellte Karten helfen beim Wegfinden. Durch eine vorab erstellte Karte können Hindernisse und Sackgassen implementiert werden, die von dem Transportroboter gemieden werden müssen. Kennt der Robotino seine Umgebung durch eine Karte kann über Selbstlokalisierung ein optimaler Pfad generiert werden. Im Fall des vorliegenden Projektes muss der Roboter nicht durch willkürliches Fahren im Raum vorab eine Karte von unbefahrbaren Punkten sammeln. Den Robotinos sind die festen Hindernisse, das heißt Lager, Lade- und Werkstationen, auf Grund der implementierten Programmierung von vornherein bekannt.
+Mit bekannten Karten und vom Roboter durch die Sensorik erstellte Karten helfen beim Wegfinden. Durch eine vorab erstellte Karte können Hindernisse und Sackgassen implementiert werden, die von dem Transportroboter gemieden werden müssen. Kennt der Robotino seine Umgebung durch eine Karte kann über Selbstlokalisierung ein optimaler Pfad generiert werden. Im Fall des vorliegenden Projektes muss der Roboter nicht durch willkürliches Fahren im Raum vorab eine Karte von unbefahrbaren Punkten sammeln. Den Robotinos sind die festen Hindernisse, das heißt Lager, Lade- und Werkstationen, auf Grund der implementierten Programmierung von vornherein bekannt.\cite{WegPlanung}
 \section{Trajektoriengenergierung}
 Durch die Bahnplanung können kollisionsfreie Trajektorien von einem Start- zu einem Zielpunkt generiert werden. Als Trajektorie wird in der Physik der Bewergungsverlauf des Roboters als Kurve im Raum bezeichnet, also die Zustandsänderung relativ zum Koordinatensystem über die Zeit. Es werden Solltrajektorien berechnet, die dem Gewerk 3 \glqq Regelung\grqq{} über eine definierte Schnittstelle übergeben werden. Über diese Trajektorie wird der Robotino zum Ziel geführt.
 
@@ -34,13 +34,14 @@ Bei der globalen Bahnplanung, in der englischsprachigen Literatur auch bekannt a
 \subsubsection{Sichtbarbeitsgraph Methode mit A*}
 Der Sichtbarkeitsgraph (engl. Visible graphs) ist eine Methode um den kürzesten Pfad zwischen zwei Punkten zu finden. 
 Diese Methode setzt voraus, dass vorab Start- und Zielpunkt, so wie Eckpunkte der statischen Hindernisse klar definiert und bekannt sind.  
-Die Eckpunkte der Hindernisse werden dann durch eine Kante verbunden, wenn eine gerade Verbindungslinie gezogen werden kann ohne andere Hindernisse zu schneiden. Dadurch werden Eckpunkte zu Knotenpunkten. Die Hindernisse mit den Verbindungslinien ist in Abbildung \ref{fig:Sichtbarkeitsgraph} dargestellt. 
+Die Eckpunkte der Hindernisse werden dann durch eine Kante verbunden, wenn eine gerade Verbindungslinie gezogen werden kann ohne andere Hindernisse zu schneiden. Dadurch werden Eckpunkte zu Knotenpunkten. Die Hindernisse mit den Verbindungslinien ist in Abbildung \ref{fig:Sichtbarkeitsgraph} dargestellt. \cite{WegPlanung}
 
 \begin{figure}[h]
 	\centering	
-	\includegraphics[width=12cm]{Sichtbarkeitsgraph.png}
+	\includegraphics[width=12cm]{BilderInke/Sichtbarkeitsgraph.png}
 	\caption{Beispiel Sichtbarkeitsgraph, Graue Felder sind Hindernisse, blaue Linie ist optimaler Pfad}
 	\label{fig:Sichtbarkeitsgraph}
+	\cite{WegPlanung}
 \end{figure}
 
 Durch Einsatz der A*-Methode kann so der optimale Pfad bestimmt werden. Die Kanten zwischen zwei Knotenpunkten werden von dem Algorithmus je nach Anforderung, beispielsweise kürzester Weg, gewichtet. Je größer diese Gewichtung ist, desto weiter Weg befindet sich der Knotenpunkt am anderen Ende der Kante. Die direkte Entfernung eines Knotenpunktes zum Zielpunkt wird geschätzt, so dass die Knoten ebenfalls eine Gewichtung bekommen. 
@@ -50,21 +51,23 @@ Vom Zielpunkt aus werden nun alle Knoten betrachtet, die über eine Kante erreich
 Ein Vorteil dieser Methode ist, dass immer der optimale Pfad vom Start zum Ziel gefunden wird. Nachteile sind jedoch, dass der Pfad immer direkt an den Ecken und Kanten der Hindernisse entlang führt. Außerdem kann bei vielen Hindernissen, bzw. Hindernisse mit vielen Ecken und Kanten, ein sehr großer Graph entstehen, der viel Rechenzeit in Anspruch nimmt. 
 
 \subsubsection{Occupancy Grid mit D*-Algorithmus}
-Wie der Name \glqq Occupancy Grid\grqq{} vermuten lässt, wird der Raum in ein Gitternetz unterteilt. Jede entstehende Zelle kann mit einer \glqq 1\grqq{} für \glqq belegt\grqq{} und \glqq 0\grqq{} für \glqq frei\grqq{} versehen werden. Dadurch entsteht eine Umgebungskarte in dem Hindernisse und freier Raum zum Fahren klar definiert sind. In der Abbildung \ref{fig:OccupancyGrid} ist ein Beispiel des Occupancy Grids dargestellt. Dabei sind anstatt Zahlen die freien Bereiche weiß und die besetzten Bereiche rot dargestellt. Der Übersichtlichkeit halber ist ein größeres Gitternetz dargestellt, als eigentlich unterteilt.
+Wie der Name \glqq Occupancy Grid\grqq{} vermuten lässt, wird der Raum in ein Gitternetz unterteilt. Jede entstehende Zelle kann mit einer \glqq 1\grqq{} für \glqq belegt\grqq{} und \glqq 0\grqq{} für \glqq frei\grqq{} versehen werden. Dadurch entsteht eine Umgebungskarte in dem Hindernisse und freier Raum zum Fahren klar definiert sind. In der Abbildung \ref{fig:OccupancyGrid} ist ein Beispiel des Occupancy Grids dargestellt. Dabei sind anstatt Zahlen die freien Bereiche weiß und die besetzten Bereiche rot dargestellt. Der Übersichtlichkeit halber ist ein größeres Gitternetz dargestellt, als eigentlich unterteilt.\cite{Robotics}
 \begin{figure}[h]
 	\centering	
-	\includegraphics[width=10cm]{OccupancyGrid.png}
+	\includegraphics[width=10cm]{BilderInke/OccupancyGrid.png}
 	\caption{Beispiel Occupancy Grid, Rot-Hindernisse, Weiß-befahrbarer Raum}
 	\label{fig:OccupancyGrid}
+	\cite{Robotics}
 \end{figure}
 
 Der D*-Algorithmus verändert die Bewertung der einzelnen Zellen mit einem neuen Wert, der die \glqq Kosten\grqq der Zelle repräsentiert. Zellen, die zu einem Hindernis gehören werden mit \glqq $ \infty $\grqq gewichtet. Je höher die Gewichtung ist, desto weiter weg befindet sich das Ziel. Mit diesem Algorithmus wird immer der optimale Pfad gefunden. Je nach Aufgabenstellung kann diese Gewichtung zum Beispiel Distanz oder Zeit bedeuten. 
 In der nachstehenden Abbildung \ref{fig:Occupancy Grid mit D*-Algorithmus} ist der geplante Weg von dem Startpunkt zum Ziel mittels grün gepunkteter Linie dargestellt. Die Hindernisse sind rot markiert. Die Intensität des Grautons im Hintergrund gibt in diesem Fall die Entfernung zum Ziel an. 
 \begin{figure}[h]
 	\centering	
-	\includegraphics[width=10cm]{DStern.png}
+	\includegraphics[width=10cm]{BilderInke/DStern.png}
 	\caption{Beispiel Occupancy Grid mit D*, Rot-Hindernisse, Intensität des Graus im Hintergrunds repräsentiert die Entfernung zum Ziel; blauer Punkt entspricht Ziel}
 	\label{fig:Occupancy Grid mit D*-Algorithmus}
+	\cite{Robotics}
 \end{figure}
 
 Ein Vorteil dieser Methode ist, dass der Weg schrittweise neu geplant werden kann. Sollte der Raum anders sein, als zuvor in dem Gitternetz eingetragen, eine Zelle beispielsweise teurer als geplant, so kann stufenweise ein besserer Pfad gefunden werden. Die Berechnung des neuen Weges erfordert nicht so viel Rechenleistung wie eine komplett neue Wegplanung, da nur die Zellen in direkter Umgebung betrachtet werden. Die Anfangsberechnung ist hingegen sehr rechenintensiv. Zudem benötigt das Occupancy Grid bei hoher Auflösung viel Speicherplatz.
@@ -78,15 +81,16 @@ Im Folgenden werden zwei Möglichkeiten den lokalen Bahnplanung beschrieben:
 \end{itemize}
 
 \subsubsection{Bug-Algorithmus}
-Der \glqq Bug-Algorithmus \grqq{} ist im Allgemeinen eine reaktive Navigationsmethode und basiert auf dem Prinzip, dass sich der Roboter sich so lange entlang eines Hindernisses bewegt, bis er wieder freie Fahrt in Richtung Ziel hat. Es gibt verschiedene Algorithmen, die diese Methode verfolgen. Dazu gehört der \glqq Bug1 -\grqq, \glqq Bug2-\grqq, \glqq Bug3-\grqq und \glqq DistBug-Algorithmus \grqq{}. Im Folgenden wird nur der Bug2-Algorithmus näher gehend erläutert. 
+Der \glqq Bug-Algorithmus \grqq{} ist im Allgemeinen eine reaktive Navigationsmethode und basiert auf dem Prinzip, dass sich der Roboter sich so lange entlang eines Hindernisses bewegt, bis er wieder freie Fahrt in Richtung Ziel hat. Es gibt verschiedene Algorithmen, die diese Methode verfolgen. Dazu gehört der \glqq Bug1 -\grqq, \glqq Bug2-\grqq, \glqq Bug3-\grqq und \glqq DistBug-Algorithmus \grqq{}. Im Folgenden wird nur der Bug2-Algorithmus näher gehend erläutert. \cite{Bug2} \cite{WegPlanung} 
 
 Unter Verwendung des betrachteten Algorithmus kennt der Roboter zu jeder Zeit den direkten Weg zwischen seiner Startposition und dem Ziel. Hierbei werden mögliche Hindernisse zunächst nicht berücksichtigt. Abgesehen von einem Ziel im globalen Raum, kennt der Roboter nur seine direkte Umgebung. Der direkte Weg wird hier m-Linie genannt. Ein Beispiel ist in der untenstehenden Abbildung \ref{fig:Bug2_m-Linie} dargestellt.
 
 \begin{figure}[h]
 	\centering	
-	\includegraphics[width=5cm]{Bug2_m-Linie.png}
+	\includegraphics[width=5cm]{BilderInke/Bug2_m-Linie.png}
 	\caption{Bu2-Algorithmus, Grauen Flächen: Hindernisse, Roter Punkt: Startpunkt, Grüner Punkt: Ziel, Verbindungslinie: m-Linie}
 	\label{fig:Bug2_m-Linie}
+	\cite{Bug2}
 \end{figure}
 Der rote Punkt in der Abbildung ist die Startposition und der grüne das Ziel. 
 Die Anweisung des Algorithmus an den Roboter können in drei einfache Befehle unterteilt werden. 
@@ -101,26 +105,28 @@ Wie ein möglicher Weg des Roboters unter dem Bug2-Algorithmus aussehen könnte, i
 
 \begin{figure}[h]
 	\centering	
-	\includegraphics[width=5cm]{Bug2.png}
+	\includegraphics[width=5cm]{BilderInke/Bug2.png}
 	\caption{Bu2-Algorithmus, Fahrweg des Roboters ist in orange dargestellt}
 	\label{fig:Bug2}
+	\cite{Bug2}
 \end{figure}
 
 Der Bug2-Algorithmus ist ein vergleichsweise einfacher Algorithmus. Das Entlangfahren an den Hindernissen kann nur in eine Richtung, links oder rechts, vorgegeben werden. Somit ist nicht garantiert, dass immer der optimale Pfad gefunden wird. Außerdem kann es zu einer Art \glqq Deadlock\grqq{} kommen, wenn der Roboter an einer Kante des Hindernissen entlang fahren muss, die m-Linie jedoch nicht wieder findet. Ein solches Szenario ist in Abbildung \ref{fig:Bug2_Problem} dargestellt. 
 
 \begin{figure}[h]
 	\centering	
-	\includegraphics[width=5cm]{Bug2_Problem.png}
+	\includegraphics[width=5cm]{BilderInke/Bug2_Problem.png}
 	\caption{Bu2-Algorithmus, möglicher Deadlock,  Fahrweg des Roboters ist in orange dargestellt}
 	\label{fig:Bug2_Problem}
+	\cite{Bug2}
 \end{figure}
 
 \subsubsection{Potentialfeld-Methode}
-Bei der Potentailfeld-Methode ist der Roboter künstlichen Kräften von Zielen und Hindernissen ausgesetzt. Die hohen Potentiale stoßen den Roboter ab, niedrigere Potentiale ziehen ihn an. Jeder Punkt in dem Konfigurationsraum erhält ein Potential. So wird dem Start ein hohes und dem Ziel ein sehr niedriges Potential zugeordnet. Hindernisse bekommen sehr hohe Potentiale. Die Bewegungsrichtung des Roboters kann über die Gradientenberechnung des Potentialfeldes erfolgen, da der Roboter auf seinem Weg vom Start zum Ziel dem negativen Gradienten des globalen Potentialfeldes folgt. In die Berechnung des Gradienten gehen nur die Hindernisse mit ein, die sich in relativer Nähe zum Roboter befinden. In der Abbildung \ref{fig:Potentialfeld} ist ein Beispiel eines Potentialfeldes dargestellt. Der rote Teil, auf dem sich die Startposition hat, genau so wie die Hindernisse ein hohes Potential. Das niedrige Potential des Ziels ist in blau dargestellt. 
+Bei der Potentailfeld-Methode ist der Roboter künstlichen Kräften von Zielen und Hindernissen ausgesetzt. Die hohen Potentiale stoßen den Roboter ab, niedrigere Potentiale ziehen ihn an. Jeder Punkt in dem Konfigurationsraum erhält ein Potential. So wird dem Start ein hohes und dem Ziel ein sehr niedriges Potential zugeordnet. Hindernisse bekommen sehr hohe Potentiale. Die Bewegungsrichtung des Roboters kann über die Gradientenberechnung des Potentialfeldes erfolgen, da der Roboter auf seinem Weg vom Start zum Ziel dem negativen Gradienten des globalen Potentialfeldes folgt. In die Berechnung des Gradienten gehen nur die Hindernisse mit ein, die sich in relativer Nähe zum Roboter befinden. In der Abbildung \ref{fig:Potentialfeld} ist ein Beispiel eines Potentialfeldes dargestellt. Der rote Teil, auf dem sich die Startposition hat, genau so wie die Hindernisse ein hohes Potential. Das niedrige Potential des Ziels ist in blau dargestellt.\cite{WegPlanung} 
 
 \begin{figure}[h]
 	\centering	
-	\includegraphics[width=9cm]{Potentialfeld.png}
+	\includegraphics[width=9cm]{BilderInke/Potentialfeld.png}
 	\caption{Beispiel Potentialfeld}
 	\label{fig:Potentialfeld}
 \end{figure}
@@ -153,7 +159,7 @@ Bei sehr hoher Dynamik und hoher Zuverlässigkeit benötigt die Potentialfeld-Meth
 Im Folgenden wird das Gesamtkonzept mit der Bahnplanungsmethode Potentialfeld kurz erläutert. Genauere Erklärungen mit Auszügen aus dem Originalprogramm wird anschließend erläutert. 
 \begin{figure}[h!]
 	\centering	
-	\includegraphics[width=11cm]{KonfigRaum.png}
+	\includegraphics[width=11cm]{BilderInke/KonfigRaum.png}
 	\caption{Konfigurationsraum}
 	\label{fig:Konfigurationsraum}
 \end{figure}
@@ -176,7 +182,7 @@ Die Ladestationen befinden sich an der rechten Seite des Konfigurationsraumes. E
 Hindernisse im Potentialfeld werden mit hohen Potentialen versehen. Zu diesen Hindernissen gehören hier die Stationen und die Robotinos. In Abbildung \ref{fig:Potentialfeld-Fertig} ist das gesamte Potentialfeld dargestellt, das auf jeden Robotino geladen wird. 
 \begin{figure}[h!]
 	\centering	
-	\includegraphics[width=11cm]{Potentialfeld_Fertig.png}
+	\includegraphics[width=11cm]{BilderInke/Potentialfeld_Fertig.png}
 	\caption{Potentialfeld des Konfigurationsraumes eingezäunt in hohe Potentiale zur eindeutigen Begrenzung des Raumes, Stationen als ein hohes Potential dargestellt, Rampen und Fahrrinnen zum leiten der Robotinos, }
 	\label{fig:Potentialfeld-Fertig}
 \end{figure}
