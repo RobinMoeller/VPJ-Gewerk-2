@@ -5,7 +5,7 @@ In diesem Kapitel werden die Funktion der erstellten Funktionsblöcke und Statefl
 In diesem Subsystem wird die UDP-Kommunikation mit der Fertigungsplanung realisiert, dazu werden die zu sendenden Daten gepackt und per UDP an alle im Netzwerk geschickt. Des Weiteren werden die von der Fertigungsplanung gesendeten Daten ausgelesen. Der Aufbau des Subsystems ist in Abbildung \ref{fig:UDPGW1} dargestellt. Um die UDP Kommunikation zu sichern, wird für jeden Robotino ein eigener sende und lese Port definiert. Dazu wird für den sende Port das Muster 250X0 verwendet und für den auslese Port das Muster 2591X. Dabei wird X als RobotinoID gesetzt. Da in Matlab der Winkel in Rad genutzt wird, wird vor dem Senden der Robotinoausrichtung der Winkel in Grad umgerechnet. Die einzulesenden und zusendenden Daten sind in Kapitel \ref{sec:Kon_Fertigungsplanung} definiert.
 
 \begin{figure}
-	\centering	\includegraphics[width=0.5\textwidth]{grafiken/UDPGewerk1.png}
+	\centering	\includegraphics[width=0.8\textwidth]{grafiken/UDPGewerk1.png}
 	\caption{Subsystem UDP Gewerk 1}
 	\label{fig:UDPGW1}
 \end{figure}
@@ -61,7 +61,7 @@ In dieser Funktion wird geprüft, ob die Station erreicht ist. Diese Information 
 Um die Sollgeschwindigkeit des Robotinos zu bestimmen, wird das Subsystem \glqq Vektorberechnung\grqq{} genutzt. Dieses Subsystem ist wie in Abbildung \ref{fig:Vektorberechnung} dargestellt, aufgebaut. Das Subsystem hat dabei den in Abbildung \ref{fig:AblVektor} gezeigten Ablauf. Dabei ist zu erkennen, dass zuerst die IR-Daten erfasst und die fahrenden Robotinos erkannt werden. Die IR-Datenerfassung wird unter Kapitel \ref{sec:IRD} näher erläutert. Wie die fahrenden Robotinos erkannt werden, wird in Kapitel \ref{sec:FRE} beschrieben. Anhand der IR-Daten und der Informationen über die fahrenden Robotinos wird der Geschwindigkeitsvektor bestimmt. Die dabei genutzte Funktion wird unter Kapitel \ref{sec:GVB} beschrieben. Anhand des bestimmten Geschwindigkeitsvektors wird eine Ausweichrichtung bestimmt, wenn ein anderer Robotino die Route kreuzt. Die dazu genutzte Funktion ist in Kapitel \ref{sec:ARB} näher beschrieben. Im nächsten Schritt wird dann das Ausweichmanöver ausgeführt. Die Implementierung des Ausweichmanövers wird in Kapitel \ref{sec:AMA} beschrieben.
 
 \begin{figure}
-	\centering	\includegraphics[width=0.5\textwidth]{grafiken/Vektorberechnung.png}
+	\centering	\includegraphics[width=0.8\textwidth]{grafiken/Vektorberechnung.png}
 	\caption{Subsystem Vektorberechnung}
 	\label{fig:Vektorberechnung}
 \end{figure}

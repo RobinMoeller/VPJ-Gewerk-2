@@ -1,41 +1,41 @@
-\babel@toc {ngerman}{}
-\babel@toc {ngerman}{}
+\select@language {ngerman}
+\select@language {ngerman}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Beispiel Sichtbarkeitsgraph, Graue Felder sind Hindernisse, blaue Linie ist optimaler Pfad}}{10}{figure.3.1}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Beispiel Occupancy Grid, Rot-Hindernisse, Wei\IeC {\ss }-befahrbarer Raum}}{12}{figure.3.2}
-\contentsline {figure}{\numberline {3.3}{\ignorespaces Beispiel Occupancy Grid mit D*, Rot-Hindernisse, Intensit\"at des Graus im Hintergrunds repr\"asentiert die Entfernung zum Ziel; blauer Punkt entspricht Ziel}}{13}{figure.3.3}
-\contentsline {figure}{\numberline {3.4}{\ignorespaces Bu2-Algorithmus, Grauen Fl\"achen: Hindernisse, Roter Punkt: Startpunkt, Gr\"uner Punkt: Ziel, Verbindungslinie: m-Linie}}{14}{figure.3.4}
-\contentsline {figure}{\numberline {3.5}{\ignorespaces Bu2-Algorithmus, Fahrweg des Roboters ist in orange dargestellt}}{15}{figure.3.5}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Bu2-Algorithmus, m\"oglicher Deadlock, Fahrweg des Roboters ist in orange dargestellt}}{16}{figure.3.6}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Beispiel Potentialfeld}}{17}{figure.3.7}
-\contentsline {figure}{\numberline {3.8}{\ignorespaces Konfigurationsraum mit Wartepositionen, Fifo-Positionen, Stationen und \"Ubergabepunkten}}{17}{figure.3.8}
-\contentsline {figure}{\numberline {3.9}{\ignorespaces Potentialfeld des Konfigurationsraumes eingez\"aunt in hohe Potentiale zur eindeutigen Begrenzung des Raumes, Stationen als ein hohes Potential dargestellt, Rampen und Fahrrinnen zum leiten der Robotinos, }}{19}{figure.3.9}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Beispiel Sichtbarkeitsgraph, Graue Felder sind Hindernisse, blaue Linie ist optimaler Pfad}}{11}{figure.3.1}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Beispiel Occupancy Grid, Rot-Hindernisse, Wei\IeC {\ss }-befahrbarer Raum}}{13}{figure.3.2}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Beispiel Occupancy Grid mit D*, Rot-Hindernisse, Intensit\"at des Graus im Hintergrunds repr\"asentiert die Entfernung zum Ziel; blauer Punkt entspricht Ziel}}{14}{figure.3.3}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Bu2-Algorithmus, Grauen Fl\"achen: Hindernisse, Roter Punkt: Startpunkt, Gr\"uner Punkt: Ziel, Verbindungslinie: m-Linie}}{15}{figure.3.4}
+\contentsline {figure}{\numberline {3.5}{\ignorespaces Bu2-Algorithmus, Fahrweg des Roboters ist in orange dargestellt}}{16}{figure.3.5}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Bu2-Algorithmus, m\"oglicher Deadlock, Fahrweg des Roboters ist in orange dargestellt}}{17}{figure.3.6}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Beispiel Potentialfeld}}{18}{figure.3.7}
+\contentsline {figure}{\numberline {3.8}{\ignorespaces Konfigurationsraum mit Wartepositionen, Fifo-Positionen, Stationen und \"Ubergabepunkten}}{18}{figure.3.8}
+\contentsline {figure}{\numberline {3.9}{\ignorespaces Potentialfeld des Konfigurationsraumes eingez\"aunt in hohe Potentiale zur eindeutigen Begrenzung des Raumes, Stationen als ein hohes Potential dargestellt, Rampen und Fahrrinnen zum leiten der Robotinos, }}{20}{figure.3.9}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Bereichseinteilung}}{20}{figure.4.1}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Potentialfeldzonen}}{22}{figure.4.2}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Potentialfeld der einzel Zonen}}{23}{figure.4.3}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Potentialfeld der Roboter Umwelt ohne Rausf\"uhrung}}{23}{figure.4.4}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Potentialfeld der Roboter Umwelt mit Rausf\"uhrung}}{24}{figure.4.5}
-\contentsline {figure}{\numberline {4.6}{\ignorespaces Potentialfeld der gau\IeC {\ss }schen radialen Basisfunktion}}{25}{figure.4.6}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Potentialfeld Ziel}}{26}{figure.4.7}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Lageplan der FIFO Pl\"atze}}{27}{figure.4.8}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Schnittstelle mit der Fertigungsplanung}}{31}{figure.4.9}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Bereichseinteilung}}{21}{figure.4.1}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Potentialfeldzonen}}{23}{figure.4.2}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Potentialfeld der einzel Zonen}}{24}{figure.4.3}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Potentialfeld der Roboter Umwelt ohne Rausf\"uhrung}}{25}{figure.4.4}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Potentialfeld der Roboter Umwelt mit Rausf\"uhrung}}{25}{figure.4.5}
+\contentsline {figure}{\numberline {4.6}{\ignorespaces Potentialfeld der gau\IeC {\ss }schen radialen Basisfunktion}}{26}{figure.4.6}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Potentialfeld Ziel}}{27}{figure.4.7}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Lageplan der FIFO Pl\"atze}}{28}{figure.4.8}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Schnittstelle mit der Fertigungsplanung}}{32}{figure.4.9}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Simulation mit Ausweichfunktion}}{34}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Simulation ohne Ausweichfunktion}}{35}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Simulation der Wartebereiche}}{36}{figure.5.3}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Simulation mit Ausweichfunktion}}{35}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Simulation ohne Ausweichfunktion}}{36}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Simulation der Wartebereiche}}{38}{figure.5.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Ablaufdiagramm Konzept}}{37}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Ablaufdiagramm der Selbstorganisation}}{38}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Ablaufplan des Subsystems Vektorberechnung}}{43}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Subsystem UDP Gewerk 1}}{44}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Subsystem UDP Daten formatieren}}{44}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Stateflow Auftrag steuern}}{46}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Stateflow Wartebereich bestimmen}}{47}{figure.6.7}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Subsystem Vektorberechnung}}{48}{figure.6.8}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Fahrmodus steuern}}{51}{figure.6.9}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Ablaufdiagramm Konzept}}{39}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Ablaufdiagramm der Selbstorganisation}}{40}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Ablaufplan des Subsystems Vektorberechnung}}{45}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Subsystem UDP Gewerk 1}}{46}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Subsystem UDP Daten formatieren}}{47}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Stateflow Auftrag steuern}}{48}{figure.6.6}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Stateflow Wartebereich bestimmen}}{49}{figure.6.7}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Subsystem Vektorberechnung}}{50}{figure.6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Fahrmodus steuern}}{53}{figure.6.9}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
