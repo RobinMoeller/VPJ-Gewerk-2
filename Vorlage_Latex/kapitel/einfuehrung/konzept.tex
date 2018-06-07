@@ -41,7 +41,7 @@ Hat sich das unbekannte Hindernis entfernt, wird wieder der normale Zielvektor g
 \section{Schnittstellen}
 Im gesamten Projektablauf ist die Kommunikation mit anderen Gruppen ausschlaggebend für eine perfektes Gesamtkonzept.
 In der Bahnplanung wurde vor allem mit der Gruppe der Bahnregelung und mit der Gruppe der Fertigungsplanung eng zusammengearbeitet.
-\subsection{Bahnregelung}
+\subsection{Bahnregelung}\label{sec:Kon_Bahnregelung}
 In sehr engen Bereichen, in denen auch eine hohe Präzision erforderlich ist, stößt die Potentialfeldmethode an ihre Grenzen. Aus diesem Grund wurde der gesamte Bereich direkt am Anfang des Projektes aufgeteilt. Das Potentialfeld wird in den freien Bereiche benutzt und an den Randbereichen des Feldes. Das Anfahren der einzelnen Fächer innerhalb der Stationen, sowie das Werkstückhandling, ist an die Bahnregelung übergeben worden.\\
 \\
 In Abbildung \ref{FIFOPlan} stellen die acht roten Kreise vor den Stationen die Übergabepunkte dar. Befindet sich der Robotino innerhalb eines solchen Kreises, inklusive einer gewissen Toleranz, wird ein Übergabebit gesetzt und die Bahnregelung übernimmt das präzise Anfahren zuerst des RFID Lesegerätes und anschließend das Ablegen in ein Stationsfach. ( Beim Abholen ist der Prozess andersherum.)
@@ -49,7 +49,7 @@ Somit gehören zur Schnittstelle nicht nur das Übergabebit. Die Gruppe der Bahnre
 \\  
 Da die Bahnregelung sehr präzise die Position des Robotinos für eine hoch genaue Fahrt benötigt, wurde von der Gruppe ein Kalman-Filter für die Robotino Position entworfen. Ohne Beobachter sendet die Kamera, bei nicht Erkennung eines Robotinos, die Positionsdaten [0,0] für diesen Robotino. Diese falsche Postion kann zu einigen Fehlern in den Berechnungen führen. Dieser Beobachter ermöglicht eine Fehlerfreie Positionsdarstellung des Roboters auch bei kurzzeitiger Verdeckung des ArUcomarkers. Die Beobachterdaten werden auch in der Bahnplanung durchgehende verwendet. 
 \newpage
-\subsection{Fertigungsplanung}
+\subsection{Fertigungsplanung}\label{sec:Kon_Fertigungsplanung}
 Die Fertigungsplanung ist für die gesamte Simulation der Fabrikumgebung zuständig. In der Gruppe werden verschiedene Aufträge generiert und intelligent auf die vier Robotinos verteilt. Mittels UDP-Kommunikation wird der jeweilige Auftrag an den jeweiligen Roboter gesendet.
 \begin{figure}[h]
 	\centering

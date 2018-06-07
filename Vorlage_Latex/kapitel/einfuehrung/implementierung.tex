@@ -14,12 +14,10 @@ Zunächst wird der Auftrag der Fertigungsplanung verarbeitet und parallel dazu wi
 Hat der Robotino sein Endziel erreicht, kann ein neuer Auftrag abgearbeitet werden.\\
 \\Hat ein Robotino zur Zeit keinen Auftrag, wird als Ziel die Standby-Position einprogrammiert. Zunächst wird der Grundalgorithmus zur Zielgebung erläutert und anschließend um die einzelnen Unterpunkte des Konzeptes erweitert.\\
 
-\section{Potentialfeld}
-\label{sec:potentialfeld}
 
 \section{Selbstorganisation durch Wartebereiche}
 \label{sec:Impl:Selbstorga}
-Die in dem Unterkapitel \ref{subsec:Selbstorga} erklärte intelligente Selstorganisation wird im Folgenden erklärt und es wird gezeigt, wie der Algorithmus in der Software Simulink umgesetzt wird. \\
+Die in dem Unterkapitel \ref{subsec:Selbstorga} erklärte intelligente Selbstorganisation wird im Folgenden erklärt und es wird gezeigt, wie der Algorithmus in der Software Simulink umgesetzt wird. \\
 \\
 Das Ablaufdiagramm in Abbildung \ref{AblaufdiagrammFIFO} stellt den Ablauf des Algorithmus dar.\\
 
@@ -77,6 +75,7 @@ In dem Fall, wenn ein anderer Robotino den ersten Wartebereich verlässt und zur 
 Die Station wird erst wieder freigegeben, wenn sie im Stationsmerker nicht mehr belegt ist.\\
 
 \section{Bekannte Hindernisse}
+\label{sec:bekHindernis}
 
 Für eine verbesserte Kollisionsvermeidung wurde das Ausweichmanöver, wie in Unterkapitel \ref{subsec:bekannt} bereits erklärt, verwendet. Die Aufgabe des Manövers ist es den Zielvektor des Robotinos so zu verändern, dass er einem sich im Weg befindenden Robotino mit einem größeren Abstand ausweicht.
 Es werden die Position des Robotinos benötigt sowie die Positionen der anderen Robotinos, die Störpositionen. Darüber hinaus benötigt das Manöver den Zielvektor.\\
@@ -89,7 +88,7 @@ Der erste Wert des Ausweichs-Array aus Formel \ref{Ausweichwinkel} ist der Auswe
 Solange eine Störposition innerhalb der \ang{30} liegen, bleibt der Ausweichwinkel erhalten. Ist der im Weg liegende Roboter weit genug umfahren, wird der originale Zielvektor einprogrammiert.
 
 \section{Unbekannte Hindernisse}
- 
+ \label{sec:unbekHindernis}
 Unbekannte Hindernisse werden nur mit Hilfe der neun verbauten Infrarotsensoren erkannt. Zyklisch werden diese Sensoren abgefragt. Detektiert einer der Sensoren ein Hindernis wird zunächst überprüft, an welcher Position relativ zur Roboterausrichtung sich das Hindernis befindet. Der Ablauf wird im Code \ref{infra} dargestellt:\\
 \begin{lstlisting}[caption=Infraroterkennung,label=infra,basicstyle=\small]
 for x=1:9
@@ -103,4 +102,49 @@ for x=1:9
 end
 \end{lstlisting}
 \noindent 
-Wurde ein Hindernis detektiert, wird ein Ausweichvektor in \ang{180} zum Hindernis in X-Richtung und einer in Y-Richtung berechnet. Diese berechneten 'IRWerte' werden anschließend in der Zielvektorberechnung einbezogen.
+Wurde ein Hindernis detektiert, wird das Hindernis in globalen Koordinaten bestimmt. Diese berechneten 'IRWerte' werden anschließend in der Zielvektorberechnung aus Kapitel \ref{sec:potentialfeld} einbezogen.
+
+\section{Potentialfeld}
+\label{sec:potentialfeld}
+
+Um das unter Kapitel \ref{sec:Potential} beschriebene Potentialfeldkonzept in Matlab/Simulink umzusetzten, werden die Funktionen \eqref{fun:H01} bis \eqref{fun:H5} partiell nach x und y abgeleitet. Die dabei entstehenden Funktionen sind als \eqref{fun:VxStation} bis \eqref{fun:VyZone5} definiert. Durch die Ableitung des Potentialfeldes ergibt sich der Gradient, der negiert werden muss, damit der ermittelte Vektor Richtung Ziel zeigt.
+
+\scalebox{0.666}{\begin{minipage}{1.5\textwidth}
+\begin{align}
+\label{fun:VxStation}
+Vx_{Hindernis}(x,y)=-K\cdot e^{-\frac{(x-Stationsposition_x)^2+(y-Stationsposition_y)^2}{2\cdot \sigma^2}} \cdot \frac{x-Stationsposition_x}{2\cdot \sigma^2}\\
+\label{fun:VyStation}
+Vy_{Hindernis}(x,y)=-K\cdot e^{-\frac{(x-Stationsposition_x)^2+(y-Stationsposition_y)^2}{2\cdot \sigma^2}} \cdot \frac{y-Stationsposition_y}{2\cdot \sigma^2}\\
+\label{fun:VxZiel}
+Vx_{Ziel}(x,y)=\frac{K\cdot(x-Ziel_x)}{\sqrt{(x-Ziel_x)^2+(y-Ziel_y)^2}}\\
+\label{fun:VyZiel}
+Vy_{Ziel}(x,y)=\frac{K\cdot(y-Ziel_y)}{\sqrt{(x-Ziel_x)^2+(y-Ziel_y)^2}}\\
+\label{fun:VxZone01}
+Vx_{Umwelt(Zone=0,x=0..5500,y=0..2500)}(x,y)=\frac{1}{\sigma}\cdot K \cdot e^{\frac{-x}{\sigma}} +\frac{-1}{\sigma}\cdot K \cdot e^{\frac{x-x_{max}}{\sigma}}\\
+Vy_{Umwelt(Zone=0,x=0..5500,y=0..2500)}(x,y)=\frac{-1}{\sigma} \cdot K \cdot e^{\frac{y-2500}{\sigma}} +\frac{1}{\sigma} \cdot K \cdot e^{\frac{-y}{\sigma}}\\
+Vx_{Umwelt(Zone=0,x=5500..x_{max},y=0..2500)}(x,y)=\frac{1}{\sigma}\cdot K \cdot e^{\frac{-(x-5500)+(y-2500)}{\sigma}} +\frac{-1}{\sigma}\cdot K \cdot e^{\frac{x-x_{max}}{\sigma}}\\
+Vy_{Umwelt(Zone=0,x=5500..x_{max},y=0..2500)}(x,y)=\frac{-1}{\sigma} \cdot K \cdot e^{\frac{-(x-5500)+(y-2500)}{\sigma}} +\frac{1}{\sigma} \cdot K \cdot e^{\frac{-y}{\sigma}}\\
+Vx_{Umwelt(Zone=0,x=5500..x_{max},y=2500..y_max)}(x,y)=\frac{1}{\sigma}\cdot K \cdot e^{-\frac{x-5500}{\sigma}} +\frac{-1}{\sigma}\cdot K \cdot e^{\frac{x-x_{max}}{\sigma}}\\
+Vy_{Umwelt(Zone=0,x=5500..x_{max},y=2500..y_{max})}(x,y)=\frac{-1}{\sigma} \cdot K \cdot e^{\frac{y-y_{max}}{\sigma}} +\frac{1}{\sigma} \cdot K \cdot e^{\frac{-y}{\sigma}}\\
+Vx_{Umwelt(Zone=1)}(x,y)=K_{gerade}\\
+Vy_{Umwelt(Zone=1)}(x,y)=-2\cdot \frac{y-3500}{K_{parabel}}\\
+Vx_{Umwelt(Zone=2)}(x,y)=-K_{gerade}\\
+Vy_{Umwelt(Zone=2)}(x,y)=-2\cdot \frac{y-3500}{K_{parabel}}\\
+Vx_{Umwelt(Zone=3)}(x,y)=-2\cdot \frac{x-300}{K_{parabel}}\\
+Vy_{Umwelt(Zone=3)}(x,y)=-K_{gerade}\\
+Vx_{Umwelt(Zone=4)}(x,y)=0\\
+Vy_{Umwelt(Zone=4)}(x,y)=K_{gerade}\\
+Vx_{Umwelt(Zone=5)}(x,y)=-2\cdot \frac{x-5500}{K_{parabel}}\\
+\label{fun:VyZone5}
+Vy_{Umwelt(Zone=5)}(x,y)=-K_{gerade}
+ \end{align}
+ \end{minipage}}
+ 
+ Der Ablaufplan in Abbildung \ref{fig:AblVektor} zeigt den Ablauf zum ermitteln des Geschwindigkeitsvektors.
+ \begin{figure}
+	\centering	\includegraphics[width=0.5\textwidth]{grafiken/Geschwindigkeit_bestimmen.png}
+	\caption{Ablaufplan des Subsystems Vektorberechnung}
+	\label{fig:AblVektor}
+\end{figure}
+Dazu werden zuerst alle benötigten Daten bestimmt. Dazu gehören die Positionen der bekannten Hindernisse, welche unter Kapitel \ref{sec:bekHindernis} beschrieben sind, und der unbekannten Hindernisse, welche unter Kapitel \ref{sec:unbekHindernis} erläutert werden. Desweiteren werden die von der Bahnregelung erhaltenen Beobachterdaten als Robotinoposition genutzt, welche in den Formeln die x und y Koordinaten darstellen. Da zuerst die Sollfahrtrichtung bestimmt werden muss, um ein Ausweichmanöver bestimmen zu können, wird erst der Geschwindigkeitsvektor anhand der Umwelt, des Ziels und der Hindernisse bestimmt. Im nächsten Schritt wird dann anhand der bekannten Hindernisse ein Ausweichmanöver berechnet, wenn sich ein bekanntes Hindernis in einem Toleranzband in Fahrtrichtung befindet. Im Anschluss wird das Ausweichmanöver auf den Geschwindigkeitsvektor addiert. Bevor der Geschwindigkeitsvektor auf den Sollwerteingang des Robotinos gegeben werden kann, muss der ermittelte Geschwindigkeitsvektor gefiltert und auf lokale Koordinaten transformiert werden.
+
