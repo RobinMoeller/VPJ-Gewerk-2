@@ -6,10 +6,8 @@ Aus diesem Grund werden hinter den Stationen Einbahnstraßen entworfen, in denen 
 \label{subsec:Selbstorga}
 Um die Entstehung von lokalen Minima zu verhindern, wird die Software der Robotinos um eine Selbstorganisation erweitert. 
 Diese Erweiterung beinhaltet Wartepositionen, damit ein Roboter, der zur einer bereits besetzten Station fahren soll, sich außerhalb des Kollisionsbereichs anstellt.
-
 \\
 In Abbildung \ref{fig:Konfigurationsraum} erkennt man am unteren Rand der Karte zwölf blaue Kreise, welche die Wartebereiche darstellen. Zu jeder Station gehören drei Wartepositionen. Durch sich verändernde Zählweisen, ist der zugehörige Warteplatz zu einer Station immer eindeutig zuzuweisen. Im Kapitel \ref{cha:Implementierung} wird dies weiter erläutert.\\
-\\
 \\
 Mit Hilfe des UDP-Datenpaketes der Kameradaten ist es für einen Robotino möglich die Positionen der anderen Robotinos zu erhalten. Ist nun die Zielstation bereits von einem anderen Robotino belegt, wird mit Hilfe der Selbstorganisationssoftware die erste mögliche Wartepostion als Ziel übernommen. Ist diese auch bereits belegt wird die Warteposition um einen Platz erhöht.\\
 Dem gesamten Anstellprozess liegt das \glqq First In First Out-Prinzip\grqq{} (im weiteren nur noch FIFO genannt) zu Grunde.
