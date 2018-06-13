@@ -48,8 +48,9 @@ Vom Zielpunkt aus werden nun alle Knoten betrachtet, die über eine Kante erreich
 Ein Vorteil dieser Methode ist, dass immer der optimale Pfad vom Start zum Ziel gefunden wird. Nachteile sind jedoch, dass der Pfad immer direkt an den Ecken und Kanten der Hindernisse entlang führt. Außerdem kann bei vielen Hindernissen, beispielsweise Hindernisse mit vielen Ecken und Kanten, ein sehr großer Graph entstehen, der viel Rechenzeit in Anspruch nimmt. 
 
 \subsubsection{Occupancy Grid mit D*-Algorithmus}
-Wie der Name \glqq Occupancy Grid\grqq{} vermuten lässt, wird der Raum in ein Gitternetz unterteilt. Jede entstehende Zelle kann mit einer \glqq 1\grqq{} für \glqq belegt\grqq{} und \glqq 0\grqq{} für \glqq frei\grqq{} versehen werden. Dadurch entsteht eine Umgebungskarte, in der Hindernisse und freier Raum zum Fahren klar definiert sind. In der Abbildung \ref{fig:OccupancyGrid} ist ein Beispiel des Occupancy Grids dargestellt. Dabei sind anstatt Zahlen in den Zellen die freien Bereiche weiß und die besetzten Bereiche rot dargestellt. Der Übersichtlichkeit halber ist ein größeres Gitternetz dargestellt, als eigentlich unterteilt.\cite{Robotics}
-\begin{figure}[h]
+Wie der Name \glqq Occupancy Grid\grqq{} vermuten lässt, wird der Raum in ein Gitternetz unterteilt. Jede entstehende Zelle kann mit einer \glqq 1\grqq{} für \glqq belegt\grqq{} und \glqq 0\grqq{} für \glqq frei\grqq{} versehen werden. Dadurch entsteht eine Umgebungskarte, in der Hindernisse und freier Raum zum Fahren klar definiert sind. In der Abbildung \ref{fig:OccupancyGrid} ist ein Beispiel des Occupancy Grids dargestellt. Dabei sind anstatt Zahlen in den Zellen die freien Bereiche weiß und die besetzten Bereiche rot dargestellt. Der Übersichtlichkeit halber ist ein größeres Gitternetz dargestellt, als eigentlich unterteilt.\cite{Robotics}\\
+
+\begin{figure}[H]
 	\centering	
 	\includegraphics[width=10cm]{BilderInke/OccupancyGrid.png}
 	\caption{Beispiel Occupancy Grid, Rot-Hindernisse, Weiß-befahrbarer Raum}
@@ -59,7 +60,7 @@ Wie der Name \glqq Occupancy Grid\grqq{} vermuten lässt, wird der Raum in ein Gi
 
 Der D*-Algorithmus verändert die Bewertung der einzelnen Zellen mit einem neuen Wert, der die \glqq Kosten\grqq der Zelle repräsentiert. Zellen, die zu einem Hindernis gehören werden mit \glqq $ \infty $\grqq gewichtet. Je höher die Gewichtung ist, desto weiter weg befindet sich das Ziel. Mit diesem Algorithmus wird immer der optimale Pfad gefunden. Je nach Aufgabenstellung kann diese Gewichtung zum Beispiel Distanz oder Zeit bedeuten. 
 In der nachstehenden Abbildung \ref{fig:Occupancy Grid mit D*-Algorithmus} ist der geplante Weg von dem Startpunkt zum Ziel mittels grün gepunkteter Linie dargestellt. Die Hindernisse sind rot markiert. Die Intensität des Grautons im Hintergrund gibt in diesem Fall die Entfernung zum Ziel an. 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering	
 	\includegraphics[width=10cm]{BilderInke/DStern.png}
 	\caption{Beispiel Occupancy Grid mit D*, Rot-Hindernisse, Intensität des Graus im Hintergrunds repräsentiert die Entfernung zum Ziel; blauer Punkt entspricht Ziel}
@@ -82,7 +83,7 @@ Der \glqq Bug-Algorithmus \grqq{} ist im Allgemeinen eine reaktive Navigationsme
 
 Unter Verwendung des betrachteten Algorithmus kennt der Roboter zu jeder Zeit den direkten Weg zwischen seiner Startposition und dem Ziel. Hierbei werden mögliche Hindernisse zunächst nicht berücksichtigt. Abgesehen von einem Ziel im globalen Raum, kennt der Roboter nur seine direkte Umgebung. Der direkte Weg wird hier m-Linie genannt. Ein Beispiel ist in der untenstehenden Abbildung \ref{fig:Bug2_m-Linie} dargestellt.
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering	
 	\includegraphics[width=5cm]{BilderInke/Bug2_m-Linie.png}
 	\caption{Bu2-Algorithmus, Grauen Flächen: Hindernisse, Roter Punkt: Startpunkt, Grüner Punkt: Ziel, Verbindungslinie: m-Linie}
@@ -100,7 +101,7 @@ Die Anweisung des Algorithmus an den Roboter können in drei einfache Befehle unt
 
 Wie ein möglicher Weg des Roboters unter dem Bug2-Algorithmus aussehen könnte, ist in Abbildung \ref{fig:Bug2} zusehen. Die orangene Linie zeigt dabei den Fahrweg des Roboters
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering	
 	\includegraphics[width=5cm]{BilderInke/Bug2.png}
 	\caption{Bu2-Algorithmus, Fahrweg des Roboters ist in orange dargestellt}
@@ -110,7 +111,7 @@ Wie ein möglicher Weg des Roboters unter dem Bug2-Algorithmus aussehen könnte, i
 
 Der Bug2-Algorithmus ist ein vergleichsweise einfacher Algorithmus. Das Entlangfahren an den Hindernissen kann nur in eine Richtung, links oder rechts, vorgegeben werden. Somit ist nicht garantiert, dass immer der optimale Pfad gefunden wird. Außerdem kann es zu einer Art \glqq Deadlock\grqq{} kommen, wenn der Roboter an einer Kante des Hindernissen entlang fahren muss, die m-Linie jedoch nicht wieder findet. Ein solches Szenario ist in Abbildung \ref{fig:Bug2_Problem} dargestellt. 
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering	
 	\includegraphics[width=5cm]{BilderInke/Bug2_Problem.png}
 	\caption{Bu2-Algorithmus, möglicher Deadlock,  Fahrweg des Roboters ist in orange dargestellt}
@@ -121,9 +122,9 @@ Der Bug2-Algorithmus ist ein vergleichsweise einfacher Algorithmus. Das Entlangf
 \subsubsection{Potentialfeld-Methode}
 Bei der Potentailfeld-Methode ist der Roboter künstlichen Kräften von Zielen und Hindernissen ausgesetzt. Die hohen Potentiale stoßen den Roboter ab, niedrigere Potentiale ziehen ihn an. Jeder Punkt in dem Konfigurationsraum erhält ein Potential. So wird dem Start ein hohes und dem Ziel ein sehr niedriges Potential zugeordnet. Hindernisse bekommen sehr hohe Potentiale. Die Bewegungsrichtung des Roboters kann über die Gradientenberechnung des Potentialfeldes erfolgen, da der Roboter auf seinem Weg vom Start zum Ziel dem negativen Gradienten des globalen Potentialfeldes folgt. In die Berechnung des Gradienten gehen nur die Hindernisse mit ein, die sich in relativer Nähe zum Roboter befinden.\cite{WegPlanung} In der Abbildung \ref{fig:Potentialfeld} ist ein Beispiel eines Potentialfeldes dargestellt. Das niedrige Potential des Ziels ist in blau dargestellt. 
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering	
-	\includegraphics[width=9cm]{BilderInke/Potentialfeld.png}
+	\includegraphics[width=15cm]{BilderInke/Potentialfeld.png}
 	\caption{Beispiel Potentialfeld}
 	\label{fig:Potentialfeld}
 \end{figure}
@@ -134,7 +135,7 @@ Die Vorteile der Potentialfeld-Methode sind sowohl die einfache Implementierung 
 
 An der zu simulierenden Produktionsstraße sind bis zu fünf Robotinos gleichzeitig beteiligt. Um einen zuverlässigen Produktionsablauf sicherstellen zu können, werden hohe Anforderungen an die Bahnplanungsmethode gestellt. Die Methode muss dynamisch und zuverlässig sein und sollte geringen Rechenaufwand benötigen. Die soeben erläuterten Methoden sind in der Tabelle \ref{tab: Methodenvergleich}, reduziert auf die wichtigsten Eigenschaften, übersichtliche dargestellt. 
 
-\begin{table}[h]
+\begin{table}[H]
 \caption{Bahnplanungsmethoden nach ihrer Dynamik, Sicherheit, Rechenzeit und Zuverlässigkeit bewertet}
  \begin{tabular}{lcccc}
  
@@ -154,7 +155,7 @@ Bei sehr hoher Dynamik und hoher Zuverlässigkeit benötigt die Potentialfeld-Meth
 \subsection{Gesamtkonzept}
 
 Im Folgenden wird das Gesamtkonzept mit der Bahnplanungsmethode Potentialfeld kurz erläutert. Genauere Erklärungen mit Auszügen aus dem Originalprogramm werden anschließend erläutert. 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering	
 	\includegraphics[width=14cm]{BilderInke/KonfigRaum.png}
 	\caption{Konfigurationsraum mit Wartepositionen, Fifo-Positionen, Stationen und Übergabepunkten}
@@ -184,7 +185,7 @@ Die Ladestationen befinden sich an der rechten Seite des Konfigurationsraumes. E
 Hindernisse im Potentialfeld werden mit hohen Potentialen versehen. Zu diesen Hindernissen gehören hier die Stationen und die Robotinos. In Abbildung \ref{fig:Potentialfeld-Fertig} ist das gesamte Potentialfeld dargestellt, das auf jeden Robotino geladen wird. 
 \begin{figure}[h!]
 	\centering	
-	\includegraphics[width=11cm]{BilderInke/Potentialfeld_Fertig.png}
+	\includegraphics[width=15cm]{BilderInke/Potentialfeld_Fertig.png}
 	\caption{Potentialfeld des Konfigurationsraumes eingezäunt in hohe Potentiale zur eindeutigen Begrenzung des Raumes, Stationen als ein hohes Potential dargestellt, Rampen und Fahrrinnen zum leiten der Robotinos, }
 	\label{fig:Potentialfeld-Fertig}
 \end{figure}

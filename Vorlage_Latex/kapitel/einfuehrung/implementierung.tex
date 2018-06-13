@@ -3,9 +3,9 @@
 In diesem Kapitel wird die Umsetzung der einzelnen Algorithmen des in Kapitel \ref{cha:konzept} erläuterten Konzepts mit Hilfe der Software Matlab/Simulink erklärt.
 Für einen besseren Überblick zu dem Konzept zeigt die Abbildung \ref{Ablaufdiagramm} ein Ablaufdiagramm des Programms der Bahnplanung.\\
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.9\textwidth]{Bilder/Bahnplanung.png}
+	\includegraphics[width=1.0\textwidth]{Bilder/Bahnplanung.png}
 	\caption{Ablaufdiagramm Konzept}
 	\label{Ablaufdiagramm}
 \end{figure}
@@ -21,9 +21,9 @@ Die in dem Unterkapitel \ref{subsec:Selbstorga} erklärte intelligente Selbstorga
 \\
 Das Ablaufdiagramm in Abbildung \ref{AblaufdiagrammFIFO} stellt den Ablauf des Algorithmus dar.\\
 
-\begin{figure}[h]
+\begin{figure}[H]
 	\centering
-	\includegraphics[width=0.4\textwidth]{Bilder/FIFO_Steuerung.png}
+	\includegraphics[width=0.5\textwidth]{Bilder/FIFO_Steuerung.png}
 	\caption{Ablaufdiagramm der Selbstorganisation}
 	\label{AblaufdiagrammFIFO}
 \end{figure}
@@ -46,7 +46,7 @@ FifoArray1=zeros([1 12]);
 FifoArray1=FifoArray(1:12);
 N=zeros([1 5]);
 for n= 1 : 1 : 4
-        N(n)=round((X(n)-703)/400)+1; % Berechnung in welchem Fifo der Roboter sich befinde
+        N(n)=round((X(n)-703)/400)+1; 
 elseif (Y(n)<450 && (X(n)>100 && X(n)<5250)&& N(n)<=12 && N(n)>0)
         for i=1:12
             if FifoArray1(i)==n
@@ -109,40 +109,40 @@ Wurde ein Hindernis detektiert, wird das Hindernis in globalen Koordinaten besti
 
 Um das unter Kapitel \ref{sec:Potential} beschriebene Potentialfeldkonzept in Matlab/Simulink umzusetzten, werden die Funktionen \eqref{fun:H01} bis \eqref{fun:H5} partiell nach x und y abgeleitet. Die dabei entstehenden Funktionen sind als \eqref{fun:VxStation} bis \eqref{fun:VyZone5} definiert. Durch die Ableitung des Potentialfeldes ergibt sich der Gradient, der negiert werden muss, damit der ermittelte Vektor Richtung Ziel zeigt.
 
-\scalebox{0.666}{\begin{minipage}{1.5\textwidth}
+\scalebox{0.9}{\begin{minipage}{1.1\textwidth}
 \begin{align}
 \label{fun:VxStation}
-Vx_{Hindernis}(x,y)=-K\cdot e^{-\frac{(x-Stationsposition_x)^2+(y-Stationsposition_y)^2}{2\cdot \sigma^2}} \cdot \frac{x-Stationsposition_x}{2\cdot \sigma^2}\\
+&Vx_{Hindernis}(x,y)=-K\cdot e^{-\frac{(x-Stationsposition_x)^2+(y-Stationsposition_y)^2}{2\cdot \sigma^2}} \cdot \frac{x-Stationsposition_x}{2\cdot \sigma^2}\\
 \label{fun:VyStation}
-Vy_{Hindernis}(x,y)=-K\cdot e^{-\frac{(x-Stationsposition_x)^2+(y-Stationsposition_y)^2}{2\cdot \sigma^2}} \cdot \frac{y-Stationsposition_y}{2\cdot \sigma^2}\\
+&Vy_{Hindernis}(x,y)=-K\cdot e^{-\frac{(x-Stationsposition_x)^2+(y-Stationsposition_y)^2}{2\cdot \sigma^2}} \cdot \frac{y-Stationsposition_y}{2\cdot \sigma^2}\\
 \label{fun:VxZiel}
-Vx_{Ziel}(x,y)=\frac{K\cdot(x-Ziel_x)}{\sqrt{(x-Ziel_x)^2+(y-Ziel_y)^2}}\\
+&Vx_{Ziel}(x,y)=\frac{K\cdot(x-Ziel_x)}{\sqrt{(x-Ziel_x)^2+(y-Ziel_y)^2}}\\
 \label{fun:VyZiel}
-Vy_{Ziel}(x,y)=\frac{K\cdot(y-Ziel_y)}{\sqrt{(x-Ziel_x)^2+(y-Ziel_y)^2}}\\
+&Vy_{Ziel}(x,y)=\frac{K\cdot(y-Ziel_y)}{\sqrt{(x-Ziel_x)^2+(y-Ziel_y)^2}}\\
 \label{fun:VxZone01}
-Vx_{Umwelt(Zone=0,x=0..5500,y=0..2500)}(x,y)=\frac{1}{\sigma}\cdot K \cdot e^{\frac{-x}{\sigma}} +\frac{-1}{\sigma}\cdot K \cdot e^{\frac{x-x_{max}}{\sigma}}\\
-Vy_{Umwelt(Zone=0,x=0..5500,y=0..2500)}(x,y)=\frac{-1}{\sigma} \cdot K \cdot e^{\frac{y-2500}{\sigma}} +\frac{1}{\sigma} \cdot K \cdot e^{\frac{-y}{\sigma}}\\
-Vx_{Umwelt(Zone=0,x=5500..x_{max},y=0..2500)}(x,y)=\frac{1}{\sigma}\cdot K \cdot e^{\frac{-(x-5500)+(y-2500)}{\sigma}} +\frac{-1}{\sigma}\cdot K \cdot e^{\frac{x-x_{max}}{\sigma}}\\
-Vy_{Umwelt(Zone=0,x=5500..x_{max},y=0..2500)}(x,y)=\frac{-1}{\sigma} \cdot K \cdot e^{\frac{-(x-5500)+(y-2500)}{\sigma}} +\frac{1}{\sigma} \cdot K \cdot e^{\frac{-y}{\sigma}}\\
-Vx_{Umwelt(Zone=0,x=5500..x_{max},y=2500..y_max)}(x,y)=\frac{1}{\sigma}\cdot K \cdot e^{-\frac{x-5500}{\sigma}} +\frac{-1}{\sigma}\cdot K \cdot e^{\frac{x-x_{max}}{\sigma}}\\
-Vy_{Umwelt(Zone=0,x=5500..x_{max},y=2500..y_{max})}(x,y)=\frac{-1}{\sigma} \cdot K \cdot e^{\frac{y-y_{max}}{\sigma}} +\frac{1}{\sigma} \cdot K \cdot e^{\frac{-y}{\sigma}}\\
-Vx_{Umwelt(Zone=1)}(x,y)=K_{gerade}\\
-Vy_{Umwelt(Zone=1)}(x,y)=-2\cdot \frac{y-3500}{K_{parabel}}\\
-Vx_{Umwelt(Zone=2)}(x,y)=-K_{gerade}\\
-Vy_{Umwelt(Zone=2)}(x,y)=-2\cdot \frac{y-3500}{K_{parabel}}\\
-Vx_{Umwelt(Zone=3)}(x,y)=-2\cdot \frac{x-300}{K_{parabel}}\\
-Vy_{Umwelt(Zone=3)}(x,y)=-K_{gerade}\\
-Vx_{Umwelt(Zone=4)}(x,y)=0\\
-Vy_{Umwelt(Zone=4)}(x,y)=K_{gerade}\\
-Vx_{Umwelt(Zone=5)}(x,y)=-2\cdot \frac{x-5500}{K_{parabel}}\\
+&Vx_{Umwelt(Zone=0,x=0..5500,y=0..2500)}(x,y)=\frac{1}{\sigma}\cdot K \cdot e^{\frac{-x}{\sigma}} +\frac{-1}{\sigma}\cdot K \cdot e^{\frac{x-x_{max}}{\sigma}}\\
+&Vy_{Umwelt(Zone=0,x=0..5500,y=0..2500)}(x,y)=\frac{-1}{\sigma} \cdot K \cdot e^{\frac{y-2500}{\sigma}} +\frac{1}{\sigma} \cdot K \cdot e^{\frac{-y}{\sigma}}\\
+&Vx_{Umwelt(Zone=0,x=5500..x_{max},y=0..2500)}(x,y)=\frac{1}{\sigma}\cdot K \cdot e^{\frac{-(x-5500)+(y-2500)}{\sigma}} +\frac{-1}{\sigma}\cdot K \cdot e^{\frac{x-x_{max}}{\sigma}}\\
+&Vy_{Umwelt(Zone=0,x=5500..x_{max},y=0..2500)}(x,y)=\frac{-1}{\sigma} \cdot K \cdot e^{\frac{-(x-5500)+(y-2500)}{\sigma}} +\frac{1}{\sigma} \cdot K \cdot e^{\frac{-y}{\sigma}}\\
+&Vx_{Umwelt(Zone=0,x=5500..x_{max},y=2500..y_max)}(x,y)=\frac{1}{\sigma}\cdot K \cdot e^{-\frac{x-5500}{\sigma}} +\frac{-1}{\sigma}\cdot K \cdot e^{\frac{x-x_{max}}{\sigma}}\\
+&Vy_{Umwelt(Zone=0,x=5500..x_{max},y=2500..y_{max})}(x,y)=\frac{-1}{\sigma} \cdot K \cdot e^{\frac{y-y_{max}}{\sigma}} +\frac{1}{\sigma} \cdot K \cdot e^{\frac{-y}{\sigma}}\\
+&Vx_{Umwelt(Zone=1)}(x,y)=K_{gerade}\\
+&Vy_{Umwelt(Zone=1)}(x,y)=-2\cdot \frac{y-3500}{K_{parabel}}\\
+&Vx_{Umwelt(Zone=2)}(x,y)=-K_{gerade}\\
+&Vy_{Umwelt(Zone=2)}(x,y)=-2\cdot \frac{y-3500}{K_{parabel}}\\
+&Vx_{Umwelt(Zone=3)}(x,y)=-2\cdot \frac{x-300}{K_{parabel}}\\
+&Vy_{Umwelt(Zone=3)}(x,y)=-K_{gerade}\\
+&Vx_{Umwelt(Zone=4)}(x,y)=0\\
+&Vy_{Umwelt(Zone=4)}(x,y)=K_{gerade}\\
+&Vx_{Umwelt(Zone=5)}(x,y)=-2\cdot \frac{x-5500}{K_{parabel}}\\
 \label{fun:VyZone5}
-Vy_{Umwelt(Zone=5)}(x,y)=-K_{gerade}
+&Vy_{Umwelt(Zone=5)}(x,y)=-K_{gerade}
  \end{align}
  \end{minipage}}
- 
+ \newpage
  Der Ablaufplan in Abbildung \ref{fig:AblVektor} zeigt den Ablauf zum ermitteln des Geschwindigkeitsvektors.
- \begin{figure}
-	\centering	\includegraphics[width=0.5\textwidth]{grafiken/Geschwindigkeit_bestimmen.png}
+ \begin{figure}[H]
+	\centering	\includegraphics[width=0.6\textwidth]{grafiken/Geschwindigkeit_bestimmen.png}
 	\caption{Ablaufplan des Subsystems Vektorberechnung}
 	\label{fig:AblVektor}
 \end{figure}

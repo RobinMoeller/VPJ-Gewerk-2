@@ -4,8 +4,8 @@ In diesem Kapitel werden die Funktion der erstellten Funktionsblöcke und Statefl
 \subsection{UDP Gewerk1 Kommunikation}
 In diesem Subsystem wird die UDP-Kommunikation mit der Fertigungsplanung realisiert, dazu werden die zu sendenden Daten gepackt und per UDP an alle im Netzwerk geschickt. Des Weiteren werden die von der Fertigungsplanung gesendeten Daten ausgelesen. Der Aufbau des Subsystems ist in Abbildung \ref{fig:UDPGW1} dargestellt. Um die UDP Kommunikation zu sichern, wird für jeden Robotino ein eigener sende und lese Port definiert. Dazu wird für den sende Port das Muster 250X0 verwendet und für den auslese Port das Muster 2591X. Dabei wird X als RobotinoID gesetzt. Da in Matlab der Winkel in Rad genutzt wird, wird vor dem Senden der Robotinoausrichtung der Winkel in Grad umgerechnet. Die einzulesenden und zusendenden Daten sind in Kapitel \ref{sec:Kon_Fertigungsplanung} definiert.
 
-\begin{figure}
-	\centering	\includegraphics[width=0.8\textwidth]{grafiken/UDPGewerk1.png}
+\begin{figure}[H]
+	\centering	\includegraphics[width=1.0\textwidth]{grafiken/UDPGewerk1.png}
 	\caption{Subsystem UDP Gewerk 1}
 	\label{fig:UDPGW1}
 \end{figure}
@@ -13,8 +13,8 @@ In diesem Subsystem wird die UDP-Kommunikation mit der Fertigungsplanung realisi
 \subsection{UDP Daten formatieren}
 In diesem Subsystem werden die eingelesenen UDP Daten von der Fertigungsplanung aufgesplittet. Der Aufbau des Subsystems ist in Abbildung \ref{fig:SubUDPform} dargestellt. Des Weiteren wird erfasst, ob ein neuer Auftrag vorhanden ist und die Fach- und Stationsbeschreibung wird auf das im Programm genutzte Format angepasst.
 
-\begin{figure}
-	\centering	\includegraphics[width=0.8\textwidth]{grafiken/UDPformatieren.png}
+\begin{figure}[H]
+	\centering	\includegraphics[width=1.0\textwidth]{grafiken/UDPformatieren.png}
 	\caption{Subsystem UDP Daten formatieren}
 	\label{fig:SubUDPform}
 \end{figure}
@@ -23,13 +23,15 @@ In diesem Subsystem werden die eingelesenen UDP Daten von der Fertigungsplanung 
 In dieser Funktion wird sich der Fehlerstatus des Robotinos gemerkt und bei einem Resetsignal durch die Fertigungsplanung zurückgesetzt. Des Weiteren wird der Fehler erkannt, wenn ein Werkstück während des Transport verloren wird.
 
 \subsection{Auftrag steuern}
-In diesem Stateflow wird das abarbeiten des Auftrags gesteuert, da wir von der Fertigungsplanung Aufträge gesendet bekommen, die Startfach und Zielfach enthalten, ist dies notwendig. Das entwickelte Stateflow ist in Abbildung \ref{fig:Auftrag} dargestellt. Dabei ist der Startzustand auf einen neuen Auftrag warten. In diesem Zustand wird der Status auf \glqq Frei\grqq{} gesetzt. Wenn nun ein Auftrag eingegangen ist, wird unterschieden ob der Robotino laden oder transportieren soll. Wenn der Robotino laden soll, wird als Ziel die Ladestation an die folgenden Funktionen übergeben. Wenn nun ein Signal von der Fertigungsplanung erhalten wird, dass der Robotino fertig geladen hat, wird der Status auf \glqq Ladenabgeschlossen\grqq{} gesetzt. Wenn sich nun der Robotino im Transportbereich befindet, also die Ladestation sicher verlassen wurde, wird wieder auf einen neuen Auftrag gewartet. Wenn ein Auftrag erhalten wird, der zum Transport dient, wird der Zustand auf \glqq Arbeitend ohne Werkstück\grqq geändert. In diesem Zustand wird als Ziel das Startfach an die nachfolgenden Funktionen übergeben. Wenn nun ein Werkstück aufgenommen ist und sich der Robotino wieder im Transportbereich befindet, wird der Zustand auf \glqq Arbeitend mit Werkstück\grqq{} gesetzt. In diesem Zustand wird nun das Zielfach als Ziel an die nachfolgenden Funktionen übergeben. Wenn dann das Werkstück abgelegt ist, wird der Zustand auf Werkstück abgelegt geändert. Dieser Zustand wird verlassen, wenn der Robotino wieder im Transportbereich ist und es kann wieder ein neuer Auftrag begonnen werden. Des Weiteren wird in diesem Stateflow ein Teil des Fehlerhandlings durchgeführt. Dazu gehört zum Beispiel, dass der Robotino seinen Status auf \glqq auf einen neuen Auftrag warten\grqq{} setzt, wenn das Werkstück während des Transportes verloren geht oder kein Werkstück am Startfach aufgenommen werden kann.  
+In diesem Stateflow wird das abarbeiten des Auftrags gesteuert, da wir von der Fertigungsplanung Aufträge gesendet bekommen, die Startfach und Zielfach enthalten, ist dies notwendig. Das entwickelte Stateflow ist in Abbildung \ref{fig:Auftrag} dargestellt.
 
-\begin{figure}
-	\centering	\includegraphics[width=0.8\textwidth]{grafiken/Auftragskoordination.pdf}
+\begin{figure}[H]
+	\centering	\includegraphics[width=1.4\textwidth,angle=90]{grafiken/Auftragskoordination.pdf}
 	\caption{Stateflow Auftrag steuern}
 	\label{fig:Auftrag}
 \end{figure}
+
+Dabei ist der Startzustand auf einen neuen Auftrag warten. In diesem Zustand wird der Status auf \glqq Frei\grqq{} gesetzt. Wenn nun ein Auftrag eingegangen ist, wird unterschieden ob der Robotino laden oder transportieren soll. Wenn der Robotino laden soll, wird als Ziel die Ladestation an die folgenden Funktionen übergeben. Wenn nun ein Signal von der Fertigungsplanung erhalten wird, dass der Robotino fertig geladen hat, wird der Status auf \glqq Ladenabgeschlossen\grqq{} gesetzt. Wenn sich nun der Robotino im Transportbereich befindet, also die Ladestation sicher verlassen wurde, wird wieder auf einen neuen Auftrag gewartet. Wenn ein Auftrag erhalten wird, der zum Transport dient, wird der Zustand auf \glqq Arbeitend ohne Werkstück\grqq geändert. In diesem Zustand wird als Ziel das Startfach an die nachfolgenden Funktionen übergeben. Wenn nun ein Werkstück aufgenommen ist und sich der Robotino wieder im Transportbereich befindet, wird der Zustand auf \glqq Arbeitend mit Werkstück\grqq{} gesetzt. In diesem Zustand wird nun das Zielfach als Ziel an die nachfolgenden Funktionen übergeben. Wenn dann das Werkstück abgelegt ist, wird der Zustand auf Werkstück abgelegt geändert. Dieser Zustand wird verlassen, wenn der Robotino wieder im Transportbereich ist und es kann wieder ein neuer Auftrag begonnen werden. Des Weiteren wird in diesem Stateflow ein Teil des Fehlerhandlings durchgeführt. Dazu gehört zum Beispiel, dass der Robotino seinen Status auf \glqq auf einen neuen Auftrag warten\grqq{} setzt, wenn das Werkstück während des Transportes verloren geht oder kein Werkstück am Startfach aufgenommen werden kann.  
 
 
 \subsection{Position der Robotinos bestimmen}
@@ -45,8 +47,8 @@ In dieser Funktion wird das aktuelle Ziel in Zielstation und Zielfach aufgeteilt
 
 \subsubsection{Fifo Position bestimmen}
 In diesem Stateflow, welches in Abbildung \ref{fig:StateFIFO} dargestellt ist, wird die Warteposition des Robotinos bestimmt. Dazu werden die in Kapitel \ref{sec:Impl:Selbstorga} beschriebenen Formeln genutzt. Dabei wird die Warteposition 4 als globale Warteposition definiert. Wenn der Robotino kein Ziel hat, wird die globale Warteposition als Ziel definiert. Sobald ein Ziel angefahren werden soll, wird zuerst die erste Warteposition abgefragt. Wenn die erste Warteposition belegt ist, wird die zweite Warteposition abgefragt. Dies geschieht solange bis Warteposition 4 erreicht wird. Wenn die erste Warteposition nicht belegt ist, wird die Station abgefragt. Ist die Station belegt, wird die Warteposition auf 1 gesetzt. Im Gegensatz dazu wird die Station als Ziel gesetzt, wenn diese nicht belegt ist. Ein Sonderfall  in dieser Betrachtung ist die Ladestation. Dabei wird direkt die Ladestation abgefragt. Wenn die Ladestation belegt ist, wird die globale Warteposition angefahren, sonst wird die Ladestation als Ziel festgelegt.
-\begin{figure}
-	\centering	\includegraphics[width=0.8\textwidth]{grafiken/FIFOStateflow.pdf}
+\begin{figure}[H]
+	\centering	\includegraphics[width=1.5\textwidth,angle=90]{grafiken/FIFOStateflow.pdf}
 	\caption{Stateflow Wartebereich bestimmen}
 	\label{fig:StateFIFO}
 \end{figure}
@@ -60,7 +62,7 @@ In dieser Funktion wird geprüft, ob die Station erreicht ist. Diese Information 
 \subsection{Geschwindigkeit bestimmen}
 Um die Sollgeschwindigkeit des Robotinos zu bestimmen, wird das Subsystem \glqq Vektorberechnung\grqq{} genutzt. Dieses Subsystem ist wie in Abbildung \ref{fig:Vektorberechnung} dargestellt, aufgebaut. Das Subsystem hat dabei den in Abbildung \ref{fig:AblVektor} gezeigten Ablauf. Dabei ist zu erkennen, dass zuerst die IR-Daten erfasst und die fahrenden Robotinos erkannt werden. Die IR-Datenerfassung wird unter Kapitel \ref{sec:IRD} näher erläutert. Wie die fahrenden Robotinos erkannt werden, wird in Kapitel \ref{sec:FRE} beschrieben. Anhand der IR-Daten und der Informationen über die fahrenden Robotinos wird der Geschwindigkeitsvektor bestimmt. Die dabei genutzte Funktion wird unter Kapitel \ref{sec:GVB} beschrieben. Anhand des bestimmten Geschwindigkeitsvektors wird eine Ausweichrichtung bestimmt, wenn ein anderer Robotino die Route kreuzt. Die dazu genutzte Funktion ist in Kapitel \ref{sec:ARB} näher beschrieben. Im nächsten Schritt wird dann das Ausweichmanöver ausgeführt. Die Implementierung des Ausweichmanövers wird in Kapitel \ref{sec:AMA} beschrieben.
 
-\begin{figure}
+\begin{figure}[H]
 	\centering	\includegraphics[width=0.8\textwidth]{grafiken/Vektorberechnung.png}
 	\caption{Subsystem Vektorberechnung}
 	\label{fig:Vektorberechnung}
@@ -73,7 +75,7 @@ In der IR-Daten erfassen Funktion werden zuerst die IR-Daten aus den RobotinoDat
 Um zu erkennen, ob die anderen Robotinos fahren, werden die Postionen der Robotinos mit den Postionen vor einer Sekunde verglichen. Wenn die Robotinos mehr als 10 mm in der Sekunde zurückgelegt haben, wird der Robotino als fahrend gesetzt.
 
 \subsubsection{Geschwindigkeitsvektor bestimmen}\label{sec:GVB}
-In dieser Funktion wird das in Kapitel \ref{sec:potentialfeld} beschriebene Potentialfeld zur Vektorberechnung umgesetzt. Die genutzten Ableitungen sind unter \eqref{fun:VxStation} bis \eqref{fun:VyZone5} dargestellt. In der Funktion \eqref{fun:VxStation} und \eqref{fun:VyStation} wird die Ableitung des Stationspotentialfeldes definiert. Diese Funktionen werden im Programm für die vier Stationen und die zwei Ladestation ausgeführt. Im nächsten Schritt wird der Zielvektor über die abgeleitete Funktion \eqref{fun:VxZiel} und \eqref{fun:VyZiel} bestimmt. Im nächsten Schritt werden die Robotino- und IR-Gradienten berechnet. Dazu wird die gleiche Funktion (\eqref{fun:VxStation} und \eqref{fun:VyStation} ) wie bei der Stationsberechnung genutzt. Dabei werden jedoch die über die IR-Daten erfassten Positionen, sowie die per Kamera-UDP erhaltenen Robotinopositionen genutzt. Im nächsten Schritt wird die aktuelle Robotinozone bestimmt und je nach Zone der Umweltgradient, nach den Funktionen \eqref{fun:VxZone01} bis \eqref{fun:VyZone5}, bestimmt. Da nicht alle Gradienten in allen Zonen genutzt werden, gibt es in jeder Zone eine eigene Summe von Gradienten. Dabei wird zum Beispiel die Stationsgradienten der Stationen nur in Zone 4 und die Ladestationsgradienten nur in Zone 0 mit eingerechnet. Des Weiteren wird der Zielgradienten nur in Zone 0 eingerechnet damit die Führung des Robotinos hinter den Stationen nicht gestört wird.
+In dieser Funktion wird das in Kapitel \ref{sec:potentialfeld} beschriebene Potentialfeld zur Vektorberechnung umgesetzt. Die genutzten Ableitungen sind unter \eqref{fun:VxStation} bis \eqref{fun:VyZone5} auf Seite \pageref{fun:VxStation} dargestellt. In der Funktion \eqref{fun:VxStation} und \eqref{fun:VyStation} wird die Ableitung des Stationspotentialfeldes definiert. Diese Funktionen werden im Programm für die vier Stationen und die zwei Ladestation ausgeführt. Im nächsten Schritt wird der Zielvektor über die abgeleitete Funktion \eqref{fun:VxZiel} und \eqref{fun:VyZiel} bestimmt. Im nächsten Schritt werden die Robotino- und IR-Gradienten berechnet. Dazu wird die gleiche Funktion (\eqref{fun:VxStation} und \eqref{fun:VyStation} ) wie bei der Stationsberechnung genutzt. Dabei werden jedoch die über die IR-Daten erfassten Positionen, sowie die per Kamera-UDP erhaltenen Robotinopositionen genutzt. Im nächsten Schritt wird die aktuelle Robotinozone bestimmt und je nach Zone der Umweltgradient, nach den Funktionen \eqref{fun:VxZone01} bis \eqref{fun:VyZone5}, bestimmt. Da nicht alle Gradienten in allen Zonen genutzt werden, gibt es in jeder Zone eine eigene Summe von Gradienten. Dabei wird zum Beispiel die Stationsgradienten der Stationen nur in Zone 4 und die Ladestationsgradienten nur in Zone 0 mit eingerechnet. Des Weiteren wird der Zielgradienten nur in Zone 0 eingerechnet damit die Führung des Robotinos hinter den Stationen nicht gestört wird.
 
 \subsubsection{Ausweichrichtung bestimmen}\label{sec:ARB}
 Um eine Ausweichrichtung zu bestimmen, wird zuerst der Abstand zu den anderen Robotinos anhand derer Positionen bestimmt. Wenn der Abstand geringer als ein Meter ist, wird der globale Winkel zum Robotino bestimmt und um \ang{90} erhöht. Zusätzlich wird im nächsten Schritt der Fahrwinkel anhand des Geschwindigkeitsvektors in globalen Koordinaten bestimmt. Befindet sich ein Robotino in einem Toleranzbereich um den Fahrwinkel, so wird mittels Fahr- und Robotinowinkel ein Enable-Bit gesetzt. Wenn dieses Enable-Bit nicht gesetzt ist, wird kein Ausweichmanöver ausgeführt.
@@ -84,22 +86,24 @@ Zusätzlich wird in dieser Funktion die Abbremsfilterung integriert, wie im Kapit
 
 \subsection{Fahrmodus steuern}\label{sec:Fahrmodus}
 Das Stateflow, welches in Abbildung \ref{fig:Fahrmodus} dargestellt ist, steuert die Kommunikation mit der Bahnregelungsgruppe. Beim Start ist der Transportbereich, in dem die Potentialfeldmethode zum Regeln genutzt wird, aktiv. Wenn der Robotino über das Potentialfeld sein Ziel erreicht hat, wird an die Bahnregelung, über das setzen des Fertigungsbereich auf \glqq Eins\grqq{}, übergeben. Wenn das Ziel eine Ladestation ist, wird der Bahnregelung die Zielladestationsposition übergeben. Wenn der Robotino fertig geladen hat, wird der Bahnregelung wieder der Übergabepunkt als Ziel gegeben und wieder auf den Transportbereich gewechselt.\\
-Wenn das Ziel eine Ladestation ist, werden zwei Varianten unterschieden. Die erste Möglichkeit besteht darin ein Werkstück aufzunehmen. Dabei wird zuerst die \glqq Werkstueckposition\grqq{} übergeben. Nach der Bestätigung von der Bahnregelung des erfolgreichen Aufnehmens, wird der RFID-Leser als Ziel vorgegeben. Wenn die Bahnregelung die Position bestätigt, wird auf eine Bestätigung, des RFID-Schreibens durch die Fertigungsplanung gewartet. Nach dieser Bestätigung wird der Bahnregelung ein Übergabepunkt vorgegeben, an dem zur Potentialfeldmethode gewechselt werden soll. Dabei besteht die Möglichkeit nach hinten abzugeben, wenn ein Robotino auf die Station wartet, oder nach vorne, wenn kein Robotino in die Station möchte.\\
-Im zweiten Fall soll ein Werkstück in der Station abgegeben werden. Dabei ändert sich die Reihenfolge der Ziele, so dass als erstes zum RFID-Leser und auf Bestätigung von Fertigungsplanung gewartet werden soll. Anschließend folgt die Zielposition für das Werkstück und wieder die Ausfahrposition.\\
-In diesem Stateflow erfolgt zusätzlich die Statuszuweisung des Robotinos und dessen Fehlererkennung.
 
-\begin{figure}
+\begin{figure}[H]
 	\centering	\includegraphics[width=1\textwidth]{grafiken/KommunikationGewerk3.pdf}
 	\caption{Fahrmodus steuern}
 	\label{fig:Fahrmodus}
 \end{figure}
 
+Wenn das Ziel eine Ladestation ist, werden zwei Varianten unterschieden. Die erste Möglichkeit besteht darin ein Werkstück aufzunehmen. Dabei wird zuerst die \glqq Werkstueckposition\grqq{} übergeben. Nach der Bestätigung von der Bahnregelung des erfolgreichen Aufnehmens, wird der RFID-Leser als Ziel vorgegeben. Wenn die Bahnregelung die Position bestätigt, wird auf eine Bestätigung, des RFID-Schreibens durch die Fertigungsplanung gewartet. Nach dieser Bestätigung wird der Bahnregelung ein Übergabepunkt vorgegeben, an dem zur Potentialfeldmethode gewechselt werden soll. Dabei besteht die Möglichkeit nach hinten abzugeben, wenn ein Robotino auf die Station wartet, oder nach vorne, wenn kein Robotino in die Station möchte.\\
+Im zweiten Fall soll ein Werkstück in der Station abgegeben werden. Dabei ändert sich die Reihenfolge der Ziele, so dass als erstes zum RFID-Leser und auf Bestätigung von Fertigungsplanung gewartet werden soll. Anschließend folgt die Zielposition für das Werkstück und wieder die Ausfahrposition.\\
+In diesem Stateflow erfolgt zusätzlich die Statuszuweisung des Robotinos und dessen Fehlererkennung.
+
+
 \subsection{Geschwindigkeit begrenzen}
 In dieser Funktion wird eine gleitende Mittelwertbildung über 100 Werte vorgenommen, um die Geschwindigkeitsvorgabe zu glätten.  Nach der Filterung wird die Geschwindigkeit je nach Position begrenzt. Dabei wird die Geschwindigkeit bei den FIFO-Positionen auf 300mm/s und in der Hauptfahrzone auf 700mm/s begrenzt.
 
 \subsection{Geschwindigkeit transformieren}
-In dieser Funktion wird der globale Geschwindigkeitsvektor auf das Robotinokoordinatensystem über den Winkel des Robotinos transformiert. Dazu wird eine Rotationsmatrix genutzt. Da der Robotino den negativen Gradienten in mm/s als Vorgabe benötigt, wird der Geschwindigkeitsvektor vor diesem Funktionsblock mit -1000 multipliziert, da durch unsere Berechnung der positive Gradent in m/s ermittelt wird.
+In dieser Funktion wird der globale Geschwindigkeitsvektor auf das Robotinokoordinatensystem über den Winkel des Robotinos transformiert. Dazu wird eine Rotationsmatrix genutzt. Da der Robotino den negativen Gradienten in mm/s als Vorgabe benötigt, wird der Geschwindigkeitsvektor vor diesem Funktionsblock mit -1000 multipliziert, da durch unsere Berechnung der positive Gradient in m/s ermittelt wird.
 
 \subsection{Status bestimmen}
-In dieser Funktion wird der Status des Robotinos, der an die Fertigungsplanung übergeben wird, bestimmt. Dabei wird der Status, der in der Fahrmodussteuerung unter Kapitel \ref{sec:Fahrmodus} besimmt wird, direkt übergeben, solange kein Fehler durch die Bahnregelung registriert wird.
+In dieser Funktion wird der Status des Robotinos, der an die Fertigungsplanung übergeben wird, bestimmt. Dabei wird der Status, der in der Fahrmodussteuerung unter Kapitel \ref{sec:Fahrmodus} bestimmt wird, direkt übergeben, solange kein Fehler durch die Bahnregelung registriert wird.
 

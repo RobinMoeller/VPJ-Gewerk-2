@@ -7,7 +7,7 @@ Aus diesem Grund werden hinter den Stationen Einbahnstraßen entworfen, in denen 
 Um die Entstehung von lokalen Minima zu verhindern, wird die Software der Robotinos um eine Selbstorganisation erweitert. 
 Diese Erweiterung beinhaltet Wartepositionen, damit ein Roboter, der zur einer bereits besetzten Station fahren soll, sich außerhalb des Kollisionsbereichs anstellt.
 \\
-In Abbildung \ref{fig:Konfigurationsraum} erkennt man am unteren Rand der Karte zwölf blaue Kreise, welche die Wartebereiche darstellen. Zu jeder Station gehören drei Wartepositionen. Durch sich verändernde Zählweisen, ist der zugehörige Warteplatz zu einer Station immer eindeutig zuzuweisen. Im Kapitel \ref{cha:Implementierung} wird dies weiter erläutert.\\
+In Abbildung \ref{fig:Konfigurationsraum} auf Seite \pageref{fig:Konfigurationsraum} erkennt man am unteren Rand der Karte zwölf blaue Kreise, welche die Wartebereiche darstellen. Zu jeder Station gehören drei Wartepositionen. Durch sich verändernde Zählweisen, ist der zugehörige Warteplatz zu einer Station immer eindeutig zuzuweisen. Im Kapitel \ref{cha:Implementierung} wird dies weiter erläutert.\\
 \\
 Mit Hilfe des UDP-Datenpaketes der Kameradaten ist es für einen Robotino möglich die Positionen der anderen Robotinos zu erhalten. Ist nun die Zielstation bereits von einem anderen Robotino belegt, wird mit Hilfe der Selbstorganisationssoftware die erste mögliche Wartepostion als Ziel übernommen. Ist diese auch bereits belegt wird die Warteposition um einen Platz erhöht.\\
 Dem gesamten Anstellprozess liegt das \glqq First In First Out-Prinzip\grqq{} (im weiteren nur noch FIFO genannt) zu Grunde.
@@ -30,7 +30,7 @@ Für eine hohe Dynamik im Gesamtsystem unterscheidet die Software zwischen sich b
 
 Das verbaute Kamerasystem ist nicht in der Lage andere Objekte, außer die mit Aruko-Markern versehenden Robotinos, zu erkennen. Um jedoch auch eine Kollision mit Menschen zu verhindern besitzt der Robotino neun Infrarot-Sensoren gleichmäßig um den untersten Rand des Roboters verteilt. Detektiert einer der Sensoren ein Objekt ermittelt die Software an welcher Stelle das Objekt erkannt wird und manipuliert den Zielvektor. Es wird ein abstoßendes Potential an der Hindernisposition programmiert.
 Hat sich das unbekannte Hindernis entfernt, wird das Potential ab einem gewissen Abstand wieder abgeschaltet.
-\newpage
+
 \section{Schnittstellen}
 Im gesamten Projektablauf ist die Kommunikation mit anderen Gruppen ausschlaggebend für eine perfektes Gesamtkonzept.
 In der Bahnplanung wird vor allem mit der Gruppe der Bahnregelung und mit der Gruppe der Fertigungsplanung eng zusammengearbeitet.
@@ -41,7 +41,7 @@ In Abbildung \ref{fig:Konfigurationsraum} stellen die acht roten Kreise vor den 
 Somit gehören zur Schnittstelle nicht nur das Übergabebit. Die Gruppe der Bahnregelung benötigt darüber hinaus auch noch den genauen Auftrag der Fertigungsplanung. Hat die Bahnregelung den Auftrag abgearbeitet, wird der Übergabebit am Übergabepunkt getoggelt und der Robotino fährt wieder im Potentialfeld. Dieser Übergabepunkt ist variabel, wie bereits in dem Unterkapitel \ref{subsec:Selbstorga} erläutert.\\
 \\  
 Da die Bahnregelung sehr präzise die Position des Robotinos für eine hoch genaue Fahrt benötigt, wird von der Gruppe ein Kalman-Filter für die Robotino Position entworfen. Ohne Beobachter sendet die Kamera, bei nicht Erkennung eines Robotinos, die Positionsdaten [0,0] für diesen Robotino. Diese falsche Postion kann zu einigen Fehlern in den Berechnungen führen. Dieser Beobachter ermöglicht eine Fehlerfreie Positionsdarstellung des Roboters auch bei kurzzeitiger Verdeckung des ArUcomarkers. Die Beobachterdaten werden auch in der Bahnplanung durchgehende verwendet. 
-\newpage
+
 \subsection{Fertigungsplanung}\label{sec:Kon_Fertigungsplanung}
 Die Fertigungsplanung ist für die gesamte Simulation der Fabrikumgebung zuständig. In der Gruppe werden verschiedene Aufträge generiert und intelligent auf die vier Robotinos verteilt. Mittels UDP-Kommunikation wird der jeweilige Auftrag an den jeweiligen Roboter gesendet.
 \begin{figure}[h]
@@ -61,12 +61,12 @@ Damit jedes individuelle Werkstück auch entsprechend erkannt wird, sind an jeder
 \label{Fehlererkennung}
 
 Eine weitere Übergabeinformation zwischen den drei Gruppen ist das Fehlerhandling. Es wird zwischen drei verschiedenen Fehlern des Robotinos unterschieden:
-\begin{enumerate}
+\begin{itemize}
 \label{Fehlerliste}
 \item Kein Werkstück vorhanden
 \item Stationsfach belegt
 \item Werkstück verloren
-\end{enumerate}
+\end{itemize}
 \noindent
 Beim Anfahren eines Stationsfachs zur Aufnahme eines Werkstückes durch die Bahnregelung, wird zwischen den Greifern eine Lichtschranke abgefragt. Kann kein Werkstück aufgenommen werden, weil beispielsweise kein Werkstück erkannt wird, wird ein Fehler ausgelöst. Dieser Fehler wird anschließend an die Fertigungsplanung gesendet. Die Fertigungsplanung entscheidet dann, ob ein falscher Auftrag gesendet wird oder in der 'Fabrik' ein Fehler vorliegt, welcher per manuellen Eingriff behoben werden muss. 
 Der zweite Fehler wird über einen Zähler der Anfahrversuche für ein Fach realisiert. Schafft es der Robotino innerhalb von drei Anfahrversuchen nicht das Werkstück abzulegen, so wird der zweite Fehler gesendet. 

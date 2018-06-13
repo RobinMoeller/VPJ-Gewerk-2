@@ -39,7 +39,7 @@
 \usepackage{courier}                                   % Courier als \ttdefault
 
 %---------------------------------------------------------------------------------------------------
-\usepackage[automark]{scrpage2}                        % Anpassung der Kopf- und Fußzeilen
+%\usepackage[automark]{scrpage2}                        % Anpassung der Kopf- und Fußzeilen
 \usepackage{xspace}                                    % Korrekter Leerraum nach Befehlsdefinitionen
 \usepackage{setspace}																	 % Dieses Package brauchen wir für den 				
 \usepackage[pdftex]{graphicx}
@@ -48,6 +48,7 @@
 \usepackage{amsfonts, amsmath, amssymb}
 \usepackage{siunitx}
 \usepackage{listings}
+\usepackage{float}
 
 																											 % anderthalbzeiligen Abstand.
 \usepackage{natbib}                                    % Neuimplementierung des \cite-Kommandos
@@ -95,12 +96,14 @@
 %---------------------------------------------------------------------------------------------------
 % Kopf- und Fußzeilen
 %---------------------------------------------------------------------------------------------------
-\pagestyle{scrheadings}
-\clearscrheadings
-\clearscrplain
-\clearscrheadfoot
-\ohead{\pagemark}
-\ihead{\headmark}
+\usepackage[automark]{scrlayer-scrpage} 
+\pagestyle{scrheadings} 
+\ihead{\headmark} 
+\ohead[\pagemark]{\pagemark} 
+%\ohead*{\thepage} 
+\chead{} 
+\cfoot[]{}
+
 
 %---------------------------------------------------------------------------------------------------
 % Neue Befehle
