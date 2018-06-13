@@ -1,0 +1,22 @@
+\scalebox{0.8}{\begin{minipage}{1.2\textwidth}
+\begin{align}
+\label{fun:H01}
+H_{0(x=0..5500,y=0..2500)}(x,y)= K_{exp}\cdot(e^{(-\frac{x}{\sigma})}+e^{(\frac{x-7400}{\sigma})}+e^{(-\frac{y}{\sigma})}+e^{(\frac{y-2500}{\sigma})} ) \label{fun:H01}\\ 
+\label{fun:H02}
+H_{0(x=5500..7400,y=0..2500)}(x,y) = K_{exp}\cdot(e^{(-\frac{(x-5500)-(y-2500)}{\sigma})}+e^{(\frac{x-7400}{\sigma})}+e^{(-\frac{y}{\sigma})} )\\ 
+\label{fun:H03}
+H_{0(x=5500..7400,y=2500..3600)}(x,y) = K_{exp}\cdot(e^{(-\frac{(x-5500)}{\sigma})}+e^{(\frac{(y-3600)}{\sigma})}+e^{(\frac{x-7400}{\sigma})}+e^{(-\frac{y}{\sigma})} )\\ 
+\label{fun:H1}
+H_{1}(x,y) = - K_{gerade}\cdot x + K_{parabel}\cdot\frac{(y-3500)^2}{B}\\
+\label{fun:H2}
+H_{2}(x,y) = K_{gerade}\cdot x + K_{parabel}\cdot\frac{(y-3500)^2}{B}\\
+\label{fun:H3}
+H_{3}(x,y) = K_{parabel}\cdot\frac{(x-300)^2}{B} + K_{gerade}\cdot y\\
+\label{fun:H4}
+H_{4}(x,y) = - K_{gerade}\cdot y\\
+\label{fun:H5}
+H_{5}(x,y) = K_{parabel}\cdot\frac{(x-5500)^2}{B}-K_{gerade}\cdot y
+ \end{align}
+\end{minipage}}
+
+Zeile 30 Bahnplanung Konzept
