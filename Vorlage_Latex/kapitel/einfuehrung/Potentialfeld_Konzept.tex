@@ -2,7 +2,7 @@
 \label{sec:Potential}
 In diesem Abschnitt wird beschrieben, wie das Potentialfeld aufgebaut ist, das zur Generierung des Geschwindigkeitsvektors genutzt wird.
 \subsection{Roboter Umwelt}
-Um die statische Umwelt des Robotinos im Potentialfeld darzustellen, wird der zu befahrende Bereich in Zonen unterteilt. Die gewählten Zonen sind in Abbildung \ref{fig:PotZonen} farbig dargestellt. In Tabelle \ref{tab:Zonen} ist die Zuordnung der Zonen zur Abbildung \ref{fig:PotZonen} beschrieben.\\
+Um die statische Umwelt des Robotinos im Potentialfeld darzustellen, wird der zu befahrene Bereich in Zonen unterteilt. Die gewählten Zonen sind in Abbildung \ref{fig:PotZonen} farbig dargestellt. In Tabelle \ref{tab:Zonen} ist die Zuordnung der Zonen zur Abbildung \ref{fig:PotZonen} beschrieben.\\
  \begin{table}[H]
 \centering
  \begin{tabular}{|c|c|c|}
@@ -25,7 +25,7 @@ Um die statische Umwelt des Robotinos im Potentialfeld darzustellen, wird der zu
 	\label{fig:PotZonen}
 \end{figure}
 
-Dabei wird eine Hauptfahrzone (Zone 0) definiert, in der mit einem virtuellen Zaun der zu befahrene Bereich abgegrenzt wird. Dieser Zaun ist notwendig, damit die Zone nicht unkontrolliert verlassen wird, dazu werden e-Funktionen genutzt, die in den Funktionen \eqref{fun:H01} bis \eqref{fun:H03} definiert sind.
+Dabei wird eine Hauptfahrzone (Zone 0) definiert, in der mit einem virtuellen \glqq Zaun\grqq{} der zu befahrene Bereich abgegrenzt wird. Dieser \glqq Zaun\grqq{} ist notwendig, damit die Zone nicht unkontrolliert verlassen wird, dazu werden e-Funktionen genutzt, die in den Funktionen \eqref{fun:H01} bis \eqref{fun:H03} definiert sind.
 
 \scalebox{0.9}{\begin{minipage}{1.1\textwidth}
  \begin{align}
@@ -48,9 +48,9 @@ Dabei wird eine Hauptfahrzone (Zone 0) definiert, in der mit einem virtuellen Za
  \end{align}
 \end{minipage}}
 
-Aufgrund der Form der Zone müssen dabei drei Funktionen definiert werden, die je nach Position des Robotinos ausgeführt werden. Das Verlassen der Zone 0 erfolgt durch die Übergabe an den Fertigungsbereich, welches in Kapitel \ref{sec:Kon_Bahnregelung} näher erläutert wird. \\
-Zone 1 bis 3 dienen zur Rückführung der Robotinos zur Zone 0, dazu wird ein Potentialfeld genutzt, dass uns ermöglicht den Robotino in eine gezielte Richtung zu lenken. Die dazu genutzten Funktionen sind unter \eqref{fun:H1} bis \eqref{fun:H3} definiert. Diese Potentialfelder nutzen in Fahrrichtung eine Geradengleichung mit definierter Steigung und senkrecht dazu eine Parabelform, um den Robotino auf Kurs zu halten. Wenn sich der Robotino in Zone 4 befindet, wird dieser über eine Geradengleichung nach hinten geführt. Die dabei genutzte Gleichung ist als \eqref{fun:H4} gekennzeichnet. Zusätzlich wird in Zone 4 für jede Station eine gaußsche radiale Basisfunktion, welche unter Kapitel \ref{sec:PotRob} näher erläutert wird, genutzt, damit keine Kollision mit den Stationen auftreten. Diese Zone wird nur im Fehlerfall oder beim Start des Robotinos betreten, da in dieser Zone der Fertigungsbereich aktiv ist. Die Zone 5 dient dazu den Robotino gezielt in Richtung der Mitte der Zone 0 zu führen. Dazu wird, wie in Zone 1 bis 3, eine Parabel mit einer Geradengleichung genutzt. Die dabei genutzte Funktion ist als \eqref{fun:H5} definiert. Dabei ist zu beachten, dass vorgesehen ist, dass Zone 5 nur aktiv ist, wenn sie aus Zone 1 betreten wird. Dadurch wird die Anfahrmöglichkeit aus der Zone 0 zur Ladestation gewährleistet. \\
-Je nach Zone gilt dabei ein eigenes Potentialfeld, welche kombiniert das Gesamtpotentialfeld ergebenen. Die einzelnen Zonen sind in Abbildung \ref{fig:Poteinzeln} dargestellt. Das gesamt Potentialfeld ist in Abbildung \ref{fig:PotUmweltohne} dargestellt, wobei zur Übersichtlichkeit die Stations und Ladestationspotentiale nicht dargestellt werden. Da die Zone 5 nur durchlaufen wird, wenn sie aus Zone 1 betreten wird, wird in Abbildung \ref{fig:Potentialfeld-Fertig} auf Seite \pageref{fig:Potentialfeld-Fertig} dargestellt, wie das Potentialfeld in diesem Fall aussieht.
+Aufgrund der Form der Zone müssen dazu drei Funktionen definiert werden, die je nach Position des Robotinos ausgeführt werden. Das Verlassen der Zone 0 erfolgt durch die Übergabe an den Fertigungsbereich, welches in Kapitel \ref{sec:Kon_Bahnregelung} näher erläutert wird. \\
+Zone 1 bis 3 dienen zur Rückführung der Robotinos zur Zone 0, dazu wird ein Potentialfeld genutzt, dass es ermöglicht den Robotino in eine gezielte Richtung zu lenken. Die dazu genutzten Funktionen sind unter \eqref{fun:H1} bis \eqref{fun:H3} definiert. Diese Potentialfelder nutzen in Fahrrichtung eine Geradengleichung mit definierter Steigung und senkrecht dazu eine Parabelform, um den Robotino auf Kurs zu halten. Wenn sich der Robotino in Zone 4 befindet, wird dieser über eine Rampe nach hinten geführt. Die dabei genutzte Gleichung ist als \eqref{fun:H4} gekennzeichnet. Zusätzlich wird in Zone 4 für jede Station eine gaußsche radiale Basisfunktion, welche unter Kapitel \ref{sec:PotRob} näher erläutert wird, genutzt, damit keine Kollision mit den Stationen auftreten. Diese Zone wird nur im Fehlerfall oder beim Start des Robotinos betreten, da in dieser Zone der Fertigungsbereich aktiv ist, in der die Bahnregelung die Steuerung des Robotinos übernimmt. Die Zone 5 dient dazu den Robotino gezielt in Richtung der Mitte der Zone 0 zu führen. Dazu wird, wie in Zone 1 bis 3, eine Parabel mit einer Geradengleichung genutzt. Die dabei genutzte Funktion ist als \eqref{fun:H5} definiert. Dabei ist zu beachten, dass vorgesehen ist, dass Zone 5 nur aktiv ist, wenn sie aus Zone 1 betreten wird. Dadurch wird die Anfahrmöglichkeit aus der Zone 0 zur Ladestation gewährleistet. \\
+Je nach Zone gilt dabei ein eigenes Potentialfeld, welche kombiniert das Gesamtpotentialfeld ergeben. Die einzelnen Zonen sind in Abbildung \ref{fig:Poteinzeln} dargestellt. Das Gesamtpotentialfeld ist in Abbildung \ref{fig:PotUmweltohne} dargestellt, wobei zur Übersichtlichkeit die Stations und Ladestationspotentiale nicht dargestellt werden. Da die Zone 5 nur durchlaufen wird, wenn sie aus Zone 1 betreten wird, wird in Abbildung \ref{fig:Potentialfeld-Fertig} auf Seite \pageref{fig:Potentialfeld-Fertig} dargestellt, wie das Potentialfeld in diesem Fall aussieht.
 
 \begin{figure}[H]
 	\centering	\includegraphics[width=0.7\textwidth,angle=-90,trim={1cm 6cm 2cm 6cm}]{grafiken/EinzelZonen.pdf}
@@ -65,7 +65,7 @@ Je nach Zone gilt dabei ein eigenes Potentialfeld, welche kombiniert das Gesamtp
 \end{figure}
 
 
-\subsection{Robotino,Stationen und IR-Hindernisse}\label{sec:PotRob}
+\subsection{Robotino, Stationen und IR-Hindernisse}\label{sec:PotRob}
 Die Robotinos, die Stationen und die IR-Hindernisse werden im Potentialfeld als gaußsche radiale Basisfunktion betrachtet. Die genutzte Funktion ist unter \eqref{fun:H_gaus} definiert. Da sich die gaußsche radiale Basisfunktion aufgrund der genutzten e-Funktion gut ableiten lässt, wird diese Funktion genutzt, um ein abstoßendes Potential zu generieren. Das Potentialfeld der gaußschen radialen Basisfunktion ist in Abbildung \ref{fig:PotRobotino} dargestellt. Dabei wird für die Stationen eine konstante Position eingestellt. Die Position des Robotinos und der IR-Hindernisse werden als flexibel betrachtet, da sie während der Laufzeit bestimmt werden müssen.
 
 \begin{align}

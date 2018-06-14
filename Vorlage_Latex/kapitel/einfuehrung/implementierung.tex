@@ -10,7 +10,7 @@ Für einen besseren Überblick zu dem Konzept zeigt die Abbildung \ref{Ablaufdiagr
 	\label{Ablaufdiagramm}
 \end{figure}
 \noindent
-Zunächst wird der Auftrag der Fertigungsplanung verarbeitet und parallel dazu wird die eigene Position des Robotinos sowie die Positionsdaten der anderen Robotinos bezogen. Nachdem die Selbstorganisation durch Wartebereiche abgearbeitet wurde, wird das erhaltene Ziel weitergeleitet. Mit dem bekannten Ziel wird der Zielvektor bestimmt. Die Hinderniserkennung läuft nun gleichzeitig.
+Zunächst wird der Auftrag der Fertigungsplanung verarbeitet und parallel dazu wird die eigene Position des Robotinos sowie die Positionsdaten der anderen Robotinos bezogen. Nachdem die Selbstorganisation durch Wartebereiche abgearbeitet ist, wird das ermittelte Ziel weitergeleitet. Mit dem bekannten Ziel wird der Zielvektor bestimmt. Die Hinderniserkennung läuft nun gleichzeitig.
 Hat der Robotino sein Endziel erreicht, kann ein neuer Auftrag abgearbeitet werden.\\
 \\Hat ein Robotino zur Zeit keinen Auftrag, wird als Ziel die Standby-Position einprogrammiert. Zunächst wird der Grundalgorithmus zur Zielgebung erläutert und anschließend um die einzelnen Unterpunkte des Konzeptes erweitert.\\
 
@@ -67,9 +67,7 @@ Damit das System die Wartepositionen der zugehörigen Zielstationen für die Zuwei
  &zweiterFifo=floor(Zielstation/2)\cdot 3+1+1\\
  &dritterFifo=floor(Zielstation/2)\cdot 3+2-2\cdot mod(Zielstation,2)+1
   \end{align} 
-Ist der erste Bereich belegt wird der zweite Bereich abgefragt ist dieser belegt wird der Dritte abgefragt. Sind alle drei Bereich belegt, gibt das Stateflowdiagramm den höchsten Wert aus. Beim höchsten Wert wird die Standbyposition als Ziel einprogrammiert.\\
-\\
-
+Ist der erste Bereich belegt, wird der zweite Bereich abgefragt. Ist dieser belegt, wird der Dritte abgefragt. Sind alle drei Bereiche belegt, gibt das Stateflowdiagramm den höchsten Wert aus. Beim höchsten Wert wird die Standbyposition als Ziel einprogrammiert.\\
 Wird im nächsten Zyklus der nächst kleinere Wartebereich frei, so wird dieses als Ziel angefahren. 
 In dem Fall, wenn ein anderer Robotino den ersten Wartebereich verlässt und zur Zielstation fährt, besteht ein Sonderfall. Da die Strecke zwischen den beiden Punkten ca. zwei Meter beträgt dauert diese Fahrt mehrere Zyklen. Damit ein dahinter stehender Robotino in dem Moment nicht auch direkt die Station anfährt, weil alle anderen Bereiche frei sind, wird eine weitere Position abgefragt. Die Stationsbelegung wird abgefragt. 
 Die Station wird erst wieder freigegeben, wenn sie im Stationsmerker nicht mehr belegt ist.\\
@@ -77,14 +75,14 @@ Die Station wird erst wieder freigegeben, wenn sie im Stationsmerker nicht mehr 
 \section{Bekannte Hindernisse}
 \label{sec:bekHindernis}
 
-Für eine verbesserte Kollisionsvermeidung wurde das Ausweichmanöver, wie in Unterkapitel \ref{subsec:bekannt} bereits erklärt, verwendet. Die Aufgabe des Manövers ist es den Zielvektor des Robotinos so zu verändern, dass er einem sich im Weg befindenden Robotino mit einem größeren Abstand ausweicht.
+Für eine verbesserte Kollisionsvermeidung wird das Ausweichmanöver, wie in Unterkapitel \ref{subsec:bekannt} bereits erklärt, verwendet. Die Aufgabe des Manövers ist es den Zielvektor des Robotinos so zu verändern, dass er einem sich im Weg befindenden Robotino mit einem größeren Abstand ausweicht.
 Es werden die Position des Robotinos benötigt sowie die Positionen der anderen Robotinos, die Störpositionen. Darüber hinaus benötigt das Manöver den Zielvektor.\\
-Zunächst wird analysiert in welchem Winkel die Störpositionen sich zum Zielvektor befinden. Liegt ein anderer Robotino innerhalb von \ang{30} zum Zeilvektor wird ein Ausweichwinkel berechnet. 
+Zunächst wird analysiert in welchem Winkel die Störpositionen sich zum Zielvektor befinden. Liegt ein anderer Robotino innerhalb von \ang{30} zum Zielvektor wird ein Ausweichwinkel berechnet. 
 \begin{align}
 \label{Ausweichwinkel}
 Ausweich(1,i)=+asin(Abstand(2,i)/Hyp)-pi/2
 \end{align}
-Der erste Wert des Ausweichs-Array aus Formel \ref{Ausweichwinkel} ist der Ausweichwinkel. Über eine trigonometrische Funktion wird der genaue Winkel des Zielvektors zum Ziel ausgerechnet und \ang{90} addiert.
+Der erste Wert des Ausweichs-Array aus Formel \ref{Ausweichwinkel} ist der Ausweichwinkel. Über eine trigonometrische Funktion wird der genaue Winkel zum Hindernisrobotinol ausgerechnet und \ang{90} addiert.
 Solange eine Störposition innerhalb der \ang{30} liegen, bleibt der Ausweichwinkel erhalten. Ist der im Weg liegende Roboter weit genug umfahren, wird der originale Zielvektor einprogrammiert.
 
 \section{Unbekannte Hindernisse}
@@ -102,7 +100,7 @@ for x=1:9
 end
 \end{lstlisting}
 \noindent 
-Wurde ein Hindernis detektiert, wird das Hindernis in globalen Koordinaten bestimmt. Diese berechneten 'IRWerte' werden anschließend in der Zielvektorberechnung aus Kapitel \ref{sec:potentialfeld} einbezogen.
+Wird ein Hindernis detektiert, wird das Hindernis in globalen Koordinaten bestimmt. Diese berechneten 'IRWerte' werden anschließend in der Zielvektorberechnung aus Kapitel \ref{sec:potentialfeld} einbezogen.
 
 \section{Potentialfeld}
 \label{sec:potentialfeld}
@@ -140,7 +138,7 @@ Um das unter Kapitel \ref{sec:Potential} beschriebene Potentialfeldkonzept in Ma
  \end{align}
  \end{minipage}}
  \newpage
- Der Ablaufplan in Abbildung \ref{fig:AblVektor} zeigt den Ablauf zum ermitteln des Geschwindigkeitsvektors.
+ Der Ablaufplan in Abbildung \ref{fig:AblVektor} zeigt den Ablauf zum Ermitteln des Geschwindigkeitsvektors.
  \begin{figure}[H]
 	\centering	\includegraphics[width=0.6\textwidth]{grafiken/Geschwindigkeit_bestimmen.png}
 	\caption{Ablaufplan des Subsystems Vektorberechnung}

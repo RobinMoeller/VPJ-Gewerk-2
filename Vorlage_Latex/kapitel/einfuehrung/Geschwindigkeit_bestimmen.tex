@@ -1,8 +1,8 @@
 \section{Funktionsblockbeschreibungen}
-In diesem Kapitel werden die Funktion der erstellten Funktionsblöcke und Stateflows erläutert.
+In diesem Kapitel werden die Funktionen der erstellten Funktionsblöcke und Stateflows erläutert.
 
 \subsection{UDP Gewerk1 Kommunikation}
-In diesem Subsystem wird die UDP-Kommunikation mit der Fertigungsplanung realisiert, dazu werden die zu sendenden Daten gepackt und per UDP an alle im Netzwerk geschickt. Des Weiteren werden die von der Fertigungsplanung gesendeten Daten ausgelesen. Der Aufbau des Subsystems ist in Abbildung \ref{fig:UDPGW1} dargestellt. Um die UDP Kommunikation zu sichern, wird für jeden Robotino ein eigener sende und lese Port definiert. Dazu wird für den sende Port das Muster 250X0 verwendet und für den auslese Port das Muster 2591X. Dabei wird X als RobotinoID gesetzt. Da in Matlab der Winkel in Rad genutzt wird, wird vor dem Senden der Robotinoausrichtung der Winkel in Grad umgerechnet. Die einzulesenden und zusendenden Daten sind in Kapitel \ref{sec:Kon_Fertigungsplanung} definiert.
+In diesem Subsystem wird die UDP-Kommunikation mit der Fertigungsplanung realisiert, dazu werden die zu sendenden Daten gepackt und per UDP an alle im Netzwerk geschickt. Des Weiteren werden die von der Fertigungsplanung gesendeten Daten ausgelesen. Der Aufbau des Subsystems ist in Abbildung \ref{fig:UDPGW1} dargestellt. Um die UDP Kommunikation zu sichern, wird für jeden Robotino ein eigener sende und lese Port definiert. Dazu wird für den sende Port das Muster 250X0 verwendet und für den auslese Port das Muster 2501X. Dabei wird X als RobotinoID gesetzt. Da in Matlab der Winkel in Rad genutzt wird, wird vor dem Senden der Robotinoausrichtung der Winkel in Grad umgerechnet. Die einzulesenden und zusendenden Daten sind in Kapitel \ref{sec:Kon_Fertigungsplanung} definiert.
 
 \begin{figure}[H]
 	\centering	\includegraphics[width=1.0\textwidth,trim={2cm 0cm 2cm 0cm}]{grafiken/UDPGewerk1.png}
@@ -23,7 +23,7 @@ In diesem Subsystem werden die eingelesenen UDP Daten von der Fertigungsplanung 
 In dieser Funktion wird sich der Fehlerstatus des Robotinos gemerkt und bei einem Resetsignal durch die Fertigungsplanung zurückgesetzt. Des Weiteren wird der Fehler erkannt, wenn ein Werkstück während des Transport verloren wird.
 
 \subsection{Auftrag steuern}
-In diesem Stateflow wird das abarbeiten des Auftrags gesteuert, da wir von der Fertigungsplanung Aufträge gesendet bekommen, die Startfach und Zielfach enthalten, ist dies notwendig. Das entwickelte Stateflow ist in Abbildung \ref{fig:Auftrag} dargestellt.
+In diesem Stateflow wird das abarbeiten des Auftrags gesteuert, da von der Fertigungsplanung Aufträge gesendet werden, die Startfach und Zielfach enthalten, ist dies notwendig. Das entwickelte Stateflow ist in Abbildung \ref{fig:Auftrag} dargestellt.
 
 \begin{figure}[H]
 	\centering	\includegraphics[width=1.4\textwidth,angle=90]{grafiken/Auftragskoordination.pdf}
@@ -31,7 +31,7 @@ In diesem Stateflow wird das abarbeiten des Auftrags gesteuert, da wir von der F
 	\label{fig:Auftrag}
 \end{figure}
 
-Dabei ist der Startzustand auf einen neuen Auftrag warten. In diesem Zustand wird der Status auf \glqq Frei\grqq{} gesetzt. Wenn nun ein Auftrag eingegangen ist, wird unterschieden ob der Robotino laden oder transportieren soll. Wenn der Robotino laden soll, wird als Ziel die Ladestation an die folgenden Funktionen übergeben. Wenn nun ein Signal von der Fertigungsplanung erhalten wird, dass der Robotino fertig geladen hat, wird der Status auf \glqq Ladenabgeschlossen\grqq{} gesetzt. Wenn sich nun der Robotino im Transportbereich befindet, also die Ladestation sicher verlassen wurde, wird wieder auf einen neuen Auftrag gewartet. Wenn ein Auftrag erhalten wird, der zum Transport dient, wird der Zustand auf \glqq Arbeitend ohne Werkstück\grqq geändert. In diesem Zustand wird als Ziel das Startfach an die nachfolgenden Funktionen übergeben. Wenn nun ein Werkstück aufgenommen ist und sich der Robotino wieder im Transportbereich befindet, wird der Zustand auf \glqq Arbeitend mit Werkstück\grqq{} gesetzt. In diesem Zustand wird nun das Zielfach als Ziel an die nachfolgenden Funktionen übergeben. Wenn dann das Werkstück abgelegt ist, wird der Zustand auf Werkstück abgelegt geändert. Dieser Zustand wird verlassen, wenn der Robotino wieder im Transportbereich ist und es kann wieder ein neuer Auftrag begonnen werden. Des Weiteren wird in diesem Stateflow ein Teil des Fehlerhandlings durchgeführt. Dazu gehört zum Beispiel, dass der Robotino seinen Status auf \glqq auf einen neuen Auftrag warten\grqq{} setzt, wenn das Werkstück während des Transportes verloren geht oder kein Werkstück am Startfach aufgenommen werden kann.  
+Dabei ist der Startzustand \glqq auf einen neuen Auftrag warten\grqq{}. In diesem Zustand wird der Status auf \glqq Frei\grqq{} gesetzt. Wenn nun ein Auftrag eingegangen ist, wird unterschieden ob der Robotino laden oder transportieren soll. Wenn der Robotino laden soll, wird als Ziel die Ladestation an die folgenden Funktionen übergeben. Wenn nun ein Signal von der Fertigungsplanung erhalten wird, dass der Robotino fertig geladen hat, wird der Status auf \glqq Ladenabgeschlossen\grqq{} gesetzt. Wenn sich nun der Robotino im Transportbereich befindet, also die Ladestation sicher verlassen wurde, wird wieder auf einen neuen Auftrag gewartet. Wenn ein Auftrag erhalten wird, der zum Transport dient, wird der Zustand auf \glqq Arbeitend ohne Werkstück\grqq{} geändert. In diesem Zustand wird als Ziel das Startfach an die nachfolgenden Funktionen übergeben. Wenn nun ein Werkstück aufgenommen ist und sich der Robotino wieder im Transportbereich befindet, wird der Zustand auf \glqq Arbeitend mit Werkstück\grqq{} gesetzt. In diesem Zustand wird nun das Zielfach als Ziel an die nachfolgenden Funktionen übergeben. Wenn dann das Werkstück abgelegt ist, wird der Zustand auf \glqq Werkstück abgelegt\grqq{} geändert. Dieser Zustand wird verlassen, wenn der Robotino wieder im Transportbereich ist und es kann wieder ein neuer Auftrag begonnen werden. Des Weiteren wird in diesem Stateflow ein Teil des Fehlerhandlings durchgeführt. Dazu gehört zum Beispiel, dass der Robotino seinen Status auf \glqq auf einen neuen Auftrag warten\grqq{} setzt, wenn das Werkstück während des Transportes verloren geht oder kein Werkstück am Startfach aufgenommen werden kann.  
 
 
 \subsection{Position der Robotinos bestimmen}
@@ -47,7 +47,7 @@ In diesem Abschnitt wird das Subsystem zur Fifobestimmung aus Abbildung \ref{fig
 \end{figure}
 
 \subsubsection{Fifo Merker bestimmen}
-In dieser Funktion werden globale Merker für die Wartepositionen und Stationen bestimmt. Dabei werden die Stationsmerker nur gesetzt, wenn sich ein Robotino in der Station befindet und zurückgesetzt, wenn die Station sicher verlassen wurde. Des Weiteren werden die Wartepositionsmerker gesetzt, wenn sich ein Robotino auf der Warteposition befindet. Im Gegensatz zu den Stationsmerkern wird der Wartebereichsmerker erst zurückgesetzt, wenn sicher ein neuer Wartebereich oder die Station erreicht wurde.
+In dieser Funktion werden globale Merker für die Wartepositionen und Stationen bestimmt. Dabei werden die Stationsmerker nur gesetzt, wenn sich ein Robotino in der Station befindet und zurückgesetzt, wenn die Station sicher verlassen wird. Des Weiteren werden die Wartepositionsmerker gesetzt, wenn sich ein Robotino auf der Warteposition befindet. Im Gegensatz zu den Stationsmerkern wird der Wartebereichsmerker erst zurückgesetzt, wenn sicher ein neuer Wartebereich oder die Station erreicht wird.
 
 \subsubsection{Zielfach formatieren}
 In dieser Funktion wird das aktuelle Ziel in Zielstation und Zielfach aufgeteilt, da in dem folgenden Stateflow hauptsächlich mit der Stationsnummer gerechnet wird.
@@ -67,7 +67,7 @@ In dieser Funktion wird anhand der ermittelten Warteposition die Zielkoordinaten
 In dieser Funktion wird geprüft, ob die Station erreicht ist. Diese Information wird im späteren Programmverlauf dazu genutzt vom Transportbereich zum Fertigungsbereich zu wechseln.
 
 \subsection{Geschwindigkeit bestimmen}
-Um die Sollgeschwindigkeit des Robotinos zu bestimmen, wird das Subsystem \glqq Geschwindigkeit bestimmen\grqq{} genutzt. Dieses Subsystem ist wie in Abbildung \ref{fig:Vektorberechnung} dargestellt, aufgebaut. Das Subsystem hat dabei den in Abbildung \ref{fig:AblVektor} gezeigten Ablauf. Dabei ist zu erkennen, dass zuerst die IR-Daten erfasst und die fahrenden Robotinos erkannt werden. Die IR-Datenerfassung wird unter Kapitel \ref{sec:IRD} näher erläutert. Wie die fahrenden Robotinos erkannt werden, wird in Kapitel \ref{sec:FRE} beschrieben. Anhand der IR-Daten und der Informationen über die fahrenden Robotinos wird der Geschwindigkeitsvektor bestimmt. Die dabei genutzte Funktion wird unter Kapitel \ref{sec:GVB} beschrieben. Anhand des bestimmten Geschwindigkeitsvektors wird eine Ausweichrichtung bestimmt, wenn ein anderer Robotino die Route kreuzt. Die dazu genutzte Funktion ist in Kapitel \ref{sec:ARB} näher beschrieben. Im nächsten Schritt wird dann das Ausweichmanöver ausgeführt. Die Implementierung des Ausweichmanövers wird in Kapitel \ref{sec:AMA} beschrieben.
+Um die Sollgeschwindigkeit des Robotinos zu bestimmen, wird das Subsystem \glqq Geschwindigkeit bestimmen\grqq{} genutzt. Dieses Subsystem ist wie in Abbildung \ref{fig:Vektorberechnung} dargestellt, aufgebaut. Das Subsystem hat dabei den in Abbildung \ref{fig:AblVektor} gezeigten Ablauf. Dabei ist zu erkennen, dass zuerst die IR-Daten erfasst und die fahrenden Robotinos erkannt werden.
 
 \begin{figure}[H]
 	\centering	\includegraphics[width=1.4\textwidth,angle=90]{grafiken/Geschwindigkeitbestimmen.pdf}
@@ -76,7 +76,7 @@ Um die Sollgeschwindigkeit des Robotinos zu bestimmen, wird das Subsystem \glqq 
 \end{figure}
 
 \subsubsection{IR Daten erfassen}\label{sec:IRD}
-In der IR-Daten erfassen Funktion werden zuerst die IR-Daten aus den RobotinoDaten gefiltert und auf NaN gesetzt, wenn der gemessene Abstand größer als 150 mm ist. Bei einem Abstand kleiner gleich 150 mm wird die Position der Hindernisse in globalen Koordinaten bestimmt und ausgegeben.
+In der dieser Funktion werden zuerst die IR-Daten aus den RobotinoDaten gefiltert und auf NaN gesetzt, wenn der gemessene Abstand größer als 150 mm ist. Bei einem Abstand kleiner gleich 150 mm wird die Position der Hindernisse in globalen Koordinaten bestimmt und ausgegeben.
 
 \subsubsection{Fahrende Robotinos erkennen}\label{sec:FRE}
 Um zu erkennen, ob die anderen Robotinos fahren, werden die Postionen der Robotinos mit den Postionen vor einer Sekunde verglichen. Wenn die Robotinos mehr als 10 mm in der Sekunde zurückgelegt haben, wird der Robotino als fahrend gesetzt.
@@ -88,7 +88,7 @@ In dieser Funktion wird das in Kapitel \ref{sec:potentialfeld} beschriebene Pote
 Um eine Ausweichrichtung zu bestimmen, wird zuerst der Abstand zu den anderen Robotinos anhand derer Positionen bestimmt. Wenn der Abstand geringer als ein Meter ist, wird der globale Winkel zum Robotino bestimmt und um \ang{90} erhöht. Zusätzlich wird im nächsten Schritt der Fahrwinkel anhand des Geschwindigkeitsvektors in globalen Koordinaten bestimmt. Befindet sich ein Robotino in einem Toleranzbereich um den Fahrwinkel, so wird mittels Fahr- und Robotinowinkel ein Enable-Bit gesetzt. Wenn dieses Enable-Bit nicht gesetzt ist, wird kein Ausweichmanöver ausgeführt.
 
 \subsubsection{Ausweichmanöver addieren}\label{sec:AMA}
-In dieser Funktion wird nun auf das Ausweichmanöver der Geschwindigkeitsvektor addiert, wenn das Enable-Bit aus der Ausweichrichtungsbestimmung gesetzt ist. Des Weiteren wird das Ausweichmanöver nicht ausgeführt, wenn sich der Robotino nicht in der Hauptfahrzone (Zone=0), nicht im FIFO-Bereich oder nahe am Ziel (Distanz >300mm) befindet.
+In dieser Funktion wird nun auf den Geschwindigkeitsvektor das Ausweichmanöver addiert, wenn das Enable-Bit aus der Ausweichrichtungsbestimmung gesetzt ist. Des Weiteren wird das Ausweichmanöver nicht ausgeführt, wenn sich der Robotino nicht in der Hauptfahrzone (Zone=0), im FIFO-Bereich oder nahe am Ziel (Distanz >300mm) befindet.
 Zusätzlich wird in dieser Funktion die Abbremsfilterung integriert, wie im Kapitel \ref{sec:Ziel} beschrieben, wird dazu ein distanzabhängiger Faktor multipliziert.
 
 \subsection{Fahrmodus steuern}\label{sec:Fahrmodus}
@@ -100,9 +100,9 @@ Das Stateflow, welches in Abbildung \ref{fig:Fahrmodus} dargestellt ist, steuert
 	\label{fig:Fahrmodus}
 \end{figure}
 
-Wenn das Ziel eine Ladestation ist, werden zwei Varianten unterschieden. Die erste Möglichkeit besteht darin ein Werkstück aufzunehmen. Dabei wird zuerst die \glqq Werkstueckposition\grqq{} übergeben. Nach der Bestätigung von der Bahnregelung des erfolgreichen Aufnehmens, wird der RFID-Leser als Ziel vorgegeben. Wenn die Bahnregelung die Position bestätigt, wird auf eine Bestätigung, des RFID-Schreibens durch die Fertigungsplanung gewartet. Nach dieser Bestätigung wird der Bahnregelung ein Übergabepunkt vorgegeben, an dem zur Potentialfeldmethode gewechselt werden soll. Dabei besteht die Möglichkeit nach hinten abzugeben, wenn ein Robotino auf die Station wartet, oder nach vorne, wenn kein Robotino in die Station möchte.\\
+Wenn das Ziel keine Ladestation ist, werden zwei Varianten unterschieden. Die erste Möglichkeit besteht darin ein Werkstück aufzunehmen. Dabei wird zuerst die \glqq Werkstueckposition\grqq{} übergeben. Nach der Bestätigung von der Bahnregelung des erfolgreichen Aufnehmens, wird der RFID-Leser als Ziel vorgegeben. Wenn die Bahnregelung die Position bestätigt, wird auf eine Bestätigung, des RFID-Schreibens durch die Fertigungsplanung gewartet. Nach dieser Bestätigung wird der Bahnregelung ein Übergabepunkt vorgegeben, an dem zur Potentialfeldmethode gewechselt werden soll. Dabei besteht die Möglichkeit nach hinten abzugeben, wenn ein Robotino auf die Station wartet, oder nach vorne, wenn kein Robotino in die Station möchte.\\
 Im zweiten Fall soll ein Werkstück in der Station abgegeben werden. Dabei ändert sich die Reihenfolge der Ziele, so dass als erstes zum RFID-Leser und auf Bestätigung von Fertigungsplanung gewartet werden soll. Anschließend folgt die Zielposition für das Werkstück und wieder die Ausfahrposition.\\
-In diesem Stateflow erfolgt zusätzlich die Statuszuweisung des Robotinos und dessen Fehlererkennung.
+In diesem Stateflow erfolgt zusätzlich die Statuszuweisung des Robotinos und dessen Fehlererkennung, sowie ein Teil des Fehlerhandlings.
 
 
 \subsection{Geschwindigkeit begrenzen}
