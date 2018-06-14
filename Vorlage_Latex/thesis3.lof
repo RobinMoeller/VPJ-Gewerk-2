@@ -1,5 +1,5 @@
-\select@language {ngerman}
-\select@language {ngerman}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -20,20 +20,20 @@
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Potentialfeld Ziel}}{22}{figure.4.5}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Schnittstelle mit der Fertigungsplanung}}{26}{figure.4.6}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Simulation mit Ausweichfunktion}}{29}{figure.5.1}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Simulation ohne Ausweichfunktion}}{30}{figure.5.2}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Simulation der Wartebereiche}}{31}{figure.5.3}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Simulation mit Ausweichfunktion}}{30}{figure.5.1}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Simulation ohne Ausweichfunktion}}{31}{figure.5.2}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Simulation der Wartebereiche}}{32}{figure.5.3}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Ablaufdiagramm Konzept}}{33}{figure.6.1}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Ablaufdiagramm der Selbstorganisation}}{34}{figure.6.2}
-\contentsline {figure}{\numberline {6.3}{\ignorespaces Ablaufplan des Subsystems Vektorberechnung}}{39}{figure.6.3}
-\contentsline {figure}{\numberline {6.4}{\ignorespaces Subsystem UDP Gewerk 1}}{40}{figure.6.4}
-\contentsline {figure}{\numberline {6.5}{\ignorespaces Subsystem UDP Daten formatieren}}{41}{figure.6.5}
-\contentsline {figure}{\numberline {6.6}{\ignorespaces Stateflow Auftrag steuern}}{42}{figure.6.6}
-\contentsline {figure}{\numberline {6.7}{\ignorespaces Subsystem Fifo bestimmen}}{44}{figure.6.7}
-\contentsline {figure}{\numberline {6.8}{\ignorespaces Stateflow Wartebereich bestimmen}}{46}{figure.6.8}
-\contentsline {figure}{\numberline {6.9}{\ignorespaces Subsystem Geschwindigkeit bestimmen}}{48}{figure.6.9}
-\contentsline {figure}{\numberline {6.10}{\ignorespaces Fahrmodus steuern}}{51}{figure.6.10}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Ablaufdiagramm Konzept}}{34}{figure.6.1}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Ablaufdiagramm der Selbstorganisation}}{35}{figure.6.2}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Ablaufplan des Subsystems Vektorberechnung}}{40}{figure.6.3}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Subsystem UDP Gewerk 1}}{41}{figure.6.4}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Subsystem UDP Daten formatieren}}{42}{figure.6.5}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Stateflow Auftrag steuern}}{43}{figure.6.6}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Subsystem Fifo bestimmen}}{45}{figure.6.7}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Stateflow Wartebereich bestimmen}}{47}{figure.6.8}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Subsystem Geschwindigkeit bestimmen}}{49}{figure.6.9}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Fahrmodus steuern}}{52}{figure.6.10}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
