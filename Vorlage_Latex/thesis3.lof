@@ -1,5 +1,5 @@
-\select@language {ngerman}
-\select@language {ngerman}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -34,7 +34,6 @@
 \contentsline {figure}{\numberline {6.8}{\ignorespaces Stateflow Wartebereich bestimmen}}{46}{figure.6.8}
 \contentsline {figure}{\numberline {6.9}{\ignorespaces Subsystem Geschwindigkeit bestimmen}}{48}{figure.6.9}
 \contentsline {figure}{\numberline {6.10}{\ignorespaces Fahrmodus steuern}}{51}{figure.6.10}
-\addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }

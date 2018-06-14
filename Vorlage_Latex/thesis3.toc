@@ -1,5 +1,5 @@
-\select@language {ngerman}
-\select@language {ngerman}
+\babel@toc {ngerman}{}
+\babel@toc {ngerman}{}
 \contentsline {chapter}{\nonumberline Tabellenverzeichnis}{III}{chapter*.2}
 \contentsline {chapter}{\nonumberline Abbildungsverzeichnis}{IV}{chapter*.3}
 \contentsline {chapter}{\numberline {1}Einf\"uhrung}{1}{chapter.1}
@@ -7,7 +7,7 @@
 \contentsline {chapter}{\numberline {3}Bahnplanung}{3}{chapter.3}
 \contentsline {section}{\numberline {3.1}Lokalisierung}{3}{section.3.1}
 \contentsline {section}{\numberline {3.2}Kartenerstellung}{4}{section.3.2}
-\contentsline {section}{\numberline {3.3}Trajektoriengenergierung}{4}{section.3.3}
+\contentsline {section}{\numberline {3.3}Trajektoriengenerierung}{4}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}Globale Bahnplanung}{5}{subsection.3.3.1}
 \contentsline {subsubsection}{\nonumberline Sichtbarbeitsgraph Methode mit A*}{5}{section*.4}
 \contentsline {subsubsection}{\nonumberline Occupancy Grid mit D*-Algorithmus}{6}{section*.5}
@@ -68,4 +68,3 @@
 \contentsline {chapter}{\numberline {8}Validierung}{54}{chapter.8}
 \contentsline {chapter}{\numberline {9}Ausblick}{56}{chapter.9}
 \contentsline {chapter}{\numberline {10}Fazit}{57}{chapter.10}
-\contentsline {chapter}{\nonumberline Literaturverzeichnis}{58}{chapter*.23}
