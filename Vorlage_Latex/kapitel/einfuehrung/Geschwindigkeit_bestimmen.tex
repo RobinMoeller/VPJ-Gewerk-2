@@ -5,7 +5,7 @@ In diesem Kapitel werden die Funktion der erstellten Funktionsblöcke und Statefl
 In diesem Subsystem wird die UDP-Kommunikation mit der Fertigungsplanung realisiert, dazu werden die zu sendenden Daten gepackt und per UDP an alle im Netzwerk geschickt. Des Weiteren werden die von der Fertigungsplanung gesendeten Daten ausgelesen. Der Aufbau des Subsystems ist in Abbildung \ref{fig:UDPGW1} dargestellt. Um die UDP Kommunikation zu sichern, wird für jeden Robotino ein eigener sende und lese Port definiert. Dazu wird für den sende Port das Muster 250X0 verwendet und für den auslese Port das Muster 2591X. Dabei wird X als RobotinoID gesetzt. Da in Matlab der Winkel in Rad genutzt wird, wird vor dem Senden der Robotinoausrichtung der Winkel in Grad umgerechnet. Die einzulesenden und zusendenden Daten sind in Kapitel \ref{sec:Kon_Fertigungsplanung} definiert.
 
 \begin{figure}[H]
-	\centering	\includegraphics[width=1.0\textwidth]{grafiken/UDPGewerk1.png}
+	\centering	\includegraphics[width=1.0\textwidth,trim={2cm 0cm 2cm 0cm}]{grafiken/UDPGewerk1.png}
 	\caption{Subsystem UDP Gewerk 1}
 	\label{fig:UDPGW1}
 \end{figure}
@@ -38,7 +38,14 @@ Dabei ist der Startzustand auf einen neuen Auftrag warten. In diesem Zustand wir
 In dieser Funktion werden anhand der RobotinoID und der UDP Daten des Kamerasystems die Störposition (andere Robotinos) bestimmt sowie die eigene Position bestimmt. Da im Laufe des Projektes Beobachterdaten durch die Bahnregelung generiert werden, wird die eigene Position nach dieser Funktion mit den Beobachterdaten überschrieben.
 
 \subsection{Fifo bestimmen}
-In diesem Abschnitt wird beschrieben welche Aufgaben die zur Wartepositionsbestimmung Funktionen erfüllen.
+In diesem Abschnitt wird das Subsystem zur Fifobestimmung aus Abbildung \ref{fig:subFifobestimmen} näher erläutert. Dabei hat das Subsystem das in Abbildung \ref{AblaufdiagrammFIFO} dargestellten Ablauf. Dabei ist zu erkennen, dass im ersten Schritt Merker gesetzt werden und das Zielfach formatiert wird. Im Anschluss wird anhand der Merker und dem Zielfach die Warteposition bestimmt. Als nächstes wird mit der betimmten Warteposition die globalen Zielkoordinaten bestimmt. Im letzten Schritt wird geprüft, ob das Ziel erreicht ist.
+
+\begin{figure}[H]
+	\centering	\includegraphics[width=1.4\textwidth,angle=90]{grafiken/FIFO_Bestimmen.pdf}
+	\caption{Subsystem Fifo bestimmen}
+	\label{fig:subFifobestimmen}
+\end{figure}
+
 \subsubsection{Fifo Merker bestimmen}
 In dieser Funktion werden globale Merker für die Wartepositionen und Stationen bestimmt. Dabei werden die Stationsmerker nur gesetzt, wenn sich ein Robotino in der Station befindet und zurückgesetzt, wenn die Station sicher verlassen wurde. Des Weiteren werden die Wartepositionsmerker gesetzt, wenn sich ein Robotino auf der Warteposition befindet. Im Gegensatz zu den Stationsmerkern wird der Wartebereichsmerker erst zurückgesetzt, wenn sicher ein neuer Wartebereich oder die Station erreicht wurde.
 
@@ -60,11 +67,11 @@ In dieser Funktion wird anhand der ermittelten Warteposition die Zielkoordinaten
 In dieser Funktion wird geprüft, ob die Station erreicht ist. Diese Information wird im späteren Programmverlauf dazu genutzt vom Transportbereich zum Fertigungsbereich zu wechseln.
 
 \subsection{Geschwindigkeit bestimmen}
-Um die Sollgeschwindigkeit des Robotinos zu bestimmen, wird das Subsystem \glqq Vektorberechnung\grqq{} genutzt. Dieses Subsystem ist wie in Abbildung \ref{fig:Vektorberechnung} dargestellt, aufgebaut. Das Subsystem hat dabei den in Abbildung \ref{fig:AblVektor} gezeigten Ablauf. Dabei ist zu erkennen, dass zuerst die IR-Daten erfasst und die fahrenden Robotinos erkannt werden. Die IR-Datenerfassung wird unter Kapitel \ref{sec:IRD} näher erläutert. Wie die fahrenden Robotinos erkannt werden, wird in Kapitel \ref{sec:FRE} beschrieben. Anhand der IR-Daten und der Informationen über die fahrenden Robotinos wird der Geschwindigkeitsvektor bestimmt. Die dabei genutzte Funktion wird unter Kapitel \ref{sec:GVB} beschrieben. Anhand des bestimmten Geschwindigkeitsvektors wird eine Ausweichrichtung bestimmt, wenn ein anderer Robotino die Route kreuzt. Die dazu genutzte Funktion ist in Kapitel \ref{sec:ARB} näher beschrieben. Im nächsten Schritt wird dann das Ausweichmanöver ausgeführt. Die Implementierung des Ausweichmanövers wird in Kapitel \ref{sec:AMA} beschrieben.
+Um die Sollgeschwindigkeit des Robotinos zu bestimmen, wird das Subsystem \glqq Geschwindigkeit bestimmen\grqq{} genutzt. Dieses Subsystem ist wie in Abbildung \ref{fig:Vektorberechnung} dargestellt, aufgebaut. Das Subsystem hat dabei den in Abbildung \ref{fig:AblVektor} gezeigten Ablauf. Dabei ist zu erkennen, dass zuerst die IR-Daten erfasst und die fahrenden Robotinos erkannt werden. Die IR-Datenerfassung wird unter Kapitel \ref{sec:IRD} näher erläutert. Wie die fahrenden Robotinos erkannt werden, wird in Kapitel \ref{sec:FRE} beschrieben. Anhand der IR-Daten und der Informationen über die fahrenden Robotinos wird der Geschwindigkeitsvektor bestimmt. Die dabei genutzte Funktion wird unter Kapitel \ref{sec:GVB} beschrieben. Anhand des bestimmten Geschwindigkeitsvektors wird eine Ausweichrichtung bestimmt, wenn ein anderer Robotino die Route kreuzt. Die dazu genutzte Funktion ist in Kapitel \ref{sec:ARB} näher beschrieben. Im nächsten Schritt wird dann das Ausweichmanöver ausgeführt. Die Implementierung des Ausweichmanövers wird in Kapitel \ref{sec:AMA} beschrieben.
 
 \begin{figure}[H]
-	\centering	\includegraphics[width=0.8\textwidth]{grafiken/Vektorberechnung.png}
-	\caption{Subsystem Vektorberechnung}
+	\centering	\includegraphics[width=1.4\textwidth,angle=90]{grafiken/Geschwindigkeitbestimmen.pdf}
+	\caption{Subsystem Geschwindigkeit bestimmen}
 	\label{fig:Vektorberechnung}
 \end{figure}
 
@@ -88,7 +95,7 @@ Zusätzlich wird in dieser Funktion die Abbremsfilterung integriert, wie im Kapit
 Das Stateflow, welches in Abbildung \ref{fig:Fahrmodus} dargestellt ist, steuert die Kommunikation mit der Bahnregelungsgruppe. Beim Start ist der Transportbereich, in dem die Potentialfeldmethode zum Regeln genutzt wird, aktiv. Wenn der Robotino über das Potentialfeld sein Ziel erreicht hat, wird an die Bahnregelung, über das setzen des Fertigungsbereich auf \glqq Eins\grqq{}, übergeben. Wenn das Ziel eine Ladestation ist, wird der Bahnregelung die Zielladestationsposition übergeben. Wenn der Robotino fertig geladen hat, wird der Bahnregelung wieder der Übergabepunkt als Ziel gegeben und wieder auf den Transportbereich gewechselt.\\
 
 \begin{figure}[H]
-	\centering	\includegraphics[width=1\textwidth]{grafiken/KommunikationGewerk3.pdf}
+	\centering	\includegraphics[width=1.4\textwidth,angle=90]{grafiken/KommunikationGewerk3.pdf}
 	\caption{Fahrmodus steuern}
 	\label{fig:Fahrmodus}
 \end{figure}

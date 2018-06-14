@@ -112,19 +112,19 @@ Um das unter Kapitel \ref{sec:Potential} beschriebene Potentialfeldkonzept in Ma
 \scalebox{0.9}{\begin{minipage}{1.1\textwidth}
 \begin{align}
 \label{fun:VxStation}
-&Vx_{Hindernis}(x,y)=-K\cdot e^{-\frac{(x-Stationsposition_x)^2+(y-Stationsposition_y)^2}{2\cdot \sigma^2}} \cdot \frac{x-Stationsposition_x}{2\cdot \sigma^2}\\
+&Vx_{Hindernis}(x,y)=-K\cdot e^{-\frac{(x-x_{Hindernis})^2+(y-y_{Hindernis})^2}{2\cdot \sigma^2}} \cdot \frac{x-x_{Hindernis}}{2\cdot \sigma^2}\\
 \label{fun:VyStation}
-&Vy_{Hindernis}(x,y)=-K\cdot e^{-\frac{(x-Stationsposition_x)^2+(y-Stationsposition_y)^2}{2\cdot \sigma^2}} \cdot \frac{y-Stationsposition_y}{2\cdot \sigma^2}\\
+&Vy_{Hindernis}(x,y)=-K\cdot e^{-\frac{(x-x_{Hindernis})^2+(y-y_{Hindernis})^2}{2\cdot \sigma^2}} \cdot \frac{y-y_{Hindernis}}{2\cdot \sigma^2}\\
 \label{fun:VxZiel}
-&Vx_{Ziel}(x,y)=\frac{K\cdot(x-Ziel_x)}{\sqrt{(x-Ziel_x)^2+(y-Ziel_y)^2}}\\
+&Vx_{Ziel}(x,y)=\frac{K\cdot(x-x_{Ziel})}{\sqrt{(x-x_{Ziel})^2+(y-y_{Ziel})^2}}\\
 \label{fun:VyZiel}
-&Vy_{Ziel}(x,y)=\frac{K\cdot(y-Ziel_y)}{\sqrt{(x-Ziel_x)^2+(y-Ziel_y)^2}}\\
+&Vy_{Ziel}(x,y)=\frac{K\cdot(y-y_{Ziel})}{\sqrt{(x-x_{Ziel})^2+(y-y_{Ziel})^2}}\\
 \label{fun:VxZone01}
 &Vx_{Umwelt(Zone=0,x=0..5500,y=0..2500)}(x,y)=\frac{1}{\sigma}\cdot K \cdot e^{\frac{-x}{\sigma}} +\frac{-1}{\sigma}\cdot K \cdot e^{\frac{x-x_{max}}{\sigma}}\\
 &Vy_{Umwelt(Zone=0,x=0..5500,y=0..2500)}(x,y)=\frac{-1}{\sigma} \cdot K \cdot e^{\frac{y-2500}{\sigma}} +\frac{1}{\sigma} \cdot K \cdot e^{\frac{-y}{\sigma}}\\
 &Vx_{Umwelt(Zone=0,x=5500..x_{max},y=0..2500)}(x,y)=\frac{1}{\sigma}\cdot K \cdot e^{\frac{-(x-5500)+(y-2500)}{\sigma}} +\frac{-1}{\sigma}\cdot K \cdot e^{\frac{x-x_{max}}{\sigma}}\\
 &Vy_{Umwelt(Zone=0,x=5500..x_{max},y=0..2500)}(x,y)=\frac{-1}{\sigma} \cdot K \cdot e^{\frac{-(x-5500)+(y-2500)}{\sigma}} +\frac{1}{\sigma} \cdot K \cdot e^{\frac{-y}{\sigma}}\\
-&Vx_{Umwelt(Zone=0,x=5500..x_{max},y=2500..y_max)}(x,y)=\frac{1}{\sigma}\cdot K \cdot e^{-\frac{x-5500}{\sigma}} +\frac{-1}{\sigma}\cdot K \cdot e^{\frac{x-x_{max}}{\sigma}}\\
+&Vx_{Umwelt(Zone=0,x=5500..x_{max},y=2500..y_{max})}(x,y)=\frac{1}{\sigma}\cdot K \cdot e^{-\frac{x-5500}{\sigma}} +\frac{-1}{\sigma}\cdot K \cdot e^{\frac{x-x_{max}}{\sigma}}\\
 &Vy_{Umwelt(Zone=0,x=5500..x_{max},y=2500..y_{max})}(x,y)=\frac{-1}{\sigma} \cdot K \cdot e^{\frac{y-y_{max}}{\sigma}} +\frac{1}{\sigma} \cdot K \cdot e^{\frac{-y}{\sigma}}\\
 &Vx_{Umwelt(Zone=1)}(x,y)=K_{gerade}\\
 &Vy_{Umwelt(Zone=1)}(x,y)=-2\cdot \frac{y-3500}{K_{parabel}}\\

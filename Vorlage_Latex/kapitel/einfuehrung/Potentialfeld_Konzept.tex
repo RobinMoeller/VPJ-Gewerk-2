@@ -18,8 +18,9 @@ Um die statische Umwelt des Robotinos im Potentialfeld darzustellen, wird der zu
    \label{tab:Zonen}
 \end{table}
 
+\newpage
 \begin{figure}[H]
-	\centering	\includegraphics[width=0.8\textwidth, angle=-90]{grafiken/Zonen_eingezeichnet.pdf}
+	\centering	\includegraphics[width=0.6\textwidth, angle=-90,trim={1.8cm 6cm 4cm 6cm}]{grafiken/Zonen_eingezeichnet.pdf}
 	\caption{Potentialfeldzonen}
 	\label{fig:PotZonen}
 \end{figure}
@@ -47,13 +48,12 @@ Dabei wird eine Hauptfahrzone (Zone 0) definiert, in der mit einem virtuellen Za
  \end{align}
 \end{minipage}}
 
-
 Aufgrund der Form der Zone müssen dabei drei Funktionen definiert werden, die je nach Position des Robotinos ausgeführt werden. Das Verlassen der Zone 0 erfolgt durch die Übergabe an den Fertigungsbereich, welches in Kapitel \ref{sec:Kon_Bahnregelung} näher erläutert wird. \\
 Zone 1 bis 3 dienen zur Rückführung der Robotinos zur Zone 0, dazu wird ein Potentialfeld genutzt, dass uns ermöglicht den Robotino in eine gezielte Richtung zu lenken. Die dazu genutzten Funktionen sind unter \eqref{fun:H1} bis \eqref{fun:H3} definiert. Diese Potentialfelder nutzen in Fahrrichtung eine Geradengleichung mit definierter Steigung und senkrecht dazu eine Parabelform, um den Robotino auf Kurs zu halten. Wenn sich der Robotino in Zone 4 befindet, wird dieser über eine Geradengleichung nach hinten geführt. Die dabei genutzte Gleichung ist als \eqref{fun:H4} gekennzeichnet. Zusätzlich wird in Zone 4 für jede Station eine gaußsche radiale Basisfunktion, welche unter Kapitel \ref{sec:PotRob} näher erläutert wird, genutzt, damit keine Kollision mit den Stationen auftreten. Diese Zone wird nur im Fehlerfall oder beim Start des Robotinos betreten, da in dieser Zone der Fertigungsbereich aktiv ist. Die Zone 5 dient dazu den Robotino gezielt in Richtung der Mitte der Zone 0 zu führen. Dazu wird, wie in Zone 1 bis 3, eine Parabel mit einer Geradengleichung genutzt. Die dabei genutzte Funktion ist als \eqref{fun:H5} definiert. Dabei ist zu beachten, dass vorgesehen ist, dass Zone 5 nur aktiv ist, wenn sie aus Zone 1 betreten wird. Dadurch wird die Anfahrmöglichkeit aus der Zone 0 zur Ladestation gewährleistet. \\
 Je nach Zone gilt dabei ein eigenes Potentialfeld, welche kombiniert das Gesamtpotentialfeld ergebenen. Die einzelnen Zonen sind in Abbildung \ref{fig:Poteinzeln} dargestellt. Das gesamt Potentialfeld ist in Abbildung \ref{fig:PotUmweltohne} dargestellt, wobei zur Übersichtlichkeit die Stations und Ladestationspotentiale nicht dargestellt werden. Da die Zone 5 nur durchlaufen wird, wenn sie aus Zone 1 betreten wird, wird in Abbildung \ref{fig:Potentialfeld-Fertig} auf Seite \pageref{fig:Potentialfeld-Fertig} dargestellt, wie das Potentialfeld in diesem Fall aussieht.
 
 \begin{figure}[H]
-	\centering	\includegraphics[width=0.8\textwidth,angle=-90]{grafiken/EinzelZonen.pdf}
+	\centering	\includegraphics[width=0.7\textwidth,angle=-90,trim={1cm 6cm 2cm 6cm}]{grafiken/EinzelZonen.pdf}
 	\caption{Potentialfeld der einzel Zonen}
 	\label{fig:Poteinzeln}
 \end{figure}
@@ -70,11 +70,11 @@ Die Robotinos, die Stationen und die IR-Hindernisse werden im Potentialfeld als 
 
 \begin{align}
 \label{fun:H_gaus}
-H_{Hindernis}(x,y)=K\cdot e^{-\frac{(x-x_{pos})^2+(y-y_{pos})^2}{2\cdot \sigma^2}}
+H_{Hindernis}(x,y)=K\cdot e^{-\frac{(x-x_{Hindernis})^2+(y-y_{Hindernis})^2}{2\cdot \sigma^2}}
  \end{align}
  
 \begin{figure}[H]
-	\centering	\includegraphics[width=0.8\textwidth,angle=-90]{grafiken/GaussKurve.pdf}
+	\centering	\includegraphics[width=0.8\textwidth,angle=-90,trim={1cm 6cm 2cm 6cm}]{grafiken/GaussKurve.pdf}
 	\caption{Potentialfeld der gaußschen radialen Basisfunktion}
 	\label{fig:PotRobotino}
 \end{figure}
@@ -88,7 +88,7 @@ H_{Ziel}(x,y)= K \cdot \sqrt{(x-x_{Ziel})^2+(y-y_{Ziel})^2}
  \end{align}
  
 \begin{figure}[H]
-	\centering	\includegraphics[width=0.8\textwidth,angle=-90]{grafiken/ZielKurve.pdf}
+	\centering	\includegraphics[width=0.8\textwidth,angle=-90,trim={1cm 6cm 2cm 6cm}]{grafiken/ZielKurve.pdf}
 	\caption{Potentialfeld Ziel}
 	\label{fig:PotZiel}
 \end{figure}

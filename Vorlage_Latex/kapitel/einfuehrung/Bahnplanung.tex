@@ -153,6 +153,7 @@ An der zu simulierenden Produktionsstraße sind bis zu fünf Robotinos gleichzeiti
 Bei sehr hoher Dynamik und hoher Zuverlässigkeit benötigt die Potentialfeld-Methode nur wenig Rechenzeit. Damit ist sie von den betrachteten Methoden die beste. Das Potentialfeld hat zudem den Vorteil, dass ein komplett autonomes Gesamtsystem geschaffen werden kann, da es für die Trajektorienberechnung nicht notwendig ist das Ziel und die Fahrtroute der anderen Robotinos zu kennen. 
 
 \subsection{Gesamtkonzept}
+\label{sec:Gesamtkonzept}
 
 Im Folgenden wird das Gesamtkonzept mit der Bahnplanungsmethode Potentialfeld kurz erläutert. Genauere Erklärungen mit Auszügen aus dem Originalprogramm werden anschließend erläutert. 
 \begin{figure}[H]
@@ -165,7 +166,7 @@ Der Konfigurationsraum ist in Abbildung \ref{fig:Konfigurationsraum} mit globale
 
 \subsubsection{Wartepositionen}
 \label{Wartepositionen}
-Jedem Robotino wird eine eigene Warteposition am Rand des Konfigurationsraumes zugeordnet. Diese Warteposition ist zu Beginn des Gesamtsystem die Startposition des jeweiligen Robotinos und immer dann Zielposition, wenn der Robotino keinen Auftrag empfängt. Sollten alle \glqq Fifo-Plätz\grqq{} (vgl. Kapitel \ref{Warteschlange}) einer Station belegt sein, so dass sich ein Robotino nicht mehr anstellen kann, muss er auf seiner Warteposition auf einen freien Platz warten. 
+Jedem Robotino wird eine eigene Warteposition am Rand des Konfigurationsraumes zugeordnet. Diese Warteposition ist zu Beginn des Gesamtsystem die Startposition des jeweiligen Robotinos und immer dann Zielposition, wenn der Robotino keinen Auftrag empfängt. Sollten alle \glqq Fifo-Plätze\grqq{} (vgl. Kapitel \ref{Warteschlange}) einer Station belegt sein, so dass sich ein Robotino nicht mehr anstellen kann, muss er auf seiner Warteposition auf einen freien Platz warten. 
 
 \subsubsection{Stationen und Übergabepunkte}
 \label{Stationen und Übergabepunkte}
